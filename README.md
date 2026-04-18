@@ -20,6 +20,8 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Snape project stills and motion assets.
 - `photos/materials/brava-gallery/`
   Curated Brava cedar gallery set plus the existing manifest and selects sheet.
+- `photos/materials/brava-light-study/`
+  Aspen time-of-day scrubber frame sequence as standalone WebP assets.
 - `proposal-support/christ-church/`
   Supporting proposal-specific utility assets.
 - `docs/`

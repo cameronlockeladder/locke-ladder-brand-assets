@@ -1,8 +1,746 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-04-17",
-  "file_count": 80,
+  "generated_at": "2026-04-18",
+  "file_count": 293,
   "items": [
+    {
+      "path": ".git/COMMIT_EDITMSG",
+      "bytes": 33,
+      "mime": "application/octet-stream",
+      "sha256": "f772cc586b4d1d8ec75d017bc0fbcc4923e20bf212c62157f3ab4f9c9029cf7a"
+    },
+    {
+      "path": ".git/FETCH_HEAD",
+      "bytes": 123,
+      "mime": "application/octet-stream",
+      "sha256": "b3574b684289220bfde2a0b0c7b574d7ad016b22d6e9dd8055afe284ae3bde63"
+    },
+    {
+      "path": ".git/HEAD",
+      "bytes": 21,
+      "mime": "application/octet-stream",
+      "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+    },
+    {
+      "path": ".git/config",
+      "bytes": 395,
+      "mime": "application/octet-stream",
+      "sha256": "352ac4c9ce36a628f91a3d09abca3368ea424e05af52d1af5df64e3e965b5b19"
+    },
+    {
+      "path": ".git/description",
+      "bytes": 73,
+      "mime": "application/octet-stream",
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+    },
+    {
+      "path": ".git/hooks/applypatch-msg.sample",
+      "bytes": 478,
+      "mime": "application/octet-stream",
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+    },
+    {
+      "path": ".git/hooks/commit-msg.sample",
+      "bytes": 896,
+      "mime": "application/octet-stream",
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+    },
+    {
+      "path": ".git/hooks/fsmonitor-watchman.sample",
+      "bytes": 4726,
+      "mime": "application/octet-stream",
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+    },
+    {
+      "path": ".git/hooks/post-update.sample",
+      "bytes": 189,
+      "mime": "application/octet-stream",
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+    },
+    {
+      "path": ".git/hooks/pre-applypatch.sample",
+      "bytes": 424,
+      "mime": "application/octet-stream",
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+    },
+    {
+      "path": ".git/hooks/pre-commit.sample",
+      "bytes": 1649,
+      "mime": "application/octet-stream",
+      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+    },
+    {
+      "path": ".git/hooks/pre-merge-commit.sample",
+      "bytes": 416,
+      "mime": "application/octet-stream",
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+    },
+    {
+      "path": ".git/hooks/pre-push.sample",
+      "bytes": 1374,
+      "mime": "application/octet-stream",
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+    },
+    {
+      "path": ".git/hooks/pre-rebase.sample",
+      "bytes": 4898,
+      "mime": "application/octet-stream",
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+    },
+    {
+      "path": ".git/hooks/pre-receive.sample",
+      "bytes": 544,
+      "mime": "application/octet-stream",
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+    },
+    {
+      "path": ".git/hooks/prepare-commit-msg.sample",
+      "bytes": 1492,
+      "mime": "application/octet-stream",
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+    },
+    {
+      "path": ".git/hooks/push-to-checkout.sample",
+      "bytes": 2783,
+      "mime": "application/octet-stream",
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+    },
+    {
+      "path": ".git/hooks/sendemail-validate.sample",
+      "bytes": 2308,
+      "mime": "application/octet-stream",
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+    },
+    {
+      "path": ".git/hooks/update.sample",
+      "bytes": 3650,
+      "mime": "application/octet-stream",
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+    },
+    {
+      "path": ".git/index",
+      "bytes": 9820,
+      "mime": "application/octet-stream",
+      "sha256": "2d61a5ad10467aba07ab6b16091a723fa75db4d09979ec8b5a5beeaf3c5cd962"
+    },
+    {
+      "path": ".git/info/exclude",
+      "bytes": 240,
+      "mime": "application/octet-stream",
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+    },
+    {
+      "path": ".git/logs/HEAD",
+      "bytes": 190,
+      "mime": "application/octet-stream",
+      "sha256": "d2e4efd93dc32fa80e1ad9bb767d4c2acea1329dccbdb269c7d565a71fdc6d2e"
+    },
+    {
+      "path": ".git/logs/refs/heads/main",
+      "bytes": 190,
+      "mime": "application/octet-stream",
+      "sha256": "d2e4efd93dc32fa80e1ad9bb767d4c2acea1329dccbdb269c7d565a71fdc6d2e"
+    },
+    {
+      "path": ".git/logs/refs/remotes/origin/main",
+      "bytes": 171,
+      "mime": "application/octet-stream",
+      "sha256": "2194e94279b673f5815d99636ebb99ebdc8a8a7e99f7127ae3269166fe48547f"
+    },
+    {
+      "path": ".git/objects/01/73bd880b7a05858fbc10e99eb89565136375ae",
+      "bytes": 844252,
+      "mime": "application/octet-stream",
+      "sha256": "445ade3115fc655d4a628d5d0afcc5df18de779023c4792515835188ea0800f6"
+    },
+    {
+      "path": ".git/objects/08/cc8fc6909d754f2efa5d8558b883e1a5716125",
+      "bytes": 446108,
+      "mime": "application/octet-stream",
+      "sha256": "1456bafe50444fe382aaac349d926b3afd22e24a0e7f1bc03865b21791183e91"
+    },
+    {
+      "path": ".git/objects/0b/e982409fdf295313f82d21a810a4707824947d",
+      "bytes": 3070617,
+      "mime": "application/octet-stream",
+      "sha256": "7414be84984be68c6422e5da4f6bee1f0a81501f5154eb895722594fd17bbcbb"
+    },
+    {
+      "path": ".git/objects/0d/51777887c0bf2cd2d6d56840fedfac9a099385",
+      "bytes": 85,
+      "mime": "application/octet-stream",
+      "sha256": "02cc3cb00ed791cf2051ec3804f48dd31ccc6601f3ff5aaa6882f0f72bcc141c"
+    },
+    {
+      "path": ".git/objects/0e/e1a15ed951a148c980c878ed530e3387eaaba5",
+      "bytes": 1957509,
+      "mime": "application/octet-stream",
+      "sha256": "243bbd9b4ddd6860882c1a6435a68dc2893b8c1b121fb2b028d957173f3ebefa"
+    },
+    {
+      "path": ".git/objects/10/8724f8ac3f38596c1ba293b62fa9a84cdf9341",
+      "bytes": 159898,
+      "mime": "application/octet-stream",
+      "sha256": "22075f44bb691661c45af05149eeae92087afb97afb21b6f1e4b41d849807164"
+    },
+    {
+      "path": ".git/objects/11/524a45f0be41595b2714bfbf0016db2f459c9c",
+      "bytes": 2666429,
+      "mime": "application/octet-stream",
+      "sha256": "3fb44cd26cae115e8fc13f245d40fc8f956979b88b407383704e0d6d389f8494"
+    },
+    {
+      "path": ".git/objects/12/adb681c72b37f94f19d7b2c92a7339cd6feb4b",
+      "bytes": 627917,
+      "mime": "application/octet-stream",
+      "sha256": "b38c70be94d1ef9267980b2d76645c855443ed6891b704c9eac1d14f8d36e1f1"
+    },
+    {
+      "path": ".git/objects/1c/58ab800a951062f66b9ae4ac81dccb109d7d6c",
+      "bytes": 1275682,
+      "mime": "application/octet-stream",
+      "sha256": "62e1f77e19e49dbf06798a9a9ed1023d01c7a002aea4cfcb3464170858d98a7a"
+    },
+    {
+      "path": ".git/objects/29/0c83b67080c3bd763fcdfb19606acea9c70e7f",
+      "bytes": 5947918,
+      "mime": "application/octet-stream",
+      "sha256": "8b37337dd659098b2d8c7f62d58f4f6f1711e75e2c3b69861e2f125100d63af2"
+    },
+    {
+      "path": ".git/objects/2b/fd6243b1552cac55b38102b694377476f3c1a7",
+      "bytes": 57,
+      "mime": "application/octet-stream",
+      "sha256": "57d85a9f1df5d87611d5c2095642bebd9751b849e48c556d6f9af7a80c33cd82"
+    },
+    {
+      "path": ".git/objects/2f/6d00523469cf2a76184743672589c69391ff78",
+      "bytes": 51793,
+      "mime": "application/octet-stream",
+      "sha256": "7c6b22ccbefc5146b93bf829cecf2c63ed88133c1ec59b64f804b083e3ba9f4a"
+    },
+    {
+      "path": ".git/objects/33/641a01d9ad3c6311011d73f91e41dfc0285d46",
+      "bytes": 228016,
+      "mime": "application/octet-stream",
+      "sha256": "61c3c2f311fa79df5ef57a7306361fd6f7adf9626cf740dd69954e666ca06eea"
+    },
+    {
+      "path": ".git/objects/33/7d32928edb812e2e650205c25d42f2011ace6b",
+      "bytes": 78272,
+      "mime": "application/octet-stream",
+      "sha256": "952b6c4bebd38fb914f4804a77b4dde2b8222957b09a34aca8308495b41da433"
+    },
+    {
+      "path": ".git/objects/34/655161df3334e0dd64eb8ff4e5121ae0de8ac6",
+      "bytes": 371893,
+      "mime": "application/octet-stream",
+      "sha256": "30c56bbef148172af79a1a0d08c4b33dc6f4d55f9c5813df3463cb294c27563a"
+    },
+    {
+      "path": ".git/objects/34/be02178fd41202736e6d3d28d98cc45d5be7b1",
+      "bytes": 13856585,
+      "mime": "application/octet-stream",
+      "sha256": "95bce14fd9ad393ecd7667ba93f6ae0c0e01df612b26bbf11d34ed9511976427"
+    },
+    {
+      "path": ".git/objects/35/75980286aa5fcb9e0e28781ad6cdf592e18847",
+      "bytes": 3117244,
+      "mime": "application/octet-stream",
+      "sha256": "a1cf0868be3256bb400ee12566a22e5f38f591dff7930056170db3e8b99caf0f"
+    },
+    {
+      "path": ".git/objects/35/8599ba7f96d327c6a9caa345b73eb5c0b73a2b",
+      "bytes": 804,
+      "mime": "application/octet-stream",
+      "sha256": "ccc7bc59e70cb9498f29c83be367f50b367fea80162e3d36eb3949cb17f3cde9"
+    },
+    {
+      "path": ".git/objects/38/a0ed724da757a7237e28941827dc79edc786ce",
+      "bytes": 840144,
+      "mime": "application/octet-stream",
+      "sha256": "0f6f8d8e7aa527dd75059638c53fc328a0db54bf28c4637863150b63ca7164f3"
+    },
+    {
+      "path": ".git/objects/3b/d73f608f711047745fa07810b00a428c40f08d",
+      "bytes": 1320358,
+      "mime": "application/octet-stream",
+      "sha256": "b82e9ae517ca6f45e4839530ac9e5c038b03615ac2fd444fd03682459886ebe7"
+    },
+    {
+      "path": ".git/objects/3b/ff35c32ddec57e275470b279975882d550a372",
+      "bytes": 69,
+      "mime": "application/octet-stream",
+      "sha256": "520e8206f72b154af5f5fceec0af425eb4f5624f4a07a05c2938889e43a6263a"
+    },
+    {
+      "path": ".git/objects/3c/d5b57e69f0b35cc0416ef9a0ca754652925250",
+      "bytes": 9855,
+      "mime": "application/octet-stream",
+      "sha256": "a4ab852cae297c2ddedc3ff0015ea3e6b662bc3d1a842f90e23de71a48619ed1"
+    },
+    {
+      "path": ".git/objects/3f/05c3739816e73680b49131e364a434c7d433b5",
+      "bytes": 1121060,
+      "mime": "application/octet-stream",
+      "sha256": "96754d3f9769a251cb30e602c48e51d1c6cdac0d3c2747ce3a4d079ce569f422"
+    },
+    {
+      "path": ".git/objects/4e/f92abc446396faf3e90be90c5095ab3f43b2ca",
+      "bytes": 1141719,
+      "mime": "application/octet-stream",
+      "sha256": "535ab16c10a203d5a36d8966014205d06d776c68f98d0098fa46c6e6ce7c1392"
+    },
+    {
+      "path": ".git/objects/4f/94d018abdbf48115af342ad15512d016942899",
+      "bytes": 3930587,
+      "mime": "application/octet-stream",
+      "sha256": "ab7b35e57cb48054a227d2e0ab0a753c368221555006b95d627ecf19f4093ab2"
+    },
+    {
+      "path": ".git/objects/54/4f1b6c3f3cb2faffd81c390c68ed5334b475f5",
+      "bytes": 1174101,
+      "mime": "application/octet-stream",
+      "sha256": "503e1aa6af7ba7fda4928cde1a4c30f80a2083e67b23ed39535bf43fd3107dd6"
+    },
+    {
+      "path": ".git/objects/57/38ff302844d92495f5b407b623d397d658be49",
+      "bytes": 55,
+      "mime": "application/octet-stream",
+      "sha256": "331d4b2d0e1eb2b74911258063413e209413717146a3c9b8d0c1d90903abdbc4"
+    },
+    {
+      "path": ".git/objects/59/3991aa00ff68d359d35e06da5634c84fb211de",
+      "bytes": 501563,
+      "mime": "application/octet-stream",
+      "sha256": "02843c676f24f705f2954ca87243d43befba4d9da39b94b7f1c64ef2022c8e2d"
+    },
+    {
+      "path": ".git/objects/5c/d83581eaf0cf5a2d7e982cd54efedc8e2e2703",
+      "bytes": 2985922,
+      "mime": "application/octet-stream",
+      "sha256": "8eaea68212e610f51b8f1eec245729ca731913fdf01a291b9dae8ed5274a885c"
+    },
+    {
+      "path": ".git/objects/5d/34fb677df0727d7f54a0991c71f021fbaae44a",
+      "bytes": 355,
+      "mime": "application/octet-stream",
+      "sha256": "c46cfaebcf5b367c7c17ed734b8e62ecb5d61189bb2a79653b33426bb94ad840"
+    },
+    {
+      "path": ".git/objects/5d/7784909a0a497c391ba3dffc2a55ea88e40ee8",
+      "bytes": 1106862,
+      "mime": "application/octet-stream",
+      "sha256": "c710f24b8ac45ff7ede0ec420101c4e03c151be22ac110eff48a1bde06d900ee"
+    },
+    {
+      "path": ".git/objects/5d/e54ff77c2d4f45a3cf47232a0e1994530bd93c",
+      "bytes": 370,
+      "mime": "application/octet-stream",
+      "sha256": "37ffeb2c640d5c2d21fe1049d17a12076be35b2c03f389850e28dccdab7cd453"
+    },
+    {
+      "path": ".git/objects/5e/f41f3d38ce2f35f57c824290a1991f7c39c135",
+      "bytes": 929198,
+      "mime": "application/octet-stream",
+      "sha256": "f7a565b34a0b7bf07006875431a1e8bae502b08753a59c8b71238e88c3e024de"
+    },
+    {
+      "path": ".git/objects/5f/2c47e9f6ee2fd959667ac03ec20b6eec6d14d8",
+      "bytes": 589442,
+      "mime": "application/octet-stream",
+      "sha256": "dceafff27ba026334f4201a3082237666e5c2df2bfa16e9d97e08ea71fa7a980"
+    },
+    {
+      "path": ".git/objects/5f/6a0905e04f661d09b143c6e6a98182ac049648",
+      "bytes": 137,
+      "mime": "application/octet-stream",
+      "sha256": "daddc8968a31067ee2721ce079d183768afc1b3b7145fe72a83bac0aa3ffee0d"
+    },
+    {
+      "path": ".git/objects/60/803a20aacf38102a5af66056b7cacb67633e4f",
+      "bytes": 55,
+      "mime": "application/octet-stream",
+      "sha256": "da2bcc32ba0b54d02d2fba0e479a39503773ee209a74c3bf8b19be789ee0acd4"
+    },
+    {
+      "path": ".git/objects/64/182f2d80115c300dde24c453f8e37ab3f9a44f",
+      "bytes": 1110291,
+      "mime": "application/octet-stream",
+      "sha256": "e0f96db7165366d57b32efaeadab2ef1e295c629eb41be721461398f2a6fcb69"
+    },
+    {
+      "path": ".git/objects/64/857116e07192f7c84ffea4259934ec4be6e1d2",
+      "bytes": 789,
+      "mime": "application/octet-stream",
+      "sha256": "4d14018dc8040bba41be13a2e4ae6d222fdadaa21b793c728276107056ecf015"
+    },
+    {
+      "path": ".git/objects/68/377b528ad8425204ce3e812bcd74f20b6c1e52",
+      "bytes": 954116,
+      "mime": "application/octet-stream",
+      "sha256": "2eaba160b9a4cbff2b492830a0039349cf9eb4efce910a9051eeedd982773289"
+    },
+    {
+      "path": ".git/objects/6c/68d7d19685008748fb64767495d6e55e5dbd51",
+      "bytes": 1008,
+      "mime": "application/octet-stream",
+      "sha256": "cde1858a76ab6e021a5fdc25f8af02d6c2addfe066f2637c092e5fe19546ba40"
+    },
+    {
+      "path": ".git/objects/76/a0b3d20fb6e9edb4239257a5b743d534c876d5",
+      "bytes": 674914,
+      "mime": "application/octet-stream",
+      "sha256": "8e94bc5b20ee6602526d06c1358aa4cdd78389eca29c5147b862689d3fa22d40"
+    },
+    {
+      "path": ".git/objects/7e/5294c12202c70a0b3bf1472d4f37d3fc05f4c4",
+      "bytes": 3218576,
+      "mime": "application/octet-stream",
+      "sha256": "778fd369686ecbaf0404228903893d87c7677d9607fa2d535b55f1f7a00df18f"
+    },
+    {
+      "path": ".git/objects/7e/c5e8074cbbb2ef2fa7ec621346bdd73c2df710",
+      "bytes": 2571794,
+      "mime": "application/octet-stream",
+      "sha256": "8ea95b548038be13e81b65f700de5198d52bf5db85390ca4de5a85369c9f998e"
+    },
+    {
+      "path": ".git/objects/88/9f2e60aeecc107ec3a8be1e6e7f2666c70cd40",
+      "bytes": 742890,
+      "mime": "application/octet-stream",
+      "sha256": "8662966e0419ba47169fac764d30d0b43f47f2f8ce5ab18233542768ac943fbc"
+    },
+    {
+      "path": ".git/objects/8a/9363cf205aa199d131fc526012aa0b25f29236",
+      "bytes": 270,
+      "mime": "application/octet-stream",
+      "sha256": "b59baff9acf806527080a56ff3ad49745decc26e4fba54512b87e71c3e68eb31"
+    },
+    {
+      "path": ".git/objects/8a/9d4399bcc6f589627c86d0caad3fc8eabfcae1",
+      "bytes": 367467,
+      "mime": "application/octet-stream",
+      "sha256": "91e86bd2ddfb46bf6dc34936b14b10bc38ab2956f5a7eff0a40896c2bc79838e"
+    },
+    {
+      "path": ".git/objects/8e/2e6391a24c969e46bf02941d3933fcacda9536",
+      "bytes": 981998,
+      "mime": "application/octet-stream",
+      "sha256": "ee9370adb0984af7d9a792fbeb7639e67f19a6118533684d2cfc9138af18dc99"
+    },
+    {
+      "path": ".git/objects/8f/3430341e261c1272b5b9bd037a01912ea40736",
+      "bytes": 117,
+      "mime": "application/octet-stream",
+      "sha256": "6c2f8f89f4b10948991db6319d0e2a47a8b951d7af482b6c6c2e6cf4dbe96786"
+    },
+    {
+      "path": ".git/objects/93/6fd470f3ad5a039041ca25eec25cb6faa86a29",
+      "bytes": 164420,
+      "mime": "application/octet-stream",
+      "sha256": "37ac390a37e4d8e4debe007598db3508b08fc4fc8edbda89bb87ea2013d0aee0"
+    },
+    {
+      "path": ".git/objects/95/4672ed25e06c5d1ba7d71a131f459d26cb3a42",
+      "bytes": 5378,
+      "mime": "application/octet-stream",
+      "sha256": "4f099650f603cf5337f01f9be51aba4b1add3bbbfdf2f828533b79c9d77e86f0"
+    },
+    {
+      "path": ".git/objects/97/feefedeb52ce44a31005f4a4800bd025b035d9",
+      "bytes": 248,
+      "mime": "application/octet-stream",
+      "sha256": "09b1709b8561804966339a0dd164c3c9bcb41b21de881bb07ce654cbe1c0dbb5"
+    },
+    {
+      "path": ".git/objects/99/0a082e27a7dd4861f6ceccf8fdf5420cd0813d",
+      "bytes": 327848,
+      "mime": "application/octet-stream",
+      "sha256": "96ee8cea41de4ea8b8dd579d8f5963c9e517dcf9f9c517549941cbaa770817cb"
+    },
+    {
+      "path": ".git/objects/9b/ab407c00e3e2b319d4cca789ac8057f2f91aff",
+      "bytes": 479330,
+      "mime": "application/octet-stream",
+      "sha256": "b12a79907a6fadc661df6408ee91003afd6f18c0c9ee1c34f69da25451e08ed6"
+    },
+    {
+      "path": ".git/objects/9d/f8934848e09e8d2c06a68f1dd9e61265c758ea",
+      "bytes": 1018478,
+      "mime": "application/octet-stream",
+      "sha256": "05eaf1da860b3f64e2ed26650a8ea79e8214412b3c3dbca79d6b9974a1083764"
+    },
+    {
+      "path": ".git/objects/9f/80e077817ed0ac62f5e4930a6130147f9abf86",
+      "bytes": 1018583,
+      "mime": "application/octet-stream",
+      "sha256": "2db1f51037d29c974580bbe26db1a9b6a2a193b902c482ed7d41881411b569be"
+    },
+    {
+      "path": ".git/objects/a0/9513d9067f8d27edaca66f831a48c0bb93498b",
+      "bytes": 982396,
+      "mime": "application/octet-stream",
+      "sha256": "806729123d7f35c9aa1ebf142969f47bd129fc0a8f195195a7f6d311d4eee022"
+    },
+    {
+      "path": ".git/objects/ad/75a1bb8aa2696e9cd423102f1a27114a920c3a",
+      "bytes": 1017179,
+      "mime": "application/octet-stream",
+      "sha256": "50111d631785f83fbd9f3aea2fa95036121ce561496550cb990ff0a4325f368e"
+    },
+    {
+      "path": ".git/objects/b0/fb48d023c84d44ebc7501772909a4f4e4e513b",
+      "bytes": 117,
+      "mime": "application/octet-stream",
+      "sha256": "52b774b4e7e45ccd4ef9e86a1df40dbce8cfd65c331c2faebb376d8e68e1a2c7"
+    },
+    {
+      "path": ".git/objects/b4/b14760b7b4fa2553a19e3bcbb813c38b8c90fd",
+      "bytes": 20450099,
+      "mime": "application/octet-stream",
+      "sha256": "a24d354aa9b97819ad237003648a280f0416d4aab37e5d310b7c1a5e3511c046"
+    },
+    {
+      "path": ".git/objects/b8/8e2720084d1f73bafc0cd414f8adb78c9832a0",
+      "bytes": 131,
+      "mime": "application/octet-stream",
+      "sha256": "8b5fd3c71eca3780e42afcf6894b051acc4e5130f0e67d9c674c47da068f6cbf"
+    },
+    {
+      "path": ".git/objects/b8/afbbee4ea054f911953f25c794911afefe9932",
+      "bytes": 112,
+      "mime": "application/octet-stream",
+      "sha256": "e98200375f1efa6d40d43e3470aeaf17f7b94aca1861bc4c6f744e04ae27840a"
+    },
+    {
+      "path": ".git/objects/ba/eb90e2fc448f95521dd327dc00e11ddb329eeb",
+      "bytes": 819344,
+      "mime": "application/octet-stream",
+      "sha256": "c4c325a58f4eee230843e7a91bad2af602229b2e572507656ea9f4380ffa31db"
+    },
+    {
+      "path": ".git/objects/bf/2b1a1a72e8ff6fee908067f8ce303bb7d5d882",
+      "bytes": 495243,
+      "mime": "application/octet-stream",
+      "sha256": "a9bc0a5793406306a6e814bd1bca4f29f19dc82e2ad325411a337dd92d7079e6"
+    },
+    {
+      "path": ".git/objects/bf/30b162de45d5a23b34eae6f73b3812eacfe52c",
+      "bytes": 3935703,
+      "mime": "application/octet-stream",
+      "sha256": "cf45c0f1c6775c927976284d1fbeba37b76d916e874fbfbf2c4cea3edd2e5385"
+    },
+    {
+      "path": ".git/objects/c0/019a6249af056be441608a65b99ea28c745024",
+      "bytes": 181476,
+      "mime": "application/octet-stream",
+      "sha256": "36a05e5271c1b59b7fe98dc05861b0d461c98211f765d3519b5d4260470c15d8"
+    },
+    {
+      "path": ".git/objects/c0/024403315774125003863db5a94747e538d633",
+      "bytes": 226926,
+      "mime": "application/octet-stream",
+      "sha256": "aa87cbda905121a93560050b77f45f74fdd0cc81c93ddbab5c61dd3d9ec5541c"
+    },
+    {
+      "path": ".git/objects/c5/6a71d2d52b74df98a82631491d2ef6f048fea4",
+      "bytes": 156680,
+      "mime": "application/octet-stream",
+      "sha256": "0ac6a470b6733f80cf3c79f77aa6dfaa4fc84f6f54204c24eb0626b7549a25e7"
+    },
+    {
+      "path": ".git/objects/c7/0ad5f511d77ebe7fb03344631dcdab3df58ecd",
+      "bytes": 618776,
+      "mime": "application/octet-stream",
+      "sha256": "4fe6e356a8647116d949020fd7bf611914a7c4cff72fdedcc9e142ce7d78a33b"
+    },
+    {
+      "path": ".git/objects/c7/a1a42c0e21f90f91ef871f2393e7ed0bef1b76",
+      "bytes": 570,
+      "mime": "application/octet-stream",
+      "sha256": "6792ea107f00629f6474c90519477c3eb4232864538f7c8370664b5a71d994b4"
+    },
+    {
+      "path": ".git/objects/c9/5dc7d3941e4d1b7ee3b29c8f6eb43f72763253",
+      "bytes": 1046323,
+      "mime": "application/octet-stream",
+      "sha256": "c2cd01e9fc3b79aea39d94b0eb093f7a35747ba34fb9d63bcefb5bf42bc611c1"
+    },
+    {
+      "path": ".git/objects/c9/c4f23e887c1ddde49bda9a15ce68a1c1e01012",
+      "bytes": 1079374,
+      "mime": "application/octet-stream",
+      "sha256": "d1cd9b2736a080cfa3df0fecc0082509bf9edf7cfaa6db68b291efdf83fc33a2"
+    },
+    {
+      "path": ".git/objects/cb/50de228c4fa212db0e969d3faaaeb283c8cf3a",
+      "bytes": 4304968,
+      "mime": "application/octet-stream",
+      "sha256": "504783a10f41870c691f20a158494bf786a2bb703f30ff285e73e3fe7926e79d"
+    },
+    {
+      "path": ".git/objects/cd/e5e42c4114928f99587fc3b4f7f45330a2486b",
+      "bytes": 1084735,
+      "mime": "application/octet-stream",
+      "sha256": "3c10feb476f162e43fd443d8f5f0b4959a041c8f523609ccd462a8334dfa269e"
+    },
+    {
+      "path": ".git/objects/cf/2227b3339437f0770c72579277b5b20d1d8b9e",
+      "bytes": 625449,
+      "mime": "application/octet-stream",
+      "sha256": "ebaa0561eb9f2d5c6d252d4a47f48213cf56509da03a50acf3328ae697079737"
+    },
+    {
+      "path": ".git/objects/cf/3bc0d579192d7f5f69b7e9503e849ba4033d77",
+      "bytes": 11717627,
+      "mime": "application/octet-stream",
+      "sha256": "9368a9d008005715270bebcfe9e9211199ae0e28b37b238bad2388ad0ccedb13"
+    },
+    {
+      "path": ".git/objects/d1/92759797900edfc6fc918f350d51b7cb58d1e9",
+      "bytes": 844806,
+      "mime": "application/octet-stream",
+      "sha256": "652036faa427769bc495bba75eb79bf400aa6c5562f8338e4a24ea1faa32d640"
+    },
+    {
+      "path": ".git/objects/d5/4acacd745ed041821ddb522f331a0f3e456075",
+      "bytes": 47,
+      "mime": "application/octet-stream",
+      "sha256": "fc545ab9096193f0da16fc5a57de20f606f706603601ea39912245fd8dbb39d6"
+    },
+    {
+      "path": ".git/objects/d8/c24ad8cdf0a0e8ed72c604896d2bc878277e60",
+      "bytes": 1378239,
+      "mime": "application/octet-stream",
+      "sha256": "77954b8967892905994ad8ca52cf8ebc5749cf6d372bf3b76765632f19e13b2b"
+    },
+    {
+      "path": ".git/objects/d9/71577ca696bbfd40b9470299b59f47775287e0",
+      "bytes": 3206765,
+      "mime": "application/octet-stream",
+      "sha256": "46b39c70a2bb4f8e69e9717db719427113625f5a982ee7fa96e9396a1a9e66d1"
+    },
+    {
+      "path": ".git/objects/de/c1c8852fecaced4aa828b643c4317a16d3b783",
+      "bytes": 20123,
+      "mime": "application/octet-stream",
+      "sha256": "40259383b2e6b7eafb8876eb81cae53397c94e2ff73ff56b3733fce771c88772"
+    },
+    {
+      "path": ".git/objects/df/6522ff754b53a871d955154b3ca58796a78746",
+      "bytes": 3029029,
+      "mime": "application/octet-stream",
+      "sha256": "cd536984f4735f635548adfe56c69712ed1bb6558c2982337e5c1bca3a4d7737"
+    },
+    {
+      "path": ".git/objects/e0/212b51f4f7738252d126b9a516420570a6b986",
+      "bytes": 8046,
+      "mime": "application/octet-stream",
+      "sha256": "36aacd4dd61e1e3577a5581d4b709f42c21a559d5263c4f98a4055f0074c6c7e"
+    },
+    {
+      "path": ".git/objects/e0/466e056da23c0caa2b562b8982c3667af05e78",
+      "bytes": 2651063,
+      "mime": "application/octet-stream",
+      "sha256": "8adaa012f07111f4d062d75c27e0cf103841356badf04dde0e0cc5df2fc8cfd6"
+    },
+    {
+      "path": ".git/objects/e0/707e0c447c396aa98e2e48aaf43f676d776c7a",
+      "bytes": 56,
+      "mime": "application/octet-stream",
+      "sha256": "96d43b4a83eeb9bb4eb28677c3faa1f161327425781f96ad64daef38d0ca35ac"
+    },
+    {
+      "path": ".git/objects/eb/82f264df361bf51b2028acf987efc11c5d0007",
+      "bytes": 9599605,
+      "mime": "application/octet-stream",
+      "sha256": "1346faa37785d8f615a71e9598abb9def2c79a2eb4d7ddd6b40ae21678311e70"
+    },
+    {
+      "path": ".git/objects/ec/02d8570721c4e634df0be7de6766da517be890",
+      "bytes": 606573,
+      "mime": "application/octet-stream",
+      "sha256": "6031e861d05cd6b20377cf55e4b3265bd8eedbc9fcc20b85c41edbc1ef5efc9b"
+    },
+    {
+      "path": ".git/objects/ed/56a95c3ffb4e642d6c3f35264b37637736683e",
+      "bytes": 8740041,
+      "mime": "application/octet-stream",
+      "sha256": "83fec96b5cbdba11f4d9e7ed8c4b3e9bc31ee86957d05188c3d14db491e3f5d5"
+    },
+    {
+      "path": ".git/objects/ee/63dc46b87c29e22666d27fc42662b51c22811a",
+      "bytes": 806336,
+      "mime": "application/octet-stream",
+      "sha256": "931d199b09afa7b37f7ad5c8b47a20438bf3a4ff326ac122369386dd47797b18"
+    },
+    {
+      "path": ".git/objects/f5/3388ccc56dd0a880c6eb65476234cd2e4626c0",
+      "bytes": 883,
+      "mime": "application/octet-stream",
+      "sha256": "6f87c43e4c553763b9ef386329e4e9384ea8f60a26d0a6913efd8e0da2b8618f"
+    },
+    {
+      "path": ".git/objects/f5/e8d48314af493d345e1bfad6c3c66aa0ed7c8b",
+      "bytes": 1719,
+      "mime": "application/octet-stream",
+      "sha256": "0c53ba7fd3e58ed999da522fa18400b4bad7f88c0db9c56b8c557641afe701c0"
+    },
+    {
+      "path": ".git/objects/f6/2b1529fb3690bde7a8bfb2dbbec1c5b74124cb",
+      "bytes": 509693,
+      "mime": "application/octet-stream",
+      "sha256": "fc6f8fd3d9a6c82c59c490213d1ee9f9b6e701536c71dc7dc85f7688117a4c40"
+    },
+    {
+      "path": ".git/objects/f6/ad840e1daa3b549a05b15a99314efec287b6da",
+      "bytes": 145,
+      "mime": "application/octet-stream",
+      "sha256": "c865473b4fd58012d18fab3ae10d461b753d680eb083951d0350914ea66f8312"
+    },
+    {
+      "path": ".git/objects/f9/ca0a4bf69f43b0883a763554189ea3669dcada",
+      "bytes": 1102562,
+      "mime": "application/octet-stream",
+      "sha256": "e3b5cfbea4ee23f70d450c1d302dc73c91f5579e1dd3ace63f89fbd534d741b6"
+    },
+    {
+      "path": ".git/objects/fa/fff2e8d6c86b79ee1db7cde4325e11516fabfb",
+      "bytes": 36,
+      "mime": "application/octet-stream",
+      "sha256": "93e0e3503ad4667b4e7dc7aaf867f7a669f708aa9ffda2e6a01b8b825d7d541a"
+    },
+    {
+      "path": ".git/objects/fb/fda73257b165cc857f16508ed7d94335f8aba1",
+      "bytes": 467559,
+      "mime": "application/octet-stream",
+      "sha256": "3d592ab4b5e535bec989e28901bc2e0d4ecb9dd8a7afeaf291bbd6850311ac4c"
+    },
+    {
+      "path": ".git/objects/fc/864f6a52ac7a17e2b54812b58f7384778ad555",
+      "bytes": 790891,
+      "mime": "application/octet-stream",
+      "sha256": "92d04d01e737d8dbaa42303a2730302c762ab04c32fe3a7d238c01356be4bb9d"
+    },
+    {
+      "path": ".git/objects/fd/ae9e15a4f8e725252bb38bbdd1211fa7651dcc",
+      "bytes": 7081089,
+      "mime": "application/octet-stream",
+      "sha256": "411fcdc61f753cc4f13a4116c1a0f308a5303658870a321b1f54654fc0e42aa5"
+    },
+    {
+      "path": ".git/refs/heads/main",
+      "bytes": 41,
+      "mime": "application/octet-stream",
+      "sha256": "a6b7de76f715443e2d11b33a21befb58f1a44737ea764d639e16489390acf96c"
+    },
+    {
+      "path": ".git/refs/remotes/origin/main",
+      "bytes": 41,
+      "mime": "application/octet-stream",
+      "sha256": "a6b7de76f715443e2d11b33a21befb58f1a44737ea764d639e16489390acf96c"
+    },
     {
       "path": ".gitignore",
       "bytes": 20,
@@ -17,9 +755,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 1765,
+      "bytes": 1876,
       "mime": "text/markdown",
-      "sha256": "0a6d26b06832622db6104f273b1cd8e343b261b37413701fb4bcee07ec26bb96"
+      "sha256": "b8b5b92c520fe00075b3799f4d20d12b993e29ea9d183e90187cc60cba29e016"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -182,6 +920,546 @@
       "bytes": 8585,
       "mime": "application/json",
       "sha256": "0c2a45a2c458638e424be5009b19b0435ed62631c07cf39bd2801a0ac6cf7441"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-001.webp",
+      "bytes": 2338,
+      "mime": "image/webp",
+      "sha256": "5de88d34892eeb3a4a37b1ff34906236c0076daea67247c5a26280dd3271d8e9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-002.webp",
+      "bytes": 2338,
+      "mime": "image/webp",
+      "sha256": "5de88d34892eeb3a4a37b1ff34906236c0076daea67247c5a26280dd3271d8e9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-003.webp",
+      "bytes": 2338,
+      "mime": "image/webp",
+      "sha256": "5de88d34892eeb3a4a37b1ff34906236c0076daea67247c5a26280dd3271d8e9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-004.webp",
+      "bytes": 2338,
+      "mime": "image/webp",
+      "sha256": "5de88d34892eeb3a4a37b1ff34906236c0076daea67247c5a26280dd3271d8e9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-005.webp",
+      "bytes": 3258,
+      "mime": "image/webp",
+      "sha256": "23dde53dc3acdd85d4f89cad60f011f8adb87174ebaf966a80b9ef4a48ef682d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-006.webp",
+      "bytes": 7574,
+      "mime": "image/webp",
+      "sha256": "9041abe971191bac1c4cd3a19225f61928277297b5927f187bb80021795d554d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-007.webp",
+      "bytes": 7764,
+      "mime": "image/webp",
+      "sha256": "54955cb098405c47b2e64eee0b803bde7ef5a7d548128a1f95a579dbead549f1"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-008.webp",
+      "bytes": 8444,
+      "mime": "image/webp",
+      "sha256": "82d8ec19575756d76b3b9a094c5f28f2e542d1434c064bf15a6df54b6761f902"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-009.webp",
+      "bytes": 9834,
+      "mime": "image/webp",
+      "sha256": "8e3e0e4fd4b61ea7bb33f5032b6d4da3e17d6a3b80423cd9b4e8f0d18451199c"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-010.webp",
+      "bytes": 12402,
+      "mime": "image/webp",
+      "sha256": "11185d2ca2d12ea407fd6eaffce5f13e68603a9b63cdd50ebd26990709e7a87d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-011.webp",
+      "bytes": 16528,
+      "mime": "image/webp",
+      "sha256": "b951ceb4745231697d7bc927fc3fb49487041b24d011adcea590b84b3361ac5d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-012.webp",
+      "bytes": 20422,
+      "mime": "image/webp",
+      "sha256": "c6bac06471ce84f05369fcbda1b6da74551d57c72a9012ef94b5d6bf1dd4e9a9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-013.webp",
+      "bytes": 24810,
+      "mime": "image/webp",
+      "sha256": "414b402bb30231d7f9816bec193d1510c329b00db81333ecec77118a17ee1c97"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-014.webp",
+      "bytes": 30536,
+      "mime": "image/webp",
+      "sha256": "d23093b2d235fb09fc6476f486e369fceb2fd4653a6d783e367232ad7a6ceea4"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-015.webp",
+      "bytes": 38282,
+      "mime": "image/webp",
+      "sha256": "49a1274b295ee8e53ccf70b6dc3533d34069d6f8b38e7fe9141016aa745d93d7"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-016.webp",
+      "bytes": 43584,
+      "mime": "image/webp",
+      "sha256": "c5128204682ea1c556785906b9d14355d124e14df7db88f6c5b3ae79d4a703a3"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-017.webp",
+      "bytes": 49530,
+      "mime": "image/webp",
+      "sha256": "0af5948e6ccddb45ba2493dcefa6248b2ea357f023365ba0fc82541e930d3603"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-018.webp",
+      "bytes": 51550,
+      "mime": "image/webp",
+      "sha256": "f8ed15b3b2b979538f15d15870d0e653c6600d7821f19eff2bab334888704f83"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-019.webp",
+      "bytes": 55298,
+      "mime": "image/webp",
+      "sha256": "1caa1299693fb175b65ed698a562fdbd2aa587b75622f87f8e658ab7c99dd249"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-020.webp",
+      "bytes": 57636,
+      "mime": "image/webp",
+      "sha256": "e95bbb72bc633b738e500e98a587ea18715b0244d422c5519cf3e26c110623bd"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-021.webp",
+      "bytes": 64168,
+      "mime": "image/webp",
+      "sha256": "87e5ea32b24889b573a6b4cb80eafd690d0f8cafcc074c3ff42f7f56bd3ee6fd"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-022.webp",
+      "bytes": 63970,
+      "mime": "image/webp",
+      "sha256": "440c408cc58341d4866dd13e300105378d8669fd5817f22b2db3beb64789f82f"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-023.webp",
+      "bytes": 67770,
+      "mime": "image/webp",
+      "sha256": "502941115376327044ab7d7744bdaddbd0daeff7ed0bba2188f1abeb93d5733f"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-024.webp",
+      "bytes": 66888,
+      "mime": "image/webp",
+      "sha256": "4432833e2db05b1e2cfe2f7a90e403e969345443f28c524f6e7d242d3bcabc0a"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-025.webp",
+      "bytes": 71496,
+      "mime": "image/webp",
+      "sha256": "0ac3947995fb762b45bac0cce85c1f299dd1a3256c747339ccddcc48ce73e606"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-026.webp",
+      "bytes": 70504,
+      "mime": "image/webp",
+      "sha256": "a55f7db93e0a17863bf12b528553b63e30b987fc784b280fa176a222ca95e0d0"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-027.webp",
+      "bytes": 75044,
+      "mime": "image/webp",
+      "sha256": "2af8c1995af3859e72769ceeb5c25ad620ab95280295c772d0abca72b70e4c36"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-028.webp",
+      "bytes": 73002,
+      "mime": "image/webp",
+      "sha256": "d7a1f95e592332542307577e4cd3907a66fc343fcdb3570c4f68e8774f256cfa"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-029.webp",
+      "bytes": 76470,
+      "mime": "image/webp",
+      "sha256": "05d46e7978419d571592a430f85890c1cb1a313de6c1382034ddcc4623d7878d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-030.webp",
+      "bytes": 76306,
+      "mime": "image/webp",
+      "sha256": "950d27ae8f91e00a4930034b33985fc31dcde2264608c356a9ac233d6b5969f1"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-031.webp",
+      "bytes": 86408,
+      "mime": "image/webp",
+      "sha256": "c2805416b58d178011dcddbca76059b46ac9b35343adbb1394b2d2928ca5ae32"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-032.webp",
+      "bytes": 83062,
+      "mime": "image/webp",
+      "sha256": "c36f73b532767180465c0135837a0d7314062d76367ea791123bc9c02bddd588"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-033.webp",
+      "bytes": 99072,
+      "mime": "image/webp",
+      "sha256": "0f6b8664e059409f066c046921acf9bde0562781ac1156d7d0d8c456e8c9988a"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-034.webp",
+      "bytes": 94586,
+      "mime": "image/webp",
+      "sha256": "eb6bf10478d515277441d1fc9dd5a6d8c6aedddaaefac33fff2a7ea3e8c603e3"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-035.webp",
+      "bytes": 98412,
+      "mime": "image/webp",
+      "sha256": "4a88ae17d5bfecfc9422e1a9be763aa1eff135d33e9b7bf782ff9cd59494c06e"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-036.webp",
+      "bytes": 97734,
+      "mime": "image/webp",
+      "sha256": "a847045ecabd16f0aa2074186390b124b698b5d5637b592af663149b0db28b07"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-037.webp",
+      "bytes": 101910,
+      "mime": "image/webp",
+      "sha256": "2b854edccd6257afd7e09f9be159cf8a2f968514d5a4685cfe6786b8c0616115"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-038.webp",
+      "bytes": 99654,
+      "mime": "image/webp",
+      "sha256": "ec0e28bb51afa6d740b89085177f6dceecff70288ef431d777b9ad2d8d2d815c"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-039.webp",
+      "bytes": 111226,
+      "mime": "image/webp",
+      "sha256": "8be9ee0015f35a799e976278caa68bf1aa5bcb87f958e11029c19e3f3f2a8de6"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-040.webp",
+      "bytes": 105894,
+      "mime": "image/webp",
+      "sha256": "3dc04cea8de3312eb5be22143e8a453efc0d243f9b25b3b0073d5c4b81c18151"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-041.webp",
+      "bytes": 109786,
+      "mime": "image/webp",
+      "sha256": "932aae7601da358ff7309322d61595a77298e071ae2bb2f1ab29b512c8f988c1"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-042.webp",
+      "bytes": 114698,
+      "mime": "image/webp",
+      "sha256": "0595651425f0c96a5717fc62a7d74fd75bc2ce994072b03d17d068d8b6656ea9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-043.webp",
+      "bytes": 111362,
+      "mime": "image/webp",
+      "sha256": "49c0a69cc50f355e78145395e1d78cef5c41dc03e8fd55c5d0de683395550b08"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-044.webp",
+      "bytes": 115434,
+      "mime": "image/webp",
+      "sha256": "9273ca87ccc5860ac982d5012bf26836e6163cffc93b211c3b537fff73fe859b"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-045.webp",
+      "bytes": 113066,
+      "mime": "image/webp",
+      "sha256": "7d66e69a3d58ec59e12c258adf27fec8ff861f2089457b43b2f92c0a82bd35c8"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-046.webp",
+      "bytes": 120114,
+      "mime": "image/webp",
+      "sha256": "ac26e5186d303f26f39ab99266ea8c40b8a89ccfbf311d913a4d5519d24b752a"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-047.webp",
+      "bytes": 118852,
+      "mime": "image/webp",
+      "sha256": "9f82fe8f4beca2c4fa24df21012a61951743dad426014d765bcffb1962934685"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-048.webp",
+      "bytes": 122642,
+      "mime": "image/webp",
+      "sha256": "3cd16fb73641213699343dc98bafb36754ddc0308b66f9b37a44c7b885d177c4"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-049.webp",
+      "bytes": 134590,
+      "mime": "image/webp",
+      "sha256": "14b86b0de930063f7922f09d2ace86cb70c7c93e93d02ed51a008ca139ec4fa9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-050.webp",
+      "bytes": 126462,
+      "mime": "image/webp",
+      "sha256": "a146b0f2e4fdc7c192d62e28e2ae220d3e232ffd90945f6b4e6829fe610f30fa"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-051.webp",
+      "bytes": 129894,
+      "mime": "image/webp",
+      "sha256": "1f6929a496f34576665f58b85e662f826145a0c288dd71a0a71e9862eae319fb"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-052.webp",
+      "bytes": 123858,
+      "mime": "image/webp",
+      "sha256": "926286a8b01db0ab325f953db48c8574be4b8c2de91bce80681cd7f547abeb50"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-053.webp",
+      "bytes": 127564,
+      "mime": "image/webp",
+      "sha256": "e486e686ec03ec539a063f70589b4393966de6927a6e566caf3886c113a4aa01"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-054.webp",
+      "bytes": 121868,
+      "mime": "image/webp",
+      "sha256": "2ad5a4cf979b80510a0050c5dd9cd3c15f5841e22ab45f075dfa846da8155174"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-055.webp",
+      "bytes": 123582,
+      "mime": "image/webp",
+      "sha256": "49534a1c0df2de29641ecb387e2dd925010a50dda6c68e8f0c2166b35e4060fa"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-056.webp",
+      "bytes": 122608,
+      "mime": "image/webp",
+      "sha256": "d8bcd6e852dbaca57b562716034a42d237868b39ccb157b39a7f0863df1cf90e"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-057.webp",
+      "bytes": 119386,
+      "mime": "image/webp",
+      "sha256": "58fa1a8ca0eb337439abddff9500fc06a18fbe2b004dc0dfb35917f6f7c531c4"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-058.webp",
+      "bytes": 118814,
+      "mime": "image/webp",
+      "sha256": "cd2ca995d691b0a958644ae87181f0f9d135fd6089f4cebfe65731989741c580"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-059.webp",
+      "bytes": 116660,
+      "mime": "image/webp",
+      "sha256": "c280912ebc7bd919773455425dfb0c6ba88d732ff60d687920baf14903db9e8e"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-060.webp",
+      "bytes": 116586,
+      "mime": "image/webp",
+      "sha256": "36a6ab2869ef4ad7c8d3541d9fd6f8d1df6e308387d958d611d2c69211ca902d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-061.webp",
+      "bytes": 114710,
+      "mime": "image/webp",
+      "sha256": "715466ad63ad004723ba9f8681dc91a3e1539f0989ca1897906b039b0a59fce1"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-062.webp",
+      "bytes": 114972,
+      "mime": "image/webp",
+      "sha256": "069861642c6ca66c6387e5d317ebf036ef6eceaa31fe249c2de1b1ad33a395f2"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-063.webp",
+      "bytes": 108996,
+      "mime": "image/webp",
+      "sha256": "f82762ea0bb9a9b31c49b76320100f2ba66f474f99d9f3d7a75cdb9bb30f59d4"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-064.webp",
+      "bytes": 110646,
+      "mime": "image/webp",
+      "sha256": "01d10b9284448db2d77bcbe762f9bc038c05410d2d52277885d98c510ef252d1"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-065.webp",
+      "bytes": 121906,
+      "mime": "image/webp",
+      "sha256": "bd23e670de84f70729ba36b9a984fdebf65f4b7f373d928e9376a92a6173fe5c"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-066.webp",
+      "bytes": 113702,
+      "mime": "image/webp",
+      "sha256": "2c94f89ec9211eaef8f36763678a5196369a7118734e13e0e4e2dc9875c64c1a"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-067.webp",
+      "bytes": 110988,
+      "mime": "image/webp",
+      "sha256": "1b616e289c37b55b058875ec4cf0121e3e9c9167824eb87cf406f82aa4edfd8e"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-068.webp",
+      "bytes": 106796,
+      "mime": "image/webp",
+      "sha256": "9f745e5c4c1e7d54850dd949a3bdbf8e5dd7edebe79793d053821d031a0ae316"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-069.webp",
+      "bytes": 100388,
+      "mime": "image/webp",
+      "sha256": "d0701484daca669d837c346d008ab3f7bc9864b61e2e136a97b83ebe0a703740"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-070.webp",
+      "bytes": 100688,
+      "mime": "image/webp",
+      "sha256": "95177fa3722048b8934d030d29ea690dabbc4c0a8868356fa64ec7723f3b92f6"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-071.webp",
+      "bytes": 96212,
+      "mime": "image/webp",
+      "sha256": "d0be17f69efd8ac9c28707dce0cd6e574d4b2a256c67e29d9d53bc7a8de1659f"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-072.webp",
+      "bytes": 96370,
+      "mime": "image/webp",
+      "sha256": "4e990775b63f343b7776926656dc58a3f9aa5506adbf331b0b917c94f68a9e5a"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-073.webp",
+      "bytes": 91526,
+      "mime": "image/webp",
+      "sha256": "cfbc4845fab457664c8e2a57366039a7bda11e5db8ba70ffdc121b1b1369367b"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-074.webp",
+      "bytes": 92216,
+      "mime": "image/webp",
+      "sha256": "ded4f200de4c82fb9efacc980440515377facb4b7d4b78139d23067b18f7763d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-075.webp",
+      "bytes": 87760,
+      "mime": "image/webp",
+      "sha256": "ca219e85b6dfa90bf110276c82adbd410de5bb54fc0a28d9796ae29a05dec602"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-076.webp",
+      "bytes": 85568,
+      "mime": "image/webp",
+      "sha256": "78534b049370e565bbd6c7f9fccf672f2bf6faa55d5205010bedc25e072f3a99"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-077.webp",
+      "bytes": 80208,
+      "mime": "image/webp",
+      "sha256": "ce770d7d76d8aff964a7ed49ffade1014354e58ccab9b007511876509bb00abf"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-078.webp",
+      "bytes": 76874,
+      "mime": "image/webp",
+      "sha256": "3914cb33be30e4b1d1f90cd3da20b2919dfbeb2e81041c634d61b0cce2b10dd4"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-079.webp",
+      "bytes": 74382,
+      "mime": "image/webp",
+      "sha256": "e416b082d743414933ef7390b5e229121465dc5f599afe92105efe6712288482"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-080.webp",
+      "bytes": 71006,
+      "mime": "image/webp",
+      "sha256": "aa1aba78a1dc4ef1ff5c774b75ecd335e6a8e8bee5d759711ff5c67a0db1755d"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-081.webp",
+      "bytes": 73790,
+      "mime": "image/webp",
+      "sha256": "5ea3e6c2c04728633287612c39829e6851c41f979c57c277371ee97d05241e2a"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-082.webp",
+      "bytes": 66944,
+      "mime": "image/webp",
+      "sha256": "d3a9e0ce0bab360dc00fdd2f05e1b1bc712af17db1e6a8a548e453aea9fafcfc"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-083.webp",
+      "bytes": 63166,
+      "mime": "image/webp",
+      "sha256": "8cc701493286c90ac99d562292320330040ac4fff539f6f5a03fc19401efe794"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-084.webp",
+      "bytes": 53138,
+      "mime": "image/webp",
+      "sha256": "b0194980acfb48408f51b66d66ead50d5f08918d98d8b809b8620ee1824b2ee7"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-085.webp",
+      "bytes": 45742,
+      "mime": "image/webp",
+      "sha256": "06c273b47262188b21dffec25d47ceca1690505fc532e34e1dba1e80a2faa692"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-086.webp",
+      "bytes": 30780,
+      "mime": "image/webp",
+      "sha256": "41b037ac83c3931836a31d0d5addd21f3156eb417f0f1c8abee46b1389324ade"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-087.webp",
+      "bytes": 18572,
+      "mime": "image/webp",
+      "sha256": "da3d4279ff23eaac823c89c8367733b7bebdbb650888a395f1a89838522d91a9"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-088.webp",
+      "bytes": 7648,
+      "mime": "image/webp",
+      "sha256": "e07ba6638df1bb3c8e5b4c6443fe7fd72f210dd5022752746a05637589288d67"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-089.webp",
+      "bytes": 2382,
+      "mime": "image/webp",
+      "sha256": "686791749b9526f4c68aa70d488ed0b32f770c629d17bc1d2954439efa86b487"
+    },
+    {
+      "path": "photos/materials/brava-light-study/sequence/frame-090.webp",
+      "bytes": 2382,
+      "mime": "image/webp",
+      "sha256": "f4754cb35381e4ec0229d907a1b95499ab1adaa1d4603bcdd1940da5b8cf8be8"
     },
     {
       "path": "photos/projects/christ-church/bell-tower-primary-leak.jpg",
