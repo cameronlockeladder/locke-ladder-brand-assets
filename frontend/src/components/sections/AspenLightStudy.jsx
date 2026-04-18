@@ -31,7 +31,7 @@ export default function AspenLightStudy() {
       style={{ height: "240vh" }}
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        {/* Stacked frames — one visible at a time */}
+        {/* Stacked frames · one visible at a time */}
         <FramesStack progress={index} />
         {/* Atmospheric vignette */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink/60 pointer-events-none" />
@@ -39,16 +39,14 @@ export default function AspenLightStudy() {
         {/* Overlay copy */}
         <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-12 pointer-events-none max-w-[1600px] mx-auto">
           <motion.div style={{ opacity: labelOpacity }}>
-            <div className="eyebrow text-paper/80">A Light Study</div>
-            <h2 className="mt-4 font-serif font-light display-tight text-[12vw] sm:text-5xl lg:text-[5.5vw] leading-[0.95] max-w-5xl text-paper">
-              Aspen, <span className="italic">from dawn</span>
-              <br />
-              to evening.
+            <div className="eyebrow text-paper/80">A Light Study · Brava Aspen</div>
+            <h2 className="mt-4 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.5vw] leading-[0.95] max-w-5xl text-paper">
+              Aspen, from dawn to evening.
             </h2>
             <p className="mt-4 max-w-lg text-paper/75 text-base leading-relaxed">
-              Mineral pigmentation moves with the sun. The color you choose on Tuesday
-              is the color you see at vespers — and the color that still reads as cedar
-              at 7 p.m. in October.
+              Mineral pigmentation moves with the sun. The color the Board
+              picks on Tuesday is the color you see at vespers, and the color
+              that still reads as cedar at 7 p.m. in October.
             </p>
           </motion.div>
 
@@ -93,7 +91,7 @@ function Frame({ src, i, progress }) {
 function FrameCounter({ progress, total }) {
   const label = useTransform(progress, (i) => `${String(i + 1).padStart(3, "0")} / ${String(total).padStart(3, "0")}`);
   return (
-    <div className="font-serif text-paper/90 text-base md:text-lg tabular-nums">
+    <div className="font-display text-paper/90 text-base md:text-lg tabular-nums font-medium">
       <motion.span>{label}</motion.span>
     </div>
   );

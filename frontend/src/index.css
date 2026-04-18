@@ -22,51 +22,58 @@ html {
   background: var(--paper);
 }
 
+/*
+  Type system
+  Display + UI + Body default: Inter.  Termina Medium is the intended brand face;
+  when a licensed Termina WOFF2 drops under /assets/fonts/, update the font-family
+  below to prepend "Termina".
+  Serif (Fraunces) is reserved for the Brava Gallery title and small italic accents only.
+*/
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", "Termina", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 400;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "ss01", "ss02";
+  font-feature-settings: "ss01", "cv11";
 }
 
-/* Brand font (Locke & Ladder wordmark / eyebrows / section markers).
-   Target: Termina Medium (commercial, Adobe Fonts). Currently substituted
-   with Archivo Medium — a close free match. When a Termina license is
-   available, drop the WOFF2 files under /assets/fonts/ and switch
-   --font-brand to "Termina", Archivo, sans-serif. */
-.font-brand,
-.eyebrow {
-  font-family: "Archivo", "Termina", "Manrope", system-ui, sans-serif;
+.font-display {
+  font-family: "Inter", "Termina", system-ui, sans-serif;
   font-weight: 500;
-  font-feature-settings: "ss01";
+  letter-spacing: -0.035em;
 }
 
 .font-serif {
+  /* Reserved for Brava Gallery + tiny italic accents only */
   font-family: "Fraunces", "Cormorant Garamond", Georgia, serif;
   font-feature-settings: "ss01", "ss02";
 }
 
 .font-sans {
-  font-family: "Manrope", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
-/* Editorial typographic helpers */
+.font-brand,
+.eyebrow {
+  font-family: "Inter", "Termina", system-ui, sans-serif;
+  font-weight: 600;
+  font-feature-settings: "cv11";
+}
+
 .display-tight {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
   line-height: 0.95;
 }
 
 .eyebrow {
-  font-family: "Archivo", "Termina", "Manrope", system-ui, sans-serif;
   font-size: 11px;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 .rule-mark {
@@ -79,75 +86,24 @@ body {
   opacity: 0.5;
 }
 
-/* Lenis smooth scroll container */
-html.lenis, html.lenis body {
-  height: auto;
-}
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
 
-/* Scrollbar minimal */
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
+::-webkit-scrollbar { width: 0; height: 0; }
 
-/* Horizontal rail scroll (evidence) */
-.rail-scroll {
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-.rail-scroll > * {
-  scroll-snap-align: start;
-}
-.rail-scroll::-webkit-scrollbar {
-  height: 0;
-}
+.rail-scroll { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+.rail-scroll > * { scroll-snap-align: start; }
+.rail-scroll::-webkit-scrollbar { height: 0; }
 
-/* Image tone */
-img {
-  image-rendering: -webkit-optimize-contrast;
-}
+img { image-rendering: -webkit-optimize-contrast; }
 
-/* Custom slider handle for react-compare-slider */
-.compare-handle {
-  background: rgba(249, 248, 246, 0.95);
-  width: 2px;
-}
-.compare-handle::before, .compare-handle::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(249, 248, 246, 0.9);
-  background: rgba(26, 28, 32, 0.35);
-  backdrop-filter: blur(6px);
-  border-radius: 999px;
-  top: 50%;
-  margin-top: -22px;
-}
+* { -webkit-tap-highlight-color: transparent; }
 
-/* Disable default tap highlight */
-* {
-  -webkit-tap-highlight-color: transparent;
-}
+::selection { background: var(--ink); color: var(--paper); }
 
-/* Selection */
-::selection {
-  background: var(--ink);
-  color: var(--paper);
-}
-
-/* Film grain / paper texture using subtle svg noise */
 .paper-grain::before {
   content: "";
   position: fixed;
@@ -160,24 +116,66 @@ img {
 }
 
 @layer base {
-  * {
-    border-color: var(--rule);
-  }
+  * { border-color: var(--rule); }
 }
 
-/* Fade reveal */
-.fade-in {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 900ms cubic-bezier(0.25, 1, 0.5, 1),
-    transform 900ms cubic-bezier(0.25, 1, 0.5, 1);
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: none;
-}
+.fade-in { opacity: 0; transform: translateY(16px); transition: opacity 900ms cubic-bezier(0.25, 1, 0.5, 1), transform 900ms cubic-bezier(0.25, 1, 0.5, 1); }
+.fade-in.visible { opacity: 1; transform: none; }
 
-/* Hide horizontal scrollbar but keep functionality */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Form range slider (Brava install scrubber) */
+input[type="range"].ll-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 100%;
+}
+input[type="range"].ll-range::-webkit-slider-runnable-track {
+  height: 1px;
+  background: rgba(26, 28, 32, 0.25);
+}
+input[type="range"].ll-range::-moz-range-track {
+  height: 1px;
+  background: rgba(26, 28, 32, 0.25);
+}
+input[type="range"].ll-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+  border-radius: 999px;
+  background: var(--ink);
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px rgba(26, 28, 32, 0.7);
+  cursor: grab;
+}
+input[type="range"].ll-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  border: 2px solid var(--paper);
+  box-shadow: 0 0 0 1px rgba(26, 28, 32, 0.7);
+  cursor: grab;
+}
+
+/* Dark variant for install slider on dark sections */
+input[type="range"].ll-range.on-dark::-webkit-slider-runnable-track {
+  background: rgba(249, 248, 246, 0.25);
+}
+input[type="range"].ll-range.on-dark::-moz-range-track {
+  background: rgba(249, 248, 246, 0.25);
+}
+input[type="range"].ll-range.on-dark::-webkit-slider-thumb {
+  background: var(--paper);
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px rgba(249, 248, 246, 0.7);
+}
+input[type="range"].ll-range.on-dark::-moz-range-thumb {
+  background: var(--paper);
+  border-color: var(--ink);
+  box-shadow: 0 0 0 1px rgba(249, 248, 246, 0.7);
+}

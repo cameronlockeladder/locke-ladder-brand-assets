@@ -1,58 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SectionTag, Caption } from "@/components/primitives";
 
 const LAYERS = [
-  {
-    n: "07",
-    name: "Brava Composite Shake",
-    role: "Visible roof",
-    note: "Class A · Class 4 · mineral pigmented",
-  },
-  {
-    n: "06",
-    name: "Custom Fabricated Edge Metals",
-    role: "Eaves, rakes, ridges",
-    note: "Locke & Ladder metal shop — matched profiles",
-  },
-  {
-    n: "05",
-    name: "Double-W Valley Metal",
-    role: "High-volume water paths",
-    note: "Open-valley, doubled for commercial life",
-  },
-  {
-    n: "04",
-    name: "Ring-Shank Stainless Nailing",
-    role: "Fastening",
-    note: "Resists back-out over decades of movement",
-  },
-  {
-    n: "03",
-    name: "Grace Ice & Water Shield",
-    role: "Vulnerable zones",
-    note: "Eaves, valleys, steeple transitions, penetrations",
-  },
-  {
-    n: "02",
-    name: "EchoShield Synthetic Underlayment",
-    role: "Field water barrier",
-    note: "High-tear, high-temp rated, UV stable during install",
-  },
-  {
-    n: "01",
-    name: "Decking, Inspected & Restored",
-    role: "Substrate",
-    note: "Rotted sheathing cut out, sistered, replaced",
-  },
+  { n: "07", name: "Brava Composite Shake", role: "Visible roof", note: "Class A · Class 4 · mineral pigmented" },
+  { n: "06", name: "Custom Fabricated Edge Metals", role: "Eaves, rakes, ridges", note: "Our metal shop. Matched profiles." },
+  { n: "05", name: "Double-W Valley Metal", role: "High-volume water paths", note: "Open-valley, doubled for commercial life." },
+  { n: "04", name: "Ring-Shank Stainless Nailing", role: "Fastening", note: "Resists back-out over decades of movement." },
+  { n: "03", name: "Grace Ice & Water Shield", role: "Vulnerable zones", note: "Eaves, valleys, steeple transitions, penetrations." },
+  { n: "02", name: "EchoShield Synthetic Underlayment", role: "Field water barrier", note: "High-tear, high-temp, UV stable during install." },
+  { n: "01", name: "Decking, Inspected & Restored", role: "Substrate", note: "Rotted sheathing cut out, sistered, replaced." },
 ];
 
 const PARTNERS = [
-  { name: "Brava Roof Tile", role: "Material — Composite Shake", href: "https://www.bravarooftile.com" },
+  { name: "Brava Roof Tile", role: "Material · Composite Shake", href: "https://www.bravarooftile.com" },
   { name: "Bone Roofing Supply", role: "Distribution", href: "https://bonedry.com" },
   { name: "Grace Ice & Water Shield", role: "Membrane", href: "https://gcpat.com/solutions/products/grace-ice-water-shield-roofing-underlayment" },
-  { name: "Eco Chief / Solarhide", role: "Snow retention", href: "https://ecochief.com" },
+  { name: "Eco Chief · Solarhide", role: "Snow retention", href: "https://ecochief.com" },
   { name: "Solar Innovations", role: "Specialty glazing", href: "https://solarinnovations.com" },
 ];
+
+// Brava install sequence — scrub with a slider (no scroll hijack).
+const INSTALL_FRAMES = 121;
+const INSTALL_PATH = (i) => `/assets/brava-install/frame-${String(i).padStart(4, "0")}.webp`;
 
 export default function RoofSystem() {
   return (
@@ -65,37 +34,34 @@ export default function RoofSystem() {
         <SectionTag number="04 / 07" title="The Roof, as a System" />
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
-            <h2 className="font-serif font-light display-tight text-[11vw] sm:text-5xl lg:text-[5.2vw] leading-[0.98]">
-              Seven layers.
-              <br />
-              <span className="italic">One quiet roof.</span>
+            <h2 className="font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.2vw] leading-[0.98]">
+              Seven layers. One roof that acts like one thing.
             </h2>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-body text-base leading-relaxed">
-              A great roof is mostly invisible. What the congregation sees is the shake.
-              What keeps the building dry is everything beneath it — specified, detailed,
-              and installed by people who understand the stakes.
+            <p className="text-base leading-relaxed text-body">
+              A great roof is mostly invisible. What the congregation sees is the
+              shake. What keeps the building dry is everything beneath it,
+              specified, detailed, and installed by people who understand the
+              stakes.
             </p>
           </div>
         </div>
 
-        {/* Exploded study */}
+        <BravaInstallScrubber />
+
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
-          {/* Visual column */}
           <div className="lg:col-span-5 fade-in">
             <div className="relative bg-paper border border-rule p-6 md:p-10">
               <div className="aspect-[3/4] relative">
-                {/* A simple editorial diagram built in SVG */}
                 <SystemDiagram />
               </div>
               <Caption className="mt-4">
-                Exploded view — sanctuary and steeple assembly. Indicative only.
+                Exploded view, sanctuary and steeple assembly. Indicative only.
               </Caption>
             </div>
           </div>
 
-          {/* Index column */}
           <div className="lg:col-span-7">
             <ol className="divide-y divide-ink/10 border-y border-ink/10">
               {LAYERS.map((l) => (
@@ -104,13 +70,13 @@ export default function RoofSystem() {
                   className="grid grid-cols-12 gap-4 md:gap-8 py-5 items-baseline"
                   data-testid={`system-layer-${l.n}`}
                 >
-                  <span className="col-span-2 md:col-span-1 font-serif italic text-warm-gold">
+                  <span className="col-span-2 md:col-span-1 font-brand text-warm-gold text-xs uppercase tracking-[0.2em]">
                     {l.n}
                   </span>
-                  <div className="col-span-10 md:col-span-5 font-serif text-ink text-lg md:text-xl">
+                  <div className="col-span-10 md:col-span-5 text-ink text-lg md:text-xl font-medium">
                     {l.name}
                   </div>
-                  <div className="col-span-6 md:col-span-2 text-[11px] uppercase tracking-[0.2em] text-slate">
+                  <div className="col-span-6 md:col-span-2 font-brand text-[11px] uppercase tracking-[0.2em] text-slate">
                     {l.role}
                   </div>
                   <div className="col-span-6 md:col-span-4 text-sm text-body leading-relaxed">
@@ -122,7 +88,6 @@ export default function RoofSystem() {
           </div>
         </div>
 
-        {/* Partners */}
         <div className="mt-28">
           <div className="eyebrow text-warm-gold mb-6">Specified partners</div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-0 border-t border-b border-ink/15">
@@ -137,9 +102,9 @@ export default function RoofSystem() {
                   i !== PARTNERS.length - 1 ? "md:border-r" : ""
                 } ${i !== 0 ? "border-t md:border-t-0" : ""}`}
               >
-                <div className="font-serif text-ink text-lg leading-snug">{p.name}</div>
+                <div className="text-ink text-lg leading-snug font-medium">{p.name}</div>
                 <div className="mt-1 text-xs text-slate">{p.role}</div>
-                <div className="mt-4 inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] text-ink/60 group-hover:text-ink">
+                <div className="mt-4 inline-flex items-center gap-2 font-brand text-[10px] uppercase tracking-[0.24em] text-ink/60 group-hover:text-ink">
                   Visit
                   <span className="w-6 h-px bg-ink/40 group-hover:bg-ink transition-colors" />
                 </div>
@@ -149,6 +114,75 @@ export default function RoofSystem() {
         </div>
       </div>
     </section>
+  );
+}
+
+function BravaInstallScrubber() {
+  const [value, setValue] = useState(Math.floor(INSTALL_FRAMES / 3)); // open on a mid, visual-rich frame
+  const [ready, setReady] = useState(false);
+  const wrapRef = useRef(null);
+
+  // Preload a handful of frames around the active value
+  useEffect(() => {
+    const preload = (i) => {
+      const img = new Image();
+      img.src = INSTALL_PATH(i);
+    };
+    [1, Math.floor(INSTALL_FRAMES / 2), INSTALL_FRAMES].forEach(preload);
+    setReady(true);
+  }, []);
+
+  const frame = Math.max(1, Math.min(INSTALL_FRAMES, value));
+
+  return (
+    <div
+      ref={wrapRef}
+      data-testid="brava-install-scrubber"
+      className="mt-14 mb-20 relative bg-ink text-paper overflow-hidden"
+    >
+      <div className="relative aspect-[16/9] w-full bg-ink">
+        {ready && (
+          <img
+            src={INSTALL_PATH(frame)}
+            alt={`Brava install frame ${frame}`}
+            className="absolute inset-0 w-full h-full object-cover"
+            data-testid="brava-install-frame"
+          />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute top-5 left-5 md:top-8 md:left-8">
+          <div className="eyebrow text-paper/70">Brava install, at your own pace</div>
+          <div className="mt-2 font-display text-2xl md:text-3xl text-paper max-w-lg leading-[1.05]">
+            Drag the slider. See every layer go down.
+          </div>
+        </div>
+        <div className="absolute bottom-5 right-5 md:bottom-8 md:right-8 font-brand text-xs tabular-nums text-paper/80 bg-ink/60 backdrop-blur-sm px-3 py-1.5">
+          {String(frame).padStart(3, "0")}
+          <span className="text-paper/40"> / {String(INSTALL_FRAMES).padStart(3, "0")}</span>
+        </div>
+      </div>
+
+      <div className="bg-ink px-6 md:px-10 py-6 border-t border-paper/10">
+        <div className="flex items-center gap-6">
+          <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/60 hidden sm:inline">
+            Decking
+          </span>
+          <input
+            type="range"
+            min={1}
+            max={INSTALL_FRAMES}
+            value={frame}
+            onChange={(e) => setValue(Number(e.target.value))}
+            aria-label="Scrub Brava install sequence"
+            data-testid="brava-install-slider"
+            className="ll-range on-dark flex-1"
+          />
+          <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/60 hidden sm:inline">
+            Finished
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -162,7 +196,6 @@ function SystemDiagram() {
         </linearGradient>
       </defs>
       <rect x="0" y="0" width="300" height="400" fill="url(#sky)" />
-      {/* Layered planes shifted */}
       {[
         { y: 40, label: "07", color: "#1A1C20" },
         { y: 80, label: "06", color: "#2B2D32" },
@@ -180,13 +213,13 @@ function SystemDiagram() {
             stroke="#1A1C20"
             strokeOpacity="0.25"
           />
-          <text x="250" y="36" fontFamily="Fraunces, serif" fontStyle="italic" fontSize="12" fill="#1A1C20">
+          <text x="250" y="36" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="600" fill="#1A1C20">
             {l.label}
           </text>
         </g>
       ))}
       <line x1="0" y1="360" x2="300" y2="360" stroke="#1A1C20" strokeOpacity="0.15" />
-      <text x="30" y="378" fontFamily="Manrope, sans-serif" fontSize="9" letterSpacing="2" fill="#50636F">
+      <text x="30" y="378" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="2" fill="#50636F">
         INDICATIVE · NOT TO SCALE
       </text>
     </svg>

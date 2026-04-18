@@ -1,7 +1,5 @@
 import React from "react";
 
-// Reusable compact components
-
 export const Eyebrow = ({ children, className = "", tone = "gold" }) => (
   <div
     className={`eyebrow flex items-center ${
@@ -15,13 +13,22 @@ export const Eyebrow = ({ children, className = "", tone = "gold" }) => (
 
 export const SectionTag = ({ number, title, className = "" }) => (
   <div className={`flex items-baseline gap-6 ${className}`}>
-    <span className="font-serif text-sm italic text-warm-gold tracking-wide">{number}</span>
-    <span className="eyebrow text-ink/70">{title}</span>
+    {number ? (
+      <span className="font-brand text-xs uppercase tracking-[0.22em] text-warm-gold">{number}</span>
+    ) : null}
+    {title ? (
+      <span
+        className="eyebrow text-ink/70"
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
+    ) : null}
   </div>
 );
 
-export const Caption = ({ children, className = "" }) => (
-  <p className={`text-xs text-slate font-sans leading-relaxed ${className}`}>{children}</p>
+export const Caption = ({ children, className = "", ...rest }) => (
+  <p className={`text-xs text-slate leading-relaxed ${className}`} {...rest}>
+    {children}
+  </p>
 );
 
 export const VerifyTag = ({ children = "verify with final asset" }) => (

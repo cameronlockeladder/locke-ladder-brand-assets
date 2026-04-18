@@ -6,6 +6,7 @@ const SECTIONS = [
   { id: "polycam", label: "3D Survey" },
   { id: "evidence", label: "Evidence" },
   { id: "cedar-brava", label: "Cedar vs Synthetic" },
+  { id: "laskey-reveal", label: "Laskey" },
   { id: "gallery", label: "Brava Gallery" },
   { id: "aspen", label: "Light Study" },
   { id: "system", label: "The System" },
@@ -51,32 +52,38 @@ export default function Nav() {
       <header
         data-testid="top-header"
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? "bg-paper/85 backdrop-blur-md border-b border-rule/60" : "bg-transparent"
+          scrolled ? "bg-paper/90 backdrop-blur-md border-b border-rule/60 text-ink" : "bg-transparent text-paper"
         }`}
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
           <button
             onClick={() => scrollTo("hero")}
-            className="flex items-center gap-3"
+            className="flex items-center gap-4"
             data-testid="brand-mark-button"
           >
             <img
               src="/assets/brand/locke-ladder/ll-icon.webp"
               alt="Locke & Ladder"
-              className="h-7 w-auto"
+              className={`h-7 w-auto transition ${scrolled ? "" : "invert brightness-0 opacity-90"}`}
             />
-            <span className="hidden sm:inline-block h-4 w-px bg-ink/25" />
-            <span className="hidden sm:inline-block font-brand text-[11px] uppercase tracking-[0.22em] text-ink/80">
-              Proposal · <span className="text-ink">Christ Church | Oak Brook</span>
+            <span className={`hidden sm:inline-block h-4 w-px ${scrolled ? "bg-ink/25" : "bg-paper/40"}`} />
+            <img
+              src="/assets/brand/client/christ-church/christ-church-logo.png"
+              alt="Christ Church | Oak Brook"
+              data-testid="christ-church-logo"
+              className={`h-6 w-auto transition ${scrolled ? "" : "invert brightness-0 opacity-90"}`}
+            />
+            <span className={`hidden md:inline-block font-brand text-[11px] uppercase tracking-[0.22em] ${scrolled ? "text-ink/70" : "text-paper/80"}`}>
+              Proposal · V4
             </span>
           </button>
           <button
             onClick={() => scrollTo("closing")}
             data-testid="header-contact-button"
-            className="hidden md:inline-flex items-center gap-2 font-brand text-[11px] uppercase tracking-[0.24em] text-ink/80 hover:text-ink transition-colors"
+            className="hidden md:inline-flex items-center gap-2 font-brand text-[11px] uppercase tracking-[0.24em] hover:opacity-100 opacity-80 transition-opacity"
           >
             Contact
-            <span className="inline-block w-8 h-px bg-ink/40" />
+            <span className={`inline-block w-8 h-px ${scrolled ? "bg-ink/40" : "bg-paper/50"}`} />
           </button>
         </div>
       </header>
@@ -99,7 +106,7 @@ export default function Nav() {
               }`}
             />
             <span
-              className={`font-brand text-[10px] tracking-[0.24em] uppercase font-medium transition-opacity duration-500 ${
+              className={`font-brand text-[10px] tracking-[0.24em] uppercase transition-opacity duration-500 ${
                 active === s.id ? "opacity-100 text-white" : "opacity-0 group-hover:opacity-70 text-white"
               }`}
             >

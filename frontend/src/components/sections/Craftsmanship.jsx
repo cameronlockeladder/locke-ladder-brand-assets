@@ -13,7 +13,6 @@ export default function Craftsmanship() {
       data-testid="section-craftsmanship"
       className="relative bg-paper border-t border-rule"
     >
-      {/* Ambient background video — Snape */}
       <div className="relative w-full h-[56vh] md:h-[70vh] overflow-hidden bg-ink">
         <video
           data-testid="craftsmanship-background-video"
@@ -32,13 +31,11 @@ export default function Craftsmanship() {
         <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-12 max-w-[1600px] mx-auto">
           <SectionTag
             number="05 / 07"
-            title="Craft &mdash; The Snape Residence"
-            className="[&_.eyebrow]:text-paper/70 [&_.font-serif]:text-paper/90"
+            title="Craft · The Snape Residence"
+            className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
           />
-          <h2 className="mt-6 font-serif font-light display-tight text-[12vw] sm:text-5xl lg:text-[5.6vw] text-paper leading-[0.95] max-w-5xl pb-6">
-            The details other crews
-            <br />
-            <span className="italic">walk away from.</span>
+          <h2 className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.6vw] text-paper leading-[0.95] max-w-5xl pb-6">
+            The details other crews walk away from.
           </h2>
         </div>
       </div>
@@ -60,7 +57,7 @@ export default function Craftsmanship() {
             afterSrc="/assets/photos/projects/snape/before-after-slider-dormer-aligned/after-dormer-1600.webp"
             beforeLabel="Before"
             afterLabel="After"
-            caption="Snape dormer &mdash; tear-off to finished copper &amp; slate"
+            caption="Snape dormer, tear-off to finished copper and slate"
           />
 
           <BeforeAfter
@@ -69,14 +66,14 @@ export default function Craftsmanship() {
             afterSrc="/assets/photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg"
             beforeLabel="Close-up"
             afterLabel="Aerial detail"
-            caption="Snape chimney &amp; slate &mdash; ground view to aerial"
+            caption="Snape chimney and slate, ground view to aerial"
           />
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" label="Copper loop &mdash; entry" />
-          <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" label="Dormer &mdash; step flashing" />
-          <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" label="Aerial &mdash; field composure" />
+          <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" label="Copper loop, entry" />
+          <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" label="Dormer, step flashing" />
+          <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" label="Aerial, field composure" />
         </div>
       </div>
     </section>
@@ -113,11 +110,8 @@ function BeforeAfter({ beforeSrc, afterSrc, beforeLabel, afterLabel, caption, te
         </span>
       </div>
       <figcaption className="mt-4 flex items-baseline justify-between">
-        <span
-          className="font-serif italic text-ink/80 text-base"
-          dangerouslySetInnerHTML={{ __html: caption }}
-        />
-        <Caption>Drag &larr; / &rarr;</Caption>
+        <span className="text-ink/80 text-base font-medium">{caption}</span>
+        <Caption>Drag to compare</Caption>
       </figcaption>
     </figure>
   );
@@ -135,10 +129,7 @@ function DetailTile({ src, label }) {
         />
       </div>
       <figcaption className="mt-3">
-        <span
-          className="font-serif italic text-ink/75 text-sm"
-          dangerouslySetInnerHTML={{ __html: label }}
-        />
+        <span className="text-ink/75 text-sm font-medium">{label}</span>
       </figcaption>
     </figure>
   );

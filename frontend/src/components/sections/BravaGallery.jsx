@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionTag, Caption } from "@/components/primitives";
 
-// Locke & Ladder installs come first — the strongest proof.
+// Locke & Ladder installs come first · the strongest proof.
 const LL_PROJECTS = [
   {
     src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.jpg",
@@ -68,7 +68,7 @@ export default function BravaGallery() {
           <motion.img
             key={img.src}
             src={img.src}
-            alt={`${img.title} — ${img.loc}`}
+            alt={`${img.title} · ${img.loc}`}
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
@@ -113,7 +113,7 @@ export default function BravaGallery() {
               )}
               <div className="font-serif text-2xl md:text-3xl text-paper">
                 {img.title}
-                <span className="text-paper/50 italic"> &mdash; {img.loc}</span>
+                <span className="text-paper/50 italic"> · {img.loc}</span>
               </div>
             </div>
             <div className="hidden md:block text-right">

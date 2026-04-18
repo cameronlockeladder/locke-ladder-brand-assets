@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "@/App.css";
 import Lenis from "lenis";
+import { useEffect } from "react";
 
 import Nav from "@/components/Nav";
 import Hero from "@/components/sections/Hero";
@@ -8,6 +9,7 @@ import Diagnosis from "@/components/sections/Diagnosis";
 import Polycam from "@/components/sections/Polycam";
 import EvidenceWall from "@/components/sections/EvidenceWall";
 import CedarBrava from "@/components/sections/CedarBrava";
+import LaskeyReveal from "@/components/sections/LaskeyReveal";
 import BravaGallery from "@/components/sections/BravaGallery";
 import AspenLightStudy from "@/components/sections/AspenLightStudy";
 import RoofSystem from "@/components/sections/RoofSystem";
@@ -60,6 +62,7 @@ export default function App() {
         <Polycam />
         <EvidenceWall />
         <CedarBrava />
+        <LaskeyReveal />
         <BravaGallery />
         <AspenLightStudy />
         <RoofSystem />

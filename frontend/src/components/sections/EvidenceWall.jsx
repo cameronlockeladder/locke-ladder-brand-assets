@@ -3,17 +3,18 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { SectionTag, Caption } from "@/components/primitives";
 
-// Featured tiles come from our on-site survey + JobNimbus selects.
+// Jon will supply final captions. For now: VERIFY COPY on all JobNimbus annotations.
+const VERIFY = "VERIFY COPY";
+
 const FEATURED = [
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-001.webp", caption: "Steeple, north face" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-002.webp", caption: "Steeple, detail" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-003.webp", caption: "Cedar field, tired" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-004.webp", caption: "Sanctuary ridge" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-005.webp", caption: "Valley, south-facing" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-006.webp", caption: "Parapet transition" },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-001.webp", caption: VERIFY },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-002.webp", caption: VERIFY },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-003.webp", caption: VERIFY },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-004.webp", caption: VERIFY },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-005.webp", caption: VERIFY },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-006.webp", caption: VERIFY },
 ];
 
-// Rail: remaining JobNimbus captures from the survey.
 const RAIL = Array.from({ length: 94 }, (_, i) => {
   const idx = String(i + 7).padStart(3, "0");
   return `/assets/photos/projects/christ-church/jobnimbus/jn-${idx}.webp`;
@@ -25,7 +26,7 @@ export default function EvidenceWall() {
 
   const allSlides = [
     ...FEATURED.map((f) => ({ src: f.src, description: f.caption })),
-    ...RAIL.map((src) => ({ src })),
+    ...RAIL.map((src) => ({ src, description: VERIFY })),
   ];
 
   const openAt = (i) => {
@@ -44,18 +45,16 @@ export default function EvidenceWall() {
           <div>
             <SectionTag
               number="02 / 07"
-              title="Field Evidence &mdash; 100 captures from our survey"
-              className="[&_.eyebrow]:text-paper/70 [&_.font-serif]:text-paper/90"
+              title="Field Evidence · 100 captures from our survey"
+              className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
             />
-            <h2 className="mt-6 font-serif font-light display-tight text-[12vw] sm:text-5xl lg:text-[5vw] text-paper leading-[0.95] max-w-4xl">
-              The whole field
-              <br />
-              <span className="italic">is tired.</span>
+            <h2 className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5vw] text-paper leading-[0.95] max-w-4xl">
+              What we saw across the whole field.
             </h2>
           </div>
           <p className="max-w-sm text-paper/70 text-base leading-relaxed">
-            Six images we keep coming back to &mdash; plus the rest of what we
-            documented on-site. Tap any image to inspect at full size.
+            Six images we keep coming back to, plus the rest of what we
+            documented on site. Tap any image to inspect at full size.
           </p>
         </div>
 
@@ -88,9 +87,14 @@ export default function EvidenceWall() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
                 <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between text-paper">
-                  <span className="font-serif italic text-sm">{f.caption}</span>
+                  <span
+                    data-testid={`evidence-featured-${i}-caption`}
+                    className="font-brand text-[10px] tracking-[0.22em] uppercase bg-warm-gold/85 text-ink px-2 py-[2px] rounded-sm"
+                  >
+                    {f.caption}
+                  </span>
                   <span className="font-brand text-[10px] tracking-[0.22em] uppercase opacity-80 group-hover:opacity-100">
-                    Enlarge &rarr;
+                    Enlarge
                   </span>
                 </div>
               </button>
@@ -101,7 +105,7 @@ export default function EvidenceWall() {
         <div className="mt-16 md:mt-20">
           <div className="flex items-baseline justify-between mb-6">
             <div className="eyebrow text-paper/60">The rest of what we documented</div>
-            <Caption className="text-paper/50">Scroll &rarr;</Caption>
+            <Caption className="text-paper/50">Scroll</Caption>
           </div>
           <div
             data-testid="evidence-rail"
@@ -125,6 +129,10 @@ export default function EvidenceWall() {
             ))}
           </div>
         </div>
+
+        <Caption className="mt-6 text-paper/50" data-testid="evidence-verify-note">
+          Captions pending from Jon. All image annotations marked VERIFY COPY will be replaced before the Board packet is finalized.
+        </Caption>
       </div>
 
       <Lightbox
@@ -134,7 +142,6 @@ export default function EvidenceWall() {
         slides={allSlides}
         styles={{ container: { background: "rgba(26,28,32,0.96)" } }}
         carousel={{ preload: 2 }}
-        data-testid="evidence-lightbox"
       />
     </section>
   );
