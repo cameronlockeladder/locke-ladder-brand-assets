@@ -64,9 +64,9 @@ export default function GiveBack() {
           </div>
 
           <div className="flex items-end gap-6">
-            <span className="inline-flex items-center gap-2 bg-paper/10 backdrop-blur-sm font-brand text-[10px] uppercase tracking-[0.24em] text-paper/85 px-3 py-1.5">
-              <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
-              Precedent · Faith Apostolic Church
+            <span className="inline-flex items-center gap-2 bg-warm-gold text-ink font-brand text-[10px] uppercase tracking-[0.24em] px-3 py-1.5 font-semibold">
+              <span className="block w-1.5 h-1.5 bg-ink rounded-full" />
+              Locke &amp; Ladder client · Faith Apostolic Church
             </span>
           </div>
         </div>

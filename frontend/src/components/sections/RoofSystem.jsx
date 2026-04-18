@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { SectionTag, Caption } from "@/components/primitives";
 
 const LAYERS = [
@@ -18,10 +18,6 @@ const PARTNERS = [
   { name: "Eco Chief · Solarhide", role: "Snow retention", href: "https://ecochief.com" },
   { name: "Solar Innovations", role: "Specialty glazing", href: "https://solarinnovations.com" },
 ];
-
-// Brava install sequence — scrub with a slider (no scroll hijack).
-const INSTALL_FRAMES = 121;
-const INSTALL_PATH = (i) => `/assets/brava-install/frame-${String(i).padStart(4, "0")}.webp`;
 
 export default function RoofSystem() {
   return (
@@ -47,8 +43,6 @@ export default function RoofSystem() {
             </p>
           </div>
         </div>
-
-        <BravaInstallScrubber />
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 fade-in">
@@ -114,75 +108,6 @@ export default function RoofSystem() {
         </div>
       </div>
     </section>
-  );
-}
-
-function BravaInstallScrubber() {
-  const [value, setValue] = useState(Math.floor(INSTALL_FRAMES / 3)); // open on a mid, visual-rich frame
-  const [ready, setReady] = useState(false);
-  const wrapRef = useRef(null);
-
-  // Preload a handful of frames around the active value
-  useEffect(() => {
-    const preload = (i) => {
-      const img = new Image();
-      img.src = INSTALL_PATH(i);
-    };
-    [1, Math.floor(INSTALL_FRAMES / 2), INSTALL_FRAMES].forEach(preload);
-    setReady(true);
-  }, []);
-
-  const frame = Math.max(1, Math.min(INSTALL_FRAMES, value));
-
-  return (
-    <div
-      ref={wrapRef}
-      data-testid="brava-install-scrubber"
-      className="mt-14 mb-20 relative bg-ink text-paper overflow-hidden"
-    >
-      <div className="relative aspect-[16/9] w-full bg-ink">
-        {ready && (
-          <img
-            src={INSTALL_PATH(frame)}
-            alt={`Brava install frame ${frame}`}
-            className="absolute inset-0 w-full h-full object-cover"
-            data-testid="brava-install-frame"
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute top-5 left-5 md:top-8 md:left-8">
-          <div className="eyebrow text-paper/70">Brava install, at your own pace</div>
-          <div className="mt-2 font-display text-2xl md:text-3xl text-paper max-w-lg leading-[1.05]">
-            Drag the slider. See every layer go down.
-          </div>
-        </div>
-        <div className="absolute bottom-5 right-5 md:bottom-8 md:right-8 font-brand text-xs tabular-nums text-paper/80 bg-ink/60 backdrop-blur-sm px-3 py-1.5">
-          {String(frame).padStart(3, "0")}
-          <span className="text-paper/40"> / {String(INSTALL_FRAMES).padStart(3, "0")}</span>
-        </div>
-      </div>
-
-      <div className="bg-ink px-6 md:px-10 py-6 border-t border-paper/10">
-        <div className="flex items-center gap-6">
-          <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/60 hidden sm:inline">
-            Decking
-          </span>
-          <input
-            type="range"
-            min={1}
-            max={INSTALL_FRAMES}
-            value={frame}
-            onChange={(e) => setValue(Number(e.target.value))}
-            aria-label="Scrub Brava install sequence"
-            data-testid="brava-install-slider"
-            className="ll-range on-dark flex-1"
-          />
-          <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/60 hidden sm:inline">
-            Finished
-          </span>
-        </div>
-      </div>
-    </div>
   );
 }
 
