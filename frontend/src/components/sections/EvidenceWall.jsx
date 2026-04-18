@@ -44,7 +44,7 @@ export default function EvidenceWall() {
           <div>
             <SectionTag
               number="02 / 07"
-              title="Field Evidence &mdash; 96 captures from our survey"
+              title="Field Evidence &mdash; 100 captures from our survey"
               className="[&_.eyebrow]:text-paper/70 [&_.font-serif]:text-paper/90"
             />
             <h2 className="mt-6 font-serif font-light display-tight text-[12vw] sm:text-5xl lg:text-[5vw] text-paper leading-[0.95] max-w-4xl">
