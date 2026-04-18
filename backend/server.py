@@ -137,47 +137,19 @@ async def capture_engagement(event: EngagementEvent):
 
 
 @api_router.get("/proposal/packet.pdf")
-async def get_board_packet_pdf(
-    recipient: Optional[str] = None,
-    role: Optional[str] = None,
-    token: Optional[str] = None,
-):
+async def get_board_packet_pdf():
     """
     Generate and return the Christ Church | Oak Brook board packet PDF.
-
-    Query params (all optional, POC for per-member packets):
-        recipient: display name to print on the cover ("Tom Williams")
-        role:      role/title under the name ("Board Chair")
-        token:     short id to render + log for open-tracking
-
-    Every download is logged to proposal_packet_opens so the team can see
-    which named packets have actually been opened.
+    Inline-viewable and downloadable. Rebuilt on every request so the
+    packet always reflects the latest copy.
     """
     try:
-        buf = build_board_packet_pdf(recipient=recipient, role=role, token=token)
+        buf = build_board_packet_pdf()
     except Exception as exc:
         logger.exception("PDF build failed")
         raise HTTPException(status_code=500, detail=f"PDF build failed: {exc}")
 
-    # Log the open (non-blocking best-effort)
-    try:
-        await db.proposal_packet_opens.insert_one({
-            "id": str(uuid.uuid4()),
-            "recipient": (recipient or "").strip() or None,
-            "role": (role or "").strip() or None,
-            "token": (token or "").strip() or None,
-            "opened_at": datetime.now(timezone.utc).isoformat(),
-        })
-    except Exception:
-        logger.warning("Unable to log packet open", exc_info=True)
-
-    # Build a human-friendly filename
-    if recipient:
-        slug = "".join(ch if ch.isalnum() else "-" for ch in recipient.lower()).strip("-")[:48] or "board-member"
-        filename = f"christ-church-oak-brook-board-packet-{slug}.pdf"
-    else:
-        filename = "christ-church-oak-brook-board-packet.pdf"
-
+    filename = "christ-church-oak-brook-board-packet.pdf"
     return StreamingResponse(
         buf,
         media_type="application/pdf",
@@ -186,13 +158,6 @@ async def get_board_packet_pdf(
             "Cache-Control": "no-store",
         },
     )
-
-
-@api_router.get("/proposal/packet/opens")
-async def list_packet_opens():
-    """Read-back for the team: which personalized packets have been opened."""
-    rows = await db.proposal_packet_opens.find({}, {"_id": 0}).sort("opened_at", -1).to_list(500)
-    return {"count": len(rows), "opens": rows}
 
 
 app.include_router(api_router)
