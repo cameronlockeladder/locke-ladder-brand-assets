@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 411,
+  "file_count": 412,
   "items": [
     {
       "path": ".gitignore",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 92084,
+      "bytes": 95188,
       "mime": "application/json",
-      "sha256": "bce82f373f0937ca2a10aef8f3b4ce6d7b7a27478fbf11cb43a8527c9676f895"
+      "sha256": "aedb39f8e80d3fc6269ca43bf28b142c6696e9c5812b3c7d560641c78594ccd9"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -85,7 +85,7 @@
       "path": "photos/.DS_Store",
       "bytes": 6148,
       "mime": "application/octet-stream",
-      "sha256": "ed0a777d00a8b9656e14f0c72b1428ed89c2b24480cd8d5da9f1490483401f82"
+      "sha256": "330ca45b822dc15d02b7d3f6c3d0aebbbd1d76cf3e673f47f2275d7e66c51be1"
     },
     {
       "path": "photos/materials/brava-field-shake-layout-study/README.md",
@@ -1405,7 +1405,7 @@
       "path": "photos/projects/.DS_Store",
       "bytes": 6148,
       "mime": "application/octet-stream",
-      "sha256": "54a060ad9493c5d1f79369179a6e59f8d213b61d8921c69cc0584696f54f7143"
+      "sha256": "2dabc1b39458f825ea9cd18ccaa751b0614372c975fd0a24de7159926f9523cd"
     },
     {
       "path": "photos/projects/christ-church/bell-tower-primary-leak.jpg",
@@ -1478,6 +1478,12 @@
       "bytes": 4305904,
       "mime": "video/mp4",
       "sha256": "97b9e8d3658198e2c0164728080efac859bad71f6d490fd4e25f22d244db58d1"
+    },
+    {
+      "path": "photos/projects/christ-church/hero-timeline.mp4",
+      "bytes": 2360050,
+      "mime": "video/mp4",
+      "sha256": "492383a3570777c169abcfd683d7845b57582f156649932f72e21efdf6e8a9d2"
     },
     {
       "path": "photos/projects/christ-church/jobnimbus/001__mo2zba496rpsgrv2__2026-04-17_14_03_51Z.webp",
@@ -2141,9 +2147,9 @@
     },
     {
       "path": "photos/projects/christ-church/steeple-closeup.mp4",
-      "bytes": 2667044,
+      "bytes": 867764,
       "mime": "video/mp4",
-      "sha256": "ef3cf29228fa3cd8249a1a4a5a14dc2906917f6048f57fdf6bde82a63f3d24ae"
+      "sha256": "3b92bf084ca08fb6980cb46887e80569f33a5e6007f05b60567345466ee45d20"
     },
     {
       "path": "photos/projects/christ-church/topdown.jpg",
