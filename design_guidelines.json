@@ -1,0 +1,183 @@
+{
+  "theme": "light",
+  "archetype": "1 (Organic & Earthy) blended with 5 (Jewel & Luxury)",
+  "global_styles": {
+    "background_color": "#F9F8F6",
+    "text_color": "#1A1C20",
+    "spacing_philosophy": "Breathable pacing. 2-3x SaaS spacing. Generous negative space.",
+    "border_radius": "rounded-none or max rounded-sm for subtle softening. Sharp, architectural edges preferred.",
+    "shadows": "Ambient, diffuse shadows only for floating UI. Images remain flat and integrated.",
+    "image_treatment": "Large, full-bleed images or carefully framed asymmetrical grids. Captions should be minimalist, placed outside the image frame or on a pure white/black solid block.",
+    "testing_requirements": "All interactive and key informational elements MUST include a data-testid attribute."
+  },
+  "color_palette": {
+    "paper": "#F9F8F6",
+    "ink": "#1A1C20",
+    "slate": "#50636F",
+    "action_blue": "#316997",
+    "deep_navy": "#003B5C",
+    "warm_gold": "#857650",
+    "body_neutral": "#404040",
+    "bronze_accent": "#9A5B3E"
+  },
+  "typography": {
+    "primary_display": "Fraunces, serif",
+    "secondary_body": "Manrope, sans-serif",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight font-serif text-ink",
+      "h2": "text-4xl sm:text-5xl font-light tracking-tight font-serif text-ink",
+      "h3": "text-2xl sm:text-3xl font-light font-serif text-ink",
+      "body_large": "text-xl sm:text-2xl font-light leading-relaxed font-sans text-body_neutral",
+      "body": "text-base sm:text-lg leading-relaxed font-sans text-body_neutral",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] font-sans text-warm_gold",
+      "caption": "text-sm font-sans text-slate italic"
+    }
+  },
+  "layout_and_grids": {
+    "general": "Single column editorial flow with dramatic split-screen interruptions. Never center-everything. Asymmetrical balance.",
+    "max_width": "max-w-7xl mx-auto for content, full-bleed w-full for hero imagery and scrubbers.",
+    "pacing": "py-24 or py-32 for section containers."
+  },
+  "components": {
+    "buttons": "Flat, sharp edges. bg-ink text-paper hover:bg-ink/80 transition-colors px-8 py-4 uppercase tracking-widest text-xs",
+    "captions": "Minimalist, placed outside the image frame or on a pure white/black solid block.",
+    "nav_sticky": "Sticky subtle section-nav. fixed right-8 top-1/2 -translate-y-1/2 flex-col gap-4 hidden lg:flex mix-blend-difference"
+  },
+  "interaction_patterns": {
+    "sticky_nav": "Vertical dot or line indicators pinned to the right edge. Silent tracking of active section.",
+    "scrubber": "Scroll-linked sequence player mapping scroll progress to WebP frame index. Sticky while scrolling.",
+    "slider": "Drag-to-compare before/after with a thin 1px vertical line and minimalist handle.",
+    "lightbox": "Full-screen dark overlay (bg-ink/95) to focus entirely on the image.",
+    "reveal": "Fade up and gentle parallax on scroll for text blocks and images."
+  },
+  "motion_system": {
+    "scroll": "Lenis smooth scroll is mandatory for premium momentum.",
+    "transitions": "Restrained, editorial. 0.8s ease-[0.25,1,0.5,1]. Avoid bouncy/SaaS physics."
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "title": "Poster First Viewport",
+      "layout": "Full viewport height (100vh). Steeple image prominently placed. Clean typographic Locke & Ladder and Christ Church lockup. Brighter, welcoming.",
+      "assets": {
+        "images": ["/assets/photos/projects/christ-church/steeple-closeup.jpg"],
+        "logos": [
+          "/assets/brand/locke-ladder-wordmark.svg",
+          "/assets/brand/christ-church-logo.svg"
+        ]
+      }
+    },
+    {
+      "id": "need-building",
+      "title": "Sanctuary Leak & Repair vs Replace",
+      "layout": "Calm, plainspoken text left, labeled diagram/proof right. High negative space. Roof rot proof displayed analytically.",
+      "assets": {
+        "images": ["/assets/proposal-support/christ-church/roof-rot.webp"]
+      }
+    },
+    {
+      "id": "evidence-wall",
+      "title": "JobNimbus Evidence",
+      "layout": "Edge-to-edge featured tiles with horizontal scrolling rail. Click to expand lightbox. Dark background to contrast with previous section.",
+      "assets": {
+        "images": ["/assets/photos/projects/christ-church/*"]
+      }
+    },
+    {
+      "id": "cedar-vs-brava",
+      "title": "Material Transition & Brava Gallery",
+      "layout": "Editorial text explaining weak reinvestment in cedar. Reveal Brava as the better path. Followed by a hero-changing Brava gallery (17 photos).",
+      "assets": {
+        "images": ["/assets/photos/materials/brava-gallery/*"]
+      }
+    },
+    {
+      "id": "aspen-light-study",
+      "title": "Aspen Light Study Scrubber",
+      "layout": "Sticky container pinning to viewport. Scrolling scrubs through the 90-frame webp sequence. Subtle typography overlay.",
+      "assets": {
+        "images": ["/assets/aspen/frame-001.webp to /assets/aspen/frame-090.webp"]
+      }
+    },
+    {
+      "id": "visualizer",
+      "title": "Cedar-to-Brava Visualizer",
+      "layout": "Two stacked react-compare-slider instances. 1. Campus view. 2. Steeple view. Thin elegant drag handle.",
+      "assets": {
+        "images": [
+          "/assets/photos/projects/christ-church/hero-campus.jpg",
+          "/assets/photos/projects/christ-church/hero-campus-brava-aspen.png",
+          "/assets/photos/projects/christ-church/steeple-closeup.jpg",
+          "/assets/photos/projects/christ-church/steeple-closeup-brava-aspen.png"
+        ]
+      }
+    },
+    {
+      "id": "roof-system",
+      "title": "Roof System Exploded Study",
+      "layout": "Editorial white board. One dominant visual + typographic statement mapping underlayment, ice/water shield, custom metals. Not a generic feature grid.",
+      "assets": {
+        "images": []
+      }
+    },
+    {
+      "id": "snape-proof",
+      "title": "Craftsmanship Proof",
+      "layout": "Snape before/after craftsmanship slider. Centered tightly with generous top/bottom padding.",
+      "assets": {
+        "images": ["/assets/photos/projects/snape/*"]
+      }
+    },
+    {
+      "id": "team",
+      "title": "Team & Relationship",
+      "layout": "Editorial portrait layout. Real crew photos. Staggered grid. Focus on 'relationship-based long-game'.",
+      "assets": {
+        "images": ["/assets/photos/team/*"]
+      }
+    },
+    {
+      "id": "giveback",
+      "title": "1% GiveBack Program",
+      "layout": "Solid deep navy (#003B5C) background. Warm gold (#857650) accent text. Clear, unambiguous statement.",
+      "assets": {
+        "images": []
+      }
+    },
+    {
+      "id": "closing",
+      "title": "Closing & Contact",
+      "layout": "One memorable conviction-led thought. Simple elegant form (name, email, role, note). Minimalist inputs (border-b only). Light backend endpoint.",
+      "assets": {
+        "images": []
+      }
+    }
+  ],
+  "do_dont": {
+    "do": [
+      "Use massive, breathable margins (p-16 to p-32).",
+      "Treat typography like an art piece—track out overlines, tighten headings.",
+      "Rely on the provided high-quality photography as the primary structural element.",
+      "Include data-testid on all interactive elements (buttons, sliders, form fields).",
+      "Make it feel like a printed board packet brought to life.",
+      "Prioritize readability for an older demographic."
+    ],
+    "dont": [
+      "No generic SaaS card soup.",
+      "No fake-construction aesthetic (no hazard tape, no rugged textures).",
+      "No emoji icons—stick to clean SVG (Lucide) if absolutely necessary.",
+      "No type that feels whacky, overtracked, or overcapitalized in body/headings.",
+      "No fast, bouncy animations.",
+      "Do not use generic typography (Inter, Roboto)."
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build the UI entirely in raw React/Tailwind/Framer Motion. Avoid off-the-shelf Shadcn cards or sections.",
+    "Implement Lenis for smooth scroll globally.",
+    "Use react-compare-slider for the Before/After sections.",
+    "Use framer-motion useScroll and useTransform for the 90-frame Aspen light study scrubber.",
+    "Implement yet-another-react-lightbox for the JobNimbus evidence wall.",
+    "Ensure all fonts are loaded elegantly (Fraunces and Manrope from Google Fonts or similar).",
+    "Only use the provided local asset paths. Do not inject Unsplash placeholders."
+  ]
+}
