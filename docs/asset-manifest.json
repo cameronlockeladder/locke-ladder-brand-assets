@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 395,
+  "file_count": 397,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 2416,
+      "bytes": 2531,
       "mime": "text/markdown",
-      "sha256": "7d7097dd1c6cd514f312d33116dac930d19f0f158205e0bbd913475423f145b2"
+      "sha256": "8a853913fe1dc1ea25db3fa9d8d86a39484e7e5b6a91ade44d0942673b9fc06a"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 65793,
+      "bytes": 91630,
       "mime": "application/json",
-      "sha256": "47ddec0a687855421ce478481b06d16a9c21d9094aad016fdf11190a212b0ab9"
+      "sha256": "20f6f9339b10086aba1d21cbe67532044a9e5dc3c3adcb81b5cd08bfe7463ad1"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -2138,6 +2138,18 @@
       "bytes": 1141646,
       "mime": "image/jpeg",
       "sha256": "0af4922ff5e4e660b0b047aba877e6db32e3a499415ff71ce3939d3b1c43cb8e"
+    },
+    {
+      "path": "photos/projects/faith-apostolic-church/README.md",
+      "bytes": 180,
+      "mime": "text/markdown",
+      "sha256": "da139cf76735a12d01269987475756cbf83b1353183414262db53a249e15f07f"
+    },
+    {
+      "path": "photos/projects/faith-apostolic-church/faith-apostolic-church-give-back.webp",
+      "bytes": 294744,
+      "mime": "image/webp",
+      "sha256": "f0d2d7b74bbb9ed3d4ce02f974824e66757150c225bfc269d31af70f068c786e"
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/README.md",
