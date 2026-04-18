@@ -1,746 +1,8 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 293,
+  "file_count": 272,
   "items": [
-    {
-      "path": ".git/COMMIT_EDITMSG",
-      "bytes": 33,
-      "mime": "application/octet-stream",
-      "sha256": "f772cc586b4d1d8ec75d017bc0fbcc4923e20bf212c62157f3ab4f9c9029cf7a"
-    },
-    {
-      "path": ".git/FETCH_HEAD",
-      "bytes": 123,
-      "mime": "application/octet-stream",
-      "sha256": "b3574b684289220bfde2a0b0c7b574d7ad016b22d6e9dd8055afe284ae3bde63"
-    },
-    {
-      "path": ".git/HEAD",
-      "bytes": 21,
-      "mime": "application/octet-stream",
-      "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
-    },
-    {
-      "path": ".git/config",
-      "bytes": 395,
-      "mime": "application/octet-stream",
-      "sha256": "352ac4c9ce36a628f91a3d09abca3368ea424e05af52d1af5df64e3e965b5b19"
-    },
-    {
-      "path": ".git/description",
-      "bytes": 73,
-      "mime": "application/octet-stream",
-      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
-    },
-    {
-      "path": ".git/hooks/applypatch-msg.sample",
-      "bytes": 478,
-      "mime": "application/octet-stream",
-      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
-    },
-    {
-      "path": ".git/hooks/commit-msg.sample",
-      "bytes": 896,
-      "mime": "application/octet-stream",
-      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
-    },
-    {
-      "path": ".git/hooks/fsmonitor-watchman.sample",
-      "bytes": 4726,
-      "mime": "application/octet-stream",
-      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
-    },
-    {
-      "path": ".git/hooks/post-update.sample",
-      "bytes": 189,
-      "mime": "application/octet-stream",
-      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
-    },
-    {
-      "path": ".git/hooks/pre-applypatch.sample",
-      "bytes": 424,
-      "mime": "application/octet-stream",
-      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
-    },
-    {
-      "path": ".git/hooks/pre-commit.sample",
-      "bytes": 1649,
-      "mime": "application/octet-stream",
-      "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
-    },
-    {
-      "path": ".git/hooks/pre-merge-commit.sample",
-      "bytes": 416,
-      "mime": "application/octet-stream",
-      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
-    },
-    {
-      "path": ".git/hooks/pre-push.sample",
-      "bytes": 1374,
-      "mime": "application/octet-stream",
-      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
-    },
-    {
-      "path": ".git/hooks/pre-rebase.sample",
-      "bytes": 4898,
-      "mime": "application/octet-stream",
-      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
-    },
-    {
-      "path": ".git/hooks/pre-receive.sample",
-      "bytes": 544,
-      "mime": "application/octet-stream",
-      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
-    },
-    {
-      "path": ".git/hooks/prepare-commit-msg.sample",
-      "bytes": 1492,
-      "mime": "application/octet-stream",
-      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
-    },
-    {
-      "path": ".git/hooks/push-to-checkout.sample",
-      "bytes": 2783,
-      "mime": "application/octet-stream",
-      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
-    },
-    {
-      "path": ".git/hooks/sendemail-validate.sample",
-      "bytes": 2308,
-      "mime": "application/octet-stream",
-      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
-    },
-    {
-      "path": ".git/hooks/update.sample",
-      "bytes": 3650,
-      "mime": "application/octet-stream",
-      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
-    },
-    {
-      "path": ".git/index",
-      "bytes": 9820,
-      "mime": "application/octet-stream",
-      "sha256": "2d61a5ad10467aba07ab6b16091a723fa75db4d09979ec8b5a5beeaf3c5cd962"
-    },
-    {
-      "path": ".git/info/exclude",
-      "bytes": 240,
-      "mime": "application/octet-stream",
-      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
-    },
-    {
-      "path": ".git/logs/HEAD",
-      "bytes": 190,
-      "mime": "application/octet-stream",
-      "sha256": "d2e4efd93dc32fa80e1ad9bb767d4c2acea1329dccbdb269c7d565a71fdc6d2e"
-    },
-    {
-      "path": ".git/logs/refs/heads/main",
-      "bytes": 190,
-      "mime": "application/octet-stream",
-      "sha256": "d2e4efd93dc32fa80e1ad9bb767d4c2acea1329dccbdb269c7d565a71fdc6d2e"
-    },
-    {
-      "path": ".git/logs/refs/remotes/origin/main",
-      "bytes": 171,
-      "mime": "application/octet-stream",
-      "sha256": "2194e94279b673f5815d99636ebb99ebdc8a8a7e99f7127ae3269166fe48547f"
-    },
-    {
-      "path": ".git/objects/01/73bd880b7a05858fbc10e99eb89565136375ae",
-      "bytes": 844252,
-      "mime": "application/octet-stream",
-      "sha256": "445ade3115fc655d4a628d5d0afcc5df18de779023c4792515835188ea0800f6"
-    },
-    {
-      "path": ".git/objects/08/cc8fc6909d754f2efa5d8558b883e1a5716125",
-      "bytes": 446108,
-      "mime": "application/octet-stream",
-      "sha256": "1456bafe50444fe382aaac349d926b3afd22e24a0e7f1bc03865b21791183e91"
-    },
-    {
-      "path": ".git/objects/0b/e982409fdf295313f82d21a810a4707824947d",
-      "bytes": 3070617,
-      "mime": "application/octet-stream",
-      "sha256": "7414be84984be68c6422e5da4f6bee1f0a81501f5154eb895722594fd17bbcbb"
-    },
-    {
-      "path": ".git/objects/0d/51777887c0bf2cd2d6d56840fedfac9a099385",
-      "bytes": 85,
-      "mime": "application/octet-stream",
-      "sha256": "02cc3cb00ed791cf2051ec3804f48dd31ccc6601f3ff5aaa6882f0f72bcc141c"
-    },
-    {
-      "path": ".git/objects/0e/e1a15ed951a148c980c878ed530e3387eaaba5",
-      "bytes": 1957509,
-      "mime": "application/octet-stream",
-      "sha256": "243bbd9b4ddd6860882c1a6435a68dc2893b8c1b121fb2b028d957173f3ebefa"
-    },
-    {
-      "path": ".git/objects/10/8724f8ac3f38596c1ba293b62fa9a84cdf9341",
-      "bytes": 159898,
-      "mime": "application/octet-stream",
-      "sha256": "22075f44bb691661c45af05149eeae92087afb97afb21b6f1e4b41d849807164"
-    },
-    {
-      "path": ".git/objects/11/524a45f0be41595b2714bfbf0016db2f459c9c",
-      "bytes": 2666429,
-      "mime": "application/octet-stream",
-      "sha256": "3fb44cd26cae115e8fc13f245d40fc8f956979b88b407383704e0d6d389f8494"
-    },
-    {
-      "path": ".git/objects/12/adb681c72b37f94f19d7b2c92a7339cd6feb4b",
-      "bytes": 627917,
-      "mime": "application/octet-stream",
-      "sha256": "b38c70be94d1ef9267980b2d76645c855443ed6891b704c9eac1d14f8d36e1f1"
-    },
-    {
-      "path": ".git/objects/1c/58ab800a951062f66b9ae4ac81dccb109d7d6c",
-      "bytes": 1275682,
-      "mime": "application/octet-stream",
-      "sha256": "62e1f77e19e49dbf06798a9a9ed1023d01c7a002aea4cfcb3464170858d98a7a"
-    },
-    {
-      "path": ".git/objects/29/0c83b67080c3bd763fcdfb19606acea9c70e7f",
-      "bytes": 5947918,
-      "mime": "application/octet-stream",
-      "sha256": "8b37337dd659098b2d8c7f62d58f4f6f1711e75e2c3b69861e2f125100d63af2"
-    },
-    {
-      "path": ".git/objects/2b/fd6243b1552cac55b38102b694377476f3c1a7",
-      "bytes": 57,
-      "mime": "application/octet-stream",
-      "sha256": "57d85a9f1df5d87611d5c2095642bebd9751b849e48c556d6f9af7a80c33cd82"
-    },
-    {
-      "path": ".git/objects/2f/6d00523469cf2a76184743672589c69391ff78",
-      "bytes": 51793,
-      "mime": "application/octet-stream",
-      "sha256": "7c6b22ccbefc5146b93bf829cecf2c63ed88133c1ec59b64f804b083e3ba9f4a"
-    },
-    {
-      "path": ".git/objects/33/641a01d9ad3c6311011d73f91e41dfc0285d46",
-      "bytes": 228016,
-      "mime": "application/octet-stream",
-      "sha256": "61c3c2f311fa79df5ef57a7306361fd6f7adf9626cf740dd69954e666ca06eea"
-    },
-    {
-      "path": ".git/objects/33/7d32928edb812e2e650205c25d42f2011ace6b",
-      "bytes": 78272,
-      "mime": "application/octet-stream",
-      "sha256": "952b6c4bebd38fb914f4804a77b4dde2b8222957b09a34aca8308495b41da433"
-    },
-    {
-      "path": ".git/objects/34/655161df3334e0dd64eb8ff4e5121ae0de8ac6",
-      "bytes": 371893,
-      "mime": "application/octet-stream",
-      "sha256": "30c56bbef148172af79a1a0d08c4b33dc6f4d55f9c5813df3463cb294c27563a"
-    },
-    {
-      "path": ".git/objects/34/be02178fd41202736e6d3d28d98cc45d5be7b1",
-      "bytes": 13856585,
-      "mime": "application/octet-stream",
-      "sha256": "95bce14fd9ad393ecd7667ba93f6ae0c0e01df612b26bbf11d34ed9511976427"
-    },
-    {
-      "path": ".git/objects/35/75980286aa5fcb9e0e28781ad6cdf592e18847",
-      "bytes": 3117244,
-      "mime": "application/octet-stream",
-      "sha256": "a1cf0868be3256bb400ee12566a22e5f38f591dff7930056170db3e8b99caf0f"
-    },
-    {
-      "path": ".git/objects/35/8599ba7f96d327c6a9caa345b73eb5c0b73a2b",
-      "bytes": 804,
-      "mime": "application/octet-stream",
-      "sha256": "ccc7bc59e70cb9498f29c83be367f50b367fea80162e3d36eb3949cb17f3cde9"
-    },
-    {
-      "path": ".git/objects/38/a0ed724da757a7237e28941827dc79edc786ce",
-      "bytes": 840144,
-      "mime": "application/octet-stream",
-      "sha256": "0f6f8d8e7aa527dd75059638c53fc328a0db54bf28c4637863150b63ca7164f3"
-    },
-    {
-      "path": ".git/objects/3b/d73f608f711047745fa07810b00a428c40f08d",
-      "bytes": 1320358,
-      "mime": "application/octet-stream",
-      "sha256": "b82e9ae517ca6f45e4839530ac9e5c038b03615ac2fd444fd03682459886ebe7"
-    },
-    {
-      "path": ".git/objects/3b/ff35c32ddec57e275470b279975882d550a372",
-      "bytes": 69,
-      "mime": "application/octet-stream",
-      "sha256": "520e8206f72b154af5f5fceec0af425eb4f5624f4a07a05c2938889e43a6263a"
-    },
-    {
-      "path": ".git/objects/3c/d5b57e69f0b35cc0416ef9a0ca754652925250",
-      "bytes": 9855,
-      "mime": "application/octet-stream",
-      "sha256": "a4ab852cae297c2ddedc3ff0015ea3e6b662bc3d1a842f90e23de71a48619ed1"
-    },
-    {
-      "path": ".git/objects/3f/05c3739816e73680b49131e364a434c7d433b5",
-      "bytes": 1121060,
-      "mime": "application/octet-stream",
-      "sha256": "96754d3f9769a251cb30e602c48e51d1c6cdac0d3c2747ce3a4d079ce569f422"
-    },
-    {
-      "path": ".git/objects/4e/f92abc446396faf3e90be90c5095ab3f43b2ca",
-      "bytes": 1141719,
-      "mime": "application/octet-stream",
-      "sha256": "535ab16c10a203d5a36d8966014205d06d776c68f98d0098fa46c6e6ce7c1392"
-    },
-    {
-      "path": ".git/objects/4f/94d018abdbf48115af342ad15512d016942899",
-      "bytes": 3930587,
-      "mime": "application/octet-stream",
-      "sha256": "ab7b35e57cb48054a227d2e0ab0a753c368221555006b95d627ecf19f4093ab2"
-    },
-    {
-      "path": ".git/objects/54/4f1b6c3f3cb2faffd81c390c68ed5334b475f5",
-      "bytes": 1174101,
-      "mime": "application/octet-stream",
-      "sha256": "503e1aa6af7ba7fda4928cde1a4c30f80a2083e67b23ed39535bf43fd3107dd6"
-    },
-    {
-      "path": ".git/objects/57/38ff302844d92495f5b407b623d397d658be49",
-      "bytes": 55,
-      "mime": "application/octet-stream",
-      "sha256": "331d4b2d0e1eb2b74911258063413e209413717146a3c9b8d0c1d90903abdbc4"
-    },
-    {
-      "path": ".git/objects/59/3991aa00ff68d359d35e06da5634c84fb211de",
-      "bytes": 501563,
-      "mime": "application/octet-stream",
-      "sha256": "02843c676f24f705f2954ca87243d43befba4d9da39b94b7f1c64ef2022c8e2d"
-    },
-    {
-      "path": ".git/objects/5c/d83581eaf0cf5a2d7e982cd54efedc8e2e2703",
-      "bytes": 2985922,
-      "mime": "application/octet-stream",
-      "sha256": "8eaea68212e610f51b8f1eec245729ca731913fdf01a291b9dae8ed5274a885c"
-    },
-    {
-      "path": ".git/objects/5d/34fb677df0727d7f54a0991c71f021fbaae44a",
-      "bytes": 355,
-      "mime": "application/octet-stream",
-      "sha256": "c46cfaebcf5b367c7c17ed734b8e62ecb5d61189bb2a79653b33426bb94ad840"
-    },
-    {
-      "path": ".git/objects/5d/7784909a0a497c391ba3dffc2a55ea88e40ee8",
-      "bytes": 1106862,
-      "mime": "application/octet-stream",
-      "sha256": "c710f24b8ac45ff7ede0ec420101c4e03c151be22ac110eff48a1bde06d900ee"
-    },
-    {
-      "path": ".git/objects/5d/e54ff77c2d4f45a3cf47232a0e1994530bd93c",
-      "bytes": 370,
-      "mime": "application/octet-stream",
-      "sha256": "37ffeb2c640d5c2d21fe1049d17a12076be35b2c03f389850e28dccdab7cd453"
-    },
-    {
-      "path": ".git/objects/5e/f41f3d38ce2f35f57c824290a1991f7c39c135",
-      "bytes": 929198,
-      "mime": "application/octet-stream",
-      "sha256": "f7a565b34a0b7bf07006875431a1e8bae502b08753a59c8b71238e88c3e024de"
-    },
-    {
-      "path": ".git/objects/5f/2c47e9f6ee2fd959667ac03ec20b6eec6d14d8",
-      "bytes": 589442,
-      "mime": "application/octet-stream",
-      "sha256": "dceafff27ba026334f4201a3082237666e5c2df2bfa16e9d97e08ea71fa7a980"
-    },
-    {
-      "path": ".git/objects/5f/6a0905e04f661d09b143c6e6a98182ac049648",
-      "bytes": 137,
-      "mime": "application/octet-stream",
-      "sha256": "daddc8968a31067ee2721ce079d183768afc1b3b7145fe72a83bac0aa3ffee0d"
-    },
-    {
-      "path": ".git/objects/60/803a20aacf38102a5af66056b7cacb67633e4f",
-      "bytes": 55,
-      "mime": "application/octet-stream",
-      "sha256": "da2bcc32ba0b54d02d2fba0e479a39503773ee209a74c3bf8b19be789ee0acd4"
-    },
-    {
-      "path": ".git/objects/64/182f2d80115c300dde24c453f8e37ab3f9a44f",
-      "bytes": 1110291,
-      "mime": "application/octet-stream",
-      "sha256": "e0f96db7165366d57b32efaeadab2ef1e295c629eb41be721461398f2a6fcb69"
-    },
-    {
-      "path": ".git/objects/64/857116e07192f7c84ffea4259934ec4be6e1d2",
-      "bytes": 789,
-      "mime": "application/octet-stream",
-      "sha256": "4d14018dc8040bba41be13a2e4ae6d222fdadaa21b793c728276107056ecf015"
-    },
-    {
-      "path": ".git/objects/68/377b528ad8425204ce3e812bcd74f20b6c1e52",
-      "bytes": 954116,
-      "mime": "application/octet-stream",
-      "sha256": "2eaba160b9a4cbff2b492830a0039349cf9eb4efce910a9051eeedd982773289"
-    },
-    {
-      "path": ".git/objects/6c/68d7d19685008748fb64767495d6e55e5dbd51",
-      "bytes": 1008,
-      "mime": "application/octet-stream",
-      "sha256": "cde1858a76ab6e021a5fdc25f8af02d6c2addfe066f2637c092e5fe19546ba40"
-    },
-    {
-      "path": ".git/objects/76/a0b3d20fb6e9edb4239257a5b743d534c876d5",
-      "bytes": 674914,
-      "mime": "application/octet-stream",
-      "sha256": "8e94bc5b20ee6602526d06c1358aa4cdd78389eca29c5147b862689d3fa22d40"
-    },
-    {
-      "path": ".git/objects/7e/5294c12202c70a0b3bf1472d4f37d3fc05f4c4",
-      "bytes": 3218576,
-      "mime": "application/octet-stream",
-      "sha256": "778fd369686ecbaf0404228903893d87c7677d9607fa2d535b55f1f7a00df18f"
-    },
-    {
-      "path": ".git/objects/7e/c5e8074cbbb2ef2fa7ec621346bdd73c2df710",
-      "bytes": 2571794,
-      "mime": "application/octet-stream",
-      "sha256": "8ea95b548038be13e81b65f700de5198d52bf5db85390ca4de5a85369c9f998e"
-    },
-    {
-      "path": ".git/objects/88/9f2e60aeecc107ec3a8be1e6e7f2666c70cd40",
-      "bytes": 742890,
-      "mime": "application/octet-stream",
-      "sha256": "8662966e0419ba47169fac764d30d0b43f47f2f8ce5ab18233542768ac943fbc"
-    },
-    {
-      "path": ".git/objects/8a/9363cf205aa199d131fc526012aa0b25f29236",
-      "bytes": 270,
-      "mime": "application/octet-stream",
-      "sha256": "b59baff9acf806527080a56ff3ad49745decc26e4fba54512b87e71c3e68eb31"
-    },
-    {
-      "path": ".git/objects/8a/9d4399bcc6f589627c86d0caad3fc8eabfcae1",
-      "bytes": 367467,
-      "mime": "application/octet-stream",
-      "sha256": "91e86bd2ddfb46bf6dc34936b14b10bc38ab2956f5a7eff0a40896c2bc79838e"
-    },
-    {
-      "path": ".git/objects/8e/2e6391a24c969e46bf02941d3933fcacda9536",
-      "bytes": 981998,
-      "mime": "application/octet-stream",
-      "sha256": "ee9370adb0984af7d9a792fbeb7639e67f19a6118533684d2cfc9138af18dc99"
-    },
-    {
-      "path": ".git/objects/8f/3430341e261c1272b5b9bd037a01912ea40736",
-      "bytes": 117,
-      "mime": "application/octet-stream",
-      "sha256": "6c2f8f89f4b10948991db6319d0e2a47a8b951d7af482b6c6c2e6cf4dbe96786"
-    },
-    {
-      "path": ".git/objects/93/6fd470f3ad5a039041ca25eec25cb6faa86a29",
-      "bytes": 164420,
-      "mime": "application/octet-stream",
-      "sha256": "37ac390a37e4d8e4debe007598db3508b08fc4fc8edbda89bb87ea2013d0aee0"
-    },
-    {
-      "path": ".git/objects/95/4672ed25e06c5d1ba7d71a131f459d26cb3a42",
-      "bytes": 5378,
-      "mime": "application/octet-stream",
-      "sha256": "4f099650f603cf5337f01f9be51aba4b1add3bbbfdf2f828533b79c9d77e86f0"
-    },
-    {
-      "path": ".git/objects/97/feefedeb52ce44a31005f4a4800bd025b035d9",
-      "bytes": 248,
-      "mime": "application/octet-stream",
-      "sha256": "09b1709b8561804966339a0dd164c3c9bcb41b21de881bb07ce654cbe1c0dbb5"
-    },
-    {
-      "path": ".git/objects/99/0a082e27a7dd4861f6ceccf8fdf5420cd0813d",
-      "bytes": 327848,
-      "mime": "application/octet-stream",
-      "sha256": "96ee8cea41de4ea8b8dd579d8f5963c9e517dcf9f9c517549941cbaa770817cb"
-    },
-    {
-      "path": ".git/objects/9b/ab407c00e3e2b319d4cca789ac8057f2f91aff",
-      "bytes": 479330,
-      "mime": "application/octet-stream",
-      "sha256": "b12a79907a6fadc661df6408ee91003afd6f18c0c9ee1c34f69da25451e08ed6"
-    },
-    {
-      "path": ".git/objects/9d/f8934848e09e8d2c06a68f1dd9e61265c758ea",
-      "bytes": 1018478,
-      "mime": "application/octet-stream",
-      "sha256": "05eaf1da860b3f64e2ed26650a8ea79e8214412b3c3dbca79d6b9974a1083764"
-    },
-    {
-      "path": ".git/objects/9f/80e077817ed0ac62f5e4930a6130147f9abf86",
-      "bytes": 1018583,
-      "mime": "application/octet-stream",
-      "sha256": "2db1f51037d29c974580bbe26db1a9b6a2a193b902c482ed7d41881411b569be"
-    },
-    {
-      "path": ".git/objects/a0/9513d9067f8d27edaca66f831a48c0bb93498b",
-      "bytes": 982396,
-      "mime": "application/octet-stream",
-      "sha256": "806729123d7f35c9aa1ebf142969f47bd129fc0a8f195195a7f6d311d4eee022"
-    },
-    {
-      "path": ".git/objects/ad/75a1bb8aa2696e9cd423102f1a27114a920c3a",
-      "bytes": 1017179,
-      "mime": "application/octet-stream",
-      "sha256": "50111d631785f83fbd9f3aea2fa95036121ce561496550cb990ff0a4325f368e"
-    },
-    {
-      "path": ".git/objects/b0/fb48d023c84d44ebc7501772909a4f4e4e513b",
-      "bytes": 117,
-      "mime": "application/octet-stream",
-      "sha256": "52b774b4e7e45ccd4ef9e86a1df40dbce8cfd65c331c2faebb376d8e68e1a2c7"
-    },
-    {
-      "path": ".git/objects/b4/b14760b7b4fa2553a19e3bcbb813c38b8c90fd",
-      "bytes": 20450099,
-      "mime": "application/octet-stream",
-      "sha256": "a24d354aa9b97819ad237003648a280f0416d4aab37e5d310b7c1a5e3511c046"
-    },
-    {
-      "path": ".git/objects/b8/8e2720084d1f73bafc0cd414f8adb78c9832a0",
-      "bytes": 131,
-      "mime": "application/octet-stream",
-      "sha256": "8b5fd3c71eca3780e42afcf6894b051acc4e5130f0e67d9c674c47da068f6cbf"
-    },
-    {
-      "path": ".git/objects/b8/afbbee4ea054f911953f25c794911afefe9932",
-      "bytes": 112,
-      "mime": "application/octet-stream",
-      "sha256": "e98200375f1efa6d40d43e3470aeaf17f7b94aca1861bc4c6f744e04ae27840a"
-    },
-    {
-      "path": ".git/objects/ba/eb90e2fc448f95521dd327dc00e11ddb329eeb",
-      "bytes": 819344,
-      "mime": "application/octet-stream",
-      "sha256": "c4c325a58f4eee230843e7a91bad2af602229b2e572507656ea9f4380ffa31db"
-    },
-    {
-      "path": ".git/objects/bf/2b1a1a72e8ff6fee908067f8ce303bb7d5d882",
-      "bytes": 495243,
-      "mime": "application/octet-stream",
-      "sha256": "a9bc0a5793406306a6e814bd1bca4f29f19dc82e2ad325411a337dd92d7079e6"
-    },
-    {
-      "path": ".git/objects/bf/30b162de45d5a23b34eae6f73b3812eacfe52c",
-      "bytes": 3935703,
-      "mime": "application/octet-stream",
-      "sha256": "cf45c0f1c6775c927976284d1fbeba37b76d916e874fbfbf2c4cea3edd2e5385"
-    },
-    {
-      "path": ".git/objects/c0/019a6249af056be441608a65b99ea28c745024",
-      "bytes": 181476,
-      "mime": "application/octet-stream",
-      "sha256": "36a05e5271c1b59b7fe98dc05861b0d461c98211f765d3519b5d4260470c15d8"
-    },
-    {
-      "path": ".git/objects/c0/024403315774125003863db5a94747e538d633",
-      "bytes": 226926,
-      "mime": "application/octet-stream",
-      "sha256": "aa87cbda905121a93560050b77f45f74fdd0cc81c93ddbab5c61dd3d9ec5541c"
-    },
-    {
-      "path": ".git/objects/c5/6a71d2d52b74df98a82631491d2ef6f048fea4",
-      "bytes": 156680,
-      "mime": "application/octet-stream",
-      "sha256": "0ac6a470b6733f80cf3c79f77aa6dfaa4fc84f6f54204c24eb0626b7549a25e7"
-    },
-    {
-      "path": ".git/objects/c7/0ad5f511d77ebe7fb03344631dcdab3df58ecd",
-      "bytes": 618776,
-      "mime": "application/octet-stream",
-      "sha256": "4fe6e356a8647116d949020fd7bf611914a7c4cff72fdedcc9e142ce7d78a33b"
-    },
-    {
-      "path": ".git/objects/c7/a1a42c0e21f90f91ef871f2393e7ed0bef1b76",
-      "bytes": 570,
-      "mime": "application/octet-stream",
-      "sha256": "6792ea107f00629f6474c90519477c3eb4232864538f7c8370664b5a71d994b4"
-    },
-    {
-      "path": ".git/objects/c9/5dc7d3941e4d1b7ee3b29c8f6eb43f72763253",
-      "bytes": 1046323,
-      "mime": "application/octet-stream",
-      "sha256": "c2cd01e9fc3b79aea39d94b0eb093f7a35747ba34fb9d63bcefb5bf42bc611c1"
-    },
-    {
-      "path": ".git/objects/c9/c4f23e887c1ddde49bda9a15ce68a1c1e01012",
-      "bytes": 1079374,
-      "mime": "application/octet-stream",
-      "sha256": "d1cd9b2736a080cfa3df0fecc0082509bf9edf7cfaa6db68b291efdf83fc33a2"
-    },
-    {
-      "path": ".git/objects/cb/50de228c4fa212db0e969d3faaaeb283c8cf3a",
-      "bytes": 4304968,
-      "mime": "application/octet-stream",
-      "sha256": "504783a10f41870c691f20a158494bf786a2bb703f30ff285e73e3fe7926e79d"
-    },
-    {
-      "path": ".git/objects/cd/e5e42c4114928f99587fc3b4f7f45330a2486b",
-      "bytes": 1084735,
-      "mime": "application/octet-stream",
-      "sha256": "3c10feb476f162e43fd443d8f5f0b4959a041c8f523609ccd462a8334dfa269e"
-    },
-    {
-      "path": ".git/objects/cf/2227b3339437f0770c72579277b5b20d1d8b9e",
-      "bytes": 625449,
-      "mime": "application/octet-stream",
-      "sha256": "ebaa0561eb9f2d5c6d252d4a47f48213cf56509da03a50acf3328ae697079737"
-    },
-    {
-      "path": ".git/objects/cf/3bc0d579192d7f5f69b7e9503e849ba4033d77",
-      "bytes": 11717627,
-      "mime": "application/octet-stream",
-      "sha256": "9368a9d008005715270bebcfe9e9211199ae0e28b37b238bad2388ad0ccedb13"
-    },
-    {
-      "path": ".git/objects/d1/92759797900edfc6fc918f350d51b7cb58d1e9",
-      "bytes": 844806,
-      "mime": "application/octet-stream",
-      "sha256": "652036faa427769bc495bba75eb79bf400aa6c5562f8338e4a24ea1faa32d640"
-    },
-    {
-      "path": ".git/objects/d5/4acacd745ed041821ddb522f331a0f3e456075",
-      "bytes": 47,
-      "mime": "application/octet-stream",
-      "sha256": "fc545ab9096193f0da16fc5a57de20f606f706603601ea39912245fd8dbb39d6"
-    },
-    {
-      "path": ".git/objects/d8/c24ad8cdf0a0e8ed72c604896d2bc878277e60",
-      "bytes": 1378239,
-      "mime": "application/octet-stream",
-      "sha256": "77954b8967892905994ad8ca52cf8ebc5749cf6d372bf3b76765632f19e13b2b"
-    },
-    {
-      "path": ".git/objects/d9/71577ca696bbfd40b9470299b59f47775287e0",
-      "bytes": 3206765,
-      "mime": "application/octet-stream",
-      "sha256": "46b39c70a2bb4f8e69e9717db719427113625f5a982ee7fa96e9396a1a9e66d1"
-    },
-    {
-      "path": ".git/objects/de/c1c8852fecaced4aa828b643c4317a16d3b783",
-      "bytes": 20123,
-      "mime": "application/octet-stream",
-      "sha256": "40259383b2e6b7eafb8876eb81cae53397c94e2ff73ff56b3733fce771c88772"
-    },
-    {
-      "path": ".git/objects/df/6522ff754b53a871d955154b3ca58796a78746",
-      "bytes": 3029029,
-      "mime": "application/octet-stream",
-      "sha256": "cd536984f4735f635548adfe56c69712ed1bb6558c2982337e5c1bca3a4d7737"
-    },
-    {
-      "path": ".git/objects/e0/212b51f4f7738252d126b9a516420570a6b986",
-      "bytes": 8046,
-      "mime": "application/octet-stream",
-      "sha256": "36aacd4dd61e1e3577a5581d4b709f42c21a559d5263c4f98a4055f0074c6c7e"
-    },
-    {
-      "path": ".git/objects/e0/466e056da23c0caa2b562b8982c3667af05e78",
-      "bytes": 2651063,
-      "mime": "application/octet-stream",
-      "sha256": "8adaa012f07111f4d062d75c27e0cf103841356badf04dde0e0cc5df2fc8cfd6"
-    },
-    {
-      "path": ".git/objects/e0/707e0c447c396aa98e2e48aaf43f676d776c7a",
-      "bytes": 56,
-      "mime": "application/octet-stream",
-      "sha256": "96d43b4a83eeb9bb4eb28677c3faa1f161327425781f96ad64daef38d0ca35ac"
-    },
-    {
-      "path": ".git/objects/eb/82f264df361bf51b2028acf987efc11c5d0007",
-      "bytes": 9599605,
-      "mime": "application/octet-stream",
-      "sha256": "1346faa37785d8f615a71e9598abb9def2c79a2eb4d7ddd6b40ae21678311e70"
-    },
-    {
-      "path": ".git/objects/ec/02d8570721c4e634df0be7de6766da517be890",
-      "bytes": 606573,
-      "mime": "application/octet-stream",
-      "sha256": "6031e861d05cd6b20377cf55e4b3265bd8eedbc9fcc20b85c41edbc1ef5efc9b"
-    },
-    {
-      "path": ".git/objects/ed/56a95c3ffb4e642d6c3f35264b37637736683e",
-      "bytes": 8740041,
-      "mime": "application/octet-stream",
-      "sha256": "83fec96b5cbdba11f4d9e7ed8c4b3e9bc31ee86957d05188c3d14db491e3f5d5"
-    },
-    {
-      "path": ".git/objects/ee/63dc46b87c29e22666d27fc42662b51c22811a",
-      "bytes": 806336,
-      "mime": "application/octet-stream",
-      "sha256": "931d199b09afa7b37f7ad5c8b47a20438bf3a4ff326ac122369386dd47797b18"
-    },
-    {
-      "path": ".git/objects/f5/3388ccc56dd0a880c6eb65476234cd2e4626c0",
-      "bytes": 883,
-      "mime": "application/octet-stream",
-      "sha256": "6f87c43e4c553763b9ef386329e4e9384ea8f60a26d0a6913efd8e0da2b8618f"
-    },
-    {
-      "path": ".git/objects/f5/e8d48314af493d345e1bfad6c3c66aa0ed7c8b",
-      "bytes": 1719,
-      "mime": "application/octet-stream",
-      "sha256": "0c53ba7fd3e58ed999da522fa18400b4bad7f88c0db9c56b8c557641afe701c0"
-    },
-    {
-      "path": ".git/objects/f6/2b1529fb3690bde7a8bfb2dbbec1c5b74124cb",
-      "bytes": 509693,
-      "mime": "application/octet-stream",
-      "sha256": "fc6f8fd3d9a6c82c59c490213d1ee9f9b6e701536c71dc7dc85f7688117a4c40"
-    },
-    {
-      "path": ".git/objects/f6/ad840e1daa3b549a05b15a99314efec287b6da",
-      "bytes": 145,
-      "mime": "application/octet-stream",
-      "sha256": "c865473b4fd58012d18fab3ae10d461b753d680eb083951d0350914ea66f8312"
-    },
-    {
-      "path": ".git/objects/f9/ca0a4bf69f43b0883a763554189ea3669dcada",
-      "bytes": 1102562,
-      "mime": "application/octet-stream",
-      "sha256": "e3b5cfbea4ee23f70d450c1d302dc73c91f5579e1dd3ace63f89fbd534d741b6"
-    },
-    {
-      "path": ".git/objects/fa/fff2e8d6c86b79ee1db7cde4325e11516fabfb",
-      "bytes": 36,
-      "mime": "application/octet-stream",
-      "sha256": "93e0e3503ad4667b4e7dc7aaf867f7a669f708aa9ffda2e6a01b8b825d7d541a"
-    },
-    {
-      "path": ".git/objects/fb/fda73257b165cc857f16508ed7d94335f8aba1",
-      "bytes": 467559,
-      "mime": "application/octet-stream",
-      "sha256": "3d592ab4b5e535bec989e28901bc2e0d4ecb9dd8a7afeaf291bbd6850311ac4c"
-    },
-    {
-      "path": ".git/objects/fc/864f6a52ac7a17e2b54812b58f7384778ad555",
-      "bytes": 790891,
-      "mime": "application/octet-stream",
-      "sha256": "92d04d01e737d8dbaa42303a2730302c762ab04c32fe3a7d238c01356be4bb9d"
-    },
-    {
-      "path": ".git/objects/fd/ae9e15a4f8e725252bb38bbdd1211fa7651dcc",
-      "bytes": 7081089,
-      "mime": "application/octet-stream",
-      "sha256": "411fcdc61f753cc4f13a4116c1a0f308a5303658870a321b1f54654fc0e42aa5"
-    },
-    {
-      "path": ".git/refs/heads/main",
-      "bytes": 41,
-      "mime": "application/octet-stream",
-      "sha256": "a6b7de76f715443e2d11b33a21befb58f1a44737ea764d639e16489390acf96c"
-    },
-    {
-      "path": ".git/refs/remotes/origin/main",
-      "bytes": 41,
-      "mime": "application/octet-stream",
-      "sha256": "a6b7de76f715443e2d11b33a21befb58f1a44737ea764d639e16489390acf96c"
-    },
     {
       "path": ".gitignore",
       "bytes": 20,
@@ -755,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 1876,
+      "bytes": 1999,
       "mime": "text/markdown",
-      "sha256": "b8b5b92c520fe00075b3799f4d20d12b993e29ea9d183e90187cc60cba29e016"
+      "sha256": "92a1717f8badcc235f30777db6d19b02f7c7a335e02eb0e3f84fff2c25fdad07"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -802,10 +64,22 @@
       "sha256": "3af6ecd07546afd60ecb99761f5808242de7f96ad21b8cb38945a379474de066"
     },
     {
+      "path": "docs/asset-manifest.json",
+      "bytes": 62575,
+      "mime": "application/json",
+      "sha256": "64045ed59b1f6bb788390f2be7e2a03f435d7bed68f288c9a46abc71334bc76d"
+    },
+    {
       "path": "docs/christ-church-brand-notes.md",
       "bytes": 524,
       "mime": "text/markdown",
       "sha256": "b0ee22fd726ac8b40633e48e3662f66853d8e37e063144642d8671c39e2badda"
+    },
+    {
+      "path": "docs/locke-copy-direction.md",
+      "bytes": 2942,
+      "mime": "text/markdown",
+      "sha256": "6e721003c3b05a5b7b2343652bd7cfbde783a76d9e24dfb789b100989278dbd9"
     },
     {
       "path": "photos/materials/brava-gallery/01-new-york-lake-forest.webp",
@@ -1532,6 +806,606 @@
       "bytes": 4305904,
       "mime": "video/mp4",
       "sha256": "97b9e8d3658198e2c0164728080efac859bad71f6d490fd4e25f22d244db58d1"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/001__mo2zba496rpsgrv2__2026-04-17_14_03_51Z.webp",
+      "bytes": 23834,
+      "mime": "image/webp",
+      "sha256": "6f948cfbb61eb65ae2c2f6d4a8328aa7f9cdc61d96ebe321bf94c27845cc812a"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/002__mo2zba4dr82z5wx6__2026-04-17_14_03_51Z.webp",
+      "bytes": 8112,
+      "mime": "image/webp",
+      "sha256": "a01dd1c95798411df269e0ac50508a73b5fac328660ce3aec1f3b7a004090085"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/003__mo2zba4dm16sskp6__2026-04-17_14_03_51Z.webp",
+      "bytes": 8366,
+      "mime": "image/webp",
+      "sha256": "f380d50547ee8d43561be3486066758e6bfaea72ceb22e72dc6b1e1bad959ca2"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/004__mo2zba4gx8wdc609__2026-04-17_14_03_51Z.webp",
+      "bytes": 3162,
+      "mime": "image/webp",
+      "sha256": "9fa60ce623e0c9c05e625d85571bff994aa71066c76a839d855b04465230a9d2"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/005__mo2zba48uf06mb91__2026-04-17_14_03_51Z.webp",
+      "bytes": 16960,
+      "mime": "image/webp",
+      "sha256": "8ebde7edee96791fed1e37de2229fc740cef31e01d31bcb0962d0c52ded5f121"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/006__mo2zba3u1vdwcxno__2026-04-17_14_03_51Z.webp",
+      "bytes": 16266,
+      "mime": "image/webp",
+      "sha256": "9bdc45a39edc846ac8d873f9c68fab1f20172960531e62d0bb96cb6b977151bc"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/007__mo2zba41eqt85npv__2026-04-17_14_03_51Z.webp",
+      "bytes": 17690,
+      "mime": "image/webp",
+      "sha256": "f4f70ff7e662ddd9d881d2f9f71cb781bd5cefe55a2a20e802e107498b54ec21"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/008__mo2zba3o97up9zsi__2026-04-17_14_03_51Z.webp",
+      "bytes": 19038,
+      "mime": "image/webp",
+      "sha256": "cc10cee3bc52d23fdd503770233837d08a2314433a425f191f5e3e323526550d"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/009__mo2zba38uiinenw2__2026-04-17_14_03_51Z.webp",
+      "bytes": 7388,
+      "mime": "image/webp",
+      "sha256": "5324e0a0d88e92bb019d8c088b504bd186c76f3efb3b27fdc8154e93f56b37db"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/010__mo2zba3ddekkuyd7__2026-04-17_14_03_51Z.webp",
+      "bytes": 9864,
+      "mime": "image/webp",
+      "sha256": "66ccb4a20278b2ca40062038251d6daa957f98ecf8c07246b81ea388a8da21d1"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/011__mo2zba2ucgo5jilp__2026-04-17_14_03_51Z.webp",
+      "bytes": 4654,
+      "mime": "image/webp",
+      "sha256": "5d7790af4be6e2be18090b91517affcf9d37edbee4db34e18321ee5dfe2af503"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/012__mo2zba3y3wmkcsxs__2026-04-17_14_03_51Z.webp",
+      "bytes": 14918,
+      "mime": "image/webp",
+      "sha256": "0ee4c387ef3de027a0f0e0f60348ab30ca599e357140bd33d7135774d954b509"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/013__mo2zba3fsyf0e459__2026-04-17_14_03_51Z.webp",
+      "bytes": 11446,
+      "mime": "image/webp",
+      "sha256": "a3a3dc977202229ab3858f9dab9fbb11b0d4d092ef06a9617eccc28b46eb576e"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/014__mo2zba39k4th1ec3__2026-04-17_14_03_51Z.webp",
+      "bytes": 8510,
+      "mime": "image/webp",
+      "sha256": "3abf4135e52c491373eb09e319c5943e35ddc68ae275020586583ab66c652733"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/015__mo2zba3zp4me68ut__2026-04-17_14_03_51Z.webp",
+      "bytes": 17272,
+      "mime": "image/webp",
+      "sha256": "2705f96a48c687fb2911b9253a5f929d21cdc65a8fc32788ce92f65028f4744e"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/016__mo2zba31muczyxjw__2026-04-17_14_03_51Z.webp",
+      "bytes": 16898,
+      "mime": "image/webp",
+      "sha256": "8f0d0f6496df7d4b1e0297aa0ea17dcf34b245744d3b359c0963439b3123bb2a"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/017__mo2zba2yqq7w4hpt__2026-04-17_14_03_51Z.webp",
+      "bytes": 42100,
+      "mime": "image/webp",
+      "sha256": "63bc83ebbfbb682f70e4c3942323ff001d9328f25291d426980eaa76976f5a2b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/018__mo2zba3dk8qjosv7__2026-04-17_14_03_51Z.webp",
+      "bytes": 12892,
+      "mime": "image/webp",
+      "sha256": "e41d62691fec48dbf05de9747f6472915644f623a89d09803f481c10ecff3aa8"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/019__mo2zba3jr9f13o8d__2026-04-17_14_03_51Z.webp",
+      "bytes": 16280,
+      "mime": "image/webp",
+      "sha256": "529236645b769f60bf7c711ef14216ed6e606924ae7fb7d61f00c8bb46e3c94d"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/020__mo2zba2pkryodrlk__2026-04-17_14_03_51Z.webp",
+      "bytes": 20748,
+      "mime": "image/webp",
+      "sha256": "5bc89f9ccff6b2886a5a258923e1c458b960ab0eaacc5bcbf46715dcb815c63b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/021__mo2zba43269z1x7x__2026-04-17_14_03_51Z.webp",
+      "bytes": 6770,
+      "mime": "image/webp",
+      "sha256": "b4b5267ec4e6d731f8d8d7a5910312db51f136da45582f4a77775edf5137efc2"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/022__mo2zba31ywxcbejw__2026-04-17_14_03_51Z.webp",
+      "bytes": 13606,
+      "mime": "image/webp",
+      "sha256": "1e60a1ccae7842264b5419eec2eff509d80ed3a9a879143ccb97fb468a926002"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/023__mo2zba46pvq60go10__2026-04-17_14_03_51Z.webp",
+      "bytes": 25776,
+      "mime": "image/webp",
+      "sha256": "c030df7705095ac2f38900dc994622ce01abe5c57b3139038187888aae3113d7"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/024__mo2zba40rfa967cu__2026-04-17_14_03_51Z.webp",
+      "bytes": 18594,
+      "mime": "image/webp",
+      "sha256": "215c5242ac52c2ff6cd7fede1733ea51c8bfa5e46922075f127811b4ecf0816b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/025__mo2zba3su6yqmsem__2026-04-17_14_03_51Z.webp",
+      "bytes": 35330,
+      "mime": "image/webp",
+      "sha256": "bb9c8c782254d5a50a68f293c0f8c76907ce4a92e47431e9d7f1fc4ec46c400b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/026__mo2zba2xc5o9mozs__2026-04-17_14_03_51Z.webp",
+      "bytes": 24996,
+      "mime": "image/webp",
+      "sha256": "858e9974cdf976e93cb91b208b4e501eda5d94e92de70152c190889fd2d8d7f7"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/027__mo2zba3058skp9sv__2026-04-17_14_03_51Z.webp",
+      "bytes": 33888,
+      "mime": "image/webp",
+      "sha256": "d44956652ad81d55ce167bedc80641a12d05743cb8c27c3e6aa714b7da574602"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/028__mo2zba47yapqm060__2026-04-17_14_03_51Z.webp",
+      "bytes": 15538,
+      "mime": "image/webp",
+      "sha256": "3dfac8992af9a71bd90dfb020709e9643c1ab7912f2bc524cb3ee727fba5bd06"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/029__mo2zba2ytlatjh9t__2026-04-17_14_03_51Z.webp",
+      "bytes": 33084,
+      "mime": "image/webp",
+      "sha256": "0e640c3bd6e8b0913bbe02aa57ec167e09a9343c727d1f04820aabec334f0a0e"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/030__mo2zba2ofbqz9qaj__2026-04-17_14_03_51Z.webp",
+      "bytes": 8182,
+      "mime": "image/webp",
+      "sha256": "9b7a887f98f1997a130cfd745617847443a4ab46b115160bc0e482172556fae5"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/031__mo2zba3swbzhfnwm__2026-04-17_14_03_51Z.webp",
+      "bytes": 6384,
+      "mime": "image/webp",
+      "sha256": "f86053749d542a366b25ac17149e2ce73bf27c35778bd5c197b2b09aae623a4b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/032__mo2zba3qimro4nsk__2026-04-17_14_03_51Z.webp",
+      "bytes": 30626,
+      "mime": "image/webp",
+      "sha256": "bfa7ac0dbbc26d02ce05d4a48bbd430ce4852ba4dd9dcedd979d9a1ca3bc8809"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/033__mo2zba349q7cv6qz__2026-04-17_14_03_51Z.webp",
+      "bytes": 15980,
+      "mime": "image/webp",
+      "sha256": "f4183ba4a5677317eb052111d71abd088a22174748b9572643e334e1fa04677d"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/034__mo2zba42wmg4t2iw__2026-04-17_14_03_51Z.webp",
+      "bytes": 12474,
+      "mime": "image/webp",
+      "sha256": "8d52b19e8f783ef3ad7fbb0e7b2b54d5d3f388f223c54c3a77ea5760b3738ecc"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/035__mo2zba3xjke3ntor__2026-04-17_14_03_51Z.webp",
+      "bytes": 13082,
+      "mime": "image/webp",
+      "sha256": "2919b804fcdba7b7923429fb6b8603546c7dc9647b6966fbecd84bb0e1e70d93"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/036__mo2zba3os8sx8k5i__2026-04-17_14_03_51Z.webp",
+      "bytes": 10082,
+      "mime": "image/webp",
+      "sha256": "1fa027fc41fd380e6fef96fa2d531bece7073294cc78d00d4f01d7b43d05d6b5"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/037__mo2zba3wrdimsc1q__2026-04-17_14_03_51Z.webp",
+      "bytes": 28012,
+      "mime": "image/webp",
+      "sha256": "f88662995889465c81188ac51dc34dd74b59bbd644bd9f5ae83fb072be45e202"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/038__mo2zba4a0mnf4g33__2026-04-17_14_03_51Z.webp",
+      "bytes": 13760,
+      "mime": "image/webp",
+      "sha256": "0e6bea2860e6c5e4f77a7ac0b87e7184fe47f14c411f4803770493efffa9325b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/039__mo2zba42qa0mbpkw__2026-04-17_14_03_51Z.webp",
+      "bytes": 13428,
+      "mime": "image/webp",
+      "sha256": "2fa23ddadf49843399b0c4f85570ab1d97ed0e6237f40d783924d2213bc487f7"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/040__mo2zba44apdgdphy__2026-04-17_14_03_51Z.webp",
+      "bytes": 5272,
+      "mime": "image/webp",
+      "sha256": "de2360928a5afdb7631abcb124991ef446ef60994191b0a5d4d3b50ea0b29e58"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/041__mo2zba2nbyb0rb7i__2026-04-17_14_03_51Z.webp",
+      "bytes": 41970,
+      "mime": "image/webp",
+      "sha256": "3ab0fc02abf7b927c4bc1cef7e62ae12b24093ac8adfd423d74e8467704fa4b2"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/042__mo2zba47qspv37l0__2026-04-17_14_03_51Z.webp",
+      "bytes": 30266,
+      "mime": "image/webp",
+      "sha256": "f8dcef7724c34fbadd204a4815490d018e0bb6df3a2953548fdfce9dd9726de5"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/043__mo2zba49qrgmf3f2__2026-04-17_14_03_51Z.webp",
+      "bytes": 11036,
+      "mime": "image/webp",
+      "sha256": "2db4a11071752b833b77eba2ec008c0e9e1b2a213d0ed049dac1e20683fabb16"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/044__mo2zba3x8sqj1dur__2026-04-17_14_03_51Z.webp",
+      "bytes": 29300,
+      "mime": "image/webp",
+      "sha256": "33ae4be4150667c94a2908c226d84b78340f6d9ea7e1020209bac07431198cad"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/045__mo2zba37n7nrzr21__2026-04-17_14_03_51Z.webp",
+      "bytes": 7380,
+      "mime": "image/webp",
+      "sha256": "905b0a137e41ea040e50be5b26eea1bd5c9bb62ae1cb0217910e7f874bbf4601"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/046__mo2zba2r3fpn8ehm__2026-04-17_14_03_51Z.webp",
+      "bytes": 4366,
+      "mime": "image/webp",
+      "sha256": "57a4dee7ea8d99569aaf2466208007eae29bad217a1274fedf409072aa62a15a"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/047__mo2zba4c97200zw5__2026-04-17_14_03_51Z.webp",
+      "bytes": 15306,
+      "mime": "image/webp",
+      "sha256": "21cebf6703af6779ad17dd23c81d57ae140e7d15a344868a7a96068ca26ed1cc"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/048__mo2zba4a5ue1j4k3__2026-04-17_14_03_51Z.webp",
+      "bytes": 14978,
+      "mime": "image/webp",
+      "sha256": "ca30f39567cec75d5c7af315244a96017e025c1efd1d99d4603d52b1940d658c"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/049__mo2zba3uk0izy6ko__2026-04-17_14_03_51Z.webp",
+      "bytes": 31484,
+      "mime": "image/webp",
+      "sha256": "0d3f398aa59d4200da387ed6b46815c7c28d73569c7d11ae68a577ad5dfcbd10"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/050__mo2zba3zj6jjdq6t__2026-04-17_14_03_51Z.webp",
+      "bytes": 19020,
+      "mime": "image/webp",
+      "sha256": "111878f834b95ea0bdb7dac133626d247afd64ae7ce9716954e1838fe385c883"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/051__mo2zba41ju4r85iv__2026-04-17_14_03_51Z.webp",
+      "bytes": 13586,
+      "mime": "image/webp",
+      "sha256": "ec43a755212b80984855db36495035e606d6936810d882534df195b5292531f9"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/052__mo2zba45k8k6tnlz__2026-04-17_14_03_51Z.webp",
+      "bytes": 3976,
+      "mime": "image/webp",
+      "sha256": "4e11f7904748e301eb8cb08ffc72f7d195560f52ef782c3134e1cf9c664b8d0f"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/053__mo2zba344vc2399z__2026-04-17_14_03_51Z.webp",
+      "bytes": 18568,
+      "mime": "image/webp",
+      "sha256": "5d107633f438fd9a7373cb891916013c6d60738390ff154e6fbd5b719c969e66"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/054__mo2zba3796u1c7m1__2026-04-17_14_03_51Z.webp",
+      "bytes": 6098,
+      "mime": "image/webp",
+      "sha256": "761820ce564a9c8e4b73b0c9282a051598309cbcb937b0661bb9d713b0a2308b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/055__mo2zba3jkonrtkrd__2026-04-17_14_03_51Z.webp",
+      "bytes": 3156,
+      "mime": "image/webp",
+      "sha256": "b1351bf992314f10ec860f9e85bab9d3c54dd064e5b3ab2e598014db3f351646"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/056__mo2zba3k91j0n8ce__2026-04-17_14_03_51Z.webp",
+      "bytes": 13076,
+      "mime": "image/webp",
+      "sha256": "0d1b6582ed07b719efd6a0311ee7891a23b60f0aad47a815c9419fe917762c59"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/057__mo2zba2s1myspjzn__2026-04-17_14_03_51Z.webp",
+      "bytes": 22752,
+      "mime": "image/webp",
+      "sha256": "f4d41107728b0df8c5158a5e17799143a64bbd39143abb4906ad145893519368"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/058__mo2zba2kzo7faj6f__2026-04-17_14_03_51Z.webp",
+      "bytes": 41742,
+      "mime": "image/webp",
+      "sha256": "a77cbce57a5725788b548bb3dca8ef2d8420be76004e6d38be455d9c88e6f5e0"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/059__mo2zba3ecgsqsr58__2026-04-17_14_03_51Z.webp",
+      "bytes": 13636,
+      "mime": "image/webp",
+      "sha256": "da314d9da237417a2274d563dbd4185eaa15fce5fba61f0b624874e697b3dbf7"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/060__mo2zba3p59v3qk0j__2026-04-17_14_03_51Z.webp",
+      "bytes": 18166,
+      "mime": "image/webp",
+      "sha256": "51d3d2ddc32eff5ae9fe04bfdad4425a18b053a261b0b76b82f8725e1ff2e92b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/061__mo2zba3mgthgapsg__2026-04-17_14_03_51Z.webp",
+      "bytes": 20450,
+      "mime": "image/webp",
+      "sha256": "ce497b46214448a84af3ad7ae9339f07bb719968c991243419953d8c0fd42a78"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/062__mo2zba3nupu173eh__2026-04-17_14_03_51Z.webp",
+      "bytes": 41290,
+      "mime": "image/webp",
+      "sha256": "46a0539f22213d742b70dcba650637c5d98c0e0337f9ba2be83c257656cc1564"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/063__mo2zba3ggojzw9qa__2026-04-17_14_03_51Z.webp",
+      "bytes": 7946,
+      "mime": "image/webp",
+      "sha256": "d949fafd52a208e2dd63040b7d57b17076f34b8b2bc6c59e6963be41dec0e0de"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/064__mo2zba3q4ypmj7xk__2026-04-17_14_03_51Z.webp",
+      "bytes": 31244,
+      "mime": "image/webp",
+      "sha256": "cce65461176e16761d595a93bc1e08970afd06e0259199b0a270ff6fba8700f2"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/065__mo2zba2qp5ozc5cl__2026-04-17_14_03_51Z.webp",
+      "bytes": 38534,
+      "mime": "image/webp",
+      "sha256": "15e70a0136f8dbb5e7302d5527b06048bf7ca6d048e2c96fb9640fb0a2875c65"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/066__mo2zba32zypq3f3x__2026-04-17_14_03_51Z.webp",
+      "bytes": 20996,
+      "mime": "image/webp",
+      "sha256": "63d0f8f98e964344ef8075a5e9238e98b2dbdf122fa63ebfb42ab23fa0ab8931"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/067__mo2zba3aaot39oe4__2026-04-17_14_03_51Z.webp",
+      "bytes": 6732,
+      "mime": "image/webp",
+      "sha256": "328644939b5d67b4bf7baa1890c7786f802af3246888c384f03bcf99b165759a"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/068__mo2zba3g4075vtva__2026-04-17_14_03_51Z.webp",
+      "bytes": 17474,
+      "mime": "image/webp",
+      "sha256": "91785aced2dce2f386099e3f786167ef528283505c2c2e9d3549a61edc7aff0e"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/069__mo2zba356vdy7yi10__2026-04-17_14_03_51Z.webp",
+      "bytes": 17722,
+      "mime": "image/webp",
+      "sha256": "70d94c9947f9eb03732402f1c719f5f5336402b485fbeeb035580ad99c04fc04"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/070__mo2zba2s12b7gtsn__2026-04-17_14_03_51Z.webp",
+      "bytes": 23244,
+      "mime": "image/webp",
+      "sha256": "4e5c69aefce81f071539b6db5307ff705a123036f33a25c61945d625ff0b5916"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/071__mo2zba362hbclog0__2026-04-17_14_03_51Z.webp",
+      "bytes": 6468,
+      "mime": "image/webp",
+      "sha256": "f6fbec1ff8f0b9f40f564a24a615278605fc5c275eb77729048e3df9683a2105"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/072__mo2zba2maz2p8k7h__2026-04-17_14_03_51Z.webp",
+      "bytes": 21668,
+      "mime": "image/webp",
+      "sha256": "46f284f94791af6ff1a304faf6fab70850a4123ab9443887c0c90b16aa02da28"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/073__mo2zba2vrpwl9ptq__2026-04-17_14_03_51Z.webp",
+      "bytes": 11042,
+      "mime": "image/webp",
+      "sha256": "34b3294ed8944d8f574e560f384c6acef2e3dce3a353b9a2072e4c02dc7a75f5"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/074__mo2zba2vamxf6qbq__2026-04-17_14_03_51Z.webp",
+      "bytes": 32686,
+      "mime": "image/webp",
+      "sha256": "d460d79e60cb299bb0eac6aa6cb0f4d1b1836aa2a0fb9a991356fd6c6cba60ef"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/075__mo2zba3iyajvepyc__2026-04-17_14_03_51Z.webp",
+      "bytes": 16204,
+      "mime": "image/webp",
+      "sha256": "522c3d3e8641cf886ae991247abdfe429cf70cb69ec6ca7bfe7748794d585738"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/076__mo2zba2p98mhnuyk__2026-04-17_14_03_51Z.webp",
+      "bytes": 34106,
+      "mime": "image/webp",
+      "sha256": "56bff7cb5d9d3494a3f65adf9a5fd6b4c588703a0993f803357aec415a10dde0"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/077__mo2zba2z8voi097u__2026-04-17_14_03_51Z.webp",
+      "bytes": 22272,
+      "mime": "image/webp",
+      "sha256": "0e5a81bf8cee256043c8bb1127c569fab0550a37eccc03e165dcf54ac3102fd6"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/078__mo2zba2tel2wgl2o__2026-04-17_14_03_51Z.webp",
+      "bytes": 16802,
+      "mime": "image/webp",
+      "sha256": "a2e72f83900ba34100d0a95bfe283cde4a8fbe770204c5c33a699172dbe5ef90"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/079__mo2zba2lhe1pmmhg__2026-04-17_14_03_51Z.webp",
+      "bytes": 15468,
+      "mime": "image/webp",
+      "sha256": "7736e518222a828b6936a2b393ce4d505bbf9dbce0dd4d5e40ee659592eca067"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/080__mo2zba3m87i4qc9g__2026-04-17_14_03_51Z.webp",
+      "bytes": 14336,
+      "mime": "image/webp",
+      "sha256": "fa5f3161d14a6efb0434244a1c36a26d1174544d878be016f86814010448ac03"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/081__mo2zba33pzflqa9y__2026-04-17_14_03_51Z.webp",
+      "bytes": 15478,
+      "mime": "image/webp",
+      "sha256": "1dc1fe3994301d6d88b86e05f53bb394e65cfb05de3197f53a5401b69be8e250"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/082__mo2zba3cjbdmdmc6__2026-04-17_14_03_51Z.webp",
+      "bytes": 5614,
+      "mime": "image/webp",
+      "sha256": "497a15f0acff190eaad65b0cafff9be7ab1feea3adba9148e7dc43f95a410294"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/083__mo2zba3l0cwx99uf__2026-04-17_14_03_51Z.webp",
+      "bytes": 7152,
+      "mime": "image/webp",
+      "sha256": "783029166df7e3c16f693d5b5a4f199273a2eae2ec4188b84d22c01a74f1ae80"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/084__mo2zba2wrp8xkkbr__2026-04-17_14_03_51Z.webp",
+      "bytes": 36082,
+      "mime": "image/webp",
+      "sha256": "461b9ea6804d0f097d5ea9dc33db933c9e822003beeecda58afb9170fdd43cca"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/085__mo2zba3vwpesetwp__2026-04-17_14_03_51Z.webp",
+      "bytes": 15648,
+      "mime": "image/webp",
+      "sha256": "4a9923df392ddb06df15cdc572b511a1d8da7cda6387a91c05888ae450e02965"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/086__mo2zba3a3gbukzl4__2026-04-17_14_03_51Z.webp",
+      "bytes": 7812,
+      "mime": "image/webp",
+      "sha256": "36f52cf3a628092a3eda2fb70d3439c8f2060e3dcce2c1ca5cbb1b3626daf63a"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/087__mo2zba3h0kpz3ksb__2026-04-17_14_03_51Z.webp",
+      "bytes": 5296,
+      "mime": "image/webp",
+      "sha256": "17f869f6936420690df2e2aec96396d3902e07fdc268014a80e00f9481748c28"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/088__mo2zba3b5sb24wo5__2026-04-17_14_03_51Z.webp",
+      "bytes": 8598,
+      "mime": "image/webp",
+      "sha256": "3971a74d62dd76b5767c1ca5a3727bdb0cf2a8550884e7317140ce2ce2f3807b"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/089__mo2zba3tiun3558n__2026-04-17_14_03_51Z.webp",
+      "bytes": 9100,
+      "mime": "image/webp",
+      "sha256": "e826d77cd06e4ecbd382d20cbc154ad153e4e860f70b3829a24be0184278a27d"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/090__mo2zba4bcmk90do4__2026-04-17_14_03_51Z.webp",
+      "bytes": 12908,
+      "mime": "image/webp",
+      "sha256": "0ea7b8e2aace0185d94332e177da9f460a727bbbd11d8d5132b966740ffe5fce"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/091__mo2zba3w8e44r2vq__2026-04-17_14_03_51Z.webp",
+      "bytes": 20068,
+      "mime": "image/webp",
+      "sha256": "587e85740b5d234b9ae940f6b49de8a9c63194cbb65ed10d73268e591c70edc4"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/092__mo2zba4f37lex8y8__2026-04-17_14_03_51Z.webp",
+      "bytes": 14036,
+      "mime": "image/webp",
+      "sha256": "2fc60cbad72a15c05625d0cbbb648eecbdcacd7ba8fadefa1c3ea4cc941b7278"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/093__mo2zba44q5qhfogy__2026-04-17_14_03_51Z.webp",
+      "bytes": 21362,
+      "mime": "image/webp",
+      "sha256": "24458c1e8b724f870d0ecc19a0414e8dae66d531a09e12b6058767a06ff5c771"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/094__mo2zba4chf7a1as5__2026-04-17_14_03_51Z.webp",
+      "bytes": 12420,
+      "mime": "image/webp",
+      "sha256": "d7fac87c409c8d173420d4a8bc4f36dfc4fa15b59610dfa1735741935d8f3ed8"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/095__mo2zba4h75erv4ra__2026-04-17_14_03_51Z.webp",
+      "bytes": 9064,
+      "mime": "image/webp",
+      "sha256": "77d52fbf1440bedb65c90322dc00a8103ce4dc5b7211ca0b47e23971a4bfe1e1"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/096__mo2zba46s0pmjw710__2026-04-17_14_03_51Z.webp",
+      "bytes": 17994,
+      "mime": "image/webp",
+      "sha256": "074bcd674eee55ea03dd07e122b19c6379ee8101fb1e715fc2ae42a45d775617"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/097__mo2zba4eg06dd6i7__2026-04-17_14_03_51Z.webp",
+      "bytes": 17348,
+      "mime": "image/webp",
+      "sha256": "f171eeec34dbd047a3c6151e8356ff904af531b8e9725885c2e5df19cf03f3cc"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/098__mo2zba3rau44ccbl__2026-04-17_14_03_51Z.webp",
+      "bytes": 35692,
+      "mime": "image/webp",
+      "sha256": "648cb72f5bc0bd509b56fc78d8fa2c0ee91f86e90d3e08eef6cc5de4b4691bab"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/099__mo2zba4huirygfaa__2026-04-17_14_03_51Z.webp",
+      "bytes": 13960,
+      "mime": "image/webp",
+      "sha256": "93e25b2cc47eb5975ecd2bbaf3658905d90eae1c28ee9f0ace8290f8217a3948"
+    },
+    {
+      "path": "photos/projects/christ-church/jobnimbus/100__mo2zba4f4a4bfb28__2026-04-17_14_03_51Z.webp",
+      "bytes": 6748,
+      "mime": "image/webp",
+      "sha256": "d7540b9bd1ef04a72200b008fda08664d7c9cdb6887ec2a4a2a5b04f96137279"
     },
     {
       "path": "photos/projects/christ-church/rear-rooftop-tpo-context.jpg",
