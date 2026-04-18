@@ -19,6 +19,8 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Includes the Christ Church JobNimbus inspection set as WebP-only files under `photos/projects/christ-church/jobnimbus/`.
 - `photos/projects/snape/`
   Snape project stills and motion assets, including the optimized full-bleed background video and tagged before/after slider pair folders.
+- `photos/projects/locke-ladder-brava-cedar-projects/`
+  Curated Hickman and Laskey precedent imagery tagged as Locke & Ladder Brava cedar projects.
 - `photos/materials/brava-gallery/`
   Curated Brava cedar gallery set plus the existing manifest and selects sheet.
 - `photos/materials/brava-light-study/`

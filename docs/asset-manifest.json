@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 280,
+  "file_count": 285,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 2096,
+      "bytes": 2245,
       "mime": "text/markdown",
-      "sha256": "c35529aa9d545234d2f6d44e3cdaa0b73abd95266dd2506cf9aac7e88f2c0de5"
+      "sha256": "b4848213bb5b8c0f95eb1561e3e93f98f538bdbb4f0a309a8ec373b8a0641d83"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 63706,
+      "bytes": 64620,
       "mime": "application/json",
-      "sha256": "1936028dc43a4d4454f42d1f74404db3f49fba4de0af5322a7639ea13edf9a34"
+      "sha256": "04f5b4a55bb9c814d41c3ab8c5c36485d426f9166c5c80cfcd7826ff6751bcd4"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -1478,6 +1478,36 @@
       "bytes": 1141646,
       "mime": "image/jpeg",
       "sha256": "0af4922ff5e4e660b0b047aba877e6db32e3a499415ff71ce3939d3b1c43cb8e"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/README.md",
+      "bytes": 346,
+      "mime": "text/markdown",
+      "sha256": "bc47296385604cffb116e30b38b5bfde35ac2c129be628cd7c338149fa6afaa0"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg",
+      "bytes": 1389945,
+      "mime": "image/jpeg",
+      "sha256": "c2a52d48c414ddb4a28235940cb46496fbb9123281843bb275fb9f17b2ea0d0d"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.jpg",
+      "bytes": 1339090,
+      "mime": "image/jpeg",
+      "sha256": "93d45a33c34f71e494cf5b04eacc80e49f9a581a13c056e6614ea246bce5270f"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.jpg",
+      "bytes": 1439661,
+      "mime": "image/jpeg",
+      "sha256": "fd56451c7f03bdfdf0b21b2609577e952705b295225c343e5f94a2464c4ca9f7"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.jpg",
+      "bytes": 1451494,
+      "mime": "image/jpeg",
+      "sha256": "59f93200af6393ac9b4b9da9c859ab3c025240d81643b611ea053b05ddb6df60"
     },
     {
       "path": "photos/projects/snape/aerial-tight.jpg",
