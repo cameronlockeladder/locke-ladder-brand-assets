@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 534,
+  "file_count": 535,
   "items": [
     {
       "path": ".gitignore",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 95399,
+      "bytes": 124665,
       "mime": "application/json",
-      "sha256": "6c41250365eea544d015d59409539ae787e07119e365c454f64ba06744b0f013"
+      "sha256": "a2824fb99418ea7053982127ed9f5ec3f532e98ea5524484abe51ae54731a0e9"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -85,7 +85,7 @@
       "path": "photos/.DS_Store",
       "bytes": 6148,
       "mime": "application/octet-stream",
-      "sha256": "330ca45b822dc15d02b7d3f6c3d0aebbbd1d76cf3e673f47f2275d7e66c51be1"
+      "sha256": "0a0a2152974a030fb6aae939b332c8148750f05d0de00786d0a9a3b035e090f7"
     },
     {
       "path": "photos/materials/brava-field-shake-layout-study/README.md",
@@ -2903,9 +2903,9 @@
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/README.md",
-      "bytes": 346,
+      "bytes": 403,
       "mime": "text/markdown",
-      "sha256": "bc47296385604cffb116e30b38b5bfde35ac2c129be628cd7c338149fa6afaa0"
+      "sha256": "b94eed7bc4e57c8b8a48968efa621402512b3f140891b70f2fb381e5df7353cf"
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg",
@@ -2930,6 +2930,12 @@
       "bytes": 1451494,
       "mime": "image/jpeg",
       "sha256": "59f93200af6393ac9b4b9da9c859ab3c025240d81643b611ea053b05ddb6df60"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-side-by-side-intro-to-brava-cedar-shot.webp",
+      "bytes": 933548,
+      "mime": "image/webp",
+      "sha256": "0c1895c1305e64b3736dac82750a4215545a88d53d82b6c2b7d398d50c6fa8d1"
     },
     {
       "path": "photos/projects/snape/aerial-tight.jpg",
