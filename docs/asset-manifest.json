@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 272,
+  "file_count": 276,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 1999,
+      "bytes": 2096,
       "mime": "text/markdown",
-      "sha256": "92a1717f8badcc235f30777db6d19b02f7c7a335e02eb0e3f84fff2c25fdad07"
+      "sha256": "c35529aa9d545234d2f6d44e3cdaa0b73abd95266dd2506cf9aac7e88f2c0de5"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 62575,
+      "bytes": 62769,
       "mime": "application/json",
-      "sha256": "64045ed59b1f6bb788390f2be7e2a03f435d7bed68f288c9a46abc71334bc76d"
+      "sha256": "3c72c6e8d6902598d21a7b27e6de314fd3870635f695ef7ce10c7a3c55b7a91d"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -1486,6 +1486,24 @@
       "sha256": "44b9d07069d97a950c4adee6061af11333c5563daad7f7b9fbb7c1b23452adc5"
     },
     {
+      "path": "photos/projects/snape/before-after-slider-dormer/README.md",
+      "bytes": 430,
+      "mime": "text/markdown",
+      "sha256": "641065d735687e375439ddcf431b6096192110bd7dfcc7a74addf597b2f8aeff"
+    },
+    {
+      "path": "photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg",
+      "bytes": 773388,
+      "mime": "image/jpeg",
+      "sha256": "bc14d5c2b00d0985d9b5b5ce02b16a73cf74f6f8373d5482af91a2cfb93631af"
+    },
+    {
+      "path": "photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.jpg",
+      "bytes": 512587,
+      "mime": "image/jpeg",
+      "sha256": "1b9c9d91db50cede4233e7dfa3f6f59da2752262927f3f9521be58d8ec7d925d"
+    },
+    {
       "path": "photos/projects/snape/chimney-detail.jpg",
       "bytes": 1278259,
       "mime": "image/jpeg",
@@ -1520,6 +1538,12 @@
       "bytes": 1020984,
       "mime": "image/jpeg",
       "sha256": "eb8b81ab8ec5244fe407d8102109d18e687f1f896689d7501363e95aaf3a97ab"
+    },
+    {
+      "path": "photos/projects/snape/full-bleed-background-video.mp4",
+      "bytes": 2774614,
+      "mime": "video/mp4",
+      "sha256": "93804e61b14de5651ff7019b6a4c2e9ee032a1ee4cabe3a5882b2f202b040f4f"
     },
     {
       "path": "photos/projects/snape/hero-aerial.jpg",
