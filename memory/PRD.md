@@ -1,64 +1,59 @@
-# Christ Church | Oak Brook — Proposal Microsite V4
+# Christ Church | Oak Brook - Proposal Microsite V4
 
 **Client:** Christ Church | Oak Brook (Board of Trustees)
 **Built by:** Locke & Ladder (Cameron / Jon Strand)
 **Agent:** E1
-**Scope:** Board-facing, image-led long-scroll React proposal + light FastAPI backend.
 
-## What's in the page (12 sections)
-1. Hero — steeple-led poster
-2. Diagnosis — leak + repair-vs-replace, incl. roof-rot tile ("why spot repairs look bad")
-3. **Polycam 3D walkthrough** (click-to-load iframe, NEW in iteration 2)
-4. Evidence Wall — 100 real JobNimbus captures (6 featured + 94 rail, lightbox)
-5. Cedar vs. Synthetic — honest cedar take + "Why we chose Brava" reveal
-6. Brava Gallery — 4 Locke & Ladder installs (Hickman, Laskey) with gold "LOCKE & LADDER CLIENT" badge, then 17 Brava precedents
-7. Aspen Light Study — 90-frame scroll scrubber (brava-light-study sequence)
-8. Roof System — exploded study + 5 named partners
-9. Craftsmanship — Snape ambient background video + 2 real before/after sliders + 3 detail tiles
-10. Team — 8 crew photos editorial grid, "Jon Strand, Founder"
-11. GiveBack — clear 1% explainer (future congregation projects only)
-12. Closing — form POSTs to `/api/proposal/interest`
+## Sections (13 total)
+1. Hero (hero-timeline.mp4 video, sans display, CC + L&L lockup)
+2. Diagnosis (leak + repair-vs-replace + roof-rot eyesore tile C)
+3. Polycam 3D walkthrough (click-to-load iframe)
+4. EvidenceWall (100 JobNimbus tiles, all captions = VERIFY COPY gold badge)
+5. CedarBrava (Cedar vs. Synthetic + 3 cedar cards + Brava reveal + spec grid)
+6. **LaskeyReveal** (full-bleed Real cedar / Brava cedar compare slider, Laskey residence)
+7. BravaGallery (4 L&L installs first with gold badge, then 17 Brava precedents; only section using Fraunces serif)
+8. AspenLightStudy (90-frame scroll scrubber, Brava Aspen)
+9. RoofSystem (7 layers + **Brava install slider** 121-frame range control, no scroll hijack + 5 partners)
+10. Craftsmanship (Snape bg video + 2 before/after sliders + 3 detail tiles)
+11. Team (18-tile dense scattered mosaic, includes extras/collage-people, bitners, travis)
+12. GiveBack (1% back headline + **Faith Apostolic precedent photo** + **Oak Brook map with Christ Church pin** + CC logo)
+13. Closing (form POSTs to /api/proposal/interest, signed "Jon Strand & the Locke & Ladder team")
 
-## Iteration history
-- **Iter 1 (first build):** 12 sections built with placeholder aspen (5 frames) + visualizer section.
-- **Iter 2 (user feedback):**
-  - REMOVED: Visualizer section
-  - ADDED: Polycam 3D iframe (click-to-load)
-  - CHANGED: Brand font to Archivo (free stand-in for Termina Medium)
-  - CHANGED: "A cedar that acts like stone" → "Cedar vs. Synthetic"
-  - CHANGED: Evidence Wall now uses 100 real JobNimbus captures
-  - CHANGED: BravaGallery leads with 4 L&L installs, clearly labeled
-  - CHANGED: Aspen scrubber wired to real 90-frame sequence
-  - CHANGED: Craftsmanship uses 2 real Snape before/after pairs + background video
-  - CHANGED: Copy rewrites to avoid "not X — Y" AI-slop patterns
-  - FIXED: Name — Jon Strand (not Jon Locke)
+## Iterations
+- **Iter 1:** Initial build (12 sections, placeholder aspen).
+- **Iter 2:** Visualizer removed · Polycam added · BravaGallery L&L-first with gold badges · 90 real aspen frames · Snape video · 100 JobNimbus · Jon Strand (fix) · Archivo brand font · em-dashes still present at that point.
+- **Iter 3 (this):** LaskeyReveal inserted · Inter replaces Fraunces as default (serif reserved to BravaGallery only) · ALL JobNimbus captions to VERIFY COPY · Christ Church logo in nav · Faith Apostolic photo + Oak Brook map + CC logo added to GiveBack · denser Team mosaic · Brava install 121-frame range-slider in RoofSystem · words "quiet" and "tired" removed · all em-dashes removed (replaced with · separators or restructured prose) · hero-timeline.mp4 video in Hero.
 
 ## Tech
-- React SPA (long-scroll editorial)
-- Fraunces (display) + Manrope (body) + Archivo (brand/eyebrow, Termina substitute)
-- Lenis smooth scroll, Framer Motion, react-compare-slider, yet-another-react-lightbox
-- FastAPI `/api/proposal/interest` (POST/GET), `/api/proposal/engagement` (POST), `/api/status`
+- React SPA, Lenis smooth scroll, Framer Motion, react-compare-slider, yet-another-react-lightbox
+- Inter (default display + body) + Fraunces (gallery only) + Manrope (fallback)
+- Brand-font slot reserves Termina when WOFF2 licensed
+- FastAPI: /api/proposal/interest (POST/GET), /api/proposal/engagement (POST), /api/status
 
-## Deployment (user deploys to Vercel manually)
-- Frontend static build: `cd /app/frontend && yarn build` → `build/` deploys to Vercel
-- Backend optional; page works without it (form fails gracefully)
-- Aspen frames (90), JobNimbus (100), L&L installs (4), Brava precedents (17), Snape video (2.7MB) are all in `/app/frontend/public/assets/`
+## Deployment (Vercel manual)
+`cd /app/frontend && yarn build` → push `build/` to Vercel.
+`REACT_APP_BACKEND_URL` points to wherever FastAPI is hosted (optional — form degrades silently).
+
+## Assets in /app/frontend/public/assets
+- `brand/` (L&L icon + wordmark, CC logo + oak-brook-streets SVG, Brava logos)
+- `photos/projects/christ-church/` including hero-timeline.mp4, steeple-closeup.mp4, 100 JobNimbus captures
+- `photos/projects/faith-apostolic-church/` (GiveBack precedent)
+- `photos/projects/locke-ladder-brava-cedar-projects/` (Hickman x2, Laskey x2)
+- `photos/projects/snape/` (video + 2 before/after pairs + 3 detail tiles)
+- `photos/materials/brava-gallery/` (17 Brava precedents)
+- `photos/team/` + `photos/team/extras/` (18 team photos)
+- `aspen/` (90 webp frames)
+- `brava-install/` (121 webp frames)
+- `proposal-support/christ-church/roof-rot.webp`
 
 ## Backlog (P0 / P1 / P2)
-- **P0:** Swap Archivo → actual Termina Medium when user provides WOFF2 (drop files under `/public/assets/fonts/` and update `--font-brand` in `index.css`)
-- **P0:** Final copy from Jon (current copy is board-friendly placeholder matching voice direction in repo's `docs/locke-copy-direction.md` — "tableside, direct, opinionated, 'We refuse…', 'It is important to us…'")
-- **P1:** Replace SystemDiagram SVG with a real architectural exploded-view illustration
-- **P1:** Select the actual top-10 JobNimbus tiles for the featured grid (currently using jn-001..006 as featured — easy to reorder by changing the FEATURED array in EvidenceWall.jsx)
-- **P2:** Engagement beacon hitting `/api/proposal/engagement`
-- **P2:** Share-link generator with per-recipient signature
+- **P0:** Drop licensed Termina Medium WOFF2 under `/public/assets/fonts/` and prepend `"Termina"` in `--font-brand` / `.font-display` in `index.css`
+- **P0:** Jon supplies final captions for all VERIFY COPY spots (EvidenceWall FEATURED + RAIL descriptions)
+- **P0:** Jon supplies final prose rewrites throughout (voice direction in repo's docs/locke-copy-direction.md)
+- **P1:** Choose the best 10 JobNimbus featured images (edit FEATURED array in EvidenceWall.jsx)
+- **P1:** Replace SystemDiagram SVG with real architectural exploded-view illustration
+- **P2:** Engagement beacons hitting /api/proposal/engagement (time on section, scroll depth)
+- **P2:** Per-recipient share URLs with unique analytics signatures
 
 ## Testing
-Both iterations pass 100% backend and frontend via testing_agent_v4.
-
-## Files of Interest
-- Sections: `/app/frontend/src/components/sections/*.jsx`
-- Nav/Footer/primitives: `/app/frontend/src/components/{Nav,Footer,primitives}.jsx`
-- Main scaffold: `/app/frontend/src/App.js`
-- Styles: `/app/frontend/src/index.css` + `/app/frontend/tailwind.config.js`
-- Backend: `/app/backend/server.py`
-- Assets: `/app/frontend/public/assets/`
+iter_1 100% pass · iter_2 100% pass · iter_3 100% pass (one LOW/INFO note about React `muted` boolean attribute reflection, not functional).
