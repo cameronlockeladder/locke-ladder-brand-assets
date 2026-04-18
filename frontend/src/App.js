@@ -1,54 +1,75 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import Lenis from "lenis";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import Nav from "@/components/Nav";
+import Hero from "@/components/sections/Hero";
+import Diagnosis from "@/components/sections/Diagnosis";
+import EvidenceWall from "@/components/sections/EvidenceWall";
+import CedarBrava from "@/components/sections/CedarBrava";
+import BravaGallery from "@/components/sections/BravaGallery";
+import Visualizer from "@/components/sections/Visualizer";
+import AspenLightStudy from "@/components/sections/AspenLightStudy";
+import RoofSystem from "@/components/sections/RoofSystem";
+import Craftsmanship from "@/components/sections/Craftsmanship";
+import Team from "@/components/sections/Team";
+import GiveBack from "@/components/sections/GiveBack";
+import Closing from "@/components/sections/Closing";
+import Footer from "@/components/Footer";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
+export default function App() {
   useEffect(() => {
-    helloWorldApi();
+    const lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    const id = requestAnimationFrame(raf);
+
+    // Simple in-view observer for fade-in utility
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll(".fade-in").forEach((el) => io.observe(el));
+
+    return () => {
+      cancelAnimationFrame(id);
+      lenis.destroy();
+      io.disconnect();
+    };
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="App paper-grain bg-paper text-ink" data-testid="proposal-root">
+      <Nav />
+      <main>
+        <Hero />
+        <Diagnosis />
+        <EvidenceWall />
+        <CedarBrava />
+        <BravaGallery />
+        <Visualizer />
+        <AspenLightStudy />
+        <RoofSystem />
+        <Craftsmanship />
+        <Team />
+        <GiveBack />
+        <Closing />
+      </main>
+      <Footer />
     </div>
   );
 }
-
-export default App;
