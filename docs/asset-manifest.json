@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 285,
+  "file_count": 395,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 2245,
+      "bytes": 2416,
       "mime": "text/markdown",
-      "sha256": "b4848213bb5b8c0f95eb1561e3e93f98f538bdbb4f0a309a8ec373b8a0641d83"
+      "sha256": "7d7097dd1c6cd514f312d33116dac930d19f0f158205e0bbd913475423f145b2"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 64620,
+      "bytes": 65793,
       "mime": "application/json",
-      "sha256": "04f5b4a55bb9c814d41c3ab8c5c36485d426f9166c5c80cfcd7826ff6751bcd4"
+      "sha256": "47ddec0a687855421ce478481b06d16a9c21d9094aad016fdf11190a212b0ab9"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -80,6 +80,666 @@
       "bytes": 2942,
       "mime": "text/markdown",
       "sha256": "6e721003c3b05a5b7b2343652bd7cfbde783a76d9e24dfb789b100989278dbd9"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/README.md",
+      "bytes": 367,
+      "mime": "text/markdown",
+      "sha256": "1d88468be724ee11b4655be5e211c118896c07b48506e9fcdd714519f60b315c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-001.webp",
+      "bytes": 32408,
+      "mime": "image/webp",
+      "sha256": "71a3dbd5f8a3437a3624764bd35fdfbe269ed53dd3f23e952c2073eb6064c3b0"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-002.webp",
+      "bytes": 29050,
+      "mime": "image/webp",
+      "sha256": "e5270dd24c94631408097463a842a7cd61c360755138c7fad771ce71b5f415c2"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-003.webp",
+      "bytes": 24360,
+      "mime": "image/webp",
+      "sha256": "0c44c9b30db493cd043cc90d920f0f0cd745fb019e10f8db71edf129c710c34c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-004.webp",
+      "bytes": 24222,
+      "mime": "image/webp",
+      "sha256": "18fbb1b431100be9d1eff040edc81abfee8e0f128d45b5352401d5e66e4196a1"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-005.webp",
+      "bytes": 25394,
+      "mime": "image/webp",
+      "sha256": "289dcaba7b19a502c41f2934aae07b410c6e373df4c5fd3bebde50bcaf21a9fb"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-006.webp",
+      "bytes": 31858,
+      "mime": "image/webp",
+      "sha256": "3cca49223adaf43cc012e2b3eec15af59646c8a9c479bb9d48d424cc80b45502"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-007.webp",
+      "bytes": 33044,
+      "mime": "image/webp",
+      "sha256": "2b08f8e2493ea6389c40e4d5d1ae2da048b8fd7e345f9430e659f88295593014"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-008.webp",
+      "bytes": 33408,
+      "mime": "image/webp",
+      "sha256": "71d96beac19bc2f8ceaad84db48830c61e442b078e200e184d5e8b3ae7945632"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-009.webp",
+      "bytes": 33836,
+      "mime": "image/webp",
+      "sha256": "0781476b6bc961ae581b6817b3eb43f43aba5d9605fbe3b87f88f101cd6f1ce5"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-010.webp",
+      "bytes": 34716,
+      "mime": "image/webp",
+      "sha256": "6909e600e107f663f9b18b2d4fdcd548ccc86b7da530f0fd5925bac026874110"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-011.webp",
+      "bytes": 35062,
+      "mime": "image/webp",
+      "sha256": "5c5be9de7aa35666a26d3a4ada7095cfb7bca80c34ae1cb0e0676ab027d3d9e3"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-012.webp",
+      "bytes": 29902,
+      "mime": "image/webp",
+      "sha256": "89fb63b4689ee7f31421d443c1acf0955ae80b497b590cc4972fb5ccb377b14c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-013.webp",
+      "bytes": 29926,
+      "mime": "image/webp",
+      "sha256": "898dd820a61d864a079498fe2da24ae3595f48a8fe4655229b38ea87ecf3a15a"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-014.webp",
+      "bytes": 30516,
+      "mime": "image/webp",
+      "sha256": "5801b31f9b95dd851194a1e9ba1fc2386487e8df26c021dce61f66c9e237fafd"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-015.webp",
+      "bytes": 31122,
+      "mime": "image/webp",
+      "sha256": "c220723182b552b89e24518268b2ad1af065a94a643564e9f0496070c3a194ad"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-016.webp",
+      "bytes": 31352,
+      "mime": "image/webp",
+      "sha256": "7680bf31fedd31a640a6b5bb27ea60e29e9aff5cf25301674f969b23815f7fb9"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-017.webp",
+      "bytes": 31586,
+      "mime": "image/webp",
+      "sha256": "f4196cd730eabbd58dcd13d61850c1ad579477a4c2e4db476de2e5d325644c24"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-018.webp",
+      "bytes": 31968,
+      "mime": "image/webp",
+      "sha256": "ef0c5428fdcd339933c67bfa759e609d63f2467509378c715912aacce33d6c60"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-019.webp",
+      "bytes": 33510,
+      "mime": "image/webp",
+      "sha256": "6b9fa7c5bffb5bd3929b90e988d75d21949a7f02272787fae0965179979aa447"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-020.webp",
+      "bytes": 33346,
+      "mime": "image/webp",
+      "sha256": "91a30eda3bd7561f8c3a6ddd50d0629d3eef513ceb2d6a2cea9aa45e14e9f111"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-021.webp",
+      "bytes": 33694,
+      "mime": "image/webp",
+      "sha256": "7400d7ceace10f10525890004b7969183b74372e45ee385316de14f51d0ae4a5"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-022.webp",
+      "bytes": 33638,
+      "mime": "image/webp",
+      "sha256": "cec508a3c1690a707400ff2f8058b5165b4568b63cefcd3272812501ef63e1bc"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-023.webp",
+      "bytes": 34592,
+      "mime": "image/webp",
+      "sha256": "9b6787f54cf1fa552b026aee36c9e0d7727354f03a5ec27f71abc526d93dedb9"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-024.webp",
+      "bytes": 27672,
+      "mime": "image/webp",
+      "sha256": "46c301d1da7d2d0465a019a1e99105a10836ec6631f5c1d700aa6e450169bab1"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-025.webp",
+      "bytes": 21280,
+      "mime": "image/webp",
+      "sha256": "faa2388f3536660e8dbeafdcf925eb67fc0d7ed1ff29149a462874126bf4a85c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-026.webp",
+      "bytes": 28596,
+      "mime": "image/webp",
+      "sha256": "8c0d8fcd08e3409e4024d63d9b042bba356b7c173451e9d07cbc1301f4fe9dd9"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-027.webp",
+      "bytes": 27948,
+      "mime": "image/webp",
+      "sha256": "cd1252ab50255bd0ee0febeab426c0fc64158a86b64035e9c46a3468ad8b3d1a"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-028.webp",
+      "bytes": 27972,
+      "mime": "image/webp",
+      "sha256": "a4d68b8dc8ca7d36936284c37a8788713924295b8c4403ce96f4e292fad531a1"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-029.webp",
+      "bytes": 29278,
+      "mime": "image/webp",
+      "sha256": "2dbd47a0f7075e276fe1b75c4cb13b4f69c14f5337673c09030d5608c53be68b"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-030.webp",
+      "bytes": 29442,
+      "mime": "image/webp",
+      "sha256": "b3f94fb06500572a4c7b9a1014129c63795f7cb406d7f4a11761ea55f53fc370"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-031.webp",
+      "bytes": 29536,
+      "mime": "image/webp",
+      "sha256": "27a8f5d5b8af9c62c878451d43afeb47c3f3a60914b0978b08b7b416244b26fc"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-032.webp",
+      "bytes": 29648,
+      "mime": "image/webp",
+      "sha256": "b29281cd23c687cb9a4ed2e16e99e4589c2bec92af0ebdd0a98668bc06628eba"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-033.webp",
+      "bytes": 27770,
+      "mime": "image/webp",
+      "sha256": "5c0fddd4f491e3a4ea2a1312832f1d873d1ece44b46a23180fcca76b5de5e8cd"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-034.webp",
+      "bytes": 27168,
+      "mime": "image/webp",
+      "sha256": "c99c4c0dd9286adabfcfcf04c0314a4fa43f033167bf36f3a671d2eece977bd9"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-035.webp",
+      "bytes": 26428,
+      "mime": "image/webp",
+      "sha256": "0ec407636909da6ea63876918a1b226462bdab3da09fa995f8649e51d62bae76"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-036.webp",
+      "bytes": 26006,
+      "mime": "image/webp",
+      "sha256": "8569098b49fd7723c16a80901b92dd6ed51ca70240319ef81edf5bba93435e13"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-037.webp",
+      "bytes": 25980,
+      "mime": "image/webp",
+      "sha256": "d49866c80273af5191c54f16641f89eec8ca7b46f8feeda27fbadf868cf5908b"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-038.webp",
+      "bytes": 25920,
+      "mime": "image/webp",
+      "sha256": "a4d38c5dd464882cc33faffcadb4e39aaacff5d13890e71d1b8d48addbe68068"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-039.webp",
+      "bytes": 25478,
+      "mime": "image/webp",
+      "sha256": "0f4417d51ee1338cabbe651044e646ce0247b958f02c208a15d6003bd29aad11"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-040.webp",
+      "bytes": 25862,
+      "mime": "image/webp",
+      "sha256": "8ea1e0b3d7fd3cff22e6a428f3d08bf2e6037d2c9c433e4aacc4eb6c82bb8b7d"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-041.webp",
+      "bytes": 25312,
+      "mime": "image/webp",
+      "sha256": "b2c46f6a13defc59939e3a32b981b9b447dd4f8b699610b98681cc4de60bfecc"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-042.webp",
+      "bytes": 25214,
+      "mime": "image/webp",
+      "sha256": "323f1df2301e742550fea4168317d968545eda64ae0784a34f449b37644e664a"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-043.webp",
+      "bytes": 24230,
+      "mime": "image/webp",
+      "sha256": "8dbdad2819809fd4aee59b351762ec694acfca4e3592c576113488b80fd59fae"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-044.webp",
+      "bytes": 24428,
+      "mime": "image/webp",
+      "sha256": "8c50a4dcc5f1aa0e64d47e7b617f4de6c4b71d3426592dd47eb483ba4e04a430"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-045.webp",
+      "bytes": 19544,
+      "mime": "image/webp",
+      "sha256": "fb9b197e219f25b567044d0c7885be8bbd310da7d997195f9732ae8791bd8bc8"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-046.webp",
+      "bytes": 23396,
+      "mime": "image/webp",
+      "sha256": "bcd116d5b4fa3bad176b95975ae77db7953ea76bae11d50953c3ea859d1130b8"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-047.webp",
+      "bytes": 25568,
+      "mime": "image/webp",
+      "sha256": "fd6244cc934f0913042a4f8acbb62e4524143238821c9d04a0be01f03051da5e"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-048.webp",
+      "bytes": 28904,
+      "mime": "image/webp",
+      "sha256": "9032b75f05fdc60d9810551050553b55c8859eb8fad1adf30a050d8b9b59e400"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-049.webp",
+      "bytes": 28934,
+      "mime": "image/webp",
+      "sha256": "308625ba71a2f65a4b4af93ee3921c814803085ae3b8d1cc6edda4208d6d82c2"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-050.webp",
+      "bytes": 28494,
+      "mime": "image/webp",
+      "sha256": "c2995aec460e0c2cdb4ff5ed59c9ac9e0a79354a7741649dcce7b6cf4da19fee"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-051.webp",
+      "bytes": 28442,
+      "mime": "image/webp",
+      "sha256": "2f107b946232a691130bbc83ad8a0daac8234a120416e530843b696aa04c5fca"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-052.webp",
+      "bytes": 28416,
+      "mime": "image/webp",
+      "sha256": "e43c20b89ce0948375cd6b96a6c8092f579c364bd2643d977bbbff786cd53c7e"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-053.webp",
+      "bytes": 28462,
+      "mime": "image/webp",
+      "sha256": "d70c73b0b3a78700cdc203d1e16b6a0dbd7f9fbd2b8d8cbb99bea86dd45b30fa"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-054.webp",
+      "bytes": 28368,
+      "mime": "image/webp",
+      "sha256": "dc182f0ce545f08728f17fa8270661522eaa92128eb4ef7b151cc117eb997490"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-055.webp",
+      "bytes": 28400,
+      "mime": "image/webp",
+      "sha256": "2c2b2a3b8b4702fa6b8d5fc18cea0d7cb18b65ce64606d2affcd72c9831c8c5e"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-056.webp",
+      "bytes": 28370,
+      "mime": "image/webp",
+      "sha256": "0fbce635266713c70c1c67f8f1c60293a5bd9ee28d2f67a8232acae640e7cdab"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-057.webp",
+      "bytes": 27750,
+      "mime": "image/webp",
+      "sha256": "a8fbc6a7231531ebfc990da818650985d89da7adc1a5e6f106123f7907c2f88c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-058.webp",
+      "bytes": 34810,
+      "mime": "image/webp",
+      "sha256": "0ddf1207549b90bb2d64cced637c2b2a64d8d32915d03348e161d254313f13c9"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-059.webp",
+      "bytes": 36712,
+      "mime": "image/webp",
+      "sha256": "ff27ca084b18b7076ac4a02f2e7523c6466753efa1cb7d9f3c6696b3fd4f0049"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-060.webp",
+      "bytes": 41570,
+      "mime": "image/webp",
+      "sha256": "5b759c7899359728d2f9f4b9efad0b3acc7ebbae93613f5fe77a9c1695025c09"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-061.webp",
+      "bytes": 50730,
+      "mime": "image/webp",
+      "sha256": "16af761367b0302d3071204b142bd0d428c7c28b2f58f8297e07f94ac5af678f"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-062.webp",
+      "bytes": 53078,
+      "mime": "image/webp",
+      "sha256": "06195bd54174cbcd4880cb149c3c77566f08fa72884476e5ff838562ec2ab034"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-063.webp",
+      "bytes": 43876,
+      "mime": "image/webp",
+      "sha256": "c4dfe99244bf6553f22d73230ffa1037064b3f01e001307f3443035bb4766dc4"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-064.webp",
+      "bytes": 40394,
+      "mime": "image/webp",
+      "sha256": "74a2bb5abb9c94c078875a05354a4780dd1d84670028dcaff654d1a4c3326d6a"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-065.webp",
+      "bytes": 33350,
+      "mime": "image/webp",
+      "sha256": "acec048e8f7dafb3763d1652c4f3632fce745f6e630a65553d1b8825834e9411"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-066.webp",
+      "bytes": 40428,
+      "mime": "image/webp",
+      "sha256": "dc18f768ac090d229be48927c96c6ee095b87c5cfb91655300f54d0afb599432"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-067.webp",
+      "bytes": 39690,
+      "mime": "image/webp",
+      "sha256": "e47c5553392190e8f392f2a1ac84c3919c5b5d1eea51f609e65d7a9e4655ef20"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-068.webp",
+      "bytes": 37594,
+      "mime": "image/webp",
+      "sha256": "0ec412aa2a59254003a6f66d77d208ff0c7833b94a6e5905b7e3dfd2ce94dec7"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-069.webp",
+      "bytes": 41140,
+      "mime": "image/webp",
+      "sha256": "dc04201f9f801bc966511010c082130c540f39be9433c7ecb74c1c811214dfb8"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-070.webp",
+      "bytes": 40188,
+      "mime": "image/webp",
+      "sha256": "27866c646ab465bc3d751fc2d793989d2bd8065dca2766c53a72f38c7147b91a"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-071.webp",
+      "bytes": 36864,
+      "mime": "image/webp",
+      "sha256": "a8f5a6d1d80e3257a1c0ce6054a237937a8afa0d44268a4a00b8d48cfd38973f"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-072.webp",
+      "bytes": 34962,
+      "mime": "image/webp",
+      "sha256": "f4109461a7ba44a62637639b34656f883ccda57d7d15317b36ae29a0305276e0"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-073.webp",
+      "bytes": 35346,
+      "mime": "image/webp",
+      "sha256": "52797e28aa4d6c4d546c45ac0ca036ead772fd05ae6bcff0569cc9ba35b17391"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-074.webp",
+      "bytes": 37660,
+      "mime": "image/webp",
+      "sha256": "804bc5e4fca6eceb9d447671f5e94e0c5dd28b75f6162af49e7eb71575148170"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-075.webp",
+      "bytes": 39270,
+      "mime": "image/webp",
+      "sha256": "27c3f91cd8a62e18f27c5ac31b1aec37ba81761515ad3623c54c5c37a08c97c8"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-076.webp",
+      "bytes": 33680,
+      "mime": "image/webp",
+      "sha256": "44ac1913a181c430e615e51aa54ac2cddbb9d6dfc4d74e85b04e8abc4f5ad97b"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-077.webp",
+      "bytes": 33550,
+      "mime": "image/webp",
+      "sha256": "566bec5c4832941e0bd3c22c56d4de3fd86e430f7d10b5a942d2291f56be2b70"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-078.webp",
+      "bytes": 35390,
+      "mime": "image/webp",
+      "sha256": "f8d3e9f6283d59ad7ca48ce6347310a4d2100d07d9f0498b25fd25dee02254fd"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-079.webp",
+      "bytes": 35208,
+      "mime": "image/webp",
+      "sha256": "4c8418d76b355c130d65784cc001f73038e7ba77c47f89edd348c3034c876363"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-080.webp",
+      "bytes": 40374,
+      "mime": "image/webp",
+      "sha256": "d3eb67f25db3be9e8a966bc489eb5844efce7140ab02dae95fb0860f8ffdf28c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-081.webp",
+      "bytes": 42700,
+      "mime": "image/webp",
+      "sha256": "eb9408f391396ba086811af650227105d72415ea335e1861aae79e7a0ec6a991"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-082.webp",
+      "bytes": 44610,
+      "mime": "image/webp",
+      "sha256": "a9d0e0847b654b55cb0ac9b77d275c11c4e6299fd62a06814995be38332c688f"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-083.webp",
+      "bytes": 48930,
+      "mime": "image/webp",
+      "sha256": "1759bb8d3e1d0e034774f1cc9f79c8b5262a1cd352a6e7d3dcbff30807c2b826"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-084.webp",
+      "bytes": 45308,
+      "mime": "image/webp",
+      "sha256": "87ed122f0215b84de185c68b14abe4b834d9486cb006458c7bff0cbc7e3d040f"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-085.webp",
+      "bytes": 44514,
+      "mime": "image/webp",
+      "sha256": "7fd9a9b939140b54ab1beea473a3c9fcfd565060e463cafa56c061e56e765794"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-086.webp",
+      "bytes": 44538,
+      "mime": "image/webp",
+      "sha256": "8b930a47b24c2673f56d500b6ccac1661f4f752a0c4ea7d4dfeba62e7e3e0838"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-087.webp",
+      "bytes": 44520,
+      "mime": "image/webp",
+      "sha256": "703364941b255599cedc2060e97d0daa04a8464a0b3dfe9491b7b6d036c75439"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-088.webp",
+      "bytes": 45592,
+      "mime": "image/webp",
+      "sha256": "7c3104bb1da7779a7c7c706d01c3f97dd2f724459e9c0d14cfd266d85ea1b8ca"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-089.webp",
+      "bytes": 45698,
+      "mime": "image/webp",
+      "sha256": "1ff57ad3dc2b7645d97cb2c2dad7e5be817d6f050729c74dc08457df48ebd683"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-090.webp",
+      "bytes": 45744,
+      "mime": "image/webp",
+      "sha256": "71abdf00aed5a4071ab76063960bd47efa73bc0bbdb11dc4568850745f762e8b"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-091.webp",
+      "bytes": 45854,
+      "mime": "image/webp",
+      "sha256": "a74515d1622a37468c09bad2a1627ddcbbb7274c03168cd5826a405b71cba6f0"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-092.webp",
+      "bytes": 45888,
+      "mime": "image/webp",
+      "sha256": "e113a14b30dad436255c933e1e75f05cb2fe77d8b082802899cdc1047e564a04"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-093.webp",
+      "bytes": 46042,
+      "mime": "image/webp",
+      "sha256": "59062e3ab2051394d3a91bc2983b5c82700dd90d6e08535e91883163cc4c084c"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-094.webp",
+      "bytes": 46120,
+      "mime": "image/webp",
+      "sha256": "4181b72b8045279ca385713b3598d02372c0486fff4fea2b2a8c7e71ce5b3041"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-095.webp",
+      "bytes": 46130,
+      "mime": "image/webp",
+      "sha256": "afc5b622a8697759e57ded638709af0a1800aeed168ea1d0be4cdc7fa8f42261"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-096.webp",
+      "bytes": 37728,
+      "mime": "image/webp",
+      "sha256": "bca091a4ab9b80adfa7fe2bb511b8a1d4a50d2d0c18bffb6828261ea689d1689"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-097.webp",
+      "bytes": 38004,
+      "mime": "image/webp",
+      "sha256": "1836d34021bc04908acea20d0f316cb9233a247ceb3a38fe7814e74475acbe00"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-098.webp",
+      "bytes": 38580,
+      "mime": "image/webp",
+      "sha256": "b893007288c9ff2cfd78c88a250d425c6cbb9969ccfcb8e2cf8e5f2b823d4347"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-099.webp",
+      "bytes": 34538,
+      "mime": "image/webp",
+      "sha256": "ebd6ef9281d13796973e0aebf678fed5cab4973a52143ac0a29a52d9d4c03005"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-100.webp",
+      "bytes": 30068,
+      "mime": "image/webp",
+      "sha256": "66bdb483fbde0dfe96140857a78a07c13a6b497d2216db9f1890e0fa3628a5e4"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-101.webp",
+      "bytes": 25488,
+      "mime": "image/webp",
+      "sha256": "16c8cfafc614c0212b077e26c722151390d870fa6f0ff5c234fa6baed8dfb3b4"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-102.webp",
+      "bytes": 20716,
+      "mime": "image/webp",
+      "sha256": "b060a3d182b1b58aee1226d4118a3ea941e86e554f620fc1196c1baf8cc82211"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-103.webp",
+      "bytes": 19218,
+      "mime": "image/webp",
+      "sha256": "c14c2ac59176d6eff5627da10e3aef4d3158a7799e80dcf29f7407104ccc9752"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-104.webp",
+      "bytes": 19436,
+      "mime": "image/webp",
+      "sha256": "da2ea252ea380e4812739e86c420a899d1b7d6d506c0e1fe33c1bf61d7ac7445"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-105.webp",
+      "bytes": 20372,
+      "mime": "image/webp",
+      "sha256": "9cc13871c705e4d299eb6a4a04a62bc867c5e0a2eb2154ea6a71a00a1683b3a2"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-106.webp",
+      "bytes": 19692,
+      "mime": "image/webp",
+      "sha256": "d49584b841f172ace3647142298ef9c1e08968eba05c05788f7c33423f8a76df"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-107.webp",
+      "bytes": 19934,
+      "mime": "image/webp",
+      "sha256": "25d2aa5302a0d4fc4a9ce84d70b893e84eedc1571caf0db09b471f72a48dea42"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-108.webp",
+      "bytes": 20146,
+      "mime": "image/webp",
+      "sha256": "1ef244a57495688f5ad1178e4742018d63b8b47a05617501f7e06b13ccfb30af"
+    },
+    {
+      "path": "photos/materials/brava-field-shake-layout-study/sequence/frame-109.webp",
+      "bytes": 21022,
+      "mime": "image/webp",
+      "sha256": "8dee7f3e0548858b5c59fd7c1166160cd7741c6461670727dc55513b748c7c56"
     },
     {
       "path": "photos/materials/brava-gallery/01-new-york-lake-forest.webp",
