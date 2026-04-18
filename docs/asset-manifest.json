@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 276,
+  "file_count": 280,
   "items": [
     {
       "path": ".gitignore",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 62769,
+      "bytes": 63706,
       "mime": "application/json",
-      "sha256": "3c72c6e8d6902598d21a7b27e6de314fd3870635f695ef7ce10c7a3c55b7a91d"
+      "sha256": "1936028dc43a4d4454f42d1f74404db3f49fba4de0af5322a7639ea13edf9a34"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -1504,6 +1504,24 @@
       "sha256": "1b9c9d91db50cede4233e7dfa3f6f59da2752262927f3f9521be58d8ec7d925d"
     },
     {
+      "path": "photos/projects/snape/before-after-slider-dormer-aligned/README.md",
+      "bytes": 278,
+      "mime": "text/markdown",
+      "sha256": "856100cc5471b9aab907737d343fdb609470bd55ed2f78d5356c6765cb361dd3"
+    },
+    {
+      "path": "photos/projects/snape/before-after-slider-dormer-aligned/after-dormer-1600.webp",
+      "bytes": 230940,
+      "mime": "image/webp",
+      "sha256": "a2e26d665d896d0fbedafc6d3654e69d2204e41a4358cd361131584644046534"
+    },
+    {
+      "path": "photos/projects/snape/before-after-slider-dormer-aligned/before-dormer-aligned-1600.webp",
+      "bytes": 223194,
+      "mime": "image/webp",
+      "sha256": "09233f4eb470e0732770efeca7bcfd37585514439b6bad65a5324f622314753a"
+    },
+    {
       "path": "photos/projects/snape/chimney-detail.jpg",
       "bytes": 1278259,
       "mime": "image/jpeg",
@@ -1628,6 +1646,12 @@
       "bytes": 8749360,
       "mime": "image/webp",
       "sha256": "f7f524644f979e84215ac123ef988aaa906cd510a4be10dc22f58a3de8725459"
+    },
+    {
+      "path": "photos/team/README.md",
+      "bytes": 258,
+      "mime": "text/markdown",
+      "sha256": "6953855815e171c89014ef0f7f2ba0c39edbcb979221e2e89bd7f0be24fddd6e"
     },
     {
       "path": "photos/team/Roofers De Sol.webp",
