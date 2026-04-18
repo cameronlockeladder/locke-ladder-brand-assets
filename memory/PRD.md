@@ -57,3 +57,25 @@
 
 ## Testing
 iter_1 100% pass · iter_2 100% pass · iter_3 100% pass (one LOW/INFO note about React `muted` boolean attribute reflection, not functional).
+
+---
+## Iteration 4 (this round)
+- Termina Medium + Heavy WOFF2 loaded via `/public/fonts.css` (linked from index.html; keeps CRA happy)
+- Laskey side-by-side single-image reveal moved INSIDE CedarBrava between the 3 cedar cards and the Brava reveal (no slider any more)
+- Separate LaskeyReveal section and .jsx file removed
+- All "V4" references removed from user-facing text
+- Craftsmanship headline: "Work that takes the time it takes."
+- Team rebuilt as sticky scroll-scatter (Framer Motion useScroll/useTransform, 18 absolutely-positioned tiles with varied rotations and parallax entries). No captions, no grid, no masonry.
+- GiveBack: full-bleed Faith Apostolic photo with huge 1% overlay; Christ Church pin has two radiating .ll-pulse-ring gradients on infinite animation; added serif italic community impact pull-quote
+- Hero: Client/Scope/Priority row rebuilt as a 4-column grid of HeroCell components (eyebrow + value) so baselines align
+- **PDF board packet endpoint**: GET /api/proposal/packet.pdf (reportlab, pure Python + Pillow for image downsizing). ~2.5MB, 7 pages (cover + 6). Download button wired into the Closing section.
+
+## Deployment reminder (Vercel manual)
+Frontend:
+  cd /app/frontend && yarn build
+  deploy ./build to Vercel.
+Termina WOFF2 files already ship under /public/assets/fonts and /public/fonts.css — no additional config needed.
+For the PDF button to work, REACT_APP_BACKEND_URL must point at a live FastAPI host with reportlab + pillow installed.
+
+## Testing history
+iter_1: 100% · iter_2: 100% · iter_3: 100% · iter_4: 100% (28/28 verified items)
