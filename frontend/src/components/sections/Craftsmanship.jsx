@@ -35,7 +35,7 @@ export default function Craftsmanship() {
             className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
           />
           <h2 className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.6vw] text-paper leading-[0.95] max-w-5xl pb-6">
-            The details other crews walk away from.
+            Work that takes the time it takes.
           </h2>
         </div>
       </div>
@@ -44,9 +44,9 @@ export default function Craftsmanship() {
         <div className="max-w-2xl mb-14">
           <p className="text-body text-lg leading-relaxed">
             Snape is a residence down the road that asked us to solve what
-            other roofers told them couldn&rsquo;t be solved. Custom metals,
-            hand-dressed copper, and a tolerance for work that takes the time
-            it takes. The same shop that would treat this steeple.
+            other roofers said couldn&rsquo;t be solved. Custom metals,
+            hand-dressed copper, and a tolerance for detail most crews skip.
+            The same shop that would treat this steeple.
           </p>
         </div>
 

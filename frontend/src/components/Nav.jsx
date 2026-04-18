@@ -6,7 +6,6 @@ const SECTIONS = [
   { id: "polycam", label: "3D Survey" },
   { id: "evidence", label: "Evidence" },
   { id: "cedar-brava", label: "Cedar vs Synthetic" },
-  { id: "laskey-reveal", label: "Laskey" },
   { id: "gallery", label: "Brava Gallery" },
   { id: "aspen", label: "Light Study" },
   { id: "system", label: "The System" },
@@ -74,7 +73,7 @@ export default function Nav() {
               className={`h-6 w-auto transition ${scrolled ? "" : "invert brightness-0 opacity-90"}`}
             />
             <span className={`hidden md:inline-block font-brand text-[11px] uppercase tracking-[0.22em] ${scrolled ? "text-ink/70" : "text-paper/80"}`}>
-              Proposal · V4
+              A proposal
             </span>
           </button>
           <button

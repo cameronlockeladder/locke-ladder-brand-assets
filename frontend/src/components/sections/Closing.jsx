@@ -51,6 +51,27 @@ export default function Closing() {
             <div className="mt-10 text-ink text-xl font-medium">
               Jon Strand &amp; the Locke &amp; Ladder team
             </div>
+
+            <div className="mt-10 pt-8 border-t border-ink/15">
+              <div className="eyebrow text-warm-gold mb-4">Download the Board Packet</div>
+              <a
+                href={`${API || ""}/proposal/packet.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="closing-pdf-download"
+                className="group inline-flex items-center gap-4 bg-ink text-paper font-brand text-[11px] uppercase tracking-[0.28em] px-6 py-4 hover:bg-bronze transition-colors"
+              >
+                <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
+                A printable 6-page packet (PDF)
+                <span className="relative inline-block w-10 h-px bg-paper/60 group-hover:bg-paper transition-colors">
+                  <span className="absolute -right-1 -top-[3px] w-[7px] h-[7px] border-r border-t border-paper/80 group-hover:border-paper rotate-45" />
+                </span>
+              </a>
+              <p className="mt-3 text-xs text-slate leading-relaxed max-w-sm">
+                A condensed version of this proposal, laid out for reading away
+                from a screen. Useful to mark up and bring to the meeting.
+              </p>
+            </div>
           </div>
 
           <div className="lg:col-span-6">

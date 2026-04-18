@@ -1,0 +1,18 @@
+/* Static font declarations — loaded via <link> from index.html
+   to avoid CRA/webpack url() resolution on absolute /assets paths. */
+
+@font-face {
+  font-family: "Termina";
+  src: url("/assets/fonts/TerminaTest-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Termina";
+  src: url("/assets/fonts/TerminaTest-Heavy.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

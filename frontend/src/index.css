@@ -17,6 +17,9 @@
   --rule: #D9D4CA;
 }
 
+/* Termina (brand face) — self-hosted. Declared in /public/fonts.css to avoid
+   webpack url() resolution. */
+
 html {
   scroll-behavior: auto;
   background: var(--paper);
@@ -33,7 +36,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Inter", "Termina", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Termina", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 400;
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
@@ -43,26 +46,24 @@ body {
 }
 
 .font-display {
-  font-family: "Inter", "Termina", system-ui, sans-serif;
+  font-family: "Termina", "Inter", system-ui, sans-serif;
   font-weight: 500;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
 }
 
 .font-serif {
-  /* Reserved for Brava Gallery + tiny italic accents only */
   font-family: "Fraunces", "Cormorant Garamond", Georgia, serif;
   font-feature-settings: "ss01", "ss02";
 }
 
 .font-sans {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Termina", "Inter", system-ui, sans-serif;
 }
 
 .font-brand,
 .eyebrow {
-  font-family: "Inter", "Termina", system-ui, sans-serif;
-  font-weight: 600;
-  font-feature-settings: "cv11";
+  font-family: "Termina", "Inter", system-ui, sans-serif;
+  font-weight: 500;
 }
 
 .display-tight {
@@ -124,6 +125,16 @@ img { image-rendering: -webkit-optimize-contrast; }
 
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Pulse / radiating glow for the GiveBack pin */
+@keyframes ll-pulse {
+  0% { transform: scale(0.6); opacity: 0.55; }
+  70% { transform: scale(2.4); opacity: 0; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+.ll-pulse-ring {
+  animation: ll-pulse 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
 
 /* Form range slider (Brava install scrubber) */
 input[type="range"].ll-range {

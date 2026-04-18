@@ -41,7 +41,7 @@ export default function Footer() {
 
         <div className="md:col-span-12 pt-8 mt-8 border-t border-paper/15 flex flex-col sm:flex-row justify-between gap-4 font-brand text-[11px] uppercase tracking-[0.2em] text-paper/45">
           <span>&copy; {new Date().getFullYear()} Locke &amp; Ladder</span>
-          <span>Proposal v4 · Confidential</span>
+          <span>Proposal · Confidential</span>
         </div>
       </div>
     </footer>

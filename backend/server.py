@@ -1,4 +1,5 @@
 from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi.responses import StreamingResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -9,6 +10,8 @@ from pydantic import BaseModel, Field, EmailStr, ConfigDict
 from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
+
+from pdf_builder import build_board_packet_pdf
 
 
 ROOT_DIR = Path(__file__).parent
@@ -108,7 +111,7 @@ async def capture_proposal_interest(payload: ProposalInterestCreate):
         await db.proposal_interest.insert_one(doc)
         logger.info("Proposal interest captured: %s <%s>", obj.name, obj.email)
         return obj
-    except Exception as e:
+    except Exception:
         logger.exception("Failed to capture proposal interest")
         raise HTTPException(status_code=500, detail="Unable to capture interest")
 
@@ -131,6 +134,30 @@ async def capture_engagement(event: EngagementEvent):
     doc["received_at"] = datetime.now(timezone.utc).isoformat()
     await db.proposal_engagement.insert_one(doc)
     return {"ok": True}
+
+
+@api_router.get("/proposal/packet.pdf")
+async def get_board_packet_pdf():
+    """
+    Generate and return the Christ Church | Oak Brook board packet PDF.
+    Inline-viewable and downloadable. Rebuilt on every request so the
+    packet always reflects the latest copy.
+    """
+    try:
+        buf = build_board_packet_pdf()
+    except Exception as exc:
+        logger.exception("PDF build failed")
+        raise HTTPException(status_code=500, detail=f"PDF build failed: {exc}")
+
+    filename = "christ-church-oak-brook-board-packet.pdf"
+    return StreamingResponse(
+        buf,
+        media_type="application/pdf",
+        headers={
+            "Content-Disposition": f'inline; filename="{filename}"',
+            "Cache-Control": "no-store",
+        },
+    )
 
 
 app.include_router(api_router)
