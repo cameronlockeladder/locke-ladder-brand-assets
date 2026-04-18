@@ -1,0 +1,487 @@
+{
+  "repository": "locke-ladder-brand-assets",
+  "generated_at": "2026-04-17",
+  "file_count": 80,
+  "items": [
+    {
+      "path": ".gitignore",
+      "bytes": 20,
+      "mime": "application/octet-stream",
+      "sha256": "2bdfdb216230559f36faf46907142b8afd478401150f810e1ddaf9a4fdcc656c"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 398,
+      "mime": "text/markdown",
+      "sha256": "6a50bb937dab7bfc63176194faa432de10b06e006c2a5dea2d0a4950971782c0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1765,
+      "mime": "text/markdown",
+      "sha256": "0a6d26b06832622db6104f273b1cd8e343b261b37413701fb4bcee07ec26bb96"
+    },
+    {
+      "path": "brand/client/christ-church/christ-church-logo.png",
+      "bytes": 10029,
+      "mime": "image/png",
+      "sha256": "6401869aa084484500edc27a6d99731ca5be56028f327a563e2768cd0e04c673"
+    },
+    {
+      "path": "brand/client/christ-church/oak-brook-streets.png",
+      "bytes": 168194,
+      "mime": "image/png",
+      "sha256": "f8777970444b6b2b363514161651ab71cac9a5b4db95092621d6ff9d91ea9a4f"
+    },
+    {
+      "path": "brand/client/christ-church/oak-brook-streets.svg",
+      "bytes": 1463755,
+      "mime": "image/svg+xml",
+      "sha256": "9ef2f3114d9631f2ddeb5e6882e63a5c558e86be0951c6cd3133896b2c0c78f8"
+    },
+    {
+      "path": "brand/locke-ladder/ll-icon.webp",
+      "bytes": 10402,
+      "mime": "image/webp",
+      "sha256": "96ecbebd11d606ec5835d11019a075d54d4558ef41569f927240a8c0c12a86ef"
+    },
+    {
+      "path": "brand/locke-ladder/locke-ladder-wordmark.png",
+      "bytes": 70383,
+      "mime": "image/png",
+      "sha256": "6af675d81580fad7b90caf77bacad889c3412a81e917fa8ce58dfe403fbb709c"
+    },
+    {
+      "path": "brand/locke-ladder/locke-ladder-wordmark.webp",
+      "bytes": 28916,
+      "mime": "image/webp",
+      "sha256": "9d25ead963a40c46d8f7ce8daeaade3c5698ab467af46095ed01e1d987c667b4"
+    },
+    {
+      "path": "brand/partners/brava/brava-new-logo-white.svg",
+      "bytes": 1902,
+      "mime": "image/svg+xml",
+      "sha256": "3af6ecd07546afd60ecb99761f5808242de7f96ad21b8cb38945a379474de066"
+    },
+    {
+      "path": "docs/christ-church-brand-notes.md",
+      "bytes": 524,
+      "mime": "text/markdown",
+      "sha256": "b0ee22fd726ac8b40633e48e3662f66853d8e37e063144642d8671c39e2badda"
+    },
+    {
+      "path": "photos/materials/brava-gallery/01-new-york-lake-forest.webp",
+      "bytes": 181398,
+      "mime": "image/webp",
+      "sha256": "3b150b16dd99eea761d9bd96803478d43dcba72474b0c2e235509387b91dc5f9"
+    },
+    {
+      "path": "photos/materials/brava-gallery/02-georgia-lake-forest.webp",
+      "bytes": 844528,
+      "mime": "image/webp",
+      "sha256": "5beb8289ae6cefb2fa5846db645081d5c0ac16f98578d1f5721b70f900efd554"
+    },
+    {
+      "path": "photos/materials/brava-gallery/03-colorado-lodge.webp",
+      "bytes": 226838,
+      "mime": "image/webp",
+      "sha256": "16e05cf4127dd46b6990432b3fd15d851b59e78f34d323000ee8bddf51929112"
+    },
+    {
+      "path": "photos/materials/brava-gallery/04-colorado-natural-cedar-shake.webp",
+      "bytes": 618568,
+      "mime": "image/webp",
+      "sha256": "e0673a54350b97c7565a4bc8d026c949df1ec70e915d165b2a2dbca8533f48a1"
+    },
+    {
+      "path": "photos/materials/brava-gallery/05-georgia-canyon-gray-cedar-shake.webp",
+      "bytes": 625236,
+      "mime": "image/webp",
+      "sha256": "71c47bd320012b8946ddc642ac9275bffe1b3827e0cf68e81174404d617a0927"
+    },
+    {
+      "path": "photos/materials/brava-gallery/06-long-grove-aspen-cedar-shake.webp",
+      "bytes": 164352,
+      "mime": "image/webp",
+      "sha256": "be08195f716e97e5adabdfeea0c835731949de6a608f0bcaff36561cc5191f27"
+    },
+    {
+      "path": "photos/materials/brava-gallery/07-greensboro-arendale-cedar-shake.webp",
+      "bytes": 606370,
+      "mime": "image/webp",
+      "sha256": "c2ea5ada0fd6f5ea8c04816672809cbcc4cef71086bbc8708f87ad855918e30a"
+    },
+    {
+      "path": "photos/materials/brava-gallery/08-illinois-cottage.webp",
+      "bytes": 1045984,
+      "mime": "image/webp",
+      "sha256": "902a323105ae423e40beef03ca7a4a7e33855af62adc71309223441599cc6969"
+    },
+    {
+      "path": "photos/materials/brava-gallery/09-mundelein-lake-forest-cedar-shake.webp",
+      "bytes": 953806,
+      "mime": "image/webp",
+      "sha256": "add5ecab358dba3dba02142a205b0ccf9f382867bc0d0c7000bfa2bcbe3ad34f"
+    },
+    {
+      "path": "photos/materials/brava-gallery/10-winnetka-weathered-cedar-shake.webp",
+      "bytes": 790628,
+      "mime": "image/webp",
+      "sha256": "b0a97e5a2d9a67212927bfe3df7a64758bb7b0aa845851d8568b2983b3aa1357"
+    },
+    {
+      "path": "photos/materials/brava-gallery/11-north-carolina-natural-cedar-shake.webp",
+      "bytes": 674686,
+      "mime": "image/webp",
+      "sha256": "932615c2259de2c18681a355c4af241bbdd49b67d8329179b3b46c36fe1ff5d7"
+    },
+    {
+      "path": "photos/materials/brava-gallery/12-west-virginia-canyon-gray-resort.webp",
+      "bytes": 227928,
+      "mime": "image/webp",
+      "sha256": "b1daa81486c0e3bd44a22ecdbfb6733bd17c62a9a83a36b1b502764098256408"
+    },
+    {
+      "path": "photos/materials/brava-gallery/13-wyoming-lodge.webp",
+      "bytes": 806068,
+      "mime": "image/webp",
+      "sha256": "95ad585983bea5a4facbd2b73555f2aad4878c5a0b7b66d0c62296e5e1bb1e4d"
+    },
+    {
+      "path": "photos/materials/brava-gallery/14-wyoming-natural-cedar-shake.webp",
+      "bytes": 589244,
+      "mime": "image/webp",
+      "sha256": "a2160e04afc28b3537db79814f6b64eeb240275172be00385bd161864b433a7f"
+    },
+    {
+      "path": "photos/materials/brava-gallery/15-decatur-head-island-lodge.webp",
+      "bytes": 509520,
+      "mime": "image/webp",
+      "sha256": "5fed902e7005b7485d95cdff49c394e5ce0c97cd48e9b83eabaffd3cdb09153d"
+    },
+    {
+      "path": "photos/materials/brava-gallery/16-grand-marais-minnesota-minne-stuga.webp",
+      "bytes": 156612,
+      "mime": "image/webp",
+      "sha256": "b32aae84f4c143075af90d45dd1f3dc808aa5d9ae07a2d74fe95f91999a3020d"
+    },
+    {
+      "path": "photos/materials/brava-gallery/17-beechwood-shake.webp",
+      "bytes": 445950,
+      "mime": "image/webp",
+      "sha256": "0bd5eda51936b70a93ccb9b0061f16ccbaca7758a0801625e93ab8551662923f"
+    },
+    {
+      "path": "photos/materials/brava-gallery/final-selects-sheet.jpg",
+      "bytes": 508139,
+      "mime": "image/jpeg",
+      "sha256": "508ddffa218f6dfa45544cf5392629c71bfb759877e7f60a7c32cab3df816a8d"
+    },
+    {
+      "path": "photos/materials/brava-gallery/manifest.json",
+      "bytes": 8585,
+      "mime": "application/json",
+      "sha256": "0c2a45a2c458638e424be5009b19b0435ed62631c07cf39bd2801a0ac6cf7441"
+    },
+    {
+      "path": "photos/projects/christ-church/bell-tower-primary-leak.jpg",
+      "bytes": 1109521,
+      "mime": "image/jpeg",
+      "sha256": "b401d4906494c82e65c1afcc505c2c4341dc652ba339d24917f00056da0f488d"
+    },
+    {
+      "path": "photos/projects/christ-church/campus-overview.jpg",
+      "bytes": 1102904,
+      "mime": "image/jpeg",
+      "sha256": "ab9f97accfd8226c259ee13656e28a260ad0ba762c4392c57cff328dbbfcc43b"
+    },
+    {
+      "path": "photos/projects/christ-church/dark-steeple-ne-leak.jpg",
+      "bytes": 1079640,
+      "mime": "image/jpeg",
+      "sha256": "16f10e92524d2d0b609c0a3ed0617112ac0a8f32152ed91e153839c0c4c276f4"
+    },
+    {
+      "path": "photos/projects/christ-church/front-corner-campus-overview.jpg",
+      "bytes": 930065,
+      "mime": "image/jpeg",
+      "sha256": "09b6e6a44730a8c8067bff701f5d18ed8a4c5d724fb18a390bbab41b52e86e2d"
+    },
+    {
+      "path": "photos/projects/christ-church/front-entrance-wide.jpg",
+      "bytes": 982894,
+      "mime": "image/jpeg",
+      "sha256": "2fda5eb83112092b77764c94455d564bc5b11be6b99b4ffdf2877f81e4d5c426"
+    },
+    {
+      "path": "photos/projects/christ-church/front-entrance.jpg",
+      "bytes": 982894,
+      "mime": "image/jpeg",
+      "sha256": "2fda5eb83112092b77764c94455d564bc5b11be6b99b4ffdf2877f81e4d5c426"
+    },
+    {
+      "path": "photos/projects/christ-church/front-entrance.mp4",
+      "bytes": 7081134,
+      "mime": "video/mp4",
+      "sha256": "fd2896c0383c470a631821eebf244224cad8ba3b7e9a3fa1f99f6098f9ce4888"
+    },
+    {
+      "path": "photos/projects/christ-church/front-roofline-missing-shingles.jpg",
+      "bytes": 1111211,
+      "mime": "image/jpeg",
+      "sha256": "b76589249edf5783b88937dc792c469c8af5dafe4de5e844e2d780bb4d1df940"
+    },
+    {
+      "path": "photos/projects/christ-church/hero-campus-brava-aspen.png",
+      "bytes": 3194906,
+      "mime": "image/png",
+      "sha256": "3acfdeff355aca7b61e061e860268b33e475a06a82e3a9bf5f3fb05495b0308b"
+    },
+    {
+      "path": "photos/projects/christ-church/hero-campus-brava-natural-cedar.png",
+      "bytes": 3094884,
+      "mime": "image/png",
+      "sha256": "96e58bf9fede48a1a7427594ff963159de2766577d90648a54e862d0ece345dc"
+    },
+    {
+      "path": "photos/projects/christ-church/hero-campus.jpg",
+      "bytes": 1102904,
+      "mime": "image/jpeg",
+      "sha256": "ab9f97accfd8226c259ee13656e28a260ad0ba762c4392c57cff328dbbfcc43b"
+    },
+    {
+      "path": "photos/projects/christ-church/hero-campus.mp4",
+      "bytes": 4305904,
+      "mime": "video/mp4",
+      "sha256": "97b9e8d3658198e2c0164728080efac859bad71f6d490fd4e25f22d244db58d1"
+    },
+    {
+      "path": "photos/projects/christ-church/rear-rooftop-tpo-context.jpg",
+      "bytes": 841242,
+      "mime": "image/jpeg",
+      "sha256": "5456304de6cc83eb7a58005f832a3f6a15954694c729110dd50b9e632fbf63bd"
+    },
+    {
+      "path": "photos/projects/christ-church/roofline-corner.jpg",
+      "bytes": 1018849,
+      "mime": "image/jpeg",
+      "sha256": "f48057f18dfd88a06ee9c13ca2e3380c186731527f2db0c2b395bf326fa2d5dc"
+    },
+    {
+      "path": "photos/projects/christ-church/sanctuary-lawn.jpg",
+      "bytes": 1379175,
+      "mime": "image/jpeg",
+      "sha256": "f937889708f80dad4eda7fdc7dc3591e9a70798c2a7ac765f94fd8328660cde9"
+    },
+    {
+      "path": "photos/projects/christ-church/side-entry-brava-aspen.png",
+      "bytes": 2787007,
+      "mime": "image/png",
+      "sha256": "43964d1f29ec84a494f35a0740cb6ffd179dfef79eeabc56d0d2912087936fd3"
+    },
+    {
+      "path": "photos/projects/christ-church/side-entry-brava-natural-cedar.png",
+      "bytes": 2705064,
+      "mime": "image/png",
+      "sha256": "f165de6a626797d05375f0f33a7da49d8b6793538510fb1acce3a0f8e78c6433"
+    },
+    {
+      "path": "photos/projects/christ-church/side-entry.jpg",
+      "bytes": 820593,
+      "mime": "image/jpeg",
+      "sha256": "defe44d742e8250d3dedb0d91c2708e78c76f660edb7624473fc052cebe78a8f"
+    },
+    {
+      "path": "photos/projects/christ-church/side-entry.mp4",
+      "bytes": 3936748,
+      "mime": "video/mp4",
+      "sha256": "fc9c27742b605fed110469f3c987cc2f7db1799b1c64958253e1a84c0ebc3d00"
+    },
+    {
+      "path": "photos/projects/christ-church/steeple-closeup-brava-aspen.png",
+      "bytes": 3318518,
+      "mime": "image/png",
+      "sha256": "c06f95fb84a8da4d67b92b61f3b002fb52eaeada2e1c7505a8de6c8feb5ae476"
+    },
+    {
+      "path": "photos/projects/christ-church/steeple-closeup-brava-natural-cedar.png",
+      "bytes": 3367646,
+      "mime": "image/png",
+      "sha256": "2980e7cc18bf8d8a52e57a3cf61ddbbc88c4a307f6fc48a31e03bf37cc7b2961"
+    },
+    {
+      "path": "photos/projects/christ-church/steeple-closeup.jpg",
+      "bytes": 1085220,
+      "mime": "image/jpeg",
+      "sha256": "5eba0061119f772d1397aa8c93be8033d700c00d2e4309e365f92a10decf7aa5"
+    },
+    {
+      "path": "photos/projects/christ-church/steeple-closeup.mp4",
+      "bytes": 2667044,
+      "mime": "video/mp4",
+      "sha256": "ef3cf29228fa3cd8249a1a4a5a14dc2906917f6048f57fdf6bde82a63f3d24ae"
+    },
+    {
+      "path": "photos/projects/christ-church/topdown.jpg",
+      "bytes": 1141646,
+      "mime": "image/jpeg",
+      "sha256": "0af4922ff5e4e660b0b047aba877e6db32e3a499415ff71ce3939d3b1c43cb8e"
+    },
+    {
+      "path": "photos/projects/snape/aerial-tight.jpg",
+      "bytes": 1123595,
+      "mime": "image/jpeg",
+      "sha256": "44b9d07069d97a950c4adee6061af11333c5563daad7f7b9fbb7c1b23452adc5"
+    },
+    {
+      "path": "photos/projects/snape/chimney-detail.jpg",
+      "bytes": 1278259,
+      "mime": "image/jpeg",
+      "sha256": "ece1a9d85be1c4ae4769572d571425f499d6f32c88c5a7718a03f4d3627f5165"
+    },
+    {
+      "path": "photos/projects/snape/copper-detail.jpg",
+      "bytes": 482510,
+      "mime": "image/jpeg",
+      "sha256": "df37fa6dbfac397c71cb28c18488403bd1c471c0daf97292aca3dc8ed36fdec9"
+    },
+    {
+      "path": "photos/projects/snape/copper-loop.mp4",
+      "bytes": 3029848,
+      "mime": "video/mp4",
+      "sha256": "370422c2c0679341035075a6068da7b276a1daec3c5b540f231a3d32bb78bcc0"
+    },
+    {
+      "path": "photos/projects/snape/dormer-detail.jpg",
+      "bytes": 986255,
+      "mime": "image/jpeg",
+      "sha256": "a4cb032a74a86c4d88d6fdf177f56fc609663b402b539dd456ab9d9c6bd2d165"
+    },
+    {
+      "path": "photos/projects/snape/front-approach.mp4",
+      "bytes": 20448325,
+      "mime": "video/mp4",
+      "sha256": "79088e296724683060d481431425b65c2647e07419703d9c9863472baefc7994"
+    },
+    {
+      "path": "photos/projects/snape/front-elevation.jpg",
+      "bytes": 1020984,
+      "mime": "image/jpeg",
+      "sha256": "eb8b81ab8ec5244fe407d8102109d18e687f1f896689d7501363e95aaf3a97ab"
+    },
+    {
+      "path": "photos/projects/snape/hero-aerial.jpg",
+      "bytes": 1959944,
+      "mime": "image/jpeg",
+      "sha256": "847e502091e7fdc3308e377d1ce16633645c89e9a0d3632a1039d616b1fec145"
+    },
+    {
+      "path": "photos/projects/snape/hero-loop.mp4",
+      "bytes": 5948791,
+      "mime": "video/mp4",
+      "sha256": "059a934d5aa58006fc91f80521463590bd81c2793534d96e1a3de0547e6e51cb"
+    },
+    {
+      "path": "photos/projects/snape/magnolia-loop.mp4",
+      "bytes": 3219450,
+      "mime": "video/mp4",
+      "sha256": "03cd1699df07063c1848e99ae78cd438279980e48f5aa506ef814c58132c6e83"
+    },
+    {
+      "path": "photos/projects/snape/material-sample.jpg",
+      "bytes": 370722,
+      "mime": "image/jpeg",
+      "sha256": "799f43b063060155ee42cc94d887e34cd52dde2730ac94413ee29b75ca7f1edc"
+    },
+    {
+      "path": "photos/projects/snape/rear-courtyard.jpg",
+      "bytes": 1322802,
+      "mime": "image/jpeg",
+      "sha256": "3dcc9dc8ce946ee14484392d47ebfa8ed2f9f8ee6655a245a272612ca0ecfd8f"
+    },
+    {
+      "path": "photos/projects/snape/snape-cut-arrival.mp4",
+      "bytes": 11716565,
+      "mime": "video/mp4",
+      "sha256": "a7c4a8c816325301adccb113d82d4bf660dff6359ff1fa4b6cd1e237936213ab"
+    },
+    {
+      "path": "photos/projects/snape/snape-cut-details.mp4",
+      "bytes": 3931671,
+      "mime": "video/mp4",
+      "sha256": "a608c358d36e7ad64af4d26ec98b4b11df1c8def2e851adc8662897a0d6f64d9"
+    },
+    {
+      "path": "photos/projects/snape/snape-cut-roofline.mp4",
+      "bytes": 9599573,
+      "mime": "video/mp4",
+      "sha256": "953bbc167ce69e9b0cce921f9b764b4afb4456aca220d0637620cc3540d6642d"
+    },
+    {
+      "path": "photos/projects/snape/snape-cut-showpiece.mp4",
+      "bytes": 13855654,
+      "mime": "video/mp4",
+      "sha256": "3db6d2fc6ae3ccf55c97ad0917a59585a6a3ae3452a24aa072e5011f64ed2913"
+    },
+    {
+      "path": "photos/team/Crew Measure.webp",
+      "bytes": 371760,
+      "mime": "image/webp",
+      "sha256": "79d36b341f0e60f6668a049f4f47202fe9d6fcfedfe1afdf1657767304f68dd2"
+    },
+    {
+      "path": "photos/team/Crew Siding Install.webp",
+      "bytes": 495070,
+      "mime": "image/webp",
+      "sha256": "777ef33ee6b10119fc52e9b88f9286b91326dd6d9ee369ead59dc14e9ba924d1"
+    },
+    {
+      "path": "photos/team/Crew Window INstall.webp",
+      "bytes": 467396,
+      "mime": "image/webp",
+      "sha256": "0dbf3cf94bfece36510403ba9e8e555a61a57f71f6ce2a05cdd12d5ea2e6fd3d"
+    },
+    {
+      "path": "photos/team/Crew Window Install Jons House.webp",
+      "bytes": 627704,
+      "mime": "image/webp",
+      "sha256": "bda5dfd5bbff818dd6f498ccee6b75a0d389f5a69a00d6e46f3cbc1cbabc096e"
+    },
+    {
+      "path": "photos/team/Google Review Team Photo-(1 of 1).webp",
+      "bytes": 8749360,
+      "mime": "image/webp",
+      "sha256": "f7f524644f979e84215ac123ef988aaa906cd510a4be10dc22f58a3de8725459"
+    },
+    {
+      "path": "photos/team/Roofers De Sol.webp",
+      "bytes": 742642,
+      "mime": "image/webp",
+      "sha256": "b87160eb6864f52e6dcde8e16edd1ab45eabd5a372a0bceda03c5e86c6160705"
+    },
+    {
+      "path": "photos/team/Truck phot BW.webp",
+      "bytes": 1173722,
+      "mime": "image/webp",
+      "sha256": "0145597fcb711a452ac45c8bfec9c97a03b717f42eff6ba3577bbe88ebe1e401"
+    },
+    {
+      "path": "photos/team/Trucks Irving.webp",
+      "bytes": 843974,
+      "mime": "image/webp",
+      "sha256": "72c2853e1993b0d0b50097d1ca72baccefbdc5b07841733a6e17acfe40cedc71"
+    },
+    {
+      "path": "photos/team/Window Install House.webp",
+      "bytes": 1016850,
+      "mime": "image/webp",
+      "sha256": "f3a710487669ea4543cdcacdbc0ef16c31dff229e4133125ed1d22759504fef3"
+    },
+    {
+      "path": "proposal-support/christ-church/roof-rot.webp",
+      "bytes": 78230,
+      "mime": "image/webp",
+      "sha256": "3b5d2a929bb90a480869e485e4d0513ecf46f6bcd11707d992ab526ee4d6a628"
+    }
+  ]
+}
