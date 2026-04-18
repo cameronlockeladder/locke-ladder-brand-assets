@@ -57,7 +57,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9, ease: [0.25, 1, 0.5, 1] }}
-            className="mt-8 max-w-xl font-serif italic text-lg md:text-xl text-ink/75 leading-relaxed"
+            className="mt-8 max-w-xl font-serif italic text-lg md:text-xl text-ink leading-relaxed bg-paper/65 md:bg-transparent md:backdrop-blur-0 backdrop-blur-sm rounded-sm inline-block px-3 py-2 md:px-0 md:py-0"
           >
             Worth preserving well — for the generations who know its steeple
             before they know the address.

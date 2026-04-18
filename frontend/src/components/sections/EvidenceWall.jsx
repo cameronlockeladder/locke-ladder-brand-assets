@@ -164,6 +164,10 @@ export default function EvidenceWall() {
         slides={allSlides}
         styles={{ container: { background: "rgba(26,28,32,0.96)" } }}
         carousel={{ preload: 2 }}
+        toolbar={{ buttons: ["close"] }}
+        controller={{ closeOnBackdropClick: true }}
+        className="evidence-lightbox"
+        data-testid="evidence-lightbox"
       />
     </section>
   );
