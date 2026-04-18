@@ -60,6 +60,10 @@ STYLES = {
         "cover_title", fontName="Helvetica-Bold", fontSize=46, leading=48,
         textColor=PAPER, alignment=TA_LEFT, spaceAfter=16,
     ),
+    "cover_title_personal": _style(
+        "cover_title_personal", fontName="Helvetica-Bold", fontSize=28, leading=32,
+        textColor=GOLD, alignment=TA_LEFT, spaceAfter=6,
+    ),
     "cover_sub": _style(
         "cover_sub", fontName="Helvetica", fontSize=13, leading=18,
         textColor=PAPER, alignment=TA_LEFT,
@@ -178,7 +182,14 @@ def _img(story, rel: str, caption: str | None = None, w: float | None = None) ->
         story.append(Spacer(1, 10))
 
 
-def build_board_packet_pdf() -> BytesIO:
+def build_board_packet_pdf(recipient: str | None = None, role: str | None = None, token: str | None = None) -> BytesIO:
+    """
+    Build the board packet PDF. When `recipient` (and optionally `role`) are
+    supplied, the cover page is personalized and a tiny "Prepared for ..."
+    line replaces the generic "Prepared by Locke & Ladder for the Board ..."
+    subtitle. `token` is a short open-tracking id rendered as a tiny footer
+    signature on the cover (same id the server logged on download).
+    """
     buf = BytesIO()
 
     content_frame = Frame(
@@ -206,19 +217,49 @@ def build_board_packet_pdf() -> BytesIO:
     story: list = []
 
     # --- Cover page ---
-    story.append(Spacer(1, PAGE_H * 0.45))
+    story.append(Spacer(1, PAGE_H * 0.42))
+
+    if recipient:
+        clean_name = (recipient or "").strip()[:120]
+        clean_role = (role or "").strip()[:80]
+        story.append(Paragraph("A proposal, prepared for", STYLES["cover_sub"]))
+        story.append(Spacer(1, 4))
+        # Recipient name rendered large on the cover
+        story.append(Paragraph(
+            f"<font color='#D5A850'>{clean_name}</font>",
+            STYLES["cover_title_personal"],
+        ))
+        if clean_role:
+            story.append(Paragraph(clean_role, STYLES["cover_sub"]))
+        story.append(Spacer(1, 14))
+
     story.append(Paragraph("A Proposal", STYLES["cover_sub"]))
     story.append(Paragraph("An icon of<br/>Oak Brook.", STYLES["cover_title"]))
     story.append(Spacer(1, 8))
-    story.append(Paragraph(
-        "Prepared by Locke &amp; Ladder for the Board of Trustees,<br/>"
-        "Christ Church | Oak Brook.",
-        STYLES["cover_sub"],
-    ))
+
+    if recipient:
+        story.append(Paragraph(
+            "A personalized copy for the Board of Trustees,<br/>"
+            "Christ Church | Oak Brook.",
+            STYLES["cover_sub"],
+        ))
+    else:
+        story.append(Paragraph(
+            "Prepared by Locke &amp; Ladder for the Board of Trustees,<br/>"
+            "Christ Church | Oak Brook.",
+            STYLES["cover_sub"],
+        ))
     story.append(Paragraph(
         datetime.now(timezone.utc).strftime("%B %Y"),
         STYLES["cover_sub"],
     ))
+
+    if token:
+        story.append(Spacer(1, 10))
+        story.append(Paragraph(
+            f"<font color='#8A98A1' size='7'>PACKET ID · {token}</font>",
+            STYLES["cover_sub"],
+        ))
 
     # Switch to content pages
     story.append(PageBreak())
