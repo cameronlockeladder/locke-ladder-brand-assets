@@ -34,6 +34,18 @@ body {
   font-feature-settings: "ss01", "ss02";
 }
 
+/* Brand font (Locke & Ladder wordmark / eyebrows / section markers).
+   Target: Termina Medium (commercial, Adobe Fonts). Currently substituted
+   with Archivo Medium — a close free match. When a Termina license is
+   available, drop the WOFF2 files under /assets/fonts/ and switch
+   --font-brand to "Termina", Archivo, sans-serif. */
+.font-brand,
+.eyebrow {
+  font-family: "Archivo", "Termina", "Manrope", system-ui, sans-serif;
+  font-weight: 500;
+  font-feature-settings: "ss01";
+}
+
 .font-serif {
   font-family: "Fraunces", "Cormorant Garamond", Georgia, serif;
   font-feature-settings: "ss01", "ss02";
@@ -50,9 +62,9 @@ body {
 }
 
 .eyebrow {
-  font-family: "Manrope", sans-serif;
+  font-family: "Archivo", "Termina", "Manrope", system-ui, sans-serif;
   font-size: 11px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   font-weight: 600;
 }

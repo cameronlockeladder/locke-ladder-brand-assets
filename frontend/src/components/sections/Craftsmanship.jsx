@@ -4,89 +4,122 @@ import {
   ReactCompareSliderImage,
   ReactCompareSliderHandle,
 } from "react-compare-slider";
-import { SectionTag, Caption, VerifyTag } from "@/components/primitives";
+import { SectionTag, Caption } from "@/components/primitives";
 
 export default function Craftsmanship() {
   return (
     <section
       id="craftsmanship"
       data-testid="section-craftsmanship"
-      className="relative bg-paper py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
+      className="relative bg-paper border-t border-rule"
     >
-      <div className="max-w-[1600px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-          <div className="lg:col-span-7">
-            <SectionTag number="05 / 07" title="Craft — Snape Residence" />
-            <h2 className="mt-6 font-serif font-light display-tight text-[11vw] sm:text-5xl lg:text-[5vw] leading-[0.98]">
-              The details other
-              <br />
-              <span className="italic">crews can&rsquo;t replicate.</span>
-            </h2>
-          </div>
-          <div className="lg:col-span-5">
-            <p className="text-body text-base leading-relaxed">
-              Snape is a nearby residence that asked us to solve what other roofers walked
-              away from. Custom metals, copper flashing, hand-dressed valleys. The same
-              shop that will treat the Christ Church steeple.
-            </p>
-          </div>
+      {/* Ambient background video — Snape */}
+      <div className="relative w-full h-[56vh] md:h-[70vh] overflow-hidden bg-ink">
+        <video
+          data-testid="craftsmanship-background-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/assets/photos/projects/snape/hero-aerial.jpg"
+        >
+          <source src="/assets/photos/projects/snape/full-bleed-background-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-transparent to-ink/80" />
+
+        <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-12 max-w-[1600px] mx-auto">
+          <SectionTag
+            number="05 / 07"
+            title="Craft &mdash; The Snape Residence"
+            className="[&_.eyebrow]:text-paper/70 [&_.font-serif]:text-paper/90"
+          />
+          <h2 className="mt-6 font-serif font-light display-tight text-[12vw] sm:text-5xl lg:text-[5.6vw] text-paper leading-[0.95] max-w-5xl pb-6">
+            The details other crews
+            <br />
+            <span className="italic">walk away from.</span>
+          </h2>
+        </div>
+      </div>
+
+      <div className="max-w-[1600px] mx-auto py-24 md:py-32 px-6 lg:px-12">
+        <div className="max-w-2xl mb-14">
+          <p className="text-body text-lg leading-relaxed">
+            Snape is a residence down the road that asked us to solve what
+            other roofers told them couldn&rsquo;t be solved. Custom metals,
+            hand-dressed copper, and a tolerance for work that takes the time
+            it takes. The same shop that would treat this steeple.
+          </p>
         </div>
 
-        {/* Before/after using a clean field shot vs detail to convey craftsmanship delta */}
-        <div className="mt-16 space-y-10">
-          <figure data-testid="snape-compare" className="fade-in">
-            <div className="relative overflow-hidden bg-ink/5">
-              <ReactCompareSlider
-                itemOne={
-                  <ReactCompareSliderImage
-                    src="/assets/photos/projects/snape/front-elevation.jpg"
-                    alt="Field elevation"
-                  />
-                }
-                itemTwo={
-                  <ReactCompareSliderImage
-                    src="/assets/photos/projects/snape/chimney-detail.jpg"
-                    alt="Detail — chimney metalwork"
-                  />
-                }
-                handle={
-                  <ReactCompareSliderHandle
-                    buttonStyle={{
-                      backdropFilter: "blur(6px)",
-                      background: "rgba(26,28,32,0.45)",
-                      border: "1px solid rgba(249,248,246,0.8)",
-                      color: "#F9F8F6",
-                      height: 52,
-                      width: 52,
-                    }}
-                    linesStyle={{ background: "#F9F8F6", opacity: 0.9, width: 1 }}
-                  />
-                }
-                style={{ height: "clamp(380px, 72vh, 820px)" }}
-              />
-              <span className="absolute top-4 left-4 bg-ink/70 text-paper text-[11px] uppercase tracking-[0.22em] px-3 py-1 backdrop-blur-sm">
-                Field
-              </span>
-              <span className="absolute top-4 right-4 bg-paper/80 text-ink text-[11px] uppercase tracking-[0.22em] px-3 py-1 backdrop-blur-sm">
-                Detail
-              </span>
-            </div>
-            <figcaption className="mt-4 flex items-baseline justify-between">
-              <span className="font-serif italic text-ink/80 text-base">
-                Snape — field elevation vs. hand-dressed chimney metalwork
-              </span>
-              <Caption>Drag ← / →</Caption>
-            </figcaption>
-          </figure>
+        <div className="space-y-14">
+          <BeforeAfter
+            testId="snape-before-after-dormer"
+            beforeSrc="/assets/photos/projects/snape/before-after-slider-dormer-aligned/before-dormer-aligned-1600.webp"
+            afterSrc="/assets/photos/projects/snape/before-after-slider-dormer-aligned/after-dormer-1600.webp"
+            beforeLabel="Before"
+            afterLabel="After"
+            caption="Snape dormer &mdash; tear-off to finished copper &amp; slate"
+          />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" label="Copper loop — entry" />
-            <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" label="Dormer — step flashing" />
-            <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" label="Aerial — field composure" />
-          </div>
+          <BeforeAfter
+            testId="snape-before-after-detail"
+            beforeSrc="/assets/photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.jpg"
+            afterSrc="/assets/photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg"
+            beforeLabel="Close-up"
+            afterLabel="Aerial detail"
+            caption="Snape chimney &amp; slate &mdash; ground view to aerial"
+          />
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" label="Copper loop &mdash; entry" />
+          <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" label="Dormer &mdash; step flashing" />
+          <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" label="Aerial &mdash; field composure" />
         </div>
       </div>
     </section>
+  );
+}
+
+function BeforeAfter({ beforeSrc, afterSrc, beforeLabel, afterLabel, caption, testId }) {
+  return (
+    <figure data-testid={testId} className="fade-in">
+      <div className="relative overflow-hidden bg-ink/5">
+        <ReactCompareSlider
+          itemOne={<ReactCompareSliderImage src={beforeSrc} alt={beforeLabel} style={{ objectFit: "cover" }} />}
+          itemTwo={<ReactCompareSliderImage src={afterSrc} alt={afterLabel} style={{ objectFit: "cover" }} />}
+          handle={
+            <ReactCompareSliderHandle
+              buttonStyle={{
+                backdropFilter: "blur(6px)",
+                background: "rgba(26,28,32,0.45)",
+                border: "1px solid rgba(249,248,246,0.8)",
+                color: "#F9F8F6",
+                height: 52,
+                width: 52,
+              }}
+              linesStyle={{ background: "#F9F8F6", opacity: 0.9, width: 1 }}
+            />
+          }
+          style={{ height: "clamp(380px, 72vh, 820px)" }}
+        />
+        <span className="absolute top-4 left-4 bg-ink/70 text-paper font-brand text-[11px] uppercase tracking-[0.22em] px-3 py-1 backdrop-blur-sm">
+          {beforeLabel}
+        </span>
+        <span className="absolute top-4 right-4 bg-paper/80 text-ink font-brand text-[11px] uppercase tracking-[0.22em] px-3 py-1 backdrop-blur-sm">
+          {afterLabel}
+        </span>
+      </div>
+      <figcaption className="mt-4 flex items-baseline justify-between">
+        <span
+          className="font-serif italic text-ink/80 text-base"
+          dangerouslySetInnerHTML={{ __html: caption }}
+        />
+        <Caption>Drag &larr; / &rarr;</Caption>
+      </figcaption>
+    </figure>
   );
 }
 
@@ -101,8 +134,11 @@ function DetailTile({ src, label }) {
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1600ms] group-hover:scale-[1.04]"
         />
       </div>
-      <figcaption className="mt-3 flex items-baseline justify-between">
-        <span className="font-serif italic text-ink/75 text-sm">{label}</span>
+      <figcaption className="mt-3">
+        <span
+          className="font-serif italic text-ink/75 text-sm"
+          dangerouslySetInnerHTML={{ __html: label }}
+        />
       </figcaption>
     </figure>
   );

@@ -5,10 +5,10 @@ import Lenis from "lenis";
 import Nav from "@/components/Nav";
 import Hero from "@/components/sections/Hero";
 import Diagnosis from "@/components/sections/Diagnosis";
+import Polycam from "@/components/sections/Polycam";
 import EvidenceWall from "@/components/sections/EvidenceWall";
 import CedarBrava from "@/components/sections/CedarBrava";
 import BravaGallery from "@/components/sections/BravaGallery";
-import Visualizer from "@/components/sections/Visualizer";
 import AspenLightStudy from "@/components/sections/AspenLightStudy";
 import RoofSystem from "@/components/sections/RoofSystem";
 import Craftsmanship from "@/components/sections/Craftsmanship";
@@ -31,7 +31,6 @@ export default function App() {
     }
     const id = requestAnimationFrame(raf);
 
-    // Simple in-view observer for fade-in utility
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -58,10 +57,10 @@ export default function App() {
       <main>
         <Hero />
         <Diagnosis />
+        <Polycam />
         <EvidenceWall />
         <CedarBrava />
         <BravaGallery />
-        <Visualizer />
         <AspenLightStudy />
         <RoofSystem />
         <Craftsmanship />

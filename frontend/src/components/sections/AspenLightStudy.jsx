@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import { Caption, VerifyTag } from "@/components/primitives";
+import { Caption } from "@/components/primitives";
 
-// The user is uploading 90 frames later. We start with 5 available.
-// The scrubber component gracefully scales with however many frames exist.
-const FRAME_COUNT = 5;
+// User has uploaded all 90 frames. Change this to 109 once the field-shake
+// layout-study sequence is wired in (different study).
+const FRAME_COUNT = 90;
 const FRAMES = Array.from({ length: FRAME_COUNT }, (_, i) => `/assets/aspen/frame-${String(i + 1).padStart(3, "0")}.webp`);
 
 export default function AspenLightStudy() {
@@ -59,11 +59,6 @@ export default function AspenLightStudy() {
             </Caption>
             <FrameCounter progress={index} total={FRAMES.length} />
           </motion.div>
-        </div>
-
-        {/* Until all 90 frames land */}
-        <div className="absolute top-6 right-6 z-20 pointer-events-auto">
-          <VerifyTag>Using {FRAME_COUNT} of 90 frames · drop remaining to /assets/aspen</VerifyTag>
         </div>
       </div>
     </section>

@@ -48,14 +48,17 @@ export default function Closing() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-6 max-w-xl">
             <p className="text-body text-lg leading-relaxed">
-              That has always been the standard we wanted to be measured by. If the Board will have us,
-              we will treat this building the way we treat the ones on our own street — quietly,
-              specifically, and for as long as it needs us.
+              That has always been the standard we wanted to be measured by.
+              If the Board will have us, we will treat this building the way
+              we treat the ones on our own street &mdash; quietly, specifically,
+              and for as long as it needs us.
             </p>
             <p className="mt-6 text-body text-lg leading-relaxed">
-              Whenever you are ready, we are ready.
+              Whenever the Board is ready, we are ready.
             </p>
-            <div className="mt-10 font-serif italic text-ink text-xl">— Jon &amp; the Locke &amp; Ladder team</div>
+            <div className="mt-10 font-serif italic text-ink text-xl">
+              &mdash; Jon Strand &amp; the Locke &amp; Ladder team
+            </div>
           </div>
 
           {/* Contact capture */}
