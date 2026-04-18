@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-18",
-  "file_count": 397,
+  "file_count": 411,
   "items": [
     {
       "path": ".gitignore",
@@ -65,9 +65,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 91630,
+      "bytes": 92084,
       "mime": "application/json",
-      "sha256": "20f6f9339b10086aba1d21cbe67532044a9e5dc3c3adcb81b5cd08bfe7463ad1"
+      "sha256": "bce82f373f0937ca2a10aef8f3b4ce6d7b7a27478fbf11cb43a8527c9676f895"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -80,6 +80,12 @@
       "bytes": 2942,
       "mime": "text/markdown",
       "sha256": "6e721003c3b05a5b7b2343652bd7cfbde783a76d9e24dfb789b100989278dbd9"
+    },
+    {
+      "path": "photos/.DS_Store",
+      "bytes": 6148,
+      "mime": "application/octet-stream",
+      "sha256": "ed0a777d00a8b9656e14f0c72b1428ed89c2b24480cd8d5da9f1490483401f82"
     },
     {
       "path": "photos/materials/brava-field-shake-layout-study/README.md",
@@ -1396,6 +1402,12 @@
       "sha256": "f4754cb35381e4ec0229d907a1b95499ab1adaa1d4603bcdd1940da5b8cf8be8"
     },
     {
+      "path": "photos/projects/.DS_Store",
+      "bytes": 6148,
+      "mime": "application/octet-stream",
+      "sha256": "54a060ad9493c5d1f79369179a6e59f8d213b61d8921c69cc0584696f54f7143"
+    },
+    {
       "path": "photos/projects/christ-church/bell-tower-primary-leak.jpg",
       "bytes": 1109521,
       "mime": "image/jpeg",
@@ -2378,6 +2390,78 @@
       "bytes": 1016850,
       "mime": "image/webp",
       "sha256": "f3a710487669ea4543cdcacdbc0ef16c31dff229e4133125ed1d22759504fef3"
+    },
+    {
+      "path": "photos/team/google-drive-source/1136-w-75th-indianapolis-in-termites-cashman-11.jpg",
+      "bytes": 12559906,
+      "mime": "image/jpeg",
+      "sha256": "c17fe536e6e0824b2f621d93d8aeb0b486b795ef09a491e2fb90c56080e19a6d"
+    },
+    {
+      "path": "photos/team/google-drive-source/1136-w-75th-indianapolis-in-termites-cashman-16-1.jpg",
+      "bytes": 11769044,
+      "mime": "image/jpeg",
+      "sha256": "1f6b1853ef78d9a908a4cedf88d325186d5ae8120317e7b5669bc6b0afa5461b"
+    },
+    {
+      "path": "photos/team/google-drive-source/README.md",
+      "bytes": 395,
+      "mime": "text/markdown",
+      "sha256": "3c0f348332665d2e77fa23e688f34f909f06a06c3eb6af8f8027b396ddeaf952"
+    },
+    {
+      "path": "photos/team/google-drive-source/bitners-metal-during-11.jpg",
+      "bytes": 7046175,
+      "mime": "image/jpeg",
+      "sha256": "da800fc468cd5397a8d98cffbe2c238c75be5bd0d14793c982903fb51bbfb4ab"
+    },
+    {
+      "path": "photos/team/google-drive-source/bitners-metal-during-13-1.jpg",
+      "bytes": 20553416,
+      "mime": "image/jpeg",
+      "sha256": "f644c00b2c9db767ccbe2312b27e56a3865e8e3af45e3ffe39eebfebfadcf480"
+    },
+    {
+      "path": "photos/team/google-drive-source/bitners-metal-during-4.jpg",
+      "bytes": 7509485,
+      "mime": "image/jpeg",
+      "sha256": "8ce62d5dd0d4de080b7c78f94c0a9c3d52d2c7f13b4f73d13bfaa40212969c6d"
+    },
+    {
+      "path": "photos/team/google-drive-source/bitners-metal-during-9.jpg",
+      "bytes": 17274223,
+      "mime": "image/jpeg",
+      "sha256": "1e58d79f0c3867a41b4bdc9862c70d89351ac20bd02db11fe697fa34462cb335"
+    },
+    {
+      "path": "photos/team/google-drive-source/collage-people-1.jpg",
+      "bytes": 21462928,
+      "mime": "image/jpeg",
+      "sha256": "81124f0701f64dd0dd019b7a826a0dfd4d033c2c4862454522d9d6c37def326a"
+    },
+    {
+      "path": "photos/team/google-drive-source/collage-people-5.jpg",
+      "bytes": 33024786,
+      "mime": "image/jpeg",
+      "sha256": "de66298a1458c61f713f8d73ed892dc50effbc427d329244f2be80da250dd7a7"
+    },
+    {
+      "path": "photos/team/google-drive-source/examples-messmer-13.jpg",
+      "bytes": 9379744,
+      "mime": "image/jpeg",
+      "sha256": "30208db3a86bc135863ce4e531a685c3d67293299cb626104eb7801c89250b5f"
+    },
+    {
+      "path": "photos/team/google-drive-source/team-photo.jpg",
+      "bytes": 19627593,
+      "mime": "image/jpeg",
+      "sha256": "4bbea7b17695048937a7816d2c6262e2771b31e7b736619948c9fb1416466ede"
+    },
+    {
+      "path": "photos/team/google-drive-source/travis-in-ll-truck-gif-6.jpg",
+      "bytes": 12372541,
+      "mime": "image/jpeg",
+      "sha256": "b807c6b053f044fe5cdae6dd6590ea9340598368596e59a9e251e828a1c05924"
     },
     {
       "path": "proposal-support/christ-church/roof-rot.webp",
