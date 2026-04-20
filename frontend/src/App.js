@@ -4,18 +4,19 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 
 import Nav from "@/components/Nav";
+import Relationship from "@/components/sections/Relationship";
 import Hero from "@/components/sections/Hero";
-import Diagnosis from "@/components/sections/Diagnosis";
-import Polycam from "@/components/sections/Polycam";
-import EvidenceWall from "@/components/sections/EvidenceWall";
-import CedarBrava from "@/components/sections/CedarBrava";
-import BravaGallery from "@/components/sections/BravaGallery";
-import AspenLightStudy from "@/components/sections/AspenLightStudy";
+import RoofEndOfLife from "@/components/sections/RoofEndOfLife";
+import FieldInspection from "@/components/sections/FieldInspection";
+import RepairVsReplace from "@/components/sections/RepairVsReplace";
+import TodaysCedar from "@/components/sections/TodaysCedar";
+import BravaProof from "@/components/sections/BravaProof";
+import LightStudy from "@/components/sections/LightStudy";
 import RoofSystem from "@/components/sections/RoofSystem";
-import Craftsmanship from "@/components/sections/Craftsmanship";
-import Team from "@/components/sections/Team";
+import AttentionToDetail from "@/components/sections/AttentionToDetail";
+import RoadMap from "@/components/sections/RoadMap";
 import GiveBack from "@/components/sections/GiveBack";
-import Closing from "@/components/sections/Closing";
+import HumanClose from "@/components/sections/HumanClose";
 import Footer from "@/components/Footer";
 
 export default function App() {
@@ -26,48 +27,33 @@ export default function App() {
       smoothWheel: true,
       smoothTouch: false,
     });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
     const id = requestAnimationFrame(raf);
-
     const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            io.unobserve(e.target);
-          }
-        });
-      },
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } }),
       { threshold: 0.12 }
     );
     document.querySelectorAll(".fade-in").forEach((el) => io.observe(el));
-
-    return () => {
-      cancelAnimationFrame(id);
-      lenis.destroy();
-      io.disconnect();
-    };
+    return () => { cancelAnimationFrame(id); lenis.destroy(); io.disconnect(); };
   }, []);
 
   return (
     <div className="App paper-grain bg-paper text-ink" data-testid="proposal-root">
       <Nav />
       <main>
+        <Relationship />
         <Hero />
-        <Diagnosis />
-        <Polycam />
-        <EvidenceWall />
-        <CedarBrava />
-        <BravaGallery />
-        <AspenLightStudy />
+        <RoofEndOfLife />
+        <FieldInspection />
+        <RepairVsReplace />
+        <TodaysCedar />
+        <BravaProof />
+        <LightStudy />
         <RoofSystem />
-        <Craftsmanship />
-        <Team />
+        <AttentionToDetail />
+        <RoadMap />
         <GiveBack />
-        <Closing />
+        <HumanClose />
       </main>
       <Footer />
     </div>
