@@ -17,6 +17,68 @@
   --rule: #D9D4CA;
 }
 
+/* Night mode · PoC. Flip paper/ink relationship so former light sections become dark.
+   Ink-bg sections get a slightly cooler deep-black so they don't collapse into the
+   newly-dark paper sections. Accent hues stay consistent so the brand voice holds. */
+:root.theme-night {
+  --paper: #121317;
+  --paper-warm: #1A1B20;
+  --ink: #EDE8DC;
+  --ink-soft: #D6D2C8;
+  --slate: #8FA2AD;
+  --slate-light: #AAB6BE;
+  --warm-gold: #C3A871;
+  --bronze: #D48B6B;
+  --body-neutral: #C7C4BE;
+  --rule: #2D2E34;
+}
+:root.theme-night body { background: var(--paper); color: var(--ink); }
+
+/* Override the hard-coded Tailwind utility classes used throughout the site */
+html.theme-night .bg-paper { background-color: #121317 !important; }
+html.theme-night .bg-paper-warm { background-color: #1A1B20 !important; }
+html.theme-night .bg-ink { background-color: #08090C !important; }
+html.theme-night .bg-ink-soft { background-color: #141519 !important; }
+
+html.theme-night .text-ink { color: #EDE8DC !important; }
+html.theme-night .text-ink\/80 { color: rgba(237, 232, 220, 0.8) !important; }
+html.theme-night .text-ink\/70 { color: rgba(237, 232, 220, 0.72) !important; }
+html.theme-night .text-ink\/65 { color: rgba(237, 232, 220, 0.65) !important; }
+html.theme-night .text-ink\/60 { color: rgba(237, 232, 220, 0.6) !important; }
+html.theme-night .text-ink\/55 { color: rgba(237, 232, 220, 0.55) !important; }
+html.theme-night .text-ink\/45 { color: rgba(237, 232, 220, 0.45) !important; }
+html.theme-night .text-ink\/40 { color: rgba(237, 232, 220, 0.4) !important; }
+html.theme-night .text-ink\/25 { color: rgba(237, 232, 220, 0.25) !important; }
+
+html.theme-night .text-body { color: #C7C4BE !important; }
+html.theme-night .text-slate { color: #8FA2AD !important; }
+
+html.theme-night .border-rule { border-color: #2D2E34 !important; }
+html.theme-night .border-ink\/10 { border-color: rgba(237, 232, 220, 0.1) !important; }
+html.theme-night .border-ink\/15 { border-color: rgba(237, 232, 220, 0.15) !important; }
+html.theme-night .border-ink\/25 { border-color: rgba(237, 232, 220, 0.25) !important; }
+html.theme-night .divide-ink\/10 > * + * { border-color: rgba(237, 232, 220, 0.1) !important; }
+
+html.theme-night .bg-ink\/60 { background-color: rgba(8, 9, 12, 0.6) !important; }
+html.theme-night .bg-ink\/70 { background-color: rgba(8, 9, 12, 0.7) !important; }
+html.theme-night .bg-ink\/80 { background-color: rgba(8, 9, 12, 0.8) !important; }
+
+/* Header glass-blur needs a tweak or it becomes near-black-on-black */
+html.theme-night header.bg-paper\/90 { background-color: rgba(18, 19, 23, 0.88) !important; }
+
+/* Nav bars: keep them white via mix-blend-difference (no override needed) */
+
+/* The gold accent becomes a softer champagne in night */
+html.theme-night .text-warm-gold { color: #C3A871 !important; }
+html.theme-night .bg-warm-gold { background-color: #C3A871 !important; }
+html.theme-night .text-warm-gold\/75 { color: rgba(195, 168, 113, 0.75) !important; }
+html.theme-night .ring-warm-gold { --tw-ring-color: #C3A871 !important; }
+html.theme-night .ring-4.ring-paper { --tw-ring-color: #121317 !important; }
+
+/* Repair/replace ledger: the dark inner panel looks fine; the light panel needs
+   a dark paper background that still reads as distinct from the surrounding page */
+html.theme-night [data-testid="ledger-repair"] { background-color: #15171C !important; }
+
 /* Termina (brand face) — self-hosted. Declared in /public/fonts.css to avoid
    webpack url() resolution. */
 
