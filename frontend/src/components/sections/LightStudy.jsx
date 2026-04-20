@@ -1,11 +1,16 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { SectionTag } from "@/components/primitives";
 
 const FRAME_COUNT = 90;
 const FRAMES = Array.from({ length: FRAME_COUNT }, (_, i) => `/assets/aspen/frame-${String(i + 1).padStart(3, "0")}.webp`);
 
 export default function LightStudy() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const COLOR_SLIDE = "/assets/proposal-support/brava-presentation-reference-slides/07-color-for-life-mineral-pigments.webp";
+
   return (
     <section
       id="light-study"
@@ -36,24 +41,41 @@ export default function LightStudy() {
             </p>
           </div>
           <div className="lg:col-span-6">
-            <figure className="relative overflow-hidden bg-paper/5 border border-paper/10">
-              <img
-                src="/assets/proposal-support/brava-presentation-reference-slides/07-color-for-life-mineral-pigments.webp"
-                alt="Color for life · mineral pigmentation"
-                loading="lazy"
-                className="w-full h-auto object-contain"
-                data-testid="color-for-life-slide"
-              />
+            <figure>
+              <button
+                type="button"
+                onClick={() => setLightboxOpen(true)}
+                data-testid="color-for-life-trigger"
+                className="relative block w-full overflow-hidden bg-paper/5 border border-paper/10 group"
+              >
+                <img
+                  src={COLOR_SLIDE}
+                  alt="Color for life · mineral pigmentation"
+                  loading="lazy"
+                  className="w-full h-auto object-contain transition-transform duration-[1200ms] group-hover:scale-[1.015]"
+                  data-testid="color-for-life-slide"
+                />
+                <span className="absolute bottom-3 right-3 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/75 text-paper px-2 py-1 backdrop-blur-sm opacity-85 group-hover:opacity-100 transition-opacity">
+                  Enlarge
+                </span>
+              </button>
+              <figcaption className="mt-3 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/55">
+                From Brava&rsquo;s own presentation material
+              </figcaption>
             </figure>
-            <figcaption className="mt-3 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/55">
-              From Brava&rsquo;s own presentation material
-            </figcaption>
           </div>
         </div>
       </div>
 
       {/* Scroll-scrubbed Aspen study */}
       <Scrubber />
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={[{ src: COLOR_SLIDE }]}
+        styles={{ container: { background: "rgba(26,28,32,0.96)" } }}
+      />
     </section>
   );
 }

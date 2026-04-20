@@ -4,14 +4,14 @@ import { SectionTag, Caption } from "@/components/primitives";
 
 // Locke & Ladder installs · now with additional Hickman + Laskey assets
 const LL_PROJECTS = [
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.jpg", title: "Hickman Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-02.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
   { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-11.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
   { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-13-scaled.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
   { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-export-16.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
   { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-aerial.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.jpg", title: "Laskey Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.jpg", title: "Laskey Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
   { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-29.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
 ].map((p) => ({ ...p, kind: "ll" }));
 

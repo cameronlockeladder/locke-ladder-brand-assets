@@ -97,7 +97,7 @@ def _cover_bg(c: rl_canvas.Canvas, _doc) -> None:
     c.saveState()
     c.setFillColor(INK)
     c.rect(0, 0, PAGE_W, PAGE_H, fill=1, stroke=0)
-    hero = _safe(ASSETS / "photos/projects/christ-church/steeple-closeup.jpg")
+    hero = _safe(ASSETS / "photos/projects/christ-church/steeple-closeup.webp")
     if hero:
         c.drawImage(str(hero), 0, 0, width=PAGE_W, height=PAGE_H, preserveAspectRatio=True, mask="auto")
     # Dark wash for legibility
@@ -235,7 +235,7 @@ def build_board_packet_pdf() -> BytesIO:
        "Water is making it into the sanctuary. The visible cedar is worn. "
        "What matters is what is happening underneath it, and that layer "
        "has been compromised for a while now.")
-    _img(story, "photos/projects/christ-church/bell-tower-primary-leak.jpg",
+    _img(story, "photos/projects/christ-church/bell-tower-primary-leak.webp",
          "Bell tower, N.E. corner · primary ingress")
     _p(story,
        "Repair fixes the spot. Replacement addresses the system: the "
@@ -282,7 +282,7 @@ def build_board_packet_pdf() -> BytesIO:
 
     # --- Page 4: Craft ---
     _section(story, "04 · Craft", "Work that takes the time it takes.")
-    _img(story, "photos/projects/snape/aerial-tight.jpg",
+    _img(story, "photos/projects/snape/aerial-tight.webp",
          "Snape Residence · aerial detail")
     _p(story,
        "Snape is a residence down the road that asked us to solve what "

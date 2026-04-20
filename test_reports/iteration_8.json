@@ -1,0 +1,33 @@
+{
+  "summary": "Iter 8 polish tested end-to-end at 1920x1080 (with 390 mobile check for magnifier gate) and PDF endpoint verified. 10/11 review criteria PASS, 1 CRITICAL FAIL: the new RoofSystem L&L / Brava toggle (SystemPanel) is coded but not wired into the JSX tree — line 71 of RoofSystem.jsx still renders <SystemDiagram /> directly inside the lg:col-span-5 wrapper instead of <SystemPanel />, so the entire toggle block (system-view-toggle, system-view-ll, system-view-brava, brava-system-slide-trigger) is absent from the rendered DOM. PASSING: (T1) TodaysCedar lifecycle-slide img removed (querySelector returns null) while lifecycle-chart with 5 bar rows and 'Source: Brava Roof Tile' caption remains; (T3) Roof System 6 layer rows (system-layer-01..06), 5 standards (standard-0..4), and roof-system-definition-tag all still present below the headline; (T4) FieldInspection featured-0 magnifier lens = 240x240 (square, width===height), className has NO 'rounded-full', backgroundSize = '500% 500%' (5×), disappears on mouseleave; (T4b) at 390px viewport, computed display is 'none' via 'hidden md:block'; (T5) Lightbox magnifier: clicking field-featured-0 opens lightbox with data-testid=lightbox-magnifier-wrap, lens = 300x300, backgroundSize '500% 500%', hint 'Move cursor to magnify · 5×' visible, lens disappears on mouseleave; (T6) color-for-life-trigger is a <button>, contains 'ENLARGE' pill, wraps img data-testid=color-for-life-slide at '.../07-color-for-life-mineral-pigments.webp', click opens lightbox with the enlarged slide; (T7) zero .jpg/.jpeg references in rendered DOM (scanned all img src, video src/currentSrc, <source> src, and video poster attributes); (T8) GET /api/proposal/packet.pdf returns 200 application/pdf, ~6.19 MB; (T9) 13 sections render in correct order; (T10) hero video src = hero-timeline.mp4, poster rewritten to steeple-closeup.webp (HTTP 200); (extra) key webp assets all return 200: full-campus-aerial-wide.webp, hickman-02.webp, aerial-tight.webp, steeple-closeup.webp, 04-brava-cedar-shake-roofing-system.webp. No page errors and no red console errors during full scroll.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "RoofSystem.jsx — SystemPanel not wired",
+        "issue": "SystemPanel component (defined lines 157–240) containing the L&L / Brava reference toggle is never rendered. Line 71 inside the lg:col-span-5 column still calls <SystemDiagram /> directly, so data-testid=system-view-toggle, system-view-ll, system-view-brava, and brava-system-slide-trigger are all absent from the DOM. This blocks review criterion #2 entirely.",
+        "selector": "[data-testid=\"system-view-toggle\"]",
+        "priority": "CRITICAL"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": ["/app/test_reports/iteration_8.json"],
+  "action_items": [
+    "In /app/frontend/src/components/sections/RoofSystem.jsx around lines 68–77, replace the inline <div className='relative bg-paper border border-rule p-6 md:p-10'>…<SystemDiagram />…<Caption>Exploded view…</Caption></div> block with <SystemPanel /> so the new toggle actually renders. Then re-verify: default active button is system-view-ll (shows SVG), clicking system-view-brava swaps to <img src='/assets/proposal-support/brava-presentation-reference-slides/04-brava-cedar-shake-roofing-system.webp'> wrapped in a button with data-testid=brava-system-slide-trigger, and clicking that button opens a yet-another-react-lightbox with the same slide."
+  ],
+  "critical_code_review_comments": [
+    "RoofSystem.jsx defines SystemPanel but never uses it — classic dead-code / forgotten-swap bug. Add a grep check or ESLint 'no-unused-vars' rule in CI to catch this.",
+    "RoofSystem.jsx is now ~273 lines with SystemPanel, SystemDiagram, LAYERS, STANDARDS, PARTNERS all colocated; when adding the toggle wiring, consider extracting SystemPanel + SystemDiagram into a sibling file to keep the main section under 200 lines.",
+    "The lightbox magnifier hint string 'Move cursor to magnify · 5×' appears three times in the DOM (once per rendered slide). Consider rendering it only for the currently-active slide index to avoid screen-reader duplication.",
+    "FieldInspection lightbox magnifier wrap receives the full native image (no throttling on mousemove). For very large webp files this is fine now (<300KB), but if higher-res source images are added, throttle/raf-schedule the setPosition state update."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100%", "frontend": "91% (10/11 criteria) — RoofSystem toggle not wired"},
+  "seed_data_creation": "none",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Only one issue to re-verify: the RoofSystem L&L/Brava toggle wiring (criterion #2). Everything else in iter-8 is green — lightbox magnifier, square 5× magnifier, color-for-life click-to-enlarge, jpg→webp global sweep (0 jpg refs in DOM), PDF endpoint, hero video poster rewrite. When retesting, check: data-testid=system-view-toggle exists, default shows SVG, click system-view-brava swaps to the webp slide, click brava-system-slide-trigger opens lightbox, click system-view-ll brings SVG back. Script used: query DOM for the four testids, then click and inspect img src at '/assets/proposal-support/brava-presentation-reference-slides/04-brava-cedar-shake-roofing-system.webp'.",
+  "rca of the issue": "RCA: during iter-8 the developer added a new wrapper component SystemPanel that encapsulates a view-state ('ll' | 'brava') + a lightbox, intending to replace the existing inline diagram-with-caption block inside lg:col-span-5. The component was written correctly (toggle buttons with proper data-testids, conditional rendering of <SystemDiagram /> vs the Brava-slide <button>, yet-another-react-lightbox instance). However the final edit step — swapping the inline block on lines 68–77 with <SystemPanel /> — was missed, leaving SystemPanel as dead code. Reproduction: hit the live page at https://brava-restoration.preview.emergentagent.com/, scroll to the Roof System section, and observe that the left column shows only the exploded SVG and caption without any tablist above it; document.querySelector('[data-testid=\"system-view-toggle\"]') returns null. Mitigation: edit RoofSystem.jsx lines ~68–77 to render <SystemPanel /> in place of the inline <div className='relative bg-paper border border-rule p-6 md:p-10'>… block. No other section needs a change."
+}

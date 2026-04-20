@@ -16,7 +16,7 @@ export default function Hero() {
           muted
           playsInline
           preload="metadata"
-          poster="/assets/photos/projects/christ-church/steeple-closeup.jpg"
+          poster="/assets/photos/projects/christ-church/steeple-closeup.webp"
           className="w-full h-full object-cover"
         >
           <source src="/assets/photos/projects/christ-church/steeple-closeup.mp4" type="video/mp4" />

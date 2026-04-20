@@ -85,7 +85,7 @@ export default function TodaysCedar() {
           </div>
         </div>
 
-        {/* Lifecycle chart · transition to Brava Proof. Native bars + Brava's own lifecycle slide */}
+        {/* Lifecycle chart · full width, native bars */}
         <div className="mt-24 md:mt-32" data-testid="lifecycle-chart">
           <div className="flex items-end justify-between gap-8 flex-wrap mb-10">
             <div>
@@ -100,68 +100,51 @@ export default function TodaysCedar() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            {/* Native bar chart */}
-            <div className="lg:col-span-7 space-y-4">
-              {LIFECYCLE.map((row, i) => (
-                <motion.div
-                  key={row.label}
-                  initial={{ opacity: 0, x: -16 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.7, delay: i * 0.08 }}
-                  className="flex items-center gap-4 md:gap-6"
-                  data-testid={`lifecycle-row-${row.label.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                  <div className="w-28 md:w-36 font-brand text-xs md:text-sm uppercase tracking-[0.18em] text-paper/80 shrink-0">
-                    {row.label}
-                  </div>
-                  <div className="relative flex-1 h-10 md:h-12 bg-paper/5 border border-paper/10 overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${(row.value / MAX_VAL) * 100}%` }}
-                      viewport={{ once: true, margin: "-80px" }}
-                      transition={{ duration: 1.1, delay: 0.2 + i * 0.08, ease: [0.25, 1, 0.5, 1] }}
-                      className={`absolute inset-y-0 left-0 ${
-                        row.tone === "brava"
-                          ? "bg-warm-gold"
-                          : row.tone === "cedar"
-                          ? "bg-bronze/80"
-                          : "bg-paper/35"
-                      }`}
-                    />
-                    <span
-                      className={`absolute inset-y-0 flex items-center pl-4 font-display text-base md:text-lg tabular-nums font-medium ${
-                        row.tone === "brava" ? "text-ink" : "text-paper"
-                      }`}
-                      style={{ left: `${Math.min((row.value / MAX_VAL) * 100, 80)}%` }}
-                    >
-                      {row.value.toFixed(2)}x
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-              <Caption className="mt-6 text-paper/50">
-                Source: Brava Roof Tile &middot; 50-year total cost of ownership
-                multipliers relative to an indexed roof replacement baseline.
-              </Caption>
-            </div>
-
-            {/* Brava's own lifecycle slide · reference material */}
-            <figure className="lg:col-span-5" data-testid="lifecycle-slide">
-              <div className="relative overflow-hidden bg-paper/5 border border-paper/10">
-                <img
-                  src="/assets/proposal-support/brava-presentation-reference-slides/02-durability-pays-dividends-lifecycle-cost.webp"
-                  alt="Brava durability pays dividends · 50-year lifecycle cost comparison"
-                  loading="lazy"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-              <figcaption className="mt-3 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/55">
-                From Brava&rsquo;s own presentation material
-              </figcaption>
-            </figure>
+          <div className="space-y-4">
+            {LIFECYCLE.map((row, i) => (
+              <motion.div
+                key={row.label}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, delay: i * 0.08 }}
+                className="flex items-center gap-4 md:gap-6"
+                data-testid={`lifecycle-row-${row.label.toLowerCase().replace(/\s+/g, "-")}`}
+              >
+                <div className="w-28 md:w-40 font-brand text-xs md:text-sm uppercase tracking-[0.18em] text-paper/80 shrink-0">
+                  {row.label}
+                </div>
+                <div className="relative flex-1 h-10 md:h-14 bg-paper/5 border border-paper/10 overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${(row.value / MAX_VAL) * 100}%` }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 1.1, delay: 0.2 + i * 0.08, ease: [0.25, 1, 0.5, 1] }}
+                    className={`absolute inset-y-0 left-0 ${
+                      row.tone === "brava"
+                        ? "bg-warm-gold"
+                        : row.tone === "cedar"
+                        ? "bg-bronze/80"
+                        : "bg-paper/35"
+                    }`}
+                  />
+                  <span
+                    className={`absolute inset-y-0 flex items-center pl-4 font-display text-base md:text-xl tabular-nums font-medium ${
+                      row.tone === "brava" ? "text-ink" : "text-paper"
+                    }`}
+                    style={{ left: `${Math.min((row.value / MAX_VAL) * 100, 80)}%` }}
+                  >
+                    {row.value.toFixed(2)}x
+                  </span>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
+          <Caption className="mt-8 text-paper/50">
+            Source: Brava Roof Tile &middot; 50-year total cost of ownership
+            multipliers relative to an indexed roof replacement baseline.
+          </Caption>
         </div>
       </div>
     </section>

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 import { SectionTag, Caption } from "@/components/primitives";
 
 const LAYERS = [
@@ -149,6 +151,92 @@ export default function RoofSystem() {
         </div>
       </div>
     </section>
+  );
+}
+
+function SystemPanel() {
+  const [view, setView] = useState("ll"); // "ll" | "brava"
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const BRAVA_SLIDE = "/assets/proposal-support/brava-presentation-reference-slides/04-brava-cedar-shake-roofing-system.webp";
+
+  return (
+    <div
+      className="relative bg-paper border border-rule p-6 md:p-8"
+      data-testid="system-panel"
+    >
+      {/* Toggle */}
+      <div
+        role="tablist"
+        aria-label="System view"
+        className="flex border border-ink/10 mb-6 text-[11px] font-brand uppercase tracking-[0.22em]"
+        data-testid="system-view-toggle"
+      >
+        <button
+          role="tab"
+          aria-selected={view === "ll"}
+          onClick={() => setView("ll")}
+          data-testid="system-view-ll"
+          className={`flex-1 px-3 py-2.5 transition-colors ${
+            view === "ll" ? "bg-ink text-paper" : "bg-paper text-ink/60 hover:text-ink"
+          }`}
+        >
+          L&amp;L view
+        </button>
+        <button
+          role="tab"
+          aria-selected={view === "brava"}
+          onClick={() => setView("brava")}
+          data-testid="system-view-brava"
+          className={`flex-1 px-3 py-2.5 transition-colors border-l border-ink/10 ${
+            view === "brava" ? "bg-ink text-paper" : "bg-paper text-ink/60 hover:text-ink"
+          }`}
+        >
+          Brava reference
+        </button>
+      </div>
+
+      {/* Panel body */}
+      {view === "ll" ? (
+        <div>
+          <div className="aspect-[3/4] relative">
+            <SystemDiagram />
+          </div>
+          <Caption className="mt-4">
+            Exploded view, sanctuary and steeple assembly. Indicative only.
+          </Caption>
+        </div>
+      ) : (
+        <div>
+          <button
+            type="button"
+            onClick={() => setLightboxOpen(true)}
+            data-testid="brava-system-slide-trigger"
+            className="relative w-full aspect-[3/4] overflow-hidden group bg-paper border border-ink/5"
+          >
+            <img
+              src={BRAVA_SLIDE}
+              alt="Brava cedar shake roofing system"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-contain transition-transform duration-[1200ms] group-hover:scale-[1.02]"
+            />
+            <span className="absolute bottom-3 right-3 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/80 text-paper px-2 py-1 backdrop-blur-sm">
+              Enlarge
+            </span>
+          </button>
+          <Caption className="mt-4">
+            Brava cedar shake roofing system &middot; reference diagram from
+            Brava&rsquo;s own material.
+          </Caption>
+        </div>
+      )}
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={[{ src: BRAVA_SLIDE }]}
+        styles={{ container: { background: "rgba(26,28,32,0.96)" } }}
+      />
+    </div>
   );
 }
 

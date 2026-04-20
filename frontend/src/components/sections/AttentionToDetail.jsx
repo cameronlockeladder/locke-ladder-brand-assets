@@ -23,7 +23,7 @@ export default function AttentionToDetail() {
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-          poster="/assets/photos/projects/snape/hero-aerial.jpg"
+          poster="/assets/photos/projects/snape/hero-aerial.webp"
         >
           <source src="/assets/photos/projects/snape/full-bleed-background-video.mp4" type="video/mp4" />
         </video>
@@ -64,8 +64,8 @@ export default function AttentionToDetail() {
           />
           <BeforeAfter
             testId="snape-before-after-detail"
-            beforeSrc="/assets/photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.jpg"
-            afterSrc="/assets/photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg"
+            beforeSrc="/assets/photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.webp"
+            afterSrc="/assets/photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.webp"
             beforeLabel="Close-up"
             afterLabel="Aerial detail"
             caption="Ground view to aerial composure"
@@ -73,9 +73,9 @@ export default function AttentionToDetail() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" />
-          <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" />
-          <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" />
+          <DetailTile src="/assets/photos/projects/snape/copper-detail.webp" />
+          <DetailTile src="/assets/photos/projects/snape/dormer-detail.webp" />
+          <DetailTile src="/assets/photos/projects/snape/aerial-tight.webp" />
         </div>
       </div>
     </section>
