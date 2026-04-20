@@ -1,81 +1,61 @@
-# Christ Church | Oak Brook - Proposal Microsite V4
+# Christ Church | Oak Brook · Proposal Microsite (V4)
 
 **Client:** Christ Church | Oak Brook (Board of Trustees)
-**Built by:** Locke & Ladder (Cameron / Jon Strand)
+**Built by:** Locke & Ladder (Jon Strand)
 **Agent:** E1
 
-## Sections (13 total)
-1. Hero (hero-timeline.mp4 video, sans display, CC + L&L lockup)
-2. Diagnosis (leak + repair-vs-replace + roof-rot eyesore tile C)
-3. Polycam 3D walkthrough (click-to-load iframe)
-4. EvidenceWall (100 JobNimbus tiles, all captions = VERIFY COPY gold badge)
-5. CedarBrava (Cedar vs. Synthetic + 3 cedar cards + Brava reveal + spec grid)
-6. **LaskeyReveal** (full-bleed Real cedar / Brava cedar compare slider, Laskey residence)
-7. BravaGallery (4 L&L installs first with gold badge, then 17 Brava precedents; only section using Fraunces serif)
-8. AspenLightStudy (90-frame scroll scrubber, Brava Aspen)
-9. RoofSystem (7 layers + **Brava install slider** 121-frame range control, no scroll hijack + 5 partners)
-10. Craftsmanship (Snape bg video + 2 before/after sliders + 3 detail tiles)
-11. Team (18-tile dense scattered mosaic, includes extras/collage-people, bitners, travis)
-12. GiveBack (1% back headline + **Faith Apostolic precedent photo** + **Oak Brook map with Christ Church pin** + CC logo)
-13. Closing (form POSTs to /api/proposal/interest, signed "Jon Strand & the Locke & Ladder team")
+## Current architecture · 12 sections (DOM order)
+1. **Relationship / Local Experts** (`#relationship`) · opens with "Impact is our rally cry." + verbatim ethos body + [ASSET NEEDED: L&L team video]
+2. **Hero** (`#hero`) · steeple video · CC + L&L lockup · mission-statement quote "Gather communities of disciples…" [VERIFY EXACT MISSION STATEMENT] · Scope = Sanctuary, Steeple & Mansard (mansard no longer optional). No "A proposal", no "An Icon", no Contact separator.
+3. **Roof End of Life** (`#roof-eol`) · verbatim end-of-useful-life body + embedded Polycam click-to-load 3D viewer
+4. **Field Inspection Report** (`#field-inspection`) · JobNimbus grid + rail + lightbox · [ASSET NEEDED: hi-res roof-condition closeups] tag · intro/triaging copy removed
+5. **Repair vs Replace** (`#repair-vs-replace`) · verbatim 5+4 bullets · only "Reduced insurance premiums." carries [VERIFY]
+6. **Today's Cedar** (`#todays-cedar`) · full verbatim cedar narrative · [VERIFY] on "3 decades" stat and [VERIFY terminology] on "3/4″ Heavies"
+7. **Brava Proof** (`#brava-proof`) · drone-montage placeholder ▸ Laskey side-by-side reveal ▸ "Why we chose Brava" (Class A removed, now Class 4 · mineral pigmented) ▸ Amy/Michigan [VERIFY] quote + [ASSET NEEDED] quote card ▸ 17-tile gallery (4 L&L + 13 Brava precedents, darker/B&W removed)
+8. **Light Study** (`#light-study`) · 90-frame Aspen scrubber · new vespers/October tagline · "board picks on Tuesday" removed
+9. **Roof System** (`#system`) · 6 components (no "Seven layers" / "the roof, as a system") · partners row · [VERIFY] on Grace + EchoShield stats
+10. **Attention to Detail** (`#attention`) · verbatim body · Snape narrative paragraph removed · before/after sliders preserved as visual proof only
+11. **Client Success Road Map** (`#roadmap`) · 7 numbered steps (Preproduction → Calendar → Safety → Oversight → Cleanup → Walkthrough → Long-Term)
+12. **Human Close** (`#human-close`) · single full-bleed image · no header, no body · [ASSET NEEDED: L&L team photo or flag] · corner Board Packet PDF download preserved
 
-## Iterations
-- **Iter 1:** Initial build (12 sections, placeholder aspen).
-- **Iter 2:** Visualizer removed · Polycam added · BravaGallery L&L-first with gold badges · 90 real aspen frames · Snape video · 100 JobNimbus · Jon Strand (fix) · Archivo brand font · em-dashes still present at that point.
-- **Iter 3 (this):** LaskeyReveal inserted · Inter replaces Fraunces as default (serif reserved to BravaGallery only) · ALL JobNimbus captions to VERIFY COPY · Christ Church logo in nav · Faith Apostolic photo + Oak Brook map + CC logo added to GiveBack · denser Team mosaic · Brava install 121-frame range-slider in RoofSystem · words "quiet" and "tired" removed · all em-dashes removed (replaced with · separators or restructured prose) · hero-timeline.mp4 video in Hero.
+## Tech stack
+- React SPA · Lenis · Framer Motion · react-compare-slider · yet-another-react-lightbox
+- Termina (brand) + Inter (display/body) + Fraunces (serif accents)
+- FastAPI: `POST /api/proposal/interest` · `GET /api/proposal/packet.pdf` (reportlab + pillow, ~2.5MB)
 
-## Tech
-- React SPA, Lenis smooth scroll, Framer Motion, react-compare-slider, yet-another-react-lightbox
-- Inter (default display + body) + Fraunces (gallery only) + Manrope (fallback)
-- Brand-font slot reserves Termina when WOFF2 licensed
-- FastAPI: /api/proposal/interest (POST/GET), /api/proposal/engagement (POST), /api/status
+## Assets preserved
+- JobNimbus 100-capture set (`/assets/photos/projects/christ-church/jobnimbus/`)
+- Polycam 3D scan (click-to-load iframe inside Roof-End-of-Life)
+- 90-frame Brava Aspen scroll scrubber
+- Before/after sliders (Snape) inside Attention to Detail
+- PDF board packet download (corner overlay on Human Close)
 
-## Deployment (Vercel manual)
-`cd /app/frontend && yarn build` → push `build/` to Vercel.
-`REACT_APP_BACKEND_URL` points to wherever FastAPI is hosted (optional — form degrades silently).
+## Removed in V4 rewrite
+- GiveBack section (no longer in the 12-section spec)
+- Team section (Relationship replaces it at the top)
+- Diagnosis / CedarBrava / BravaGallery / AspenLightStudy / Craftsmanship / Closing (renamed + rewritten)
+- Polycam as standalone section (embedded inside Roof-End-of-Life)
+- Brava install slider (frames not available)
+- All "Class A" claims on the Brava shake
+- "quiet" copy, "tired roof" copy, board-clock pressure language
+- Snape case-study narrative paragraph
 
-## Assets in /app/frontend/public/assets
-- `brand/` (L&L icon + wordmark, CC logo + oak-brook-streets SVG, Brava logos)
-- `photos/projects/christ-church/` including hero-timeline.mp4, steeple-closeup.mp4, 100 JobNimbus captures
-- `photos/projects/faith-apostolic-church/` (GiveBack precedent)
-- `photos/projects/locke-ladder-brava-cedar-projects/` (Hickman x2, Laskey x2)
-- `photos/projects/snape/` (video + 2 before/after pairs + 3 detail tiles)
-- `photos/materials/brava-gallery/` (17 Brava precedents)
-- `photos/team/` + `photos/team/extras/` (18 team photos)
-- `aspen/` (90 webp frames)
-- `brava-install/` (121 webp frames)
-- `proposal-support/christ-church/roof-rot.webp`
+## Iteration history
+- Iter 1–4: 7-section architecture, PDF, Termina, Laskey reveal, Polycam
+- **Iter 5 (current): 12-section rewrite.** All verbatim user copy applied. [ASSET NEEDED] / [VERIFY] tags rendered literally in the UI per spec. 17/17 content checks pass. 0 console errors. PDF endpoint: HTTP 200, application/pdf, 2.5MB.
 
 ## Backlog (P0 / P1 / P2)
-- **P0:** Drop licensed Termina Medium WOFF2 under `/public/assets/fonts/` and prepend `"Termina"` in `--font-brand` / `.font-display` in `index.css`
-- **P0:** Jon supplies final captions for all VERIFY COPY spots (EvidenceWall FEATURED + RAIL descriptions)
-- **P0:** Jon supplies final prose rewrites throughout (voice direction in repo's docs/locke-copy-direction.md)
-- **P1:** Choose the best 10 JobNimbus featured images (edit FEATURED array in EvidenceWall.jsx)
-- **P1:** Replace SystemDiagram SVG with real architectural exploded-view illustration
-- **P2:** Engagement beacons hitting /api/proposal/engagement (time on section, scroll depth)
+- **P0:** Supply hi-res roof-condition closeups with proper labels (replaces the 3 [ASSET NEEDED] placeholders in Field Inspection tiles 4–6)
+- **P0:** Supply L&L team video / team / crew / flag / house still (replaces placeholder in Relationship + Human Close)
+- **P0:** Supply Brava drone-montage edit (replaces drone-montage placeholder at top of Brava Proof)
+- **P0:** Confirm exact Christ Church mission statement text (replaces [VERIFY EXACT MISSION STATEMENT])
+- **P0:** Verify Certi-label terminology "3/4″ Heavies" and the "roofing doubled every 10 years" stat
+- **P0:** Verify insurance-premium claim and Grace Ice & Water Shield "highest performing" claim and EchoShield "97% radiant heat" claim
+- **P1:** Add more Hickman detailed closeups to Brava Proof gallery
+- **P1:** Sanity-check all 94 rail JobNimbus files exist on disk (per iter-5 reviewer note)
+- **P1:** Replace Laskey/Hickman [ASSET NEEDED] quote card with a real attributed 5-star customer quote
+- **P2:** Engagement beacons hitting `/api/proposal/engagement`
 - **P2:** Per-recipient share URLs with unique analytics signatures
 
 ## Testing
-iter_1 100% pass · iter_2 100% pass · iter_3 100% pass (one LOW/INFO note about React `muted` boolean attribute reflection, not functional).
-
----
-## Iteration 4 (this round)
-- Termina Medium + Heavy WOFF2 loaded via `/public/fonts.css` (linked from index.html; keeps CRA happy)
-- Laskey side-by-side single-image reveal moved INSIDE CedarBrava between the 3 cedar cards and the Brava reveal (no slider any more)
-- Separate LaskeyReveal section and .jsx file removed
-- All "V4" references removed from user-facing text
-- Craftsmanship headline: "Work that takes the time it takes."
-- Team rebuilt as sticky scroll-scatter (Framer Motion useScroll/useTransform, 18 absolutely-positioned tiles with varied rotations and parallax entries). No captions, no grid, no masonry.
-- GiveBack: full-bleed Faith Apostolic photo with huge 1% overlay; Christ Church pin has two radiating .ll-pulse-ring gradients on infinite animation; added serif italic community impact pull-quote
-- Hero: Client/Scope/Priority row rebuilt as a 4-column grid of HeroCell components (eyebrow + value) so baselines align
-- **PDF board packet endpoint**: GET /api/proposal/packet.pdf (reportlab, pure Python + Pillow for image downsizing). ~2.5MB, 7 pages (cover + 6). Download button wired into the Closing section.
-
-## Deployment reminder (Vercel manual)
-Frontend:
-  cd /app/frontend && yarn build
-  deploy ./build to Vercel.
-Termina WOFF2 files already ship under /public/assets/fonts and /public/fonts.css — no additional config needed.
-For the PDF button to work, REACT_APP_BACKEND_URL must point at a live FastAPI host with reportlab + pillow installed.
-
-## Testing history
-iter_1: 100% · iter_2: 100% · iter_3: 100% · iter_4: 100% (28/28 verified items)
+- iter_1 100% · iter_2 100% · iter_3 100% · iter_4 100% · **iter_5 100% (17/17 content checks, PDF verified)**
