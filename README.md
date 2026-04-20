@@ -19,6 +19,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
 - `photos/projects/christ-church/`
   Christ Church photo/video assets and render assets used in proposal development.
   Includes the Christ Church JobNimbus inspection set as WebP-only files under `photos/projects/christ-church/jobnimbus/`.
+  Includes tagged Field Inspection Report photos under `photos/projects/christ-church/field-inspection-report/`.
 - `photos/projects/snape/`
   Snape project stills and motion assets, including the optimized full-bleed background video and tagged before/after slider pair folders.
 - `photos/projects/faith-apostolic-church/`

@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-04-19",
-  "file_count": 560,
+  "generated_at": "2026-04-20",
+  "file_count": 569,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 3214,
+      "bytes": 3327,
       "mime": "text/markdown",
-      "sha256": "e70862f3026c7c183a5554a369a1813e570469a54ed9bcb077afe0afcfdd3751"
+      "sha256": "ad8ea53b556d1e5f9e762fff9cef6b321d057124529f6522a24b2a3f166c8c71"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 130265,
+      "bytes": 130728,
       "mime": "application/json",
-      "sha256": "3d05be980ba893d58bc7abd969625157bee7692737acb5b51c69545dc902b583"
+      "sha256": "c08e07f08c8021f18b7686e08c5a840207355fb50bc626fc9041c9cfdcf58716"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -2218,6 +2218,36 @@
       "sha256": "16f10e92524d2d0b609c0a3ed0617112ac0a8f32152ed91e153839c0c4c276f4"
     },
     {
+      "path": "photos/projects/christ-church/field-inspection-report/README.md",
+      "bytes": 566,
+      "mime": "text/markdown",
+      "sha256": "306eec06a0f15aee385a415fc0a062dc903dfb4836d0ad59031306c55cd30d4a"
+    },
+    {
+      "path": "photos/projects/christ-church/field-inspection-report/bell-tower-roof-closeup.jpg",
+      "bytes": 1109521,
+      "mime": "image/jpeg",
+      "sha256": "b401d4906494c82e65c1afcc505c2c4341dc652ba339d24917f00056da0f488d"
+    },
+    {
+      "path": "photos/projects/christ-church/field-inspection-report/dark-steeple-roof-closeup.jpg",
+      "bytes": 1079640,
+      "mime": "image/jpeg",
+      "sha256": "16f10e92524d2d0b609c0a3ed0617112ac0a8f32152ed91e153839c0c4c276f4"
+    },
+    {
+      "path": "photos/projects/christ-church/field-inspection-report/front-roofline-and-spire.jpg",
+      "bytes": 1111211,
+      "mime": "image/jpeg",
+      "sha256": "b76589249edf5783b88937dc792c469c8af5dafe4de5e844e2d780bb4d1df940"
+    },
+    {
+      "path": "photos/projects/christ-church/field-inspection-report/full-campus-aerial-wide.jpg",
+      "bytes": 1102904,
+      "mime": "image/jpeg",
+      "sha256": "ab9f97accfd8226c259ee13656e28a260ad0ba762c4392c57cff328dbbfcc43b"
+    },
+    {
       "path": "photos/projects/christ-church/front-corner-campus-overview.jpg",
       "bytes": 930065,
       "mime": "image/jpeg",
@@ -3329,9 +3359,27 @@
     },
     {
       "path": "videos/projects/brava-web-video-assets/README.md",
-      "bytes": 525,
+      "bytes": 1162,
       "mime": "text/markdown",
-      "sha256": "bf233808a72f4e40e35dfe4aa67184b5de64035993332cad47fc42e1aed511fa"
+      "sha256": "bf859e5cedc68668805c2bdfdec3003114aed67a2db01c06bea68d4c9bdabaca"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4",
+      "bytes": 8710581,
+      "mime": "video/mp4",
+      "sha256": "c3ed4df50a0156e322be3fc23d8cdc797867282c48875a7164d6a92121b1da10"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/laskey-brava-cedar-carmel-00000157-first-12s.mp4",
+      "bytes": 8030848,
+      "mime": "video/mp4",
+      "sha256": "e1af53b2c3b7fa3a6a640b3c09b4663483c313ec07d8d7c192560158b7a009fd"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/laskey-brava-cedar-carmel-01572414-full.mp4",
+      "bytes": 3575225,
+      "mime": "video/mp4",
+      "sha256": "0fe14d2278077ecdda91f6e3c8f1bbb1cb03d02a0f25bce2861a4fceccbda07d"
     },
     {
       "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-05-13s.mp4",
@@ -3344,6 +3392,12 @@
       "bytes": 7484620,
       "mime": "video/mp4",
       "sha256": "77bdd1cc1978da31870d03819dea7f1ab8a169e74d2a13f89df2f81380a22a06"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/todays-cedar-background-laskey-brava-cedar-carmel-00000097-full.mp4",
+      "bytes": 1586651,
+      "mime": "video/mp4",
+      "sha256": "12ed23f5cbf8e7858ef2fd4f3b7028d41b5c225b9a8d0a294da5740356bae97b"
     },
     {
       "path": "videos/projects/coppergate-window-install/README.md",
