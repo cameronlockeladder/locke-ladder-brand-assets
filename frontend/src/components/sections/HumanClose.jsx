@@ -10,25 +10,29 @@ export default function HumanClose() {
       data-testid="section-human-close"
       className="relative bg-ink text-paper overflow-hidden"
     >
-      {/* Single full-bleed image. No header. No body copy. */}
+      {/* Full-bleed flag video loop · no header, no body */}
       <div className="relative w-full h-[100svh] overflow-hidden">
-        <img
-          src="/assets/photos/team/team-photo.webp"
-          alt=""
-          data-testid="human-close-image"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-        />
+          data-testid="human-close-video"
+        >
+          <source
+            src="/assets/videos/projects/coppergate-window-install/coppergate-window-install-v1-0008-full.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="/assets/videos/projects/coppergate-window-install/coppergate-window-install-v1-0006-07-14s.mp4"
+            type="video/mp4"
+          />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/10 via-transparent to-ink/75" />
 
-        {/* Asset-needed flag — top left, minimal */}
-        <span
-          className="absolute top-24 left-6 md:left-12 font-brand text-[10px] uppercase tracking-[0.24em] bg-warm-gold text-ink px-2.5 py-1 font-semibold"
-          data-testid="human-close-asset-flag"
-        >
-          [ASSET NEEDED: L&amp;L team photo or house flying an L&amp;L flag]
-        </span>
-
-        {/* Preserved PDF packet interactive — tucked in bottom-right corner */}
+        {/* Preserved PDF packet interactive · bottom-right corner */}
         <a
           href={`${API || ""}/proposal/packet.pdf`}
           target="_blank"

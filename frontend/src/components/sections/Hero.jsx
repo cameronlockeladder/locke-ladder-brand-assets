@@ -27,7 +27,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 pt-32 md:pt-36 pb-16 min-h-[100svh] flex flex-col justify-between">
-        {/* Top row: CC logo + L&L lockup + mission statement under */}
+        {/* Top row · CC + L&L lockup + mission statement */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,13 +53,9 @@ export default function Hero() {
             data-testid="hero-mission"
           >
             &ldquo;Gather communities of disciples&hellip;&rdquo;
-            <span className="ml-2 font-brand not-italic text-[10px] uppercase tracking-[0.22em] text-warm-gold/90 align-middle">
-              [VERIFY EXACT MISSION STATEMENT]
-            </span>
           </p>
         </motion.div>
 
-        {/* Headline area */}
         <div className="max-w-[1200px]">
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
@@ -83,7 +79,6 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        {/* Aligned row: client / scope / priority — mansard included, not optional */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -96,7 +91,7 @@ export default function Hero() {
             <HeroCell label="Priority" value="Stop the leak" />
             <div className="flex md:justify-end items-end pt-1">
               <button
-                onClick={() => document.getElementById("roof-eol")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("relationship")?.scrollIntoView({ behavior: "smooth" })}
                 data-testid="hero-scroll-button"
                 className="group inline-flex items-center gap-3 font-brand text-[11px] uppercase tracking-[0.28em] text-paper/80 hover:text-paper transition-colors"
               >

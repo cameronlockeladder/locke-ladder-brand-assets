@@ -1,33 +1,45 @@
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { SectionTag, Caption } from "@/components/primitives";
+import { SectionTag } from "@/components/primitives";
 
-// No intro copy. No "six images we keep coming back to." No triaging language.
-// Tag each tile with what the viewer is seeing. [ASSET NEEDED: hi-res roof-condition closeups]
-const LABEL_NEEDED = "[ASSET NEEDED: labeled hi-res closeup]";
-
+// Featured hero tiles · 4 curated high-res inspection photos
 const FEATURED = [
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-001.webp", caption: "Worn cedar field" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-002.webp", caption: "Compromised underlayment" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-003.webp", caption: "Steeple, NE corner" },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-004.webp", caption: LABEL_NEEDED },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-005.webp", caption: LABEL_NEEDED },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-006.webp", caption: LABEL_NEEDED },
+  {
+    src: "/assets/photos/projects/christ-church/field-inspection-report/full-campus-aerial-wide.jpg",
+    label: "Full campus aerial",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/field-inspection-report/bell-tower-roof-closeup.jpg",
+    label: "Bell tower, roof closeup",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/field-inspection-report/dark-steeple-roof-closeup.jpg",
+    label: "Steeple, NE leak zone",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/field-inspection-report/front-roofline-and-spire.jpg",
+    label: "Front roofline & spire",
+  },
 ];
 
-const RAIL = Array.from({ length: 94 }, (_, i) => {
-  const idx = String(i + 7).padStart(3, "0");
-  return `/assets/photos/projects/christ-church/jobnimbus/jn-${idx}.webp`;
-});
+// Curated JobNimbus rail · top-quality tiles only (culled from 100 by filesize)
+const RAIL_IDS = [
+  "017","041","058","062","065","084","098","025","076","027",
+  "029","074","049","064","032","042","044","037","023","026",
+  "001","070","057","077","072","093","066","020","061","091",
+  "008","050","024","053","060","096","069","007","068","097",
+  "015","005",
+];
+const RAIL = RAIL_IDS.map((idx) => `/assets/photos/projects/christ-church/jobnimbus/jn-${idx}.webp`);
 
 export default function FieldInspection() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
   const allSlides = [
-    ...FEATURED.map((f) => ({ src: f.src, description: f.caption })),
-    ...RAIL.map((src) => ({ src, description: LABEL_NEEDED })),
+    ...FEATURED.map((f) => ({ src: f.src })),
+    ...RAIL.map((src) => ({ src })),
   ];
 
   const openAt = (i) => {
@@ -54,21 +66,17 @@ export default function FieldInspection() {
           Field Inspection Report.
         </h2>
 
+        {/* 4 featured tiles */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4">
           {FEATURED.map((f, i) => {
             const className =
               i === 0
-                ? "col-span-2 md:col-span-3 md:row-span-2 aspect-[4/5]"
+                ? "col-span-2 md:col-span-4 md:row-span-2 aspect-[16/11]"
                 : i === 1
-                ? "col-span-2 md:col-span-3 aspect-[16/10]"
+                ? "col-span-1 md:col-span-2 aspect-[4/5]"
                 : i === 2
                 ? "col-span-1 md:col-span-2 aspect-[4/5]"
-                : i === 3
-                ? "col-span-1 md:col-span-1 aspect-[4/5]"
-                : i === 4
-                ? "col-span-2 md:col-span-3 aspect-[16/10]"
-                : "col-span-2 md:col-span-3 aspect-[16/10]";
-            const isPlaceholder = f.caption.startsWith("[ASSET NEEDED");
+                : "col-span-2 md:col-span-4 aspect-[16/8]";
             return (
               <button
                 key={i}
@@ -78,21 +86,14 @@ export default function FieldInspection() {
               >
                 <img
                   src={f.src}
-                  alt={f.caption}
+                  alt={f.label}
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent opacity-70 group-hover:opacity-55 transition-opacity" />
                 <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between text-paper gap-3">
-                  <span
-                    data-testid={`field-featured-${i}-caption`}
-                    className={`font-brand text-[10px] tracking-[0.22em] uppercase px-2 py-[2px] ${
-                      isPlaceholder
-                        ? "bg-warm-gold/85 text-ink"
-                        : "bg-paper/90 text-ink"
-                    }`}
-                  >
-                    {f.caption}
+                  <span className="font-brand text-[10px] tracking-[0.22em] uppercase bg-paper/90 text-ink px-2 py-[2px]">
+                    {f.label}
                   </span>
                   <span className="font-brand text-[10px] tracking-[0.22em] uppercase opacity-80 group-hover:opacity-100 shrink-0">
                     Enlarge
@@ -103,10 +104,11 @@ export default function FieldInspection() {
           })}
         </div>
 
+        {/* Curated JobNimbus rail · no captions */}
         <div className="mt-16 md:mt-20">
           <div className="flex items-baseline justify-between mb-6">
-            <div className="eyebrow text-paper/60">The rest of what we documented</div>
-            <Caption className="text-paper/50">Scroll</Caption>
+            <div className="eyebrow text-paper/60">Site documentation</div>
+            <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/40">Scroll</span>
           </div>
           <div
             data-testid="field-rail"
@@ -125,17 +127,11 @@ export default function FieldInspection() {
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.05]"
                 />
-                <div className="absolute inset-0 bg-ink/30 group-hover:bg-ink/10 transition-colors" />
+                <div className="absolute inset-0 bg-ink/20 group-hover:bg-ink/5 transition-colors" />
               </button>
             ))}
           </div>
         </div>
-
-        <Caption className="mt-6 text-paper/50" data-testid="field-asset-note">
-          [ASSET NEEDED: hi-res roof-condition closeups &middot; worn cedar,
-          compromised underlayment]. Labels will be applied once final assets
-          are supplied.
-        </Caption>
       </div>
 
       <Lightbox

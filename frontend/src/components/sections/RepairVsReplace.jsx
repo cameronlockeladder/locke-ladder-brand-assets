@@ -10,10 +10,10 @@ const REPAIR = [
 ];
 
 const REPLACE = [
-  { text: "Addresses the entire system, not just the symptom.", verify: false },
-  { text: "Opportunity for maintenance freedom.", verify: false },
-  { text: "Reduced insurance premiums.", verify: true },
-  { text: "Enhance exterior appearance.", verify: false },
+  "Addresses the entire system, not just the symptom.",
+  "Opportunity for maintenance freedom.",
+  "Reduced insurance premiums.",
+  "Enhance exterior appearance.",
 ];
 
 export default function RepairVsReplace() {
@@ -65,14 +65,7 @@ export default function RepairVsReplace() {
                   <span className="font-brand text-[11px] uppercase tracking-[0.2em] text-paper/40 pt-1 shrink-0">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-base leading-relaxed">
-                    {n.text}
-                    {n.verify && (
-                      <span className="ml-2 font-brand text-[10px] uppercase tracking-[0.22em] text-warm-gold align-middle">
-                        [VERIFY]
-                      </span>
-                    )}
-                  </span>
+                  <span className="text-base leading-relaxed">{n}</span>
                 </li>
               ))}
             </ul>

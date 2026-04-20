@@ -1,16 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { SectionTag, Caption } from "@/components/primitives";
+import { SectionTag } from "@/components/primitives";
 
 export default function Relationship() {
   return (
     <section
       id="relationship"
       data-testid="section-relationship"
-      className="relative bg-paper pt-28 md:pt-36 pb-28 md:pb-36 px-6 lg:px-12 border-b border-rule"
+      className="relative bg-paper pt-28 md:pt-36 pb-28 md:pb-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="01 / 12" title="Local Experts" />
+        <SectionTag number="02 / 12" title="Local Experts" />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-7">
@@ -47,20 +47,8 @@ export default function Relationship() {
                 loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-ink/10 to-transparent" />
-              <figcaption className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-paper">
-                <span className="font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/60 backdrop-blur-sm px-2.5 py-1">
-                  [ASSET NEEDED: L&amp;L team video]
-                </span>
-                <span className="font-brand text-[10px] uppercase tracking-[0.24em] opacity-80">
-                  Placeholder still
-                </span>
-              </figcaption>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/5 to-transparent" />
             </figure>
-            <Caption className="mt-4">
-              Replace with team video or team / crew / flag / house photography
-              when approved.
-            </Caption>
           </div>
         </div>
       </div>

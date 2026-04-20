@@ -4,8 +4,8 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 
 import Nav from "@/components/Nav";
-import Relationship from "@/components/sections/Relationship";
 import Hero from "@/components/sections/Hero";
+import Relationship from "@/components/sections/Relationship";
 import RoofEndOfLife from "@/components/sections/RoofEndOfLife";
 import FieldInspection from "@/components/sections/FieldInspection";
 import RepairVsReplace from "@/components/sections/RepairVsReplace";
@@ -14,6 +14,7 @@ import BravaProof from "@/components/sections/BravaProof";
 import LightStudy from "@/components/sections/LightStudy";
 import RoofSystem from "@/components/sections/RoofSystem";
 import AttentionToDetail from "@/components/sections/AttentionToDetail";
+import NewApproach from "@/components/sections/NewApproach";
 import RoadMap from "@/components/sections/RoadMap";
 import HumanClose from "@/components/sections/HumanClose";
 import Footer from "@/components/Footer";
@@ -40,8 +41,8 @@ export default function App() {
     <div className="App paper-grain bg-paper text-ink" data-testid="proposal-root">
       <Nav />
       <main>
-        <Relationship />
         <Hero />
+        <Relationship />
         <RoofEndOfLife />
         <FieldInspection />
         <RepairVsReplace />
@@ -50,6 +51,7 @@ export default function App() {
         <LightStudy />
         <RoofSystem />
         <AttentionToDetail />
+        <NewApproach />
         <RoadMap />
         <HumanClose />
       </main>

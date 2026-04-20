@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionTag, Caption } from "@/components/primitives";
 
+// Locke & Ladder installs · now with additional Hickman + Laskey assets
 const LL_PROJECTS = [
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.jpg", title: "Hickman Residence", loc: "Locke & Ladder client", kind: "ll" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg", title: "Hickman Residence", loc: "Locke & Ladder client", kind: "ll" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.jpg", title: "Laskey Residence", loc: "Locke & Ladder client", kind: "ll" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.jpg", title: "Laskey Residence", loc: "Locke & Ladder client", kind: "ll" },
-];
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.jpg", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-11.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-13-scaled.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-export-16.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-aerial.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.jpg", title: "Laskey Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.jpg", title: "Laskey Residence", loc: "Locke & Ladder client" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-29.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
+].map((p) => ({ ...p, kind: "ll" }));
 
-// Brava precedents · removed darker / black-and-white candidates per direction.
 const BRAVA_PROJECTS = [
   { src: "/assets/photos/materials/brava-gallery/01-new-york-lake-forest.webp", title: "Lake Forest", loc: "New York" },
   { src: "/assets/photos/materials/brava-gallery/02-georgia-lake-forest.webp", title: "Lake Forest", loc: "Georgia" },
@@ -39,7 +44,6 @@ export default function BravaProof() {
       data-testid="section-brava-proof"
       className="relative bg-ink text-paper border-t border-ink"
     >
-      {/* Section header */}
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-28 md:pt-32">
         <SectionTag
           number="07 / 12"
@@ -54,26 +58,35 @@ export default function BravaProof() {
         </h2>
       </div>
 
-      {/* Drone montage · OPEN with this before gallery */}
-      <div className="mt-16 relative w-full h-[56vh] md:h-[72vh] overflow-hidden bg-ink" data-testid="brava-drone-montage">
-        <div className="absolute inset-0 flex items-center justify-center text-center px-6">
-          <img
-            src="/assets/photos/materials/brava-gallery/06-long-grove-aspen-cedar-shake.webp"
-            alt="Brava cedar shake field"
-            className="absolute inset-0 w-full h-full object-cover opacity-40"
+      {/* Drone montage · real footage */}
+      <div
+        className="mt-16 relative w-full h-[56vh] md:h-[78vh] overflow-hidden bg-ink"
+        data-testid="brava-drone-montage"
+      >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          data-testid="brava-drone-video"
+        >
+          <source
+            src="/assets/videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-16-22s.mp4"
+            type="video/mp4"
           />
-          <div className="relative max-w-2xl">
-            <span className="inline-flex items-center gap-2 bg-warm-gold text-ink font-brand text-[10px] uppercase tracking-[0.24em] px-2.5 py-1 font-semibold">
-              [ASSET NEEDED: Brava drone montage]
-            </span>
-            <p className="mt-6 text-paper/80 text-base md:text-lg leading-relaxed">
-              Short-form drone montage &middot; mixed closeups and midrange,
-              jump cuts not too quick. Replace this placeholder when the edit
-              is supplied.
-            </p>
-          </div>
+          <source
+            src="/assets/videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-05-13s.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/40 pointer-events-none" />
+        <div className="absolute bottom-6 md:bottom-10 left-5 md:left-12 right-5 md:right-12 flex items-end justify-between gap-6">
+          <span className="font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/55 backdrop-blur-sm text-paper/85 px-2.5 py-1">
+            Brava in the wild &middot; drone footage
+          </span>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40 pointer-events-none" />
       </div>
 
       {/* Laskey introducing Brava */}
@@ -102,49 +115,54 @@ export default function BravaProof() {
         </div>
       </figure>
 
-      {/* Why we chose Brava · corrected copy */}
-      <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 md:pt-28 pb-24 md:pb-28">
-        <div className="max-w-3xl">
-          <div className="eyebrow text-warm-gold">Why we chose Brava</div>
-          <h3 className="mt-4 font-serif font-light display-tight text-[9vw] sm:text-4xl lg:text-[3.6vw] leading-[1.02]">
-            The first synthetic we put our name on.
-          </h3>
-          <p className="mt-6 text-paper/85 text-base leading-relaxed" data-testid="why-brava-body">
-            We refused every synthetic in this category for years. Brava
-            composite shake is the one that finally earned it. Molded from
-            real cedar masters. Mineral pigmented so the color runs through
-            the shake, not on top of it. Class 4 impact rated. Made in Iowa
-            with about 95% recycled content, and backed for fifty years. It
-            is important to us that we only introduce a material to the Board
-            that we would specify on our own homes. Brava is on that list.
-          </p>
-
-          {/* Badge row · Class 4 · mineral pigmented (Class A intentionally removed from the shake) */}
-          <div className="mt-8 flex flex-wrap gap-3" data-testid="brava-badge-row">
-            <Badge>Class 4</Badge>
-            <Badge>Mineral pigmented</Badge>
-            <Badge>~95% recycled content</Badge>
-            <Badge>50-year limited warranty</Badge>
-            <Badge muted>Made in Washington, Iowa</Badge>
-          </div>
+      {/* Why we chose Brava · with Hickman POV background video */}
+      <div className="relative overflow-hidden" data-testid="why-brava-block">
+        <div className="absolute inset-0 pointer-events-none">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover opacity-35"
+            data-testid="why-brava-bg-video"
+          >
+            <source
+              src="/assets/videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/60" />
         </div>
 
-        {/* Quote cards · sprinkled */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6" data-testid="brava-quote-cards">
-          <QuoteCard
-            quote="My satisfaction level hasn't changed in 9 years."
-            attr="Amy, Michigan"
-            verify
-          />
-          <QuoteCard
-            quote="[ASSET NEEDED: Laskey or Hickman quote + 5-star symbol]"
-            attr="[VERIFY]"
-            placeholder
-          />
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 md:pt-28 pb-24 md:pb-28">
+          <div className="max-w-3xl">
+            <div className="eyebrow text-warm-gold">Why we chose Brava</div>
+            <h3 className="mt-4 font-serif font-light display-tight text-[9vw] sm:text-4xl lg:text-[3.6vw] leading-[1.02]">
+              The first synthetic we put our name on.
+            </h3>
+            <p className="mt-6 text-paper/85 text-base leading-relaxed" data-testid="why-brava-body">
+              We refused every synthetic in this category for years. Brava
+              composite shake is the one that finally earned it. Molded from
+              real cedar masters. Mineral pigmented so the color runs through
+              the shake, not on top of it. Class 4 impact rated. Made in Iowa
+              with about 95% recycled content, and backed for fifty years. It
+              is important to us that we only introduce a material to the Board
+              that we would specify on our own homes. Brava is on that list.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3" data-testid="brava-badge-row">
+              <Badge>Class 4</Badge>
+              <Badge>Mineral pigmented</Badge>
+              <Badge>~95% recycled content</Badge>
+              <Badge>50-year limited warranty</Badge>
+              <Badge muted>Made in Washington, Iowa</Badge>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Gallery · abundant, L&L + Brava intermixed but L&L badge carries the weight */}
+      {/* Gallery · hero + thumbnail rail */}
       <div className="relative h-[80svh] md:h-[88svh] w-full overflow-hidden border-t border-paper/10">
         <AnimatePresence mode="wait">
           <motion.img
@@ -201,7 +219,7 @@ export default function BravaProof() {
               <span className="text-paper/40">&nbsp;first, then Brava precedents</span>
             </div>
             <Caption className="text-paper/50">
-              {LL_PROJECTS.length} L&amp;L projects &middot; {BRAVA_PROJECTS.length} Brava precedents &middot; [ASSET NEEDED: more Hickman detailed closeups]
+              {LL_PROJECTS.length} L&amp;L projects &middot; {BRAVA_PROJECTS.length} Brava precedents
             </Caption>
           </div>
           <div
@@ -228,6 +246,44 @@ export default function BravaProof() {
           </div>
         </div>
       </div>
+
+      {/* Beauty with a Conscience panel · AFTER gallery */}
+      <div
+        className="relative bg-ink border-t border-paper/10"
+        data-testid="beauty-conscience-panel"
+      >
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7">
+            <div className="eyebrow text-warm-gold">Beauty with a conscience</div>
+            <h3 className="mt-4 font-serif italic font-light text-paper text-[8vw] sm:text-4xl lg:text-[3.6vw] leading-[1.05] max-w-3xl">
+              A roof that subtracts from landfill instead of adding to it.
+            </h3>
+            <p className="mt-6 max-w-2xl text-paper/80 text-base md:text-lg leading-relaxed">
+              Every Brava tile diverts plastic from landfill. About 95%
+              recycled content. Fully recyclable at end of life.
+            </p>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="grid grid-cols-3 gap-4">
+              <Stat big="~95%" sub="recycled content" />
+              <Stat big="0" sub="plastic sent to landfill" />
+              <Stat big="100%" sub="recyclable end-of-life" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Quote card · single, Amy/Michigan verbatim */}
+      <div className="bg-ink border-t border-paper/10">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 md:py-24">
+          <div className="max-w-3xl mx-auto" data-testid="brava-quote-cards">
+            <QuoteCard
+              quote="My satisfaction level hasn't changed in 9 years."
+              attr="Amy, Michigan"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -246,15 +302,22 @@ function Badge({ children, muted = false }) {
   );
 }
 
-function QuoteCard({ quote, attr, verify, placeholder }) {
+function Stat({ big, sub }) {
   return (
-    <figure
-      className={`p-7 md:p-8 border ${
-        placeholder
-          ? "border-dashed border-paper/25 bg-paper/[0.03]"
-          : "border-paper/15 bg-paper/[0.05]"
-      }`}
-    >
+    <div className="border-l border-warm-gold/60 pl-4">
+      <div className="font-display text-3xl md:text-4xl text-paper font-medium tabular-nums leading-none">
+        {big}
+      </div>
+      <div className="mt-2 font-brand text-[10px] uppercase tracking-[0.22em] text-paper/60 leading-snug">
+        {sub}
+      </div>
+    </div>
+  );
+}
+
+function QuoteCard({ quote, attr }) {
+  return (
+    <figure className="p-7 md:p-8 border border-paper/15 bg-paper/[0.05]">
       <div className="flex items-center gap-1 text-warm-gold text-base" aria-label="Five star rating">
         {Array.from({ length: 5 }).map((_, i) => (
           <span key={i}>&#9733;</span>
@@ -265,9 +328,6 @@ function QuoteCard({ quote, attr, verify, placeholder }) {
       </blockquote>
       <figcaption className="mt-5 font-brand text-[11px] uppercase tracking-[0.22em] text-paper/70">
         &mdash; {attr}
-        {verify && (
-          <span className="ml-2 text-warm-gold">[VERIFY]</span>
-        )}
       </figcaption>
     </figure>
   );

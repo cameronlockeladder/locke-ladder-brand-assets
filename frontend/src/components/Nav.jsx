@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 const SECTIONS = [
-  { id: "relationship", label: "Local Experts" },
   { id: "hero", label: "Christ Church" },
+  { id: "relationship", label: "Local Experts" },
   { id: "roof-eol", label: "End of Life" },
   { id: "field-inspection", label: "Field Inspection" },
   { id: "repair-vs-replace", label: "Repair vs Replace" },
@@ -11,12 +11,13 @@ const SECTIONS = [
   { id: "light-study", label: "Light Study" },
   { id: "system", label: "Roof System" },
   { id: "attention", label: "Attention to Detail" },
-  { id: "roadmap", label: "Client Success" },
+  { id: "new-approach", label: "Our Approach" },
+  { id: "roadmap", label: "Christ Church Success" },
   { id: "human-close", label: "Close" },
 ];
 
 export default function Nav() {
-  const [active, setActive] = useState("relationship");
+  const [active, setActive] = useState("hero");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

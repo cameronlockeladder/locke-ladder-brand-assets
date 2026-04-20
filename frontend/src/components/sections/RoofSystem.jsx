@@ -2,36 +2,20 @@ import React from "react";
 import { SectionTag, Caption } from "@/components/primitives";
 
 const LAYERS = [
-  {
-    n: "01",
-    name: "Brava Composite Shake",
-    note: "Class 4 impact rated.",
-  },
-  {
-    n: "02",
-    name: "Custom Fabricated Edge Metals",
-    note: "Custom fabricated to maximize performance and beauty. More thought. More intentionality. More attention to detail.",
-  },
-  {
-    n: "03",
-    name: "Ring-shank nails",
-    note: "Option to use screws for even higher wind rating.",
-  },
-  {
-    n: "04",
-    name: "Grace Ice & Water Shield",
-    note: "Highest performing on the market [VERIFY]. Protecting the most vulnerable areas of the roof no matter how much ice and snow.",
-  },
-  {
-    n: "05",
-    name: "EchoShield Synthetic Underlayment (suggested)",
-    note: "Reflect up to 97% of radiant heat [VERIFY]. Lower cooling bills. Increased comfort for the congregation.",
-  },
-  {
-    n: "06",
-    name: "Decking",
-    note: "Locke & Ladder inspects every sheet of decking to ensure lifetime performance.",
-  },
+  { n: "01", name: "Brava Composite Shake", note: "Class 4 impact rated." },
+  { n: "02", name: "Custom Fabricated Edge Metals", note: "Custom fabricated to maximize performance and beauty. More thought. More intentionality. More attention to detail." },
+  { n: "03", name: "Ring-shank nails", note: "Option to use screws for even higher wind rating." },
+  { n: "04", name: "Grace Ice & Water Shield", note: "Highest performing on the market. Protecting the most vulnerable areas of the roof no matter how much ice and snow." },
+  { n: "05", name: "EchoShield Synthetic Underlayment (suggested)", note: "Reflect up to 97% of radiant heat. Lower cooling bills. Increased comfort for the congregation." },
+  { n: "06", name: "Decking", note: "Locke & Ladder inspects every sheet of decking to ensure lifetime performance." },
+];
+
+const STANDARDS = [
+  { label: "Class 4", sub: "Impact rated" },
+  { label: "188 MPH", sub: "Wind · 211 w/ screws" },
+  { label: "Class A", sub: "Rated system with approved underlayments" },
+  { label: "CRRC", sub: "Cool Roof Rating Council" },
+  { label: "Miami-Dade", sub: "County approved" },
 ];
 
 const PARTNERS = [
@@ -52,19 +36,48 @@ export default function RoofSystem() {
       <div className="max-w-[1600px] mx-auto">
         <SectionTag number="09 / 12" title="The full system" />
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-          <div className="lg:col-span-7">
-            <h2
-              className="font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.4vw] leading-[0.98]"
-              data-testid="roof-system-headline"
-            >
-              Roof System.
-            </h2>
-          </div>
-          <div className="lg:col-span-5">
-            <p className="text-base md:text-lg leading-relaxed text-body" data-testid="roof-system-subhead">
-              System: components engineered to perform as one.
-            </p>
+        {/* Etymology headline treatment — one-place-only */}
+        <div className="mt-8 relative" data-testid="roof-system-headline-block">
+          <h2
+            id="roof-system-headline"
+            aria-describedby="roof-system-def"
+            data-testid="roof-system-headline"
+            className="font-display font-semibold uppercase text-ink leading-[0.95] tracking-[-0.02em] relative z-10"
+            style={{ fontSize: "clamp(56px, 8vw, 140px)" }}
+          >
+            <span className="inline-block relative">
+              Roof
+            </span>{" "}
+            <span className="inline-block relative">
+              System
+              {/* Desktop · baseline-right footnote tag */}
+              <span
+                id="roof-system-def"
+                role="definition"
+                data-testid="roof-system-definition-tag"
+                className="hidden md:inline-block absolute left-full bottom-[0.18em] ml-4 font-serif text-ink/85 whitespace-nowrap normal-case"
+                style={{ fontSize: "clamp(11px, 1.2vw, 18px)", lineHeight: 1.1, fontWeight: 400, letterSpacing: "normal" }}
+              >
+                <em>system</em>
+                <span className="font-brand not-italic text-ink/55 mx-1" style={{ fontSize: "0.8em", letterSpacing: "0.05em" }}>
+                  (noun)
+                </span>
+                <span className="mx-1 text-ink/45">&middot;</span>
+                <em>a set of components engineered to perform as one.</em>
+              </span>
+            </span>
+          </h2>
+          {/* Mobile · tag wraps below, left-aligned */}
+          <div
+            className="md:hidden mt-3 font-serif text-ink/85 italic text-sm leading-snug"
+            aria-hidden="true"
+          >
+            <em>system</em>
+            <span className="font-brand not-italic text-ink/55 mx-1" style={{ fontSize: "0.8em" }}>
+              (noun)
+            </span>
+            <span className="mx-1 text-ink/45">&middot;</span>
+            <em>a set of components engineered to perform as one.</em>
           </div>
         </div>
 
@@ -95,18 +108,7 @@ export default function RoofSystem() {
                     {l.name}
                   </div>
                   <div className="col-span-12 md:col-span-7 text-sm md:text-base text-body leading-relaxed">
-                    {l.note.split(/(\[VERIFY\])/).map((chunk, i) =>
-                      chunk === "[VERIFY]" ? (
-                        <span
-                          key={i}
-                          className="ml-1 font-brand text-[10px] uppercase tracking-[0.22em] text-warm-gold align-middle"
-                        >
-                          [VERIFY]
-                        </span>
-                      ) : (
-                        <span key={i}>{chunk}</span>
-                      )
-                    )}
+                    {l.note}
                   </div>
                 </li>
               ))}
@@ -114,7 +116,33 @@ export default function RoofSystem() {
           </div>
         </div>
 
-        <div className="mt-28">
+        {/* Standards badge row · Class A restored at SYSTEM level */}
+        <div className="mt-20 md:mt-24" data-testid="standards-badge-row">
+          <div className="flex items-end justify-between gap-6 flex-wrap mb-6">
+            <div className="eyebrow text-warm-gold">Meets or exceeds all major standards</div>
+            <Caption>Source: Brava Roof Tile</Caption>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border-t border-b border-ink/15">
+            {STANDARDS.map((s, i) => (
+              <div
+                key={s.label}
+                data-testid={`standard-${i}`}
+                className={`py-6 md:py-8 px-5 md:px-6 border-ink/10 ${
+                  i !== STANDARDS.length - 1 ? "md:border-r" : ""
+                } ${i >= 2 ? "border-t md:border-t-0" : ""} ${
+                  i % 2 === 1 && i < STANDARDS.length - 1 ? "border-l md:border-l-0" : ""
+                }`}
+              >
+                <div className="font-display text-ink text-2xl md:text-3xl font-medium leading-none">
+                  {s.label}
+                </div>
+                <div className="mt-2 text-xs md:text-sm text-slate leading-snug">{s.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-24">
           <div className="eyebrow text-warm-gold mb-6">Specified partners</div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-0 border-t border-b border-ink/15">
             {PARTNERS.map((p, i) => (

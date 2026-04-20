@@ -22,6 +22,7 @@ const STEPS = [
     n: "04",
     title: "Installation Oversight",
     body: "Daily jobsite supervision. Locke & Ladder's long-term financial health stands behind the guarantee.",
+    pill: "Factory-trained, vetted, insured. Locke & Ladder is a certified BRAVA installer.",
   },
   {
     n: "05",
@@ -56,7 +57,8 @@ export default function RoadMap() {
               className="font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.4vw] leading-[0.98]"
               data-testid="roadmap-headline"
             >
-              Client Success Road Map.
+              Christ Church
+              <br />Success Road Map.
             </h2>
           </div>
           <div className="lg:col-span-5">
@@ -90,6 +92,15 @@ export default function RoadMap() {
               <p className="mt-3 max-w-2xl text-body text-base md:text-lg leading-relaxed">
                 {s.body}
               </p>
+              {s.pill && (
+                <div
+                  className="mt-5 inline-flex items-center gap-3 bg-ink text-paper font-brand text-[10px] uppercase tracking-[0.24em] px-4 py-2.5"
+                  data-testid={`roadmap-pill-${s.n}`}
+                >
+                  <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
+                  {s.pill}
+                </div>
+              )}
             </motion.li>
           ))}
         </ol>
