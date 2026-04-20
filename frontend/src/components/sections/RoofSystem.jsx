@@ -2,13 +2,36 @@ import React from "react";
 import { SectionTag, Caption } from "@/components/primitives";
 
 const LAYERS = [
-  { n: "07", name: "Brava Composite Shake", role: "Visible roof", note: "Class A · Class 4 · mineral pigmented" },
-  { n: "06", name: "Custom Fabricated Edge Metals", role: "Eaves, rakes, ridges", note: "Our metal shop. Matched profiles." },
-  { n: "05", name: "Double-W Valley Metal", role: "High-volume water paths", note: "Open-valley, doubled for commercial life." },
-  { n: "04", name: "Ring-Shank Stainless Nailing", role: "Fastening", note: "Resists back-out over decades of movement." },
-  { n: "03", name: "Grace Ice & Water Shield", role: "Vulnerable zones", note: "Eaves, valleys, steeple transitions, penetrations." },
-  { n: "02", name: "EchoShield Synthetic Underlayment", role: "Field water barrier", note: "High-tear, high-temp, UV stable during install." },
-  { n: "01", name: "Decking, Inspected & Restored", role: "Substrate", note: "Rotted sheathing cut out, sistered, replaced." },
+  {
+    n: "01",
+    name: "Brava Composite Shake",
+    note: "Class 4 impact rated.",
+  },
+  {
+    n: "02",
+    name: "Custom Fabricated Edge Metals",
+    note: "Custom fabricated to maximize performance and beauty. More thought. More intentionality. More attention to detail.",
+  },
+  {
+    n: "03",
+    name: "Ring-shank nails",
+    note: "Option to use screws for even higher wind rating.",
+  },
+  {
+    n: "04",
+    name: "Grace Ice & Water Shield",
+    note: "Highest performing on the market [VERIFY]. Protecting the most vulnerable areas of the roof no matter how much ice and snow.",
+  },
+  {
+    n: "05",
+    name: "EchoShield Synthetic Underlayment (suggested)",
+    note: "Reflect up to 97% of radiant heat [VERIFY]. Lower cooling bills. Increased comfort for the congregation.",
+  },
+  {
+    n: "06",
+    name: "Decking",
+    note: "Locke & Ladder inspects every sheet of decking to ensure lifetime performance.",
+  },
 ];
 
 const PARTNERS = [
@@ -27,19 +50,20 @@ export default function RoofSystem() {
       className="relative bg-paper-warm py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="04 / 07" title="The Roof, as a System" />
+        <SectionTag number="09 / 12" title="The full system" />
+
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
-            <h2 className="font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.2vw] leading-[0.98]">
-              Seven layers. One roof that acts like one thing.
+            <h2
+              className="font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.4vw] leading-[0.98]"
+              data-testid="roof-system-headline"
+            >
+              Roof System.
             </h2>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-base leading-relaxed text-body">
-              A great roof is mostly invisible. What the congregation sees is the
-              shake. What keeps the building dry is everything beneath it,
-              specified, detailed, and installed by people who understand the
-              stakes.
+            <p className="text-base md:text-lg leading-relaxed text-body" data-testid="roof-system-subhead">
+              System: components engineered to perform as one.
             </p>
           </div>
         </div>
@@ -67,14 +91,22 @@ export default function RoofSystem() {
                   <span className="col-span-2 md:col-span-1 font-brand text-warm-gold text-xs uppercase tracking-[0.2em]">
                     {l.n}
                   </span>
-                  <div className="col-span-10 md:col-span-5 text-ink text-lg md:text-xl font-medium">
+                  <div className="col-span-10 md:col-span-4 text-ink text-lg md:text-xl font-medium">
                     {l.name}
                   </div>
-                  <div className="col-span-6 md:col-span-2 font-brand text-[11px] uppercase tracking-[0.2em] text-slate">
-                    {l.role}
-                  </div>
-                  <div className="col-span-6 md:col-span-4 text-sm text-body leading-relaxed">
-                    {l.note}
+                  <div className="col-span-12 md:col-span-7 text-sm md:text-base text-body leading-relaxed">
+                    {l.note.split(/(\[VERIFY\])/).map((chunk, i) =>
+                      chunk === "[VERIFY]" ? (
+                        <span
+                          key={i}
+                          className="ml-1 font-brand text-[10px] uppercase tracking-[0.22em] text-warm-gold align-middle"
+                        >
+                          [VERIFY]
+                        </span>
+                      ) : (
+                        <span key={i}>{chunk}</span>
+                      )
+                    )}
                   </div>
                 </li>
               ))}
@@ -122,25 +154,16 @@ function SystemDiagram() {
       </defs>
       <rect x="0" y="0" width="300" height="400" fill="url(#sky)" />
       {[
-        { y: 40, label: "07", color: "#1A1C20" },
-        { y: 80, label: "06", color: "#2B2D32" },
-        { y: 120, label: "05", color: "#50636F" },
-        { y: 160, label: "04", color: "#857650" },
-        { y: 200, label: "03", color: "#9A5B3E" },
-        { y: 240, label: "02", color: "#8A98A1" },
-        { y: 280, label: "01", color: "#D9D4CA" },
+        { y: 40, label: "01", color: "#1A1C20" },
+        { y: 90, label: "02", color: "#2B2D32" },
+        { y: 140, label: "03", color: "#857650" },
+        { y: 190, label: "04", color: "#9A5B3E" },
+        { y: 240, label: "05", color: "#8A98A1" },
+        { y: 290, label: "06", color: "#D9D4CA" },
       ].map((l, i) => (
         <g key={i} transform={`translate(${30 + i * 4}, ${l.y})`}>
-          <polygon
-            points="0,30 120,0 240,30 120,60"
-            fill={l.color}
-            opacity={0.9}
-            stroke="#1A1C20"
-            strokeOpacity="0.25"
-          />
-          <text x="250" y="36" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="600" fill="#1A1C20">
-            {l.label}
-          </text>
+          <polygon points="0,30 120,0 240,30 120,60" fill={l.color} opacity={0.9} stroke="#1A1C20" strokeOpacity="0.25" />
+          <text x="250" y="36" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="600" fill="#1A1C20">{l.label}</text>
         </g>
       ))}
       <line x1="0" y1="360" x2="300" y2="360" stroke="#1A1C20" strokeOpacity="0.15" />

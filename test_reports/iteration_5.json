@@ -1,0 +1,46 @@
+{
+  "summary": "Frontend-only verification of the v4 12-section rewrite for the Christ Church Oak Brook proposal microsite. All 12 sections render in the correct DOM order with correct IDs and data-testids, Nav side-dots contain exactly 12 entries, no GiveBack section exists, and the PDF packet endpoint returns HTTP 200 with application/pdf. Every content requirement called out in the review (verbatim copy, removed phrases, [VERIFY]/[ASSET NEEDED] flags, Class A removal, Polycam click-to-load, FieldInspection lightbox, Brava drone-montage-before-Laskey order, Brava thumbnail swap, 7 RoadMap steps, HumanClose image-only + pdf link) was programmatically verified.",
+  "backend_issues": {
+    "critical": [],
+    "minor": [
+      {"endpoint": "/api/proposal/packet.pdf", "issue": "HEAD returns 405 (only GET is allowed). Not functionally required for users, but worth noting — app only uses this via <a href>, which issues a GET, so the real user flow works correctly (HTTP 200, content-type application/pdf, 2.5MB, valid %PDF-1.4 magic bytes)."}
+    ]
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "verified_checks": [
+    "DOM order of 12 main sections matches spec exactly (relationship, hero, roof-eol, field-inspection, repair-vs-replace, todays-cedar, brava-proof, light-study, system, attention, roadmap, human-close)",
+    "No #giveback element or [data-testid=section-giveback] anywhere in the DOM",
+    "Side nav has exactly 12 nav-dot-* entries, none reference giveback",
+    "Relationship: 'Impact is our rally cry.' + body starts with 'Locke & Ladder's core ethos revolves around'",
+    "Hero: no 'A proposal' eyebrow, no 'An icon of' headline, no Contact separator line; CC+L&L lockup visible; mission quote with literal [VERIFY EXACT MISSION STATEMENT]; Scope cell reads 'Sanctuary, Steeple & Mansard'",
+    "RoofEndOfLife: headline 'Roof is at the end of useful life.'; polycam-load-button converts to polycam-iframe on click (verified)",
+    "FieldInspection: headline 'Field Inspection Report.'; 6 featured tiles (field-featured-0..5); field-rail-0 present; [ASSET NEEDED] asset note present; lightbox opens on tile click; no 'six images we keep coming back to' or 'triaging' copy",
+    "RepairVsReplace: 5 repair bullets + 4 replace bullets; only replace-bullet-2 'Reduced insurance premiums.' shows [VERIFY]; no 'bridge', 'roof's clock', 'lets us specify', 'decision the Board has not had to revisit'",
+    "TodaysCedar: [VERIFY] after 'last 3 decades'; [VERIFY terminology] after '3/4\" Heavies'",
+    "BravaProof: brava-drone-montage appears in DOM BEFORE laskey-intro; 'Class 4 impact rated' present; NO 'Class A' anywhere in the section or in brava-badge-row; badges Class 4 + Mineral pigmented present; 2 quote cards (Amy/Michigan w/ [VERIFY] + [ASSET NEEDED] placeholder); thumbnail rail swaps hero image on click (src before != src after)",
+    "LightStudy: tagline 'Mineral pigmentation moves with the sun. The color chosen in daylight is the color you see at vespers, and the color that still reads as cedar at 7 p.m. in October.' present; no 'the board picks on Tuesday'",
+    "RoofSystem: headline 'Roof System.'; subhead 'System: components engineered to perform as one.'; exactly 6 layer items (system-layer-01..06), no system-layer-07; layer copy matches spec (Class 4 impact rated / Custom fabricated... / Option to use screws... / Grace Ice & [VERIFY] / EchoShield 97% [VERIFY] / Decking inspected); no 'Seven layers', 'the roof, as a system', or 'Our metal shop. Matched profiles.'",
+    "AttentionToDetail: headline 'Attention to Detail.'; two before/after sliders (snape-before-after-dormer, snape-before-after-detail) render; no 'Snape is a residence down the road' paragraph",
+    "RoadMap: headline 'Client Success Road Map.'; exactly 7 steps (01..07) with exact titles Preproduction Planning / Church Calendar Coordination / Safety + Site Protection / Installation Oversight / Daily Cleanup / Final Walkthrough / Long-Term Relationship",
+    "HumanClose: no h2/h3/eyebrow/p elements in the section (image-only as specified); human-close-image + human-close-asset-flag present; closing-pdf-download href ends with /api/proposal/packet.pdf",
+    "GET {REACT_APP_BACKEND_URL}/api/proposal/packet.pdf -> HTTP 200, content-type application/pdf, 2,502,509 bytes, valid %PDF-1.4 magic bytes",
+    "Zero console errors captured during a full top-to-bottom page scroll"
+  ],
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "HumanClose hardcodes API = `${BACKEND_URL}/api` but falls back to empty string when BACKEND_URL is missing, producing a relative /proposal/packet.pdf that would 404. In this env BACKEND_URL is set so it works, but worth being aware of.",
+    "FieldInspection declares 94 RAIL entries (jn-007 through jn-100); if any of those webp files are missing on disk, lazy-loaded tiles will 404 silently. Not verified per-file in this pass — main agent may want to sanity-check that all 94 files exist."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (PDF endpoint verified)", "frontend": "100% (all 17 section/content checks pass, 0 console errors)"},
+  "test_credentials": "not applicable",
+  "seed_data_creation": "none",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "v4 12-section microsite is passing all content/order/flag checks against the spec. If deeper regressions are needed, run the same Playwright checks in screens 768 and 390 widths for responsive (this pass was 1920x1080 only). Side nav is xl: only, so dot checks will not appear at <1280px viewport — query the DOM not the viewport for nav verification. The FieldInspection rail has 94 lazy images; use a lazy-load disabling evaluate before snapshotting tile visibility."
+}

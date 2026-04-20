@@ -15,7 +15,6 @@ import LightStudy from "@/components/sections/LightStudy";
 import RoofSystem from "@/components/sections/RoofSystem";
 import AttentionToDetail from "@/components/sections/AttentionToDetail";
 import RoadMap from "@/components/sections/RoadMap";
-import GiveBack from "@/components/sections/GiveBack";
 import HumanClose from "@/components/sections/HumanClose";
 import Footer from "@/components/Footer";
 
@@ -52,7 +51,6 @@ export default function App() {
         <RoofSystem />
         <AttentionToDetail />
         <RoadMap />
-        <GiveBack />
         <HumanClose />
       </main>
       <Footer />

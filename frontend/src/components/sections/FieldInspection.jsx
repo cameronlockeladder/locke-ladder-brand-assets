@@ -3,16 +3,17 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { SectionTag, Caption } from "@/components/primitives";
 
-// Jon will supply final captions. For now: VERIFY COPY on all JobNimbus annotations.
-const VERIFY = "VERIFY COPY";
+// No intro copy. No "six images we keep coming back to." No triaging language.
+// Tag each tile with what the viewer is seeing. [ASSET NEEDED: hi-res roof-condition closeups]
+const LABEL_NEEDED = "[ASSET NEEDED: labeled hi-res closeup]";
 
 const FEATURED = [
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-001.webp", caption: VERIFY },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-002.webp", caption: VERIFY },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-003.webp", caption: VERIFY },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-004.webp", caption: VERIFY },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-005.webp", caption: VERIFY },
-  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-006.webp", caption: VERIFY },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-001.webp", caption: "Worn cedar field" },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-002.webp", caption: "Compromised underlayment" },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-003.webp", caption: "Steeple, NE corner" },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-004.webp", caption: LABEL_NEEDED },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-005.webp", caption: LABEL_NEEDED },
+  { src: "/assets/photos/projects/christ-church/jobnimbus/jn-006.webp", caption: LABEL_NEEDED },
 ];
 
 const RAIL = Array.from({ length: 94 }, (_, i) => {
@@ -20,13 +21,13 @@ const RAIL = Array.from({ length: 94 }, (_, i) => {
   return `/assets/photos/projects/christ-church/jobnimbus/jn-${idx}.webp`;
 });
 
-export default function EvidenceWall() {
+export default function FieldInspection() {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
   const allSlides = [
     ...FEATURED.map((f) => ({ src: f.src, description: f.caption })),
-    ...RAIL.map((src) => ({ src, description: VERIFY })),
+    ...RAIL.map((src) => ({ src, description: LABEL_NEEDED })),
   ];
 
   const openAt = (i) => {
@@ -36,27 +37,22 @@ export default function EvidenceWall() {
 
   return (
     <section
-      id="evidence"
-      data-testid="section-evidence"
+      id="field-inspection"
+      data-testid="section-field-inspection"
       className="relative bg-ink text-paper py-28 md:py-36 border-t border-ink"
     >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
-        <div className="flex items-end justify-between gap-8 flex-wrap">
-          <div>
-            <SectionTag
-              number="02 / 07"
-              title="Field Evidence · 100 captures from our survey"
-              className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
-            />
-            <h2 className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5vw] text-paper leading-[0.95] max-w-4xl">
-              What we saw across the whole field.
-            </h2>
-          </div>
-          <p className="max-w-sm text-paper/70 text-base leading-relaxed">
-            Six images we keep coming back to, plus the rest of what we
-            documented on site. Tap any image to inspect at full size.
-          </p>
-        </div>
+        <SectionTag
+          number="04 / 12"
+          title="From the survey"
+          className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
+        />
+        <h2
+          className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.4vw] text-paper leading-[0.95] max-w-5xl"
+          data-testid="field-inspection-headline"
+        >
+          Field Inspection Report.
+        </h2>
 
         <div className="mt-16 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4">
           {FEATURED.map((f, i) => {
@@ -72,11 +68,12 @@ export default function EvidenceWall() {
                 : i === 4
                 ? "col-span-2 md:col-span-3 aspect-[16/10]"
                 : "col-span-2 md:col-span-3 aspect-[16/10]";
+            const isPlaceholder = f.caption.startsWith("[ASSET NEEDED");
             return (
               <button
                 key={i}
                 onClick={() => openAt(i)}
-                data-testid={`evidence-featured-${i}`}
+                data-testid={`field-featured-${i}`}
                 className={`relative group overflow-hidden bg-paper/5 ${className}`}
               >
                 <img
@@ -85,15 +82,19 @@ export default function EvidenceWall() {
                   loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between text-paper">
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between text-paper gap-3">
                   <span
-                    data-testid={`evidence-featured-${i}-caption`}
-                    className="font-brand text-[10px] tracking-[0.22em] uppercase bg-warm-gold/85 text-ink px-2 py-[2px] rounded-sm"
+                    data-testid={`field-featured-${i}-caption`}
+                    className={`font-brand text-[10px] tracking-[0.22em] uppercase px-2 py-[2px] ${
+                      isPlaceholder
+                        ? "bg-warm-gold/85 text-ink"
+                        : "bg-paper/90 text-ink"
+                    }`}
                   >
                     {f.caption}
                   </span>
-                  <span className="font-brand text-[10px] tracking-[0.22em] uppercase opacity-80 group-hover:opacity-100">
+                  <span className="font-brand text-[10px] tracking-[0.22em] uppercase opacity-80 group-hover:opacity-100 shrink-0">
                     Enlarge
                   </span>
                 </div>
@@ -108,14 +109,14 @@ export default function EvidenceWall() {
             <Caption className="text-paper/50">Scroll</Caption>
           </div>
           <div
-            data-testid="evidence-rail"
+            data-testid="field-rail"
             className="rail-scroll no-scrollbar flex gap-3 md:gap-4 overflow-x-auto pb-4 -mx-6 px-6 lg:-mx-12 lg:px-12"
           >
             {RAIL.map((src, i) => (
               <button
                 key={i}
                 onClick={() => openAt(FEATURED.length + i)}
-                data-testid={`evidence-rail-${i}`}
+                data-testid={`field-rail-${i}`}
                 className="relative shrink-0 h-48 md:h-64 aspect-[3/2] overflow-hidden group bg-paper/5"
               >
                 <img
@@ -130,8 +131,10 @@ export default function EvidenceWall() {
           </div>
         </div>
 
-        <Caption className="mt-6 text-paper/50" data-testid="evidence-verify-note">
-          Captions pending from Jon. All image annotations marked VERIFY COPY will be replaced before the Board packet is finalized.
+        <Caption className="mt-6 text-paper/50" data-testid="field-asset-note">
+          [ASSET NEEDED: hi-res roof-condition closeups &middot; worn cedar,
+          compromised underlayment]. Labels will be applied once final assets
+          are supplied.
         </Caption>
       </div>
 

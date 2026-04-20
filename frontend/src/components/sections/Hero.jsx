@@ -19,25 +19,47 @@ export default function Hero() {
           poster="/assets/photos/projects/christ-church/steeple-closeup.jpg"
           className="w-full h-full object-cover"
         >
-          <source src="/assets/photos/projects/christ-church/hero-timeline.mp4" type="video/mp4" />
           <source src="/assets/photos/projects/christ-church/steeple-closeup.mp4" type="video/mp4" />
+          <source src="/assets/photos/projects/christ-church/hero-timeline.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/30 to-ink/60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/25 to-ink/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink/75" />
       </div>
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 pt-32 md:pt-36 pb-16 min-h-[100svh] flex flex-col justify-between">
+        {/* Top row: CC logo + L&L lockup + mission statement under */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
-          className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8"
+          className="max-w-xl"
         >
-          <span className="eyebrow text-warm-gold">A proposal</span>
-          <span className="hidden sm:inline-block h-3 w-px bg-paper/25" />
-          <div className="eyebrow text-paper/70">Prepared by Locke &amp; Ladder</div>
+          <div className="flex items-center gap-5">
+            <img
+              src="/assets/brand/client/christ-church/christ-church-logo.png"
+              alt="Christ Church | Oak Brook"
+              data-testid="hero-cc-logo"
+              className="h-10 md:h-12 w-auto invert brightness-0 opacity-95"
+            />
+            <span className="h-7 w-px bg-paper/30" />
+            <img
+              src="/assets/brand/locke-ladder/ll-icon.webp"
+              alt="Locke & Ladder"
+              className="h-7 md:h-8 w-auto invert brightness-0 opacity-95"
+            />
+          </div>
+          <p
+            className="mt-5 font-serif italic text-paper/85 text-base md:text-lg leading-relaxed"
+            data-testid="hero-mission"
+          >
+            &ldquo;Gather communities of disciples&hellip;&rdquo;
+            <span className="ml-2 font-brand not-italic text-[10px] uppercase tracking-[0.22em] text-warm-gold/90 align-middle">
+              [VERIFY EXACT MISSION STATEMENT]
+            </span>
+          </p>
         </motion.div>
 
+        {/* Headline area */}
         <div className="max-w-[1200px]">
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
@@ -46,9 +68,9 @@ export default function Hero() {
             className="font-display text-paper text-[13vw] sm:text-[10vw] lg:text-[8.5vw] leading-[0.9] display-tight"
             data-testid="hero-headline"
           >
-            An icon of
+            Christ&nbsp;Church
             <br />
-            Oak&nbsp;Brook.
+            <span className="text-paper/80">Oak&nbsp;Brook.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -61,7 +83,7 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        {/* Aligned row: each cell is a baseline-aligned grid of eyebrow + value */}
+        {/* Aligned row: client / scope / priority — mansard included, not optional */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,11 +92,11 @@ export default function Hero() {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-6">
             <HeroCell label="Client" value="Christ Church | Oak Brook" />
-            <HeroCell label="Scope" value="Sanctuary &amp; Steeple" hint="Mansard (opt.)" />
+            <HeroCell label="Scope" value="Sanctuary, Steeple &amp; Mansard" />
             <HeroCell label="Priority" value="Stop the leak" />
             <div className="flex md:justify-end items-end pt-1">
               <button
-                onClick={() => document.getElementById("diagnosis")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("roof-eol")?.scrollIntoView({ behavior: "smooth" })}
                 data-testid="hero-scroll-button"
                 className="group inline-flex items-center gap-3 font-brand text-[11px] uppercase tracking-[0.28em] text-paper/80 hover:text-paper transition-colors"
               >
@@ -91,13 +113,12 @@ export default function Hero() {
   );
 }
 
-function HeroCell({ label, value, hint }) {
+function HeroCell({ label, value }) {
   return (
     <div className="flex flex-col gap-2">
       <div className="eyebrow text-paper/55 h-[14px] leading-none">{label}</div>
       <div className="text-base md:text-lg text-paper font-medium leading-snug">
         <span dangerouslySetInnerHTML={{ __html: value }} />
-        {hint ? <span className="text-paper/55 font-normal"> · {hint}</span> : null}
       </div>
     </div>
   );

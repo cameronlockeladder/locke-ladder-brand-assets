@@ -6,16 +6,17 @@ import {
 } from "react-compare-slider";
 import { SectionTag, Caption } from "@/components/primitives";
 
-export default function Craftsmanship() {
+export default function AttentionToDetail() {
   return (
     <section
-      id="craftsmanship"
-      data-testid="section-craftsmanship"
+      id="attention"
+      data-testid="section-attention"
       className="relative bg-paper border-t border-rule"
     >
+      {/* Background reel (visual proof only, no case-study narrative) */}
       <div className="relative w-full h-[56vh] md:h-[70vh] overflow-hidden bg-ink">
         <video
-          data-testid="craftsmanship-background-video"
+          data-testid="attention-background-video"
           autoPlay
           loop
           muted
@@ -30,23 +31,25 @@ export default function Craftsmanship() {
 
         <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-12 max-w-[1600px] mx-auto">
           <SectionTag
-            number="05 / 07"
-            title="Craft · The Snape Residence"
+            number="10 / 12"
+            title="Craft"
             className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
           />
-          <h2 className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.6vw] text-paper leading-[0.95] max-w-5xl pb-6">
-            Work that takes the time it takes.
+          <h2
+            className="mt-6 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.6vw] text-paper leading-[0.95] max-w-5xl pb-6"
+            data-testid="attention-headline"
+          >
+            Attention to Detail.
           </h2>
         </div>
       </div>
 
       <div className="max-w-[1600px] mx-auto py-24 md:py-32 px-6 lg:px-12">
         <div className="max-w-2xl mb-14">
-          <p className="text-body text-lg leading-relaxed">
-            Snape is a residence down the road that asked us to solve what
-            other roofers said couldn&rsquo;t be solved. Custom metals,
-            hand-dressed copper, and a tolerance for detail most crews skip.
-            The same shop that would treat this steeple.
+          <p className="text-body text-lg md:text-xl leading-relaxed" data-testid="attention-body">
+            Custom fabricated metals, hand-dressed copper, obsession with
+            detail. Old-world craftsmanship with new materials. Art meets
+            impact.
           </p>
         </div>
 
@@ -57,16 +60,15 @@ export default function Craftsmanship() {
             afterSrc="/assets/photos/projects/snape/before-after-slider-dormer-aligned/after-dormer-1600.webp"
             beforeLabel="Before"
             afterLabel="After"
-            caption="Snape dormer, tear-off to finished copper and slate"
+            caption="Tear-off to finished copper and slate"
           />
-
           <BeforeAfter
             testId="snape-before-after-detail"
             beforeSrc="/assets/photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.jpg"
             afterSrc="/assets/photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg"
             beforeLabel="Close-up"
             afterLabel="Aerial detail"
-            caption="Snape chimney and slate, ground view to aerial"
+            caption="Ground view to aerial composure"
           />
         </div>
 

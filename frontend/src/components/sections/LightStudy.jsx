@@ -2,12 +2,10 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { Caption } from "@/components/primitives";
 
-// User has uploaded all 90 frames. Change this to 109 once the field-shake
-// layout-study sequence is wired in (different study).
 const FRAME_COUNT = 90;
 const FRAMES = Array.from({ length: FRAME_COUNT }, (_, i) => `/assets/aspen/frame-${String(i + 1).padStart(3, "0")}.webp`);
 
-export default function AspenLightStudy() {
+export default function LightStudy() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -15,38 +13,34 @@ export default function AspenLightStudy() {
   });
   const smooth = useSpring(scrollYProgress, { stiffness: 80, damping: 22, mass: 0.4 });
 
-  // Map to frame index
   const index = useTransform(smooth, (v) => Math.min(FRAMES.length - 1, Math.floor(v * FRAMES.length)));
-
-  // Subtle overlay opacity (fade labels at extremes)
   const labelOpacity = useTransform(smooth, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
 
   return (
     <section
-      id="aspen"
-      data-testid="section-aspen"
+      id="light-study"
+      data-testid="section-light-study"
       ref={ref}
       className="relative bg-ink text-paper border-t border-ink"
-      // Give generous scroll length for the scrub
       style={{ height: "240vh" }}
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        {/* Stacked frames · one visible at a time */}
         <FramesStack progress={index} />
-        {/* Atmospheric vignette */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink/60 pointer-events-none" />
 
-        {/* Overlay copy */}
         <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-12 pointer-events-none max-w-[1600px] mx-auto">
           <motion.div style={{ opacity: labelOpacity }}>
-            <div className="eyebrow text-paper/80">A Light Study · Brava Aspen</div>
-            <h2 className="mt-4 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.5vw] leading-[0.95] max-w-5xl text-paper">
+            <div className="eyebrow text-paper/80">08 / 12 &middot; A light study &middot; Brava Aspen</div>
+            <h2 className="mt-4 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.5vw] leading-[0.95] max-w-5xl text-paper" data-testid="light-study-headline">
               Aspen, from dawn to evening.
             </h2>
-            <p className="mt-4 max-w-lg text-paper/75 text-base leading-relaxed">
-              Mineral pigmentation moves with the sun. The color the Board
-              picks on Tuesday is the color you see at vespers, and the color
-              that still reads as cedar at 7 p.m. in October.
+            <p
+              className="mt-4 max-w-xl text-paper/80 text-base md:text-lg leading-relaxed"
+              data-testid="light-study-body"
+            >
+              Mineral pigmentation moves with the sun. The color chosen in
+              daylight is the color you see at vespers, and the color that
+              still reads as cedar at 7 p.m. in October.
             </p>
           </motion.div>
 
@@ -64,7 +58,6 @@ export default function AspenLightStudy() {
 }
 
 function FramesStack({ progress }) {
-  // Render each frame absolutely; show only the one matching the current index.
   return (
     <div className="absolute inset-0">
       {FRAMES.map((src, i) => (
@@ -75,7 +68,6 @@ function FramesStack({ progress }) {
 }
 
 function Frame({ src, i, progress }) {
-  // Use motion value change to toggle opacity. For small counts we just show based on equality.
   const opacity = useTransform(progress, (current) => (current === i ? 1 : 0));
   return (
     <motion.img

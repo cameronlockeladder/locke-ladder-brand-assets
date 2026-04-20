@@ -12,7 +12,6 @@ const SECTIONS = [
   { id: "system", label: "Roof System" },
   { id: "attention", label: "Attention to Detail" },
   { id: "roadmap", label: "Client Success" },
-  { id: "giveback", label: "GiveBack" },
   { id: "human-close", label: "Close" },
 ];
 
