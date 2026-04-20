@@ -14,6 +14,8 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Christ Church | Oak Brook client-facing marks and supporting location graphic.
 - `photos/team/`
   WebP team and truck photography from `Branch For Print/webp-team-photos`.
+- `videos/brand/new-approach-to-contracting/`
+  Optimized Locke & Ladder brand/story video with music.
 - `photos/projects/christ-church/`
   Christ Church photo/video assets and render assets used in proposal development.
   Includes the Christ Church JobNimbus inspection set as WebP-only files under `photos/projects/christ-church/jobnimbus/`.
