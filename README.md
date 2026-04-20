@@ -25,6 +25,8 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Curated Hickman and Laskey precedent imagery tagged as Locke & Ladder Brava cedar projects.
 - `videos/projects/brava-web-video-assets/`
   Optimized Brava-related web video clips for full-bleed background and motion proof sections.
+- `videos/projects/coppergate-window-install/`
+  Optimized Coppergate window-install web video clips.
 - `photos/materials/brava-gallery/`
   Curated Brava cedar gallery set plus the existing manifest and selects sheet.
 - `photos/materials/brava-light-study/`

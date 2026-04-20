@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-19",
-  "file_count": 555,
+  "file_count": 558,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 3009,
+      "bytes": 3111,
       "mime": "text/markdown",
-      "sha256": "ca3862c91a4e92d62e24ab09252b35928dc040fab026ffb4af3a0fef4deb0cd2"
+      "sha256": "1066e07192298aea8aaa07dfdfaab51fcd74ef815d3217d076c3b7adc64f5423"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 124931,
+      "bytes": 129549,
       "mime": "application/json",
-      "sha256": "c746107827d01ceff8f7324e2e69cdae41fdceaa5257a1a0f45328efc1a039be"
+      "sha256": "fb15439af10be5d639e46a10f499ce74f18030729d6bafd9583e97a4eddc2b21"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -3332,6 +3332,24 @@
       "bytes": 7484620,
       "mime": "video/mp4",
       "sha256": "77bdd1cc1978da31870d03819dea7f1ab8a169e74d2a13f89df2f81380a22a06"
+    },
+    {
+      "path": "videos/projects/coppergate-window-install/README.md",
+      "bytes": 593,
+      "mime": "text/markdown",
+      "sha256": "f0f5c99876a1afdce18ef49da6000a55238a79f0798082e44fb1e1d0ac12c56b"
+    },
+    {
+      "path": "videos/projects/coppergate-window-install/coppergate-window-install-v1-0006-07-14s.mp4",
+      "bytes": 1757350,
+      "mime": "video/mp4",
+      "sha256": "28dbcd6647afa252090c0b8d87c179ad7f52056bb28ea6e772f4d1cc738aeab8"
+    },
+    {
+      "path": "videos/projects/coppergate-window-install/coppergate-window-install-v1-0008-full.mp4",
+      "bytes": 1823444,
+      "mime": "video/mp4",
+      "sha256": "457e985e0de0ba005873fd8f3b68a951c60f643abf5e5b07d64c57ce89d22191"
     }
   ]
 }
