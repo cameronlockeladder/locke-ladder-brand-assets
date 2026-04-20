@@ -66,14 +66,7 @@ export default function RoofSystem() {
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 fade-in">
-            <div className="relative bg-paper border border-rule p-6 md:p-10">
-              <div className="aspect-[3/4] relative">
-                <SystemDiagram />
-              </div>
-              <Caption className="mt-4">
-                Exploded view, sanctuary and steeple assembly. Indicative only.
-              </Caption>
-            </div>
+            <SystemPanel />
           </div>
 
           <div className="lg:col-span-7">
@@ -157,7 +150,7 @@ export default function RoofSystem() {
 function SystemPanel() {
   const [view, setView] = useState("ll"); // "ll" | "brava"
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const BRAVA_SLIDE = "/assets/proposal-support/brava-presentation-reference-slides/04-brava-cedar-shake-roofing-system.webp";
+  const BRAVA_SLIDE = "/assets/proposal-support/brava-presentation-reference-slides/02-durability-pays-dividends-lifecycle-cost.webp";
 
   return (
     <div
