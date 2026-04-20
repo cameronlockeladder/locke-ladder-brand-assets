@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-04-18",
-  "file_count": 535,
+  "generated_at": "2026-04-19",
+  "file_count": 555,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 2688,
+      "bytes": 3009,
       "mime": "text/markdown",
-      "sha256": "0eb79977b254e349a2871dacb0f6dcbe155455a0d0ffd01dc0e5efdd0f68e387"
+      "sha256": "ca3862c91a4e92d62e24ab09252b35928dc040fab026ffb4af3a0fef4deb0cd2"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -38,6 +38,18 @@
       "bytes": 1463755,
       "mime": "image/svg+xml",
       "sha256": "9ef2f3114d9631f2ddeb5e6882e63a5c558e86be0951c6cd3133896b2c0c78f8"
+    },
+    {
+      "path": "brand/locke-ladder/TerminaTest-Heavy.woff2",
+      "bytes": 7048,
+      "mime": "font/woff2",
+      "sha256": "53301f36b6a152bd31d5a3a3a6efa1960e4da1838bac34a71794f87f8a592837"
+    },
+    {
+      "path": "brand/locke-ladder/TerminaTest-Medium.woff2",
+      "bytes": 7128,
+      "mime": "font/woff2",
+      "sha256": "1d4c89f27003450e9319f802b54c3aff0df02bbb6d434d23c6fbf494be111847"
     },
     {
       "path": "brand/locke-ladder/ll-icon.webp",
@@ -65,9 +77,57 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 124665,
+      "bytes": 124931,
       "mime": "application/json",
-      "sha256": "a2824fb99418ea7053982127ed9f5ec3f532e98ea5524484abe51ae54731a0e9"
+      "sha256": "c746107827d01ceff8f7324e2e69cdae41fdceaa5257a1a0f45328efc1a039be"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
+      "bytes": 179890,
+      "mime": "image/webp",
+      "sha256": "07d27a3d3c86c3020fa9003bdb2aca2f49ce2025b22d7b1811a88b905177681d"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/02-durability-pays-dividends-lifecycle-cost.webp",
+      "bytes": 368950,
+      "mime": "image/webp",
+      "sha256": "25b09e85fe4d05aa7b5a893cff54f114008e6e31bca73b4384121ae3dcff5296"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/03-installed-by-experts.webp",
+      "bytes": 96448,
+      "mime": "image/webp",
+      "sha256": "9c0f9b4350143d3fb4f7016bdfbd60d6f8a5764865c571cd7da747ef34b65f62"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/04-brava-cedar-shake-roofing-system.webp",
+      "bytes": 403822,
+      "mime": "image/webp",
+      "sha256": "ad750d79c5e6e39ff6a572d887bbb94053b84d6406c7d56dbc59a69bc7636f9e"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/05-beauty-with-a-conscience-sustainability.webp",
+      "bytes": 111744,
+      "mime": "image/webp",
+      "sha256": "0b08225a343c932c88e49e6767238edacd669204e57f30f37b8d1f9c83e6765f"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/06-brava-vs-wood-cedar-shake-benefits.webp",
+      "bytes": 302982,
+      "mime": "image/webp",
+      "sha256": "4d5db54683020c47ce39df826fcc574393abd53de5867d13c5a130909088b30e"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/07-color-for-life-mineral-pigments.webp",
+      "bytes": 390892,
+      "mime": "image/webp",
+      "sha256": "4a9e9963269b85e5cd807505ab66e7129f10d5b16da48908a8869e710190ecaa"
+    },
+    {
+      "path": "docs/brava-presentation-reference-slides/README.md",
+      "bytes": 1097,
+      "mime": "text/markdown",
+      "sha256": "fbca66b0eb4d4e7704e6787832bb91440020960c3a457cacb59fecec968ef1e8"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
@@ -2903,9 +2963,9 @@
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/README.md",
-      "bytes": 403,
+      "bytes": 713,
       "mime": "text/markdown",
-      "sha256": "b94eed7bc4e57c8b8a48968efa621402512b3f140891b70f2fb381e5df7353cf"
+      "sha256": "6cb8f37298df9f648e63cbb24ae8062ce375b2a1cef4b79c39891650783d16e1"
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg",
@@ -2920,6 +2980,30 @@
       "sha256": "93d45a33c34f71e494cf5b04eacc80e49f9a581a13c056e6614ea246bce5270f"
     },
     {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-11.webp",
+      "bytes": 780864,
+      "mime": "image/webp",
+      "sha256": "70d35ce171930ee3f50acddd09ff862e7718c114f7786bf3e2704eb2906f183b"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-13-scaled.webp",
+      "bytes": 771758,
+      "mime": "image/webp",
+      "sha256": "e7e7f361fde6b5ca6bb0e9683f26046051dea50d54e14c32cc3cde2febcb31f1"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-export-16.webp",
+      "bytes": 373694,
+      "mime": "image/webp",
+      "sha256": "c2bc6864ded8033ec71c9a41b57d75b5be99927b46f94f709b8c1d0b9ff81d73"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-aerial.webp",
+      "bytes": 1318760,
+      "mime": "image/webp",
+      "sha256": "c579b93ad290750b6db7244807dd167cd49950a20fe2f9db6266d84c9bece5e8"
+    },
+    {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.jpg",
       "bytes": 1439661,
       "mime": "image/jpeg",
@@ -2930,6 +3014,12 @@
       "bytes": 1451494,
       "mime": "image/jpeg",
       "sha256": "59f93200af6393ac9b4b9da9c859ab3c025240d81643b611ea053b05ddb6df60"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-29.webp",
+      "bytes": 979114,
+      "mime": "image/webp",
+      "sha256": "0129136ac8dba4793772b763e1b12da67ea6e7d9116e3ba708752a5e062f9827"
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-side-by-side-intro-to-brava-cedar-shot.webp",
@@ -3212,6 +3302,36 @@
       "bytes": 78230,
       "mime": "image/webp",
       "sha256": "3b5d2a929bb90a480869e485e4d0513ecf46f6bcd11707d992ab526ee4d6a628"
+    },
+    {
+      "path": "reviews/google/README.md",
+      "bytes": 1627,
+      "mime": "text/markdown",
+      "sha256": "dce15c3233238facc279406b3560ce087c6869192b21806308aae488f686758c"
+    },
+    {
+      "path": "reviews/google/google-5-star.png",
+      "bytes": 40824,
+      "mime": "image/png",
+      "sha256": "a787c1ab0773003f276b0040fd82e07b0ca88d0e377ea9d7415a72e0f9570fdb"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/README.md",
+      "bytes": 525,
+      "mime": "text/markdown",
+      "sha256": "bf233808a72f4e40e35dfe4aa67184b5de64035993332cad47fc42e1aed511fa"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-05-13s.mp4",
+      "bytes": 11397920,
+      "mime": "video/mp4",
+      "sha256": "3c014a020d6620df20f13b8e0dbe40dde8f16a2b692ec6c8ea11c3e2b2e12297"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-16-22s.mp4",
+      "bytes": 7484620,
+      "mime": "video/mp4",
+      "sha256": "77bdd1cc1978da31870d03819dea7f1ab8a169e74d2a13f89df2f81380a22a06"
     }
   ]
 }

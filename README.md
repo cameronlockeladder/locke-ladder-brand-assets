@@ -23,6 +23,8 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Faith Apostolic Church imagery used for the Church GiveBack Program.
 - `photos/projects/locke-ladder-brava-cedar-projects/`
   Curated Hickman and Laskey precedent imagery tagged as Locke & Ladder Brava cedar projects.
+- `videos/projects/brava-web-video-assets/`
+  Optimized Brava-related web video clips for full-bleed background and motion proof sections.
 - `photos/materials/brava-gallery/`
   Curated Brava cedar gallery set plus the existing manifest and selects sheet.
 - `photos/materials/brava-light-study/`
@@ -33,8 +35,11 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Imported 121-frame WebP sequence from a downloaded folder whose semantic label was not preserved.
 - `proposal-support/christ-church/`
   Supporting proposal-specific utility assets.
+- `reviews/google/`
+  Google review proof graphic plus approved review pull quotes.
 - `docs/`
   Supporting notes and generated manifests.
+  Includes Brava presentation reference slides under `docs/brava-presentation-reference-slides/`.
 
 ## Deliberately Excluded
 
