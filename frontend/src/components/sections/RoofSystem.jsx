@@ -36,47 +36,28 @@ export default function RoofSystem() {
       <div className="max-w-[1600px] mx-auto">
         <SectionTag number="09 / 12" title="The full system" />
 
-        {/* Etymology headline treatment — one-place-only */}
-        <div className="mt-8 relative" data-testid="roof-system-headline-block">
+        {/* Etymology headline · definition directly underneath */}
+        <div className="mt-8" data-testid="roof-system-headline-block">
           <h2
             id="roof-system-headline"
             aria-describedby="roof-system-def"
             data-testid="roof-system-headline"
-            className="font-display font-semibold uppercase text-ink leading-[0.95] tracking-[-0.02em] relative z-10"
+            className="font-display font-semibold uppercase text-ink leading-[0.95] tracking-[-0.02em]"
             style={{ fontSize: "clamp(56px, 8vw, 140px)" }}
           >
-            <span className="inline-block relative">
-              Roof
-            </span>{" "}
-            <span className="inline-block relative">
-              System
-              {/* Desktop · baseline-right footnote tag */}
-              <span
-                id="roof-system-def"
-                role="definition"
-                data-testid="roof-system-definition-tag"
-                className="hidden md:inline-block absolute left-full bottom-[0.18em] ml-4 font-serif text-ink/85 whitespace-nowrap normal-case"
-                style={{ fontSize: "clamp(11px, 1.2vw, 18px)", lineHeight: 1.1, fontWeight: 400, letterSpacing: "normal" }}
-              >
-                <em>system</em>
-                <span className="font-brand not-italic text-ink/55 mx-1" style={{ fontSize: "0.8em", letterSpacing: "0.05em" }}>
-                  (noun)
-                </span>
-                <span className="mx-1 text-ink/45">&middot;</span>
-                <em>a set of components engineered to perform as one.</em>
-              </span>
-            </span>
+            Roof System
           </h2>
-          {/* Mobile · tag wraps below, left-aligned */}
           <div
-            className="md:hidden mt-3 font-serif text-ink/85 italic text-sm leading-snug"
-            aria-hidden="true"
+            id="roof-system-def"
+            role="definition"
+            data-testid="roof-system-definition-tag"
+            className="mt-5 font-serif text-ink/80 text-base md:text-xl leading-snug max-w-2xl"
           >
             <em>system</em>
-            <span className="font-brand not-italic text-ink/55 mx-1" style={{ fontSize: "0.8em" }}>
+            <span className="font-brand not-italic text-ink/55 mx-2" style={{ fontSize: "0.75em", letterSpacing: "0.06em" }}>
               (noun)
             </span>
-            <span className="mx-1 text-ink/45">&middot;</span>
+            <span className="mx-1 text-ink/40">&middot;</span>
             <em>a set of components engineered to perform as one.</em>
           </div>
         </div>
@@ -101,7 +82,7 @@ export default function RoofSystem() {
                   className="grid grid-cols-12 gap-4 md:gap-8 py-5 items-baseline"
                   data-testid={`system-layer-${l.n}`}
                 >
-                  <span className="col-span-2 md:col-span-1 font-brand text-warm-gold text-xs uppercase tracking-[0.2em]">
+                  <span className="col-span-2 md:col-span-1 font-brand text-slate text-xs uppercase tracking-[0.2em]">
                     {l.n}
                   </span>
                   <div className="col-span-10 md:col-span-4 text-ink text-lg md:text-xl font-medium">
@@ -119,7 +100,7 @@ export default function RoofSystem() {
         {/* Standards badge row · Class A restored at SYSTEM level */}
         <div className="mt-20 md:mt-24" data-testid="standards-badge-row">
           <div className="flex items-end justify-between gap-6 flex-wrap mb-6">
-            <div className="eyebrow text-warm-gold">Meets or exceeds all major standards</div>
+            <div className="eyebrow text-ink/65">Meets or exceeds all major standards</div>
             <Caption>Source: Brava Roof Tile</Caption>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border-t border-b border-ink/15">
@@ -143,7 +124,7 @@ export default function RoofSystem() {
         </div>
 
         <div className="mt-24">
-          <div className="eyebrow text-warm-gold mb-6">Specified partners</div>
+          <div className="eyebrow text-ink/65 mb-6">Specified partners</div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-0 border-t border-b border-ink/15">
             {PARTNERS.map((p, i) => (
               <a

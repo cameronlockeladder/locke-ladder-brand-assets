@@ -18,7 +18,7 @@ export default function LightStudy() {
         data-testid="color-for-life-panel"
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <SectionTag
               number="08 / 12"
               title="Color for life"
@@ -35,15 +35,19 @@ export default function LightStudy() {
               vespers, and what still reads as cedar at 7 p.m. in October.
             </p>
           </div>
-          <div className="lg:col-span-5">
-            <div className="grid grid-cols-3 gap-0 border border-paper/15">
-              <ColorChip label="Dawn" bg="#C1A27A" />
-              <ColorChip label="Noon" bg="#8A6B45" />
-              <ColorChip label="Vespers" bg="#5F4A30" />
-            </div>
-            <p className="mt-4 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/55">
-              Same shake. Different light. Same shake.
-            </p>
+          <div className="lg:col-span-6">
+            <figure className="relative overflow-hidden bg-paper/5 border border-paper/10">
+              <img
+                src="/assets/proposal-support/brava-presentation-reference-slides/07-color-for-life-mineral-pigments.webp"
+                alt="Color for life · mineral pigmentation"
+                loading="lazy"
+                className="w-full h-auto object-contain"
+                data-testid="color-for-life-slide"
+              />
+            </figure>
+            <figcaption className="mt-3 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/55">
+              From Brava&rsquo;s own presentation material
+            </figcaption>
           </div>
         </div>
       </div>
@@ -51,16 +55,6 @@ export default function LightStudy() {
       {/* Scroll-scrubbed Aspen study */}
       <Scrubber />
     </section>
-  );
-}
-
-function ColorChip({ label, bg }) {
-  return (
-    <div className="aspect-square relative flex items-end p-3" style={{ background: bg }}>
-      <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/90 bg-ink/45 backdrop-blur-sm px-2 py-0.5">
-        {label}
-      </span>
-    </div>
   );
 }
 

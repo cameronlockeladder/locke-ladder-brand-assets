@@ -73,9 +73,9 @@ export default function AttentionToDetail() {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" label="Copper loop, entry" />
-          <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" label="Dormer, step flashing" />
-          <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" label="Aerial, field composure" />
+          <DetailTile src="/assets/photos/projects/snape/copper-detail.jpg" />
+          <DetailTile src="/assets/photos/projects/snape/dormer-detail.jpg" />
+          <DetailTile src="/assets/photos/projects/snape/aerial-tight.jpg" />
         </div>
       </div>
     </section>
@@ -119,20 +119,17 @@ function BeforeAfter({ beforeSrc, afterSrc, beforeLabel, afterLabel, caption, te
   );
 }
 
-function DetailTile({ src, label }) {
+function DetailTile({ src }) {
   return (
     <figure className="fade-in group">
       <div className="relative overflow-hidden aspect-[4/5] bg-ink/5">
         <img
           src={src}
-          alt={label}
+          alt=""
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1600ms] group-hover:scale-[1.04]"
         />
       </div>
-      <figcaption className="mt-3">
-        <span className="text-ink/75 text-sm font-medium">{label}</span>
-      </figcaption>
     </figure>
   );
 }

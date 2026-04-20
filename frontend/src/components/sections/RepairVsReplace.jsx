@@ -57,7 +57,7 @@ export default function RepairVsReplace() {
           <div className="bg-ink text-paper p-8 md:p-12" data-testid="ledger-replace">
             <div className="flex items-baseline justify-between">
               <h3 className="font-display text-3xl md:text-4xl font-medium">Replace</h3>
-              <span className="eyebrow text-warm-gold">Our recommendation</span>
+              <span className="eyebrow text-ink/55">Our recommendation</span>
             </div>
             <ul className="mt-8 space-y-5">
               {REPLACE.map((n, i) => (

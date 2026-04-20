@@ -58,7 +58,7 @@ export default function BravaProof() {
         </h2>
       </div>
 
-      {/* Drone montage · real footage */}
+      {/* Drone montage · christ-church-brava-drone-montage */}
       <div
         className="mt-16 relative w-full h-[56vh] md:h-[78vh] overflow-hidden bg-ink"
         data-testid="brava-drone-montage"
@@ -73,18 +73,14 @@ export default function BravaProof() {
           data-testid="brava-drone-video"
         >
           <source
-            src="/assets/videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-16-22s.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="/assets/videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-05-13s.mp4"
+            src="/assets/videos/projects/brava-web-video-assets/christ-church-brava-drone-montage.mp4"
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/40 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/15 to-ink/30 pointer-events-none" />
         <div className="absolute bottom-6 md:bottom-10 left-5 md:left-12 right-5 md:right-12 flex items-end justify-between gap-6">
           <span className="font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/55 backdrop-blur-sm text-paper/85 px-2.5 py-1">
-            Brava in the wild &middot; drone footage
+            Christ Church &middot; Brava drone montage
           </span>
         </div>
       </div>
@@ -99,8 +95,8 @@ export default function BravaProof() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent pointer-events-none" />
           <div className="absolute top-5 left-5 md:top-8 md:left-8 flex flex-col gap-2">
-            <span className="inline-flex items-center gap-2 bg-warm-gold text-ink font-brand text-[10px] uppercase tracking-[0.24em] px-2.5 py-1 font-semibold w-fit">
-              <span className="block w-1.5 h-1.5 bg-ink rounded-full" />
+            <span className="inline-flex items-center gap-2 bg-paper/90 text-ink font-brand text-[10px] uppercase tracking-[0.24em] px-2.5 py-1 font-semibold w-fit">
+              <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
               Locke &amp; Ladder client
             </span>
             <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/85 bg-ink/55 backdrop-blur-sm px-2.5 py-1 w-fit">
@@ -115,48 +111,70 @@ export default function BravaProof() {
         </div>
       </figure>
 
-      {/* Why we chose Brava · with Hickman POV background video */}
-      <div className="relative overflow-hidden" data-testid="why-brava-block">
-        <div className="absolute inset-0 pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover opacity-35"
-            data-testid="why-brava-bg-video"
-          >
-            <source
-              src="/assets/videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/60" />
-        </div>
+      {/* Why we chose Brava · vertical POV video LEFT, split copy RIGHT */}
+      <div className="relative bg-ink" data-testid="why-brava-block">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 md:pt-28 pb-24 md:pb-28">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            {/* LEFT · vertical video, not full-bleed */}
+            <div className="lg:col-span-5 flex lg:justify-start justify-center">
+              <div
+                className="relative w-full max-w-[420px] aspect-[9/16] overflow-hidden bg-black ring-1 ring-paper/10 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.6)]"
+                data-testid="why-brava-video-wrap"
+              >
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  data-testid="why-brava-bg-video"
+                >
+                  <source
+                    src="/assets/videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent pointer-events-none" />
+                <span className="absolute bottom-3 left-3 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/55 backdrop-blur-sm text-paper/80 px-2 py-0.5">
+                  Hickman Residence &middot; Brava in hand
+                </span>
+              </div>
+            </div>
 
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 md:pt-28 pb-24 md:pb-28">
-          <div className="max-w-3xl">
-            <div className="eyebrow text-warm-gold">Why we chose Brava</div>
-            <h3 className="mt-4 font-serif font-light display-tight text-[9vw] sm:text-4xl lg:text-[3.6vw] leading-[1.02]">
-              The first synthetic we put our name on.
-            </h3>
-            <p className="mt-6 text-paper/85 text-base leading-relaxed" data-testid="why-brava-body">
-              We refused every synthetic in this category for years. Brava
-              composite shake is the one that finally earned it. Molded from
-              real cedar masters. Mineral pigmented so the color runs through
-              the shake, not on top of it. Class 4 impact rated. Made in Iowa
-              with about 95% recycled content, and backed for fifty years. It
-              is important to us that we only introduce a material to the Board
-              that we would specify on our own homes. Brava is on that list.
-            </p>
+            {/* RIGHT · split copy */}
+            <div className="lg:col-span-7 lg:pt-4">
+              <div className="eyebrow text-bronze">Why we chose Brava</div>
+              <h3 className="mt-4 font-serif font-light display-tight text-[9vw] sm:text-4xl lg:text-[3.6vw] leading-[1.02] text-paper">
+                The first synthetic
+                <br />we put our name on.
+              </h3>
 
-            <div className="mt-8 flex flex-wrap gap-3" data-testid="brava-badge-row">
-              <Badge>Class 4</Badge>
-              <Badge>Mineral pigmented</Badge>
-              <Badge>~95% recycled content</Badge>
-              <Badge>50-year limited warranty</Badge>
-              <Badge muted>Made in Washington, Iowa</Badge>
+              <div className="mt-8 max-w-xl space-y-5 text-paper/85 text-base md:text-lg leading-relaxed" data-testid="why-brava-body">
+                <p>
+                  We refused every synthetic in this category for years. Brava
+                  composite shake is the one that finally earned it.
+                </p>
+                <p>
+                  Molded from real cedar masters. Mineral pigmented so the color
+                  runs through the shake, not on top of it. Class 4 impact
+                  rated. Made in Iowa with about 95% recycled content, and
+                  backed for fifty years.
+                </p>
+                <p>
+                  It is important to us that we only introduce a material to
+                  the Board that we would specify on our own homes. Brava is
+                  on that list.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3" data-testid="brava-badge-row">
+                <Badge>Class 4</Badge>
+                <Badge>Mineral pigmented</Badge>
+                <Badge muted>~95% recycled content</Badge>
+                <Badge muted>50-year limited warranty</Badge>
+                <Badge muted>Made in Washington, Iowa</Badge>
+              </div>
             </div>
           </div>
         </div>
@@ -186,8 +204,8 @@ export default function BravaProof() {
           <div className="flex items-end justify-between gap-6">
             <div>
               {isLL ? (
-                <div className="inline-flex items-center gap-3 bg-warm-gold text-ink px-3 py-1.5 mb-3">
-                  <span className="block w-1.5 h-1.5 bg-ink rounded-full" />
+                <div className="inline-flex items-center gap-3 bg-paper/90 text-ink px-3 py-1.5 mb-3">
+                  <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
                   <span className="font-brand text-[10px] uppercase tracking-[0.24em] font-semibold">Locke &amp; Ladder client</span>
                 </div>
               ) : (
@@ -215,7 +233,7 @@ export default function BravaProof() {
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8">
           <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
             <div className="eyebrow text-paper/60">
-              <span className="text-warm-gold">Locke &amp; Ladder installs</span>
+              <span className="text-paper/85">Locke &amp; Ladder installs</span>
               <span className="text-paper/40">&nbsp;first, then Brava precedents</span>
             </div>
             <Caption className="text-paper/50">
@@ -237,7 +255,7 @@ export default function BravaProof() {
               >
                 <img src={g.src} alt="" loading="lazy" className="w-full h-full object-cover" />
                 {g.kind === "ll" && (
-                  <span className="absolute top-1 left-1 right-1 bg-warm-gold text-ink font-brand text-[8px] uppercase tracking-[0.18em] px-1 py-[2px] text-center font-semibold">
+                  <span className="absolute top-1 left-1 right-1 bg-paper/85 text-ink font-brand text-[8px] uppercase tracking-[0.18em] px-1 py-[2px] text-center font-semibold">
                     L&amp;L
                   </span>
                 )}
@@ -273,13 +291,17 @@ export default function BravaProof() {
         </div>
       </div>
 
-      {/* Quote card · single, Amy/Michigan verbatim */}
+      {/* Quote cards · Amy + Hickman */}
       <div className="bg-ink border-t border-paper/10">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 md:py-24">
-          <div className="max-w-3xl mx-auto" data-testid="brava-quote-cards">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-testid="brava-quote-cards">
             <QuoteCard
               quote="My satisfaction level hasn't changed in 9 years."
               attr="Amy, Michigan"
+            />
+            <QuoteCard
+              quote="From the first attic inspection to the final day, Locke & Ladder gave us complete confidence. They started exactly when promised, finished in six days, and helped us secure thousands in insurance funds we never would have pursued on our own. Top shelf."
+              attr="Gilda Hickman"
             />
           </div>
         </div>

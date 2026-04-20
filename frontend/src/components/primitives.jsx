@@ -14,7 +14,7 @@ export const Eyebrow = ({ children, className = "", tone = "gold" }) => (
 export const SectionTag = ({ number, title, className = "" }) => (
   <div className={`flex items-baseline gap-6 ${className}`}>
     {number ? (
-      <span className="font-brand text-xs uppercase tracking-[0.22em] text-warm-gold">{number}</span>
+      <span className="font-brand text-xs uppercase tracking-[0.22em] text-warm-gold/75">{number}</span>
     ) : null}
     {title ? (
       <span
