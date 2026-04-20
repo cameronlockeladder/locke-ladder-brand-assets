@@ -16,6 +16,8 @@ Included clips:
   Source: `Brava Cedar - Laskey (Carmel)01572414.mov`, full clip.
 - `todays-cedar-background-laskey-brava-cedar-carmel-00000097-full.mp4`
   Source: `Brava Cedar - Laskey (Carmel)00000097.mov`, full clip. Tagged as background video for the "Today's Cedar" section.
+- `christ-church-brava-drone-montage.mp4`
+  Source: `Christ Church BRAVA Drone montage.mp4`, resized and converted for web use.
 
 Export notes:
 
@@ -25,4 +27,4 @@ Export notes:
 - no audio
 - `+faststart` for web delivery
 
-Tags: Brava web video assets, McCue, Hickman, Laskey, Brava slate, Brava cedar, drone, full-bleed background, Today's Cedar section.
+Tags: Brava web video assets, McCue, Hickman, Laskey, Christ Church, Brava slate, Brava cedar, drone, full-bleed background, Today's Cedar section.

@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-04-20",
-  "file_count": 569,
+  "file_count": 571,
   "items": [
     {
       "path": ".gitignore",
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 130728,
+      "bytes": 132958,
       "mime": "application/json",
-      "sha256": "c08e07f08c8021f18b7686e08c5a840207355fb50bc626fc9041c9cfdcf58716"
+      "sha256": "b2b967c80b255000ea4b1c8e1ab50195bd5b57de7894437712bb1891f4e7b892"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -3358,10 +3358,22 @@
       "sha256": "b2ba585200f79a20a8d344671e2cd188f84e309d9b5c2e9aa0f56610a5234af3"
     },
     {
+      "path": "videos/projects/.DS_Store",
+      "bytes": 6148,
+      "mime": "application/octet-stream",
+      "sha256": "024941a3d75d5f6409adb96505b3201b8674e5e54dee847faf0bf2f5e68ef396"
+    },
+    {
       "path": "videos/projects/brava-web-video-assets/README.md",
-      "bytes": 1162,
+      "bytes": 1305,
       "mime": "text/markdown",
-      "sha256": "bf859e5cedc68668805c2bdfdec3003114aed67a2db01c06bea68d4c9bdabaca"
+      "sha256": "02c292ab8ac74663c769301376595086fa8f053c6368d3142cb8d2a259543242"
+    },
+    {
+      "path": "videos/projects/brava-web-video-assets/christ-church-brava-drone-montage.mp4",
+      "bytes": 17549057,
+      "mime": "video/mp4",
+      "sha256": "7444d2a85cfd4a54c5e9692fb2989ce2e4a6443bc9973ba5feb22cb64173ab80"
     },
     {
       "path": "videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4",
