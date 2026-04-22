@@ -47,8 +47,8 @@ export default function BravaProof() {
     >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-28 md:pt-32">
         <SectionTag
-          number="07 / 12"
-          title="Proof"
+          number="07 / 13"
+          title="Lasting Beauty"
           className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
         />
         <h2

@@ -40,7 +40,7 @@ export default function TodaysCedar() {
 
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 py-28 md:py-36">
         <SectionTag
-          number="06 / 12"
+          number="06 / 13"
           title="Materials"
           className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
         />

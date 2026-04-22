@@ -9,7 +9,7 @@ export default function RoofEndOfLife() {
       className="relative bg-paper py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="03 / 12" title="Problem" />
+        <SectionTag number="03 / 13" title="Problem" />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-6">
