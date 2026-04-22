@@ -45,6 +45,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
 - `docs/`
   Supporting notes and generated manifests.
   Includes Brava presentation reference slides under `docs/brava-presentation-reference-slides/`.
+  Includes Hickman and Laskey Brava cedar precedent reports under `docs/project-reports/brava-cedar-precedents/`.
 
 ## Deliberately Excluded
 

@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-04-20",
-  "file_count": 571,
+  "generated_at": "2026-04-22",
+  "file_count": 574,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 3327,
+      "bytes": 3441,
       "mime": "text/markdown",
-      "sha256": "ad8ea53b556d1e5f9e762fff9cef6b321d057124529f6522a24b2a3f166c8c71"
+      "sha256": "3b43b70d4101ed08a1bc286b12e590b0a3c4f4b5ef5081a3978287239a7fca6a"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -140,6 +140,24 @@
       "bytes": 2942,
       "mime": "text/markdown",
       "sha256": "6e721003c3b05a5b7b2343652bd7cfbde783a76d9e24dfb789b100989278dbd9"
+    },
+    {
+      "path": "docs/project-reports/brava-cedar-precedents/hickman-preliminary-inspection-report-2025-06-05.pdf",
+      "bytes": 8717761,
+      "mime": "application/pdf",
+      "sha256": "a3c0ea927b0a1ee2b7ded027df216fe720cb6d6d1fe39b70ab7868c9a385c8e3"
+    },
+    {
+      "path": "docs/project-reports/brava-cedar-precedents/laskey-locke-ladder-estimate-report-2025-08-01.pdf",
+      "bytes": 1317392,
+      "mime": "application/pdf",
+      "sha256": "1ab11e2b4c22188d57b04ac5a0532b32779b10990ef0d4328972e3850d29904b"
+    },
+    {
+      "path": "docs/project-reports/brava-cedar-precedents/laskey-roofr-roof-report-2025-06-09.pdf",
+      "bytes": 503211,
+      "mime": "application/pdf",
+      "sha256": "c8f460c0e5e75215fa51dd23eacd55947eab37b59200706fc5d372dcb1d70858"
     },
     {
       "path": "photos/.DS_Store",
