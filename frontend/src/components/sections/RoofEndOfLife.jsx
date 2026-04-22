@@ -9,7 +9,7 @@ export default function RoofEndOfLife() {
       className="relative bg-paper py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="03 / 12" title="Condition" />
+        <SectionTag number="03 / 12" title="Problem" />
 
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-6">
@@ -23,7 +23,7 @@ export default function RoofEndOfLife() {
           <div className="lg:col-span-6 lg:pt-4">
             <p className="text-body text-lg leading-relaxed" data-testid="roof-eol-body">
               Active leaks are threatening the interior and integrity of the
-              sanctuary. The cedar is worn. The felt paper underlayment beneath
+              sanctuary. Cedar is worn. The felt paper underlayment beneath
               the cedar is at the end of its typical lifespan and is
               compromised. Long-term leaks will create extensive repair needs
               and leave the Church at risk for mold.
@@ -59,7 +59,7 @@ function Polycam3D() {
     <div>
       <div className="flex items-end justify-between flex-wrap gap-6 mb-6">
         <div className="eyebrow text-warm-gold">Walk the campus yourself</div>
-        <Caption>3D scan captured on site · click to load</Caption>
+        <Caption>3D Scan created from Locke &amp; Ladder site visit</Caption>
       </div>
 
       <div

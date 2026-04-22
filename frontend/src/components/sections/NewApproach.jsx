@@ -23,10 +23,6 @@ export default function NewApproach() {
               A new approach
               <br />to contracting.
             </h2>
-            <p className="mt-8 max-w-lg text-paper/80 text-base md:text-lg leading-relaxed">
-              Every roof we install is a calling card for the next one. We
-              chose this work because we love the craft of it. Press play.
-            </p>
           </div>
 
           <div className="lg:col-span-7 flex justify-center">

@@ -105,14 +105,6 @@ function Scrubber() {
             >
               Aspen, from dawn to evening.
             </h3>
-            <p
-              className="mt-4 max-w-xl text-paper/80 text-base md:text-lg leading-relaxed"
-              data-testid="light-study-body"
-            >
-              Mineral pigmentation moves with the sun. The color chosen in
-              daylight is the color you see at vespers, and the color that
-              still reads as cedar at 7 p.m. in October.
-            </p>
           </motion.div>
 
           <motion.div style={{ opacity: labelOpacity }} className="flex items-end justify-between">

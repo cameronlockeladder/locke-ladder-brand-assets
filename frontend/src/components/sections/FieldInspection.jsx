@@ -3,22 +3,39 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { SectionTag } from "@/components/primitives";
 
+/* Featured · worst, most clear condition photos (visual cull) + hail hits.
+   Captions adapted from real roof inspection-report language, not fabricated. */
 const FEATURED = [
-  { src: "/assets/photos/projects/christ-church/field-inspection-report/full-campus-aerial-wide.webp", label: "Full campus aerial" },
-  { src: "/assets/photos/projects/christ-church/field-inspection-report/bell-tower-roof-closeup.webp", label: "Bell tower, roof closeup" },
-  { src: "/assets/photos/projects/christ-church/field-inspection-report/dark-steeple-roof-closeup.webp", label: "Steeple, NE leak zone" },
-  { src: "/assets/photos/projects/christ-church/field-inspection-report/front-roofline-and-spire.webp", label: "Front roofline & spire" },
+  {
+    src: "/assets/photos/projects/christ-church/field-inspection-report/full-campus-aerial-wide.webp",
+    label: "Full campus aerial",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-013.webp",
+    label: "Wind-lifted shakes across the field",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-023.webp",
+    label: "Impact indentations to soft metals",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-052.webp",
+    label: "Moss / algae growth over roof facets",
+  },
+  {
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-074.webp",
+    label: "Previous leak damage at chimney",
+  },
 ];
 
 const RAIL_IDS = [
   "017","041","058","062","065","084","098","025","076","027",
-  "029","074","049","064","032","042","044","037","023","026",
+  "029","064","032","042","044","037","026",
   "001","070","057","077","072","093","066","020","061","091",
   "008","050","024","053","060","096","069","007","068","097",
   "015","005",
 ];
 const RAIL = RAIL_IDS.map((idx) => `/assets/photos/projects/christ-church/jobnimbus/jn-${idx}.webp`);
-
 const MAGNIFIABLE = new Set(FEATURED.map((f) => f.src));
 
 export default function FieldInspection() {
@@ -64,13 +81,11 @@ export default function FieldInspection() {
         <div className="mt-10 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4">
           {FEATURED.map((f, i) => {
             const className =
-              i === 0
-                ? "col-span-2 md:col-span-4 md:row-span-2 aspect-[16/11]"
-                : i === 1
-                ? "col-span-1 md:col-span-2 aspect-[4/5]"
-                : i === 2
-                ? "col-span-1 md:col-span-2 aspect-[4/5]"
-                : "col-span-2 md:col-span-4 aspect-[16/8]";
+              i === 0 ? "col-span-2 md:col-span-6 aspect-[16/7]"
+              : i === 1 ? "col-span-1 md:col-span-3 aspect-[4/3]"
+              : i === 2 ? "col-span-1 md:col-span-3 aspect-[4/3]"
+              : i === 3 ? "col-span-1 md:col-span-3 aspect-[4/3]"
+              : "col-span-1 md:col-span-3 aspect-[4/3]";
             return (
               <MagnifierTile
                 key={i}
@@ -131,7 +146,6 @@ export default function FieldInspection() {
   );
 }
 
-/* ───────── Square 5× hover magnifier ───────── */
 function MagnifierTile({ src, label, className, testId, onClick }) {
   const ref = useRef(null);
   const [lens, setLens] = useState(null);
@@ -192,8 +206,6 @@ function MagnifierTile({ src, label, className, testId, onClick }) {
   );
 }
 
-/* ───────── Lightbox magnifier ─────────
-   Desktop-only 5× square lens that tracks the cursor over the enlarged photo. */
 function LightboxMagnifier({ src }) {
   const ref = useRef(null);
   const [lens, setLens] = useState(null);

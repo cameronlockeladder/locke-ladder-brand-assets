@@ -15,23 +15,24 @@ const LL_PROJECTS = [
   { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-29.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
 ].map((p) => ({ ...p, kind: "ll" }));
 
+// Brava precedents · larger/premier homes lead; darker/b&w removed
 const BRAVA_PROJECTS = [
+  { src: "/assets/photos/materials/brava-gallery/13-wyoming-lodge.webp", title: "Lodge", loc: "Wyoming" },
   { src: "/assets/photos/materials/brava-gallery/01-new-york-lake-forest.webp", title: "Lake Forest", loc: "New York" },
   { src: "/assets/photos/materials/brava-gallery/02-georgia-lake-forest.webp", title: "Lake Forest", loc: "Georgia" },
-  { src: "/assets/photos/materials/brava-gallery/04-colorado-natural-cedar-shake.webp", title: "Natural Cedar Shake", loc: "Colorado" },
-  { src: "/assets/photos/materials/brava-gallery/05-georgia-canyon-gray-cedar-shake.webp", title: "Canyon Gray", loc: "Georgia" },
-  { src: "/assets/photos/materials/brava-gallery/06-long-grove-aspen-cedar-shake.webp", title: "Aspen Cedar Shake", loc: "Long Grove, IL" },
-  { src: "/assets/photos/materials/brava-gallery/07-greensboro-arendale-cedar-shake.webp", title: "Arendale Cedar Shake", loc: "Greensboro" },
-  { src: "/assets/photos/materials/brava-gallery/08-illinois-cottage.webp", title: "Cottage", loc: "Illinois" },
   { src: "/assets/photos/materials/brava-gallery/09-mundelein-lake-forest-cedar-shake.webp", title: "Lake Forest Shake", loc: "Mundelein, IL" },
   { src: "/assets/photos/materials/brava-gallery/10-winnetka-weathered-cedar-shake.webp", title: "Weathered Cedar Shake", loc: "Winnetka, IL" },
-  { src: "/assets/photos/materials/brava-gallery/11-north-carolina-natural-cedar-shake.webp", title: "Natural Cedar Shake", loc: "North Carolina" },
-  { src: "/assets/photos/materials/brava-gallery/13-wyoming-lodge.webp", title: "Lodge", loc: "Wyoming" },
+  { src: "/assets/photos/materials/brava-gallery/06-long-grove-aspen-cedar-shake.webp", title: "Aspen Cedar Shake", loc: "Long Grove, IL" },
   { src: "/assets/photos/materials/brava-gallery/14-wyoming-natural-cedar-shake.webp", title: "Natural Cedar Shake", loc: "Wyoming" },
+  { src: "/assets/photos/materials/brava-gallery/11-north-carolina-natural-cedar-shake.webp", title: "Natural Cedar Shake", loc: "North Carolina" },
+  { src: "/assets/photos/materials/brava-gallery/07-greensboro-arendale-cedar-shake.webp", title: "Arendale Cedar Shake", loc: "Greensboro" },
+  { src: "/assets/photos/materials/brava-gallery/05-georgia-canyon-gray-cedar-shake.webp", title: "Canyon Gray", loc: "Georgia" },
+  { src: "/assets/photos/materials/brava-gallery/04-colorado-natural-cedar-shake.webp", title: "Natural Cedar Shake", loc: "Colorado" },
   { src: "/assets/photos/materials/brava-gallery/17-beechwood-shake.webp", title: "Beechwood Shake", loc: "Illinois" },
+  { src: "/assets/photos/materials/brava-gallery/08-illinois-cottage.webp", title: "Cottage", loc: "Illinois" },
 ].map((p) => ({ ...p, kind: "brava" }));
 
-const GALLERY = [...LL_PROJECTS, ...BRAVA_PROJECTS];
+const GALLERY = [...BRAVA_PROJECTS, ...LL_PROJECTS];
 
 export default function BravaProof() {
   const [active, setActive] = useState(0);
@@ -78,11 +79,6 @@ export default function BravaProof() {
           />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/15 to-ink/30 pointer-events-none" />
-        <div className="absolute bottom-6 md:bottom-10 left-5 md:left-12 right-5 md:right-12 flex items-end justify-between gap-6">
-          <span className="font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/55 backdrop-blur-sm text-paper/85 px-2.5 py-1">
-            Christ Church &middot; Brava drone montage
-          </span>
-        </div>
       </div>
 
       {/* Laskey introducing Brava */}
@@ -231,15 +227,6 @@ export default function BravaProof() {
 
       <div className="bg-ink border-t border-paper/10">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-8">
-          <div className="flex items-center justify-between mb-4 flex-wrap gap-4">
-            <div className="eyebrow text-paper/60">
-              <span className="text-paper/85">Locke &amp; Ladder installs</span>
-              <span className="text-paper/40">&nbsp;first, then Brava precedents</span>
-            </div>
-            <Caption className="text-paper/50">
-              {LL_PROJECTS.length} L&amp;L projects &middot; {BRAVA_PROJECTS.length} Brava precedents
-            </Caption>
-          </div>
           <div
             className="rail-scroll no-scrollbar flex gap-2 overflow-x-auto -mx-6 px-6 lg:-mx-12 lg:px-12"
             data-testid="brava-thumbnail-rail"
@@ -265,33 +252,7 @@ export default function BravaProof() {
         </div>
       </div>
 
-      {/* Beauty with a Conscience panel · AFTER gallery */}
-      <div
-        className="relative bg-ink border-t border-paper/10"
-        data-testid="beauty-conscience-panel"
-      >
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <div className="eyebrow text-warm-gold">Beauty with a conscience</div>
-            <h3 className="mt-4 font-serif italic font-light text-paper text-[8vw] sm:text-4xl lg:text-[3.6vw] leading-[1.05] max-w-3xl">
-              A roof that subtracts from landfill instead of adding to it.
-            </h3>
-            <p className="mt-6 max-w-2xl text-paper/80 text-base md:text-lg leading-relaxed">
-              Every Brava tile diverts plastic from landfill. About 95%
-              recycled content. Fully recyclable at end of life.
-            </p>
-          </div>
-          <div className="lg:col-span-5">
-            <div className="grid grid-cols-3 gap-4">
-              <Stat big="~95%" sub="recycled content" />
-              <Stat big="0" sub="plastic sent to landfill" />
-              <Stat big="100%" sub="recyclable end-of-life" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Quote cards · Amy + Hickman */}
+      {/* Quote cards · directly under the gallery */}
       <div className="bg-ink border-t border-paper/10">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 md:py-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-testid="brava-quote-cards">
@@ -321,19 +282,6 @@ function Badge({ children, muted = false }) {
     >
       {children}
     </span>
-  );
-}
-
-function Stat({ big, sub }) {
-  return (
-    <div className="border-l border-warm-gold/60 pl-4">
-      <div className="font-display text-3xl md:text-4xl text-paper font-medium tabular-nums leading-none">
-        {big}
-      </div>
-      <div className="mt-2 font-brand text-[10px] uppercase tracking-[0.22em] text-paper/60 leading-snug">
-        {sub}
-      </div>
-    </div>
   );
 }
 

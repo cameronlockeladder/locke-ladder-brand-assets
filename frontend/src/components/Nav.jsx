@@ -7,7 +7,7 @@ const SECTIONS = [
   { id: "field-inspection", label: "Field Inspection" },
   { id: "repair-vs-replace", label: "Repair vs Replace" },
   { id: "todays-cedar", label: "Today's Cedar" },
-  { id: "brava-proof", label: "Brava Proof" },
+  { id: "brava-proof", label: "Lasting Beauty" },
   { id: "light-study", label: "Light Study" },
   { id: "system", label: "Roof System" },
   { id: "attention", label: "Attention to Detail" },

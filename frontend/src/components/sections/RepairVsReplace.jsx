@@ -12,7 +12,9 @@ const REPAIR = [
 const REPLACE = [
   "Addresses the entire system, not just the symptom.",
   "Opportunity for maintenance freedom.",
+  "Long term energy cost savings with Low-e underlayment.",
   "Reduced insurance premiums.",
+  "Renewed architectural beauty.",
   "Enhance exterior appearance.",
 ];
 

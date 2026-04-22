@@ -142,8 +142,134 @@ export default function RoofSystem() {
             ))}
           </div>
         </div>
+
+        {/* Expandable detail panels — Low-e underlayment + Grace vs generic IWS */}
+        <div className="mt-20 space-y-4" data-testid="system-detail-panels">
+          <DetailPanel
+            testId="panel-lowe"
+            badge="05"
+            title="Low-e Synthetic Underlayment"
+            subtitle="A second skin that reflects radiant heat back at the roof."
+          >
+            <p className="text-body leading-relaxed">
+              Traditional 30-lb felt paper does one job: keep water out for a
+              few hours during install. A Low-e synthetic underlayment does
+              three. It still keeps water out &mdash; for longer, and without
+              tearing when a crew walks it. It reflects up to 97% of radiant
+              heat away from the attic, which means lower summer cooling
+              bills and a more comfortable sanctuary below. And it stays
+              dimensionally stable for the full life of the roof so the
+              system it supports doesn&rsquo;t telegraph wrinkles up through
+              the shakes.
+            </p>
+            <ul className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <li className="border-t border-ink/15 pt-3">
+                <div className="font-brand text-[10px] uppercase tracking-[0.22em] text-ink/55">Performance</div>
+                <div className="mt-1 text-ink">Reflects radiant heat &middot; lowers cooling load</div>
+              </li>
+              <li className="border-t border-ink/15 pt-3">
+                <div className="font-brand text-[10px] uppercase tracking-[0.22em] text-ink/55">Longevity</div>
+                <div className="mt-1 text-ink">Lasts the life of the roof, not just the install</div>
+              </li>
+              <li className="border-t border-ink/15 pt-3">
+                <div className="font-brand text-[10px] uppercase tracking-[0.22em] text-ink/55">Recommended</div>
+                <div className="mt-1 text-ink">EchoShield radiant-barrier synthetic</div>
+              </li>
+            </ul>
+          </DetailPanel>
+
+          <DetailPanel
+            testId="panel-iws"
+            badge="04"
+            title="Grace Ice &amp; Water Shield vs generic IWS"
+            subtitle="Where cheap membranes fail, Grace still performs."
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-ink/15">
+              <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-ink/15">
+                <div className="flex items-baseline justify-between">
+                  <h4 className="font-display text-2xl text-ink font-medium">Generic IWS</h4>
+                  <span className="eyebrow text-slate">What we see fail</span>
+                </div>
+                <ul className="mt-5 space-y-3 text-sm text-body leading-relaxed">
+                  <li className="flex gap-3"><Mark minus /> Adhesive softens or slumps in summer heat.</li>
+                  <li className="flex gap-3"><Mark minus /> Seams lift on high-slope work before the shingles are even down.</li>
+                  <li className="flex gap-3"><Mark minus /> Tears around fasteners instead of self-sealing.</li>
+                  <li className="flex gap-3"><Mark minus /> Short warranty, often one season of installation coverage.</li>
+                </ul>
+              </div>
+              <div className="p-6 md:p-8 bg-ink text-paper">
+                <div className="flex items-baseline justify-between">
+                  <h4 className="font-display text-2xl font-medium">Grace Ice &amp; Water Shield</h4>
+                  <span className="eyebrow text-warm-gold/85">What we specify</span>
+                </div>
+                <ul className="mt-5 space-y-3 text-sm leading-relaxed">
+                  <li className="flex gap-3"><Mark plus light /> Rubberized asphalt that self-seals around every nail.</li>
+                  <li className="flex gap-3"><Mark plus light /> Stays stable through ice-dam cycles, Midwest winters included.</li>
+                  <li className="flex gap-3"><Mark plus light /> Protects the most vulnerable areas of the roof for decades, not seasons.</li>
+                  <li className="flex gap-3"><Mark plus light /> Backed by GCP&rsquo;s full-system warranty when paired with specified components.</li>
+                </ul>
+              </div>
+            </div>
+          </DetailPanel>
+        </div>
       </div>
     </section>
+  );
+}
+
+function DetailPanel({ testId, badge, title, subtitle, children }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border border-rule bg-paper" data-testid={testId}>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        data-testid={`${testId}-toggle`}
+        className="w-full flex items-center gap-5 md:gap-8 p-5 md:p-6 text-left hover:bg-paper-warm transition-colors"
+      >
+        <span className="font-brand text-[11px] uppercase tracking-[0.22em] text-slate shrink-0 w-8">
+          {badge}
+        </span>
+        <span className="flex-1">
+          <span
+            className="block font-display text-xl md:text-2xl text-ink font-medium leading-snug"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <span className="block mt-1 text-sm md:text-base text-body leading-snug">{subtitle}</span>
+        </span>
+        <span
+          className={`shrink-0 w-8 h-8 rounded-full border border-ink/20 flex items-center justify-center transition-transform duration-300 ${
+            open ? "rotate-45" : ""
+          }`}
+          aria-hidden="true"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+        </span>
+      </button>
+      <div
+        className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-out ${
+          open ? "max-h-[2400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-5 md:px-6 pb-6 md:pb-8 pt-2">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+function Mark({ minus, plus, light }) {
+  const color = light ? "text-warm-gold/90" : "text-slate";
+  return (
+    <span className={`shrink-0 mt-[6px] w-4 h-4 inline-flex items-center justify-center border ${color} rounded-full`} aria-hidden="true">
+      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+        {minus && <line x1="5" y1="12" x2="19" y2="12" />}
+        {plus && <><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></>}
+      </svg>
+    </span>
   );
 }
 

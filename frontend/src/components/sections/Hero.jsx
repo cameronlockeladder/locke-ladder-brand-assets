@@ -85,10 +85,10 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.1, ease: [0.25, 1, 0.5, 1] }}
           className="pt-8 border-t border-paper/20"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 md:gap-x-12 gap-y-6">
-            <HeroCell label="Client" value="Christ Church | Oak Brook" />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 md:gap-x-12 gap-y-6">
+            <HeroCell label="Client" value="Christ Church | Oak Brook" hidden />
+            <HeroCell label="Contractor" value="Locke &amp; Ladder" />
             <HeroCell label="Scope" value="Sanctuary, Steeple &amp; Mansard" />
-            <HeroCell label="Priority" value="Stop the leak" />
             <div className="flex md:justify-end items-end pt-1">
               <button
                 onClick={() => document.getElementById("relationship")?.scrollIntoView({ behavior: "smooth" })}
@@ -108,7 +108,8 @@ export default function Hero() {
   );
 }
 
-function HeroCell({ label, value }) {
+function HeroCell({ label, value, hidden }) {
+  if (hidden) return null;
   return (
     <div className="flex flex-col gap-2">
       <div className="eyebrow text-paper/55 h-[14px] leading-none">{label}</div>
