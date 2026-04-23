@@ -40,6 +40,10 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Brava field-shake layout scroll frame sequence as standalone WebP assets, without the source video or working HTML.
 - `photos/materials/ice-and-water-shield/`
   Web-optimized stills tagged for Grace Ice and water shield and Cheap Ice and water shield reference use.
+- `photos/materials/road-map/`
+  Web-optimized crew stills tagged for road map and client-success-road-map use.
+- `photos/materials/why-brava/`
+  Web-optimized Brava Clarke stills tagged for why-Brava messaging and material proof use.
 - `photos/materials/unlabeled-webp-sequence-2026-04-18/`
   Imported 121-frame WebP sequence from a downloaded folder whose semantic label was not preserved.
 - `proposal-support/christ-church/`
