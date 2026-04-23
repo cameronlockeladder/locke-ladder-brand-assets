@@ -115,10 +115,6 @@ export default function BravaProof() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent pointer-events-none" />
           <div className="absolute top-5 left-5 md:top-8 md:left-8 flex flex-col gap-2">
-            <span className="inline-flex items-center gap-2 bg-paper/90 text-ink font-brand text-[10px] uppercase tracking-[0.24em] px-2.5 py-1 font-semibold w-fit">
-              <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
-              Locke &amp; Ladder client
-            </span>
             <span className="font-brand text-[10px] uppercase tracking-[0.24em] text-paper/85 bg-ink/55 backdrop-blur-sm px-2.5 py-1 w-fit">
               Laskey Residence &middot; Introducing Brava
             </span>

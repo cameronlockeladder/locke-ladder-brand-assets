@@ -1,49 +1,64 @@
 # Christ Church | Oak Brook · Proposal Microsite (V4)
 
-**Purpose:** Board members "self-educate" as if Jon Strand were pitching in person.
+**Purpose:** Board members self-educate as if Jon Strand were pitching in person.
 
-## Current architecture · 13 sections
-1. **Hero** · steeple video · Contractor/Scope/Begin (Client + Priority cells removed)
-2. **Alignment** · "We speak your language." · 2 photo placeholders (Jon teaching/roof · Jon's Dad with Billy Graham) + verbatim Jon Strand copy (Billy Graham / Grace / Mercy Road / facilities manager / LIFT 10,000)
-3. **Problem** · "Roof is at the end of useful life." · Polycam "3D Scan created from Locke & Ladder site visit"
-4. **Field Inspection Report** · 5 curated feature tiles with real-report captions (Wind-lifted shakes / Impact indentations / Moss & algae / Previous leak damage) + 39-tile rail + 5× square hover magnifier + lightbox magnifier
-5. **Repair vs Replace** · 5 Repair bullets / **6 Replace bullets** (+ Low-e underlayment + Renewed architectural beauty)
-6. **Today's Cedar** · bg video · full-width native lifecycle chart
-7. **Lasting Beauty** · Christ Church Brava drone montage · Laskey reveal · Hickman POV vertical video + 3-paragraph split copy · 22-tile gallery (Brava precedents lead, L&L close) · Amy + Gilda Hickman quote cards directly under gallery · *Beauty-with-a-Conscience deleted*
-8. **Light Study** · Color-for-Life slide (click-to-enlarge) · Aspen scrubber (headline only, paragraph removed)
-9. **Roof System** · etymology headline · L&L view ↔ Brava reference toggle · 6-layer table · 5-badge Standards · Partners · **2 new expandable panels**: Low-e Synthetic Underlayment + Grace IWS vs Generic IWS comparison
-10. **Attention to Detail** · before/after + 3 uncaptioned detail tiles
-11. **Our Approach** · vertical "with-music" video (audio restored) · paragraph under header deleted
-12. **Christ Church Success Road Map** · 7 steps + BRAVA-installer pill
-13. **Human Close** · Coppergate flag loop · PDF download
+## Current architecture · 14 sections
+1. **Hero** · steeple video · Contractor · Scope · Begin
+2. **Alignment** · "We speak your language." · 2 photo placeholders + Jon Strand copy
+3. **Problem** · "Roof is at the end of useful life." · Polycam
+4. **Field Inspection** · 5 featured tiles · 42-tile rail · 5× square magnifier + lightbox magnifier
+5. **Repair vs Replace** · 5 · 6 bullets
+6. **Today's Cedar** · bg video · native lifecycle chart
+7. **Lasting Beauty** · drone · Laskey reveal · Why-Brava vertical POV + split copy · 22-tile interwoven gallery (no L&L tagging) · 3 quote cards (Amy · Gilda Hickman pull-quote · Faith Apostolic)
+8. **Light Study** · Color-for-Life slide · Aspen scrubber
+9. **Roof System** · etymology headline · L&L ↔ Brava toggle · 6-layer table · 5 Standards · Partners · 2 expandable panels (Low-e · Grace IWS vs generic)
+10. **Attention to Detail**
+11. **Our Approach** · vertical music video with audio
+12. **Christ Church Success Road Map** · 7 steps + BRAVA installer pill
+13. **Questions (FAQ)** · 5 expandable Q&A on Brava / replace / disruption / church-fit / next-steps
+14. **Human Close** · flag video · sign-off block (Jon Strand · PDF · "— end —")
 
-## Header controls (iter-9)
-- Sun/moon **theme toggle** (day ↔ night, persisted)
-- Eye **side-nav toggle** (hide/show 13-dot navigator, persisted)
-
-## Footer
-- Only L&L mark + verbatim copy: "Locke & Ladder is a Chicagoland exterior company specializing in performance roofing, high efficiency windows, siding, doors and gutter systems."
+## Global controls
+- Sticky **scroll-progress bar** (2px top, warm-gold, mix-blend-difference)
+- Header **theme toggle** (day / night) + **side-nav toggle** (hide/show 13-dot navigator)
 
 ## Tech
 - React SPA · Lenis · Framer Motion · react-compare-slider · yet-another-react-lightbox
 - Termina + Inter + Fraunces
-- FastAPI: `POST /api/proposal/interest` · `GET /api/proposal/packet.pdf`
+- FastAPI: `GET /api/proposal/packet.pdf` 6.2 MB
 
 ## Assets
-- All photos now WebP (42 JPGs converted, 90% size saved on disk)
-- Live-page payload ~45 MB
-- `with-music` video re-encoded with audio preserved (iter-7 bug fixed)
-- Originals backed up at `/app/.asset-originals/`
+- All photos WebP · live-page payload ~45 MB · originals backed up at `/app/.asset-originals/`
+
+## Outstanding asset requests (ranked, for user to drop in GitHub)
+**Tier 1 (highest impact):**
+1. Jon Strand teaching at L&L / on a roof (Alignment)
+2. Jon's father with Billy Graham (Alignment)
+3. Faith Apostolic Church exterior (anchor for 3rd quote)
+4. One Hickman or Laskey full house-scale AFTER photo
+
+**Tier 2:**
+5. 3 hail-damage Christ Church inspection photos (boss-confirmed)
+6. L&L crew-on-a-roof action shot (Road Map)
+7. Brava cedar shake product sample photo (Why-Brava)
+8. L&L yard sign on completed job (end)
+
+**Tier 3:**
+9. Aerial of church/institutional-scale Brava install
+10. 5-8s b-roll of EchoShield or ridge-vent install
+11. High-res christ-church-logo 2x
+
+## Copy→viz conversions queued
+1. Today's Cedar — 4-dot timeline chart for "roofing doubled every 10 years"
+2. Standards row — click-popover explainer per badge
+3. Roof System 6-layer — hover-row highlights SVG layer
+4. Road Map — per-step icons
+5. Repair vs Replace — central cost-multiple visual (3.14× vs 16.76×)
+6. Today's Cedar — 3-ring cedar-lifespan vs Brava graphic
+7. New Approach — autoplay muted + SOUND-ON CTA + key-line quote card
 
 ## Iteration history
-- iter_5 17/17 · iter_6 27/27 · iter_7 14/14 · iter_8 11/11 · iter_9 smoke
-- **iter_10 (current)**: 13/14 first pass → 14/14 after single-line fix on BravaProof SectionTag title
-
-## Backlog
-- **P0:** Swap placeholders in Alignment with real photos of Jon teaching/on a roof + Jon's Dad with Billy Graham
-- **P1:** Field Inspection — if user wants, I can pull additional hail-specific shots from the rail into the feature tier once a few are marked as hail-hit confirmed
-- **P1:** Compress the last two heavy videos (`hero-timeline.mp4`, `snape-bg.mp4`) for ~2MB savings
-- **P2:** Engagement beacons · per-recipient share URLs · `?present=1` mode
+- iter_5 17/17 · iter_6 27/27 · iter_7 14/14 · iter_8 11/11 · iter_9 smoke · iter_10 14/14 · **iter_11 11/11 after one-line badge removal fix**
 
 ## Testing
-- iter_10 testing: 13/14 on first pass; missed single prop (SectionTag title="Proof" vs "Lasting Beauty") flagged by testing agent, fixed in one search_replace, verified via screenshot. PDF endpoint 200 OK, 0 console errors.
+- iter_11: 10/11 first pass, single remaining Laskey badge fixed in one edit, PDF endpoint 200/6.19MB, 0 console errors
