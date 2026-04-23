@@ -14,6 +14,8 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Christ Church | Oak Brook client-facing marks and supporting location graphic.
 - `photos/team/`
   WebP team and truck photography from `Branch For Print/webp-team-photos`.
+- `videos/projects/faith-apostolic-church/`
+  Optimized Faith Apostolic Church project video clips for church-related proof use.
 - `videos/brand/new-approach-to-contracting/`
   Optimized Locke & Ladder brand/story video with music.
 - `photos/projects/christ-church/`
@@ -47,6 +49,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
 - `docs/`
   Supporting notes and generated manifests.
   Includes Brava presentation reference slides under `docs/brava-presentation-reference-slides/`.
+  Includes Jon PDF reference pages under `docs/jon-pdf-reference-pages/`.
   Includes Hickman and Laskey Brava cedar precedent reports under `docs/project-reports/brava-cedar-precedents/`.
 
 ## Deliberately Excluded
