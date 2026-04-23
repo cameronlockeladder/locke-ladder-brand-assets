@@ -146,6 +146,85 @@ export default function TodaysCedar() {
             multipliers relative to an indexed roof replacement baseline.
           </Caption>
         </div>
+
+        {/* Roofing-cost timeline · copy→viz POC #1 */}
+        <div className="mt-24 md:mt-28 pt-14 md:pt-16 border-t border-paper/10" data-testid="cost-timeline">
+          <div className="flex items-end justify-between gap-8 flex-wrap mb-10">
+            <div>
+              <div className="eyebrow text-paper/70">The cost of waiting</div>
+              <h3 className="mt-4 font-serif italic font-light text-paper text-[7vw] sm:text-3xl lg:text-[2.8vw] leading-[1.05] max-w-3xl">
+                Roofing costs have doubled every 10 years for the last 3 decades.
+              </h3>
+            </div>
+            <p className="max-w-sm text-paper/65 text-sm md:text-base leading-relaxed">
+              Pick the wrong roof now, and you may be paying 3 to 4 times the
+              price by the time you realize the mistake.
+            </p>
+          </div>
+
+          <div className="relative pt-10 pb-6">
+            <div className="absolute left-0 right-0 top-[52px] h-px bg-paper/15" />
+            <div className="grid grid-cols-4 gap-0 relative">
+              {[
+                { year: "1996", mul: "1x", dot: "bg-paper/25" },
+                { year: "2006", mul: "2x", dot: "bg-paper/45" },
+                { year: "2016", mul: "4x", dot: "bg-paper/70" },
+                { year: "2026", mul: "8x", dot: "bg-warm-gold" },
+              ].map((t, i) => (
+                <motion.div
+                  key={t.year}
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                  data-testid={`timeline-dot-${t.year}`}
+                  className="flex flex-col items-center text-center px-3"
+                >
+                  <div className="font-display text-paper text-3xl md:text-5xl font-medium tabular-nums leading-none">
+                    {t.mul}
+                  </div>
+                  <span className={`mt-8 w-3 h-3 rounded-full ${t.dot} ring-4 ring-ink`} />
+                  <div className="mt-4 font-brand text-[11px] uppercase tracking-[0.24em] text-paper/55">
+                    {t.year}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Cedar-vs-Brava 3-ring lifespan graphic · copy→viz POC #6 */}
+        <div className="mt-24 md:mt-28 pt-14 md:pt-16 border-t border-paper/10" data-testid="lifespan-rings">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-5">
+              <div className="eyebrow text-paper/70">Lifespan, plainly</div>
+              <h3 className="mt-4 font-serif italic font-light text-paper text-[7vw] sm:text-3xl lg:text-[2.8vw] leading-[1.05]">
+                One decision for the next two generations of members.
+              </h3>
+              <p className="mt-6 text-paper/70 text-sm md:text-base leading-relaxed max-w-md">
+                Average wood cedar shake lasts 15&ndash;20 years, with ongoing
+                molding, rotting, and moss treatment. Brava&rsquo;s limited
+                warranty runs 50.
+              </p>
+            </div>
+            <div className="lg:col-span-7">
+              <div className="relative flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                <svg viewBox="0 0 460 380" className="w-full max-w-[520px] h-auto" aria-hidden="true">
+                  {/* 50yr ring · Brava */}
+                  <circle cx="230" cy="190" r="170" fill="none" stroke="#857650" strokeOpacity="0.8" strokeWidth="2" />
+                  <text x="230" y="18" textAnchor="middle" fontFamily="Inter" fontSize="11" letterSpacing="2" fill="#EAE2D2" opacity="0.65">BRAVA &middot; 50 YEARS</text>
+                  {/* 30yr ring · certi-label */}
+                  <circle cx="230" cy="190" r="105" fill="none" stroke="#EAE2D2" strokeOpacity="0.35" strokeWidth="1.5" strokeDasharray="4 4" />
+                  <text x="230" y="74" textAnchor="middle" fontFamily="Inter" fontSize="10" letterSpacing="2" fill="#EAE2D2" opacity="0.55">CERTI-LABEL CEDAR &middot; ~30 YRS</text>
+                  {/* 15-20yr ring · generic cedar */}
+                  <circle cx="230" cy="190" r="55" fill="none" stroke="#9A5B3E" strokeOpacity="0.8" strokeWidth="1.5" />
+                  <text x="230" y="186" textAnchor="middle" fontFamily="Inter" fontSize="10" letterSpacing="2" fill="#9A5B3E" opacity="0.95">GENERIC CEDAR</text>
+                  <text x="230" y="202" textAnchor="middle" fontFamily="Inter" fontSize="16" fontWeight="600" fill="#EAE2D2">15&ndash;20 yrs</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -13,11 +13,11 @@ const LAYERS = [
 ];
 
 const STANDARDS = [
-  { label: "Class 4", sub: "Impact rated" },
-  { label: "188 MPH", sub: "Wind · 211 w/ screws" },
-  { label: "Class A", sub: "Rated system with approved underlayments" },
-  { label: "CRRC", sub: "Cool Roof Rating Council" },
-  { label: "Miami-Dade", sub: "County approved" },
+  { label: "Class 4", sub: "Impact rated", info: "Highest hail-impact rating. Withstands a 2-inch ice ball at 90 mph with no loss of water-shedding function." },
+  { label: "188 MPH", sub: "Wind · 211 w/ screws", info: "Wind-uplift rated to 188 mph with ring-shank nails; 211 mph with screw fastening. Exceeds every Chicagoland wind-design requirement." },
+  { label: "Class A", sub: "Rated system with approved underlayments", info: "Highest fire rating when installed over approved underlayments. Carries the full Class A system designation — at the assembly level, not the shake alone." },
+  { label: "CRRC", sub: "Cool Roof Rating Council", info: "Listed with the Cool Roof Rating Council for solar reflectance and thermal emittance. Qualifies for cool-roof incentives where applicable." },
+  { label: "Miami-Dade", sub: "County approved", info: "Miami-Dade approved — the most demanding wind and impact standards in the country. If it holds up there, it holds up here." },
 ];
 
 const PARTNERS = [
@@ -29,6 +29,7 @@ const PARTNERS = [
 ];
 
 export default function RoofSystem() {
+  const [hovered, setHovered] = useState(null);
   return (
     <section
       id="system"
@@ -66,29 +67,44 @@ export default function RoofSystem() {
 
         <div className="mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 fade-in">
-            <SystemPanel />
+            <SystemPanel hovered={hovered} />
           </div>
 
           <div className="lg:col-span-7">
-            <ol className="divide-y divide-ink/10 border-y border-ink/10">
-              {LAYERS.map((l) => (
-                <li
-                  key={l.n}
-                  className="grid grid-cols-12 gap-4 md:gap-8 py-5 items-baseline"
-                  data-testid={`system-layer-${l.n}`}
-                >
-                  <span className="col-span-2 md:col-span-1 font-brand text-slate text-xs uppercase tracking-[0.2em]">
-                    {l.n}
-                  </span>
-                  <div className="col-span-10 md:col-span-4 text-ink text-lg md:text-xl font-medium">
-                    {l.name}
-                  </div>
-                  <div className="col-span-12 md:col-span-7 text-sm md:text-base text-body leading-relaxed">
-                    {l.note}
-                  </div>
-                </li>
-              ))}
+            <ol className="divide-y divide-ink/10 border-y border-ink/10" data-testid="system-layer-list">
+              {LAYERS.map((l) => {
+                const isHover = hovered === l.n;
+                return (
+                  <li
+                    key={l.n}
+                    onMouseEnter={() => setHovered(l.n)}
+                    onMouseLeave={() => setHovered(null)}
+                    onFocus={() => setHovered(l.n)}
+                    onBlur={() => setHovered(null)}
+                    tabIndex={0}
+                    className={`grid grid-cols-12 gap-4 md:gap-8 py-5 items-baseline cursor-default transition-colors ${
+                      isHover ? "bg-paper" : ""
+                    }`}
+                    data-testid={`system-layer-${l.n}`}
+                  >
+                    <span className={`col-span-2 md:col-span-1 font-brand text-xs uppercase tracking-[0.2em] transition-colors ${
+                      isHover ? "text-warm-gold" : "text-slate"
+                    }`}>
+                      {l.n}
+                    </span>
+                    <div className="col-span-10 md:col-span-4 text-ink text-lg md:text-xl font-medium">
+                      {l.name}
+                    </div>
+                    <div className="col-span-12 md:col-span-7 text-sm md:text-base text-body leading-relaxed">
+                      {l.note}
+                    </div>
+                  </li>
+                );
+              })}
             </ol>
+            <div className="mt-3 font-brand text-[10px] uppercase tracking-[0.24em] text-slate/80">
+              Hover a layer &middot; the diagram responds.
+            </div>
           </div>
         </div>
 
@@ -190,6 +206,14 @@ export default function RoofSystem() {
                   <h4 className="font-display text-2xl text-ink font-medium">Generic IWS</h4>
                   <span className="eyebrow text-slate">What we see fail</span>
                 </div>
+                <figure className="mt-5 relative overflow-hidden aspect-[4/3] bg-ink/5">
+                  <img
+                    src="/assets/photos/materials/ice-and-water-shield/leakbarrier-roof-underlayments-lb742161-4f_600-cheap-ice-and-water-shield.webp"
+                    alt="Generic leak-barrier ice and water shield"
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-contain bg-paper-warm"
+                  />
+                </figure>
                 <ul className="mt-5 space-y-3 text-sm text-body leading-relaxed">
                   <li className="flex gap-3"><Mark minus /> Adhesive softens or slumps in summer heat.</li>
                   <li className="flex gap-3"><Mark minus /> Seams lift on high-slope work before the shingles are even down.</li>
@@ -202,6 +226,17 @@ export default function RoofSystem() {
                   <h4 className="font-display text-2xl font-medium">Grace Ice &amp; Water Shield</h4>
                   <span className="eyebrow text-warm-gold/85">What we specify</span>
                 </div>
+                <figure className="mt-5 relative overflow-hidden aspect-[4/3] bg-paper/5">
+                  <img
+                    src="/assets/photos/materials/ice-and-water-shield/ludowici-install-pierson-indy-9-grace-ice-and-water-shield.webp"
+                    alt="Grace Ice & Water Shield installed on a Locke & Ladder job"
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <span className="absolute bottom-2 left-2 font-brand text-[9px] uppercase tracking-[0.22em] bg-ink/65 backdrop-blur-sm text-paper/80 px-2 py-0.5">
+                    On a Locke &amp; Ladder job
+                  </span>
+                </figure>
                 <ul className="mt-5 space-y-3 text-sm leading-relaxed">
                   <li className="flex gap-3"><Mark plus light /> Rubberized asphalt that self-seals around every nail.</li>
                   <li className="flex gap-3"><Mark plus light /> Stays stable through ice-dam cycles, Midwest winters included.</li>
@@ -214,6 +249,56 @@ export default function RoofSystem() {
         </div>
       </div>
     </section>
+  );
+}
+
+function StandardBadge({ s, i, last }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div
+      data-testid={`standard-${i}`}
+      className={`relative border-ink/10 ${
+        !last ? "md:border-r" : ""
+      } ${i >= 2 ? "border-t md:border-t-0" : ""} ${
+        i % 2 === 1 && !last ? "border-l md:border-l-0" : ""
+      }`}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        data-testid={`standard-${i}-toggle`}
+        className="w-full text-left py-6 md:py-8 px-5 md:px-6 hover:bg-paper-warm transition-colors group"
+      >
+        <div className="font-display text-ink text-2xl md:text-3xl font-medium leading-none">
+          {s.label}
+        </div>
+        <div className="mt-2 flex items-center justify-between gap-3 text-xs md:text-sm text-slate leading-snug">
+          <span>{s.sub}</span>
+          <span
+            aria-hidden="true"
+            className={`shrink-0 w-5 h-5 rounded-full border border-ink/25 text-ink/50 group-hover:border-ink/50 group-hover:text-ink flex items-center justify-center transition-all ${
+              open ? "rotate-45 bg-ink text-paper border-ink" : ""
+            }`}
+          >
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </span>
+        </div>
+      </button>
+      <div
+        className={`overflow-hidden transition-[max-height,opacity] duration-300 ${
+          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+        data-testid={`standard-${i}-info`}
+      >
+        <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm text-body leading-relaxed">
+          {s.info}
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -273,7 +358,7 @@ function Mark({ minus, plus, light }) {
   );
 }
 
-function SystemPanel() {
+function SystemPanel({ hovered }) {
   const [view, setView] = useState("ll"); // "ll" | "brava"
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const BRAVA_SLIDE = "/assets/proposal-support/brava-presentation-reference-slides/02-durability-pays-dividends-lifecycle-cost.webp";
@@ -318,7 +403,7 @@ function SystemPanel() {
       {view === "ll" ? (
         <div>
           <div className="aspect-[3/4] relative">
-            <SystemDiagram />
+            <SystemDiagram hovered={hovered} />
           </div>
           <Caption className="mt-4">
             Exploded view, sanctuary and steeple assembly. Indicative only.
@@ -359,7 +444,15 @@ function SystemPanel() {
   );
 }
 
-function SystemDiagram() {
+function SystemDiagram({ hovered }) {
+  const layers = [
+    { y: 40, label: "01", color: "#1A1C20" },
+    { y: 90, label: "02", color: "#2B2D32" },
+    { y: 140, label: "03", color: "#857650" },
+    { y: 190, label: "04", color: "#9A5B3E" },
+    { y: 240, label: "05", color: "#8A98A1" },
+    { y: 290, label: "06", color: "#D9D4CA" },
+  ];
   return (
     <svg viewBox="0 0 300 400" className="w-full h-full" aria-hidden="true">
       <defs>
@@ -369,19 +462,40 @@ function SystemDiagram() {
         </linearGradient>
       </defs>
       <rect x="0" y="0" width="300" height="400" fill="url(#sky)" />
-      {[
-        { y: 40, label: "01", color: "#1A1C20" },
-        { y: 90, label: "02", color: "#2B2D32" },
-        { y: 140, label: "03", color: "#857650" },
-        { y: 190, label: "04", color: "#9A5B3E" },
-        { y: 240, label: "05", color: "#8A98A1" },
-        { y: 290, label: "06", color: "#D9D4CA" },
-      ].map((l, i) => (
-        <g key={i} transform={`translate(${30 + i * 4}, ${l.y})`}>
-          <polygon points="0,30 120,0 240,30 120,60" fill={l.color} opacity={0.9} stroke="#1A1C20" strokeOpacity="0.25" />
-          <text x="250" y="36" fontFamily="Inter, sans-serif" fontSize="12" fontWeight="600" fill="#1A1C20">{l.label}</text>
-        </g>
-      ))}
+      {layers.map((l, i) => {
+        const active = hovered === l.label;
+        const dim = hovered && hovered !== l.label;
+        return (
+          <g
+            key={i}
+            transform={`translate(${30 + i * 4}, ${l.y})`}
+            data-testid={`system-diagram-layer-${l.label}`}
+            style={{
+              opacity: dim ? 0.25 : 1,
+              transform: `translate(${30 + i * 4}px, ${l.y + (active ? -12 : 0)}px)`,
+              transition: "transform 380ms cubic-bezier(0.25, 1, 0.5, 1), opacity 260ms ease",
+            }}
+          >
+            <polygon
+              points="0,30 120,0 240,30 120,60"
+              fill={l.color}
+              opacity={active ? 1 : 0.9}
+              stroke={active ? "#857650" : "#1A1C20"}
+              strokeOpacity={active ? 1 : 0.25}
+              strokeWidth={active ? 2 : 1}
+            />
+            <text
+              x="250" y="36"
+              fontFamily="Inter, sans-serif"
+              fontSize="12"
+              fontWeight={active ? 700 : 600}
+              fill={active ? "#857650" : "#1A1C20"}
+            >
+              {l.label}
+            </text>
+          </g>
+        );
+      })}
       <line x1="0" y1="360" x2="300" y2="360" stroke="#1A1C20" strokeOpacity="0.15" />
       <text x="30" y="378" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="2" fill="#50636F">
         INDICATIVE · NOT TO SCALE

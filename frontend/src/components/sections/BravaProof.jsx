@@ -120,40 +120,35 @@ export default function BravaProof() {
             </span>
           </div>
           <div className="absolute bottom-6 md:bottom-10 left-5 md:left-12 right-5 md:right-12 text-paper">
-            <div className="font-display display-tight text-[7vw] sm:text-4xl lg:text-[3.4vw] leading-[1.02] text-paper max-w-4xl">
-              Real cedar and Brava cedar on the same house. In the same light.
+            <div className="font-display display-tight text-[6vw] sm:text-4xl lg:text-[2.8vw] leading-[1.05] text-paper">
+              Real cedar and Brava cedar on the same house.
+              <br />
+              In the same light.
             </div>
           </div>
         </div>
       </figure>
 
-      {/* Why we chose Brava · vertical POV video LEFT, split copy RIGHT */}
+      {/* Why we chose Brava · Brava cedar product photo LEFT + split copy RIGHT */}
       <div className="relative bg-ink" data-testid="why-brava-block">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 md:pt-28 pb-24 md:pb-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* LEFT · vertical video, not full-bleed */}
+            {/* LEFT · Brava cedar product photo in front of old cedar house */}
             <div className="lg:col-span-5 flex lg:justify-start justify-center">
               <div
-                className="relative w-full max-w-[420px] aspect-[9/16] overflow-hidden bg-black ring-1 ring-paper/10 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.6)]"
+                className="relative w-full overflow-hidden bg-black ring-1 ring-paper/10 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.6)] aspect-[4/5]"
                 data-testid="why-brava-video-wrap"
               >
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <img
+                  src="/assets/photos/materials/why-brava/brava-cedar-clarke-during-319-why-brava.webp"
+                  alt="Brava cedar shake held in front of an aging real-cedar home"
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover"
-                  data-testid="why-brava-bg-video"
-                >
-                  <source
-                    src="/assets/videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+                  data-testid="why-brava-product-photo"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent pointer-events-none" />
                 <span className="absolute bottom-3 left-3 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/55 backdrop-blur-sm text-paper/80 px-2 py-0.5">
-                  Hickman Residence &middot; Brava in hand
+                  Brava in hand &middot; real cedar behind
                 </span>
               </div>
             </div>

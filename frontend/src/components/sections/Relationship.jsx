@@ -24,22 +24,8 @@ export default function Relationship() {
           <br />your language.
         </motion.h2>
 
-        {/* Two-photo layout · Jon teaching + Jon's Dad with Billy Graham */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <PhotoPlaceholder
-            testId="alignment-photo-jon"
-            label="Jon Strand · teaching / on a roof"
-            aspect="aspect-[4/5]"
-          />
-          <PhotoPlaceholder
-            testId="alignment-photo-dad-graham"
-            label="Jon's father with Billy Graham"
-            aspect="aspect-[4/5]"
-          />
-        </div>
-
-        {/* Copy block */}
-        <div className="mt-14 max-w-3xl space-y-5 text-body text-lg leading-relaxed" data-testid="alignment-body">
+        {/* Copy FIRST · so the section reads even without photos */}
+        <div className="mt-10 max-w-3xl space-y-5 text-body text-lg leading-relaxed" data-testid="alignment-body">
           <p>
             Founder Jon Strand grew up traveling the world with Billy Graham.
             His father has been on staff as Outreach Pastor at Grace Community
@@ -62,30 +48,50 @@ export default function Relationship() {
             toward their God-given potential&rdquo;</em> resonates.
           </p>
         </div>
+
+        {/* Two visuals · Jon on a church roof (FAC video) + Jon teaching */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <figure
+            data-testid="alignment-photo-jon"
+            className="relative overflow-hidden bg-ink/5 aspect-[4/5]"
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+              data-testid="alignment-jon-video"
+            >
+              <source
+                src="/assets/videos/projects/faith-apostolic-church/v2-0001-jon-at-fac-faith-apostolic-church-full.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent pointer-events-none" />
+            <figcaption className="absolute bottom-5 left-5 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/60 backdrop-blur-sm text-paper px-2.5 py-1">
+              Jon &middot; Faith Apostolic Church, on the roof
+            </figcaption>
+          </figure>
+
+          <figure
+            data-testid="alignment-photo-dad-graham"
+            className="relative overflow-hidden bg-ink/5 aspect-[4/5]"
+          >
+            <img
+              src="/assets/photos/team/jon-presenting.webp"
+              alt="Jon Strand teaching at Locke & Ladder"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent pointer-events-none" />
+            <figcaption className="absolute bottom-5 left-5 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/60 backdrop-blur-sm text-paper px-2.5 py-1">
+              Jon &middot; teaching at Locke &amp; Ladder
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
-  );
-}
-
-function PhotoPlaceholder({ testId, label, aspect }) {
-  return (
-    <figure
-      data-testid={testId}
-      className={`relative overflow-hidden bg-ink/5 border border-dashed border-ink/20 ${aspect} flex items-center justify-center`}
-    >
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-center px-8">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" className="text-ink/40" aria-hidden="true">
-          <rect x="3" y="4" width="18" height="16" rx="1" />
-          <circle cx="8.5" cy="10" r="1.5" />
-          <path d="M21 16l-5-5-9 9" />
-        </svg>
-        <div className="font-brand text-[11px] uppercase tracking-[0.24em] text-ink/55">
-          Photo pending
-        </div>
-        <div className="font-serif italic text-ink/70 text-sm leading-snug max-w-[240px]">
-          {label}
-        </div>
-      </div>
-    </figure>
   );
 }

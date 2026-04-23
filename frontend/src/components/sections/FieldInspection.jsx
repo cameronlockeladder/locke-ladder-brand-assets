@@ -19,8 +19,8 @@ const FEATURED = [
     label: "Impact indentations to soft metals",
   },
   {
-    src: "/assets/photos/projects/christ-church/jobnimbus/jn-052.webp",
-    label: "Moss / algae growth over roof facets",
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-065.webp",
+    label: "Split and cupped shakes across the field",
   },
   {
     src: "/assets/photos/projects/christ-church/jobnimbus/jn-074.webp",

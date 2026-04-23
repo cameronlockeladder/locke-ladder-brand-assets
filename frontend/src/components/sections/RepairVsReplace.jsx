@@ -35,7 +35,7 @@ export default function RepairVsReplace() {
           Repair vs. Replace.
         </h2>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-0 border border-rule">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-0 border border-rule">
           <div
             className="bg-paper p-8 md:p-12 border-b md:border-b-0 md:border-r border-rule"
             data-testid="ledger-repair"
@@ -56,10 +56,44 @@ export default function RepairVsReplace() {
             </ul>
           </div>
 
+          {/* Central cost-multiple viz · POC #5 */}
+          <div
+            className="hidden md:flex bg-paper-warm border-r border-rule items-center justify-center p-6"
+            data-testid="cost-multiple-viz"
+          >
+            <div className="text-center">
+              <div className="font-brand text-[10px] uppercase tracking-[0.24em] text-slate mb-5">
+                Over 50 years
+              </div>
+              <div className="flex items-baseline justify-center gap-4">
+                <div className="text-center">
+                  <div className="font-display font-semibold text-warm-gold leading-none" style={{ fontSize: "clamp(36px, 4vw, 56px)" }}>
+                    3.14x
+                  </div>
+                  <div className="mt-2 font-brand text-[9px] uppercase tracking-[0.2em] text-slate">
+                    Replace &middot; Brava
+                  </div>
+                </div>
+                <div className="text-slate text-2xl font-light">vs</div>
+                <div className="text-center">
+                  <div className="font-display font-semibold text-bronze leading-none" style={{ fontSize: "clamp(36px, 4vw, 56px)" }}>
+                    16.76x
+                  </div>
+                  <div className="mt-2 font-brand text-[9px] uppercase tracking-[0.2em] text-slate">
+                    Repair path &middot; cedar
+                  </div>
+                </div>
+              </div>
+              <div className="mt-6 max-w-[160px] mx-auto text-xs text-slate leading-snug">
+                Total cost of ownership, relative to a single replace.
+              </div>
+            </div>
+          </div>
+
           <div className="bg-ink text-paper p-8 md:p-12" data-testid="ledger-replace">
             <div className="flex items-baseline justify-between">
               <h3 className="font-display text-3xl md:text-4xl font-medium">Replace</h3>
-              <span className="eyebrow text-ink/55">Our recommendation</span>
+              <span className="eyebrow text-warm-gold">Our recommendation</span>
             </div>
             <ul className="mt-8 space-y-5">
               {REPLACE.map((n, i) => (

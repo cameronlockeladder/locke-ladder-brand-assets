@@ -26,6 +26,7 @@ export default function Nav() {
   const [theme, setTheme] = useState(() => {
     try { return localStorage.getItem("cc_theme") || "day"; } catch { return "day"; }
   });
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -39,7 +40,6 @@ export default function Nav() {
     return () => { window.removeEventListener("scroll", onScroll); io.disconnect(); };
   }, []);
 
-  // Apply theme to <html>
   useEffect(() => {
     document.documentElement.classList.toggle("theme-night", theme === "night");
     try { localStorage.setItem("cc_theme", theme); } catch {}
@@ -49,30 +49,40 @@ export default function Nav() {
     try { localStorage.setItem("cc_nav_hidden", navHidden ? "1" : "0"); } catch {}
   }, [navHidden]);
 
-  const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  // Lock scroll when mobile sheet open
+  useEffect(() => {
+    document.documentElement.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.documentElement.style.overflow = ""; };
+  }, [mobileOpen]);
 
-  const iconColor = scrolled ? "text-ink" : "text-paper";
+  const scrollTo = (id) => {
+    setMobileOpen(false);
+    // Small defer so lock is released before scroll
+    setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+  };
+
+  const iconColor = scrolled || mobileOpen ? "text-ink" : "text-paper";
 
   return (
     <>
       <header
         data-testid="top-header"
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? "bg-paper/90 backdrop-blur-md border-b border-rule/60 text-ink" : "bg-transparent text-paper"
+          scrolled || mobileOpen ? "bg-paper/90 backdrop-blur-md border-b border-rule/60 text-ink" : "bg-transparent text-paper"
         }`}
       >
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
           <button onClick={() => scrollTo("hero")} className="flex items-center gap-4" data-testid="brand-mark-button">
             <img src="/assets/brand/locke-ladder/ll-icon.webp" alt="Locke & Ladder"
-              className={`h-7 w-auto transition ${scrolled ? "" : "invert brightness-0 opacity-90"}`} />
-            <span className={`hidden sm:inline-block h-4 w-px ${scrolled ? "bg-ink/25" : "bg-paper/40"}`} />
+              className={`h-7 w-auto transition ${scrolled || mobileOpen ? "" : "invert brightness-0 opacity-90"}`} />
+            <span className={`hidden sm:inline-block h-4 w-px ${scrolled || mobileOpen ? "bg-ink/25" : "bg-paper/40"}`} />
             <img src="/assets/brand/client/christ-church/christ-church-logo.png"
               alt="Christ Church | Oak Brook" data-testid="christ-church-logo"
-              className={`h-6 w-auto transition ${scrolled ? "" : "invert brightness-0 opacity-90"}`} />
+              className={`h-6 w-auto transition ${scrolled || mobileOpen ? "" : "invert brightness-0 opacity-90"}`} />
           </button>
 
-          <div className="flex items-center gap-5 md:gap-6">
-            {/* Theme toggle — day / night */}
+          <div className="flex items-center gap-4 md:gap-6">
+            {/* Theme toggle */}
             <button
               onClick={() => setTheme((t) => (t === "day" ? "night" : "day"))}
               data-testid="theme-toggle"
@@ -80,12 +90,10 @@ export default function Nav() {
               className={`inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-current/5 transition-opacity opacity-75 hover:opacity-100 ${iconColor}`}
             >
               {theme === "day" ? (
-                // moon
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
                 </svg>
               ) : (
-                // sun
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="4" />
                   <line x1="12" y1="3" x2="12" y2="5" />
@@ -100,7 +108,7 @@ export default function Nav() {
               )}
             </button>
 
-            {/* Side-nav visibility toggle (desktop only) */}
+            {/* Desktop-only side-nav visibility toggle */}
             <button
               onClick={() => setNavHidden((h) => !h)}
               data-testid="side-nav-toggle"
@@ -109,7 +117,6 @@ export default function Nav() {
               className={`hidden xl:inline-flex items-center justify-center w-8 h-8 rounded-full hover:bg-current/5 transition-opacity opacity-75 hover:opacity-100 ${iconColor}`}
             >
               {navHidden ? (
-                // eye-off
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M17.9 17.9A11 11 0 0 1 12 20c-5.5 0-9.7-4-11-8a13 13 0 0 1 4-5.3" />
                   <path d="M9.5 4.2A10.8 10.8 0 0 1 12 4c5.5 0 9.7 4 11 8a12.8 12.8 0 0 1-2.6 4" />
@@ -117,10 +124,30 @@ export default function Nav() {
                   <path d="M10 10a3 3 0 0 0 4 4" />
                 </svg>
               ) : (
-                // eye
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12Z" />
                   <circle cx="12" cy="12" r="3" />
+                </svg>
+              )}
+            </button>
+
+            {/* Mobile hamburger · under xl */}
+            <button
+              onClick={() => setMobileOpen((o) => !o)}
+              data-testid="mobile-menu-toggle"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              className={`xl:hidden inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-current/5 transition-opacity opacity-90 hover:opacity-100 ${iconColor}`}
+            >
+              {mobileOpen ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+                  <line x1="4" y1="8" x2="20" y2="8" />
+                  <line x1="4" y1="16" x2="20" y2="16" />
                 </svg>
               )}
             </button>
@@ -133,7 +160,48 @@ export default function Nav() {
         </div>
       </header>
 
-      {/* Side section nav · hideable via toggle */}
+      {/* Mobile full-screen sheet */}
+      <div
+        data-testid="mobile-nav-sheet"
+        aria-hidden={!mobileOpen}
+        className={`xl:hidden fixed inset-0 z-30 bg-paper transition-opacity duration-300 ${
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="pt-20 pb-12 px-6 h-full overflow-y-auto">
+          <div className="eyebrow text-ink/50 mb-6">Jump to section</div>
+          <ol className="space-y-1">
+            {SECTIONS.map((s, i) => {
+              const isActive = active === s.id;
+              return (
+                <li key={s.id}>
+                  <button
+                    onClick={() => scrollTo(s.id)}
+                    data-testid={`mobile-nav-item-${s.id}`}
+                    className={`w-full flex items-center gap-4 py-4 border-b border-ink/10 group ${
+                      isActive ? "text-ink" : "text-ink/80 hover:text-ink"
+                    }`}
+                  >
+                    <span className={`font-brand text-[11px] uppercase tracking-[0.24em] w-8 ${
+                      isActive ? "text-warm-gold" : "text-ink/40"
+                    }`}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="flex-1 text-left font-display text-2xl leading-snug">
+                      {s.label}
+                    </span>
+                    {isActive && (
+                      <span className="block w-2 h-2 bg-warm-gold rounded-full" aria-hidden="true" />
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      </div>
+
+      {/* Desktop side nav */}
       <nav
         data-testid="side-section-nav"
         aria-hidden={navHidden}

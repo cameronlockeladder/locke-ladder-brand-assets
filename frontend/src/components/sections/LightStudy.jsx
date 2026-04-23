@@ -1,11 +1,26 @@
-import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { SectionTag } from "@/components/primitives";
 
-const FRAME_COUNT = 90;
-const FRAMES = Array.from({ length: FRAME_COUNT }, (_, i) => `/assets/aspen/frame-${String(i + 1).padStart(3, "0")}.webp`);
+// Use only the visible-light range (frames 18-82). Earlier/later frames are pitch black (pre-dawn / post-evening).
+const FRAME_START = 18;
+const FRAME_END = 82;
+const FRAME_COUNT = FRAME_END - FRAME_START + 1;
+const FRAMES = Array.from(
+  { length: FRAME_COUNT },
+  (_, i) => `/assets/aspen/frame-${String(i + FRAME_START).padStart(3, "0")}.webp`
+);
+
+// Time anchor labels distributed across the visible day.
+const TIME_MARKS = [
+  { pct: 0, label: "Dawn" },
+  { pct: 22, label: "Morning" },
+  { pct: 50, label: "Noon" },
+  { pct: 72, label: "Late afternoon" },
+  { pct: 88, label: "Vespers" },
+  { pct: 100, label: "Evening" },
+];
 
 export default function LightStudy() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -15,14 +30,11 @@ export default function LightStudy() {
     <section
       id="light-study"
       data-testid="section-light-study"
-      className="relative bg-ink text-paper border-t border-ink"
+      className="relative bg-ink text-paper border-t border-ink py-28 md:py-36 px-6 lg:px-12"
     >
-      {/* Color For Life intro panel · ABOVE the scrubber */}
-      <div
-        className="relative bg-ink border-b border-paper/10"
-        data-testid="color-for-life-panel"
-      >
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      {/* Color For Life intro panel */}
+      <div className="max-w-[1600px] mx-auto" data-testid="color-for-life-panel">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6">
             <SectionTag
               number="08 / 14"
@@ -67,8 +79,22 @@ export default function LightStudy() {
         </div>
       </div>
 
-      {/* Scroll-scrubbed Aspen study */}
-      <Scrubber />
+      {/* Draggable, non-full-width Aspen light scrubber */}
+      <div className="max-w-[1400px] mx-auto mt-24 md:mt-32" data-testid="aspen-scrubber">
+        <div className="flex items-end justify-between flex-wrap gap-6 mb-6">
+          <div>
+            <div className="eyebrow text-paper/60">A light study &middot; Brava Aspen</div>
+            <h3
+              className="mt-3 font-display display-tight text-[8vw] sm:text-4xl lg:text-[3.6vw] leading-[1] text-paper"
+              data-testid="light-study-headline"
+            >
+              Aspen, from dawn to evening.
+            </h3>
+          </div>
+        </div>
+
+        <AspenSlider />
+      </div>
 
       <Lightbox
         open={lightboxOpen}
@@ -80,74 +106,149 @@ export default function LightStudy() {
   );
 }
 
-function Scrubber() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
-  const smooth = useSpring(scrollYProgress, { stiffness: 80, damping: 22, mass: 0.4 });
-  const index = useTransform(smooth, (v) => Math.min(FRAMES.length - 1, Math.floor(v * FRAMES.length)));
-  const labelOpacity = useTransform(smooth, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
+function AspenSlider() {
+  const [progress, setProgress] = useState(0); // 0-100
+  const [dragging, setDragging] = useState(false);
+  const trackRef = useRef(null);
+
+  const frameIndex = Math.min(FRAME_COUNT - 1, Math.round((progress / 100) * (FRAME_COUNT - 1)));
+
+  // Preload a handful of frames around the current index for smooth scrub
+  useEffect(() => {
+    const preloadWindow = 4;
+    const start = Math.max(0, frameIndex - preloadWindow);
+    const end = Math.min(FRAME_COUNT - 1, frameIndex + preloadWindow);
+    for (let i = start; i <= end; i++) {
+      const img = new Image();
+      img.src = FRAMES[i];
+    }
+  }, [frameIndex]);
+
+  const setFromClientX = (clientX) => {
+    const rect = trackRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const x = Math.max(0, Math.min(rect.width, clientX - rect.left));
+    setProgress((x / rect.width) * 100);
+  };
+
+  const onPointerDown = (e) => {
+    e.preventDefault();
+    trackRef.current?.setPointerCapture?.(e.pointerId);
+    setDragging(true);
+    setFromClientX(e.clientX);
+  };
+  const onPointerMove = (e) => {
+    if (!dragging) return;
+    setFromClientX(e.clientX);
+  };
+  const onPointerUp = (e) => {
+    setDragging(false);
+    try { trackRef.current?.releasePointerCapture?.(e.pointerId); } catch {}
+  };
+  // Direct click — handles simulated/test clicks that skip pointer events, and plain mouse clicks on the track
+  const onClick = (e) => setFromClientX(e.clientX);
+
+  const onKeyDown = (e) => {
+    if (e.key === "ArrowRight") setProgress((p) => Math.min(100, p + 2));
+    else if (e.key === "ArrowLeft") setProgress((p) => Math.max(0, p - 2));
+    else if (e.key === "Home") setProgress(0);
+    else if (e.key === "End") setProgress(100);
+  };
+
+  // Closest label to current progress for the floating time chip
+  const nearestLabel = TIME_MARKS.reduce((acc, m) =>
+    Math.abs(m.pct - progress) < Math.abs(acc.pct - progress) ? m : acc
+  , TIME_MARKS[0]).label;
 
   return (
-    <div ref={ref} className="relative" style={{ height: "240vh" }}>
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <FramesStack progress={index} />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-transparent to-ink/60 pointer-events-none" />
+    <div data-testid="aspen-slider">
+      {/* Contained frame viewer · 16:9 · single <img> with preloaded window */}
+      <div className="relative w-full aspect-[16/9] overflow-hidden bg-ink-soft border border-paper/10">
+        <img
+          src={FRAMES[frameIndex]}
+          alt={`Aspen at frame ${frameIndex + 1}`}
+          draggable={false}
+          className="absolute inset-0 w-full h-full object-cover select-none"
+          data-testid="aspen-current-frame"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent pointer-events-none" />
 
-        <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-12 pointer-events-none max-w-[1600px] mx-auto">
-          <motion.div style={{ opacity: labelOpacity }}>
-            <div className="eyebrow text-paper/80">A light study &middot; Brava Aspen</div>
-            <h3
-              className="mt-4 font-display display-tight text-[12vw] sm:text-5xl lg:text-[5.5vw] leading-[0.95] max-w-5xl text-paper"
-              data-testid="light-study-headline"
-            >
-              Aspen, from dawn to evening.
-            </h3>
-          </motion.div>
-
-          <motion.div style={{ opacity: labelOpacity }} className="flex items-end justify-between">
-            <span className="text-paper/60 text-xs">
-              <span className="inline-block w-8 h-px bg-paper/40 mr-3 align-middle" />
-              Scroll to move through the day
-            </span>
-            <FrameCounter progress={index} total={FRAMES.length} />
-          </motion.div>
+        {/* Floating time chip */}
+        <div
+          data-testid="aspen-time-chip"
+          className="absolute top-4 left-4 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/65 backdrop-blur-sm text-paper/90 px-2.5 py-1"
+        >
+          {nearestLabel}
+        </div>
+        <div className="absolute top-4 right-4 font-display text-paper/80 text-sm tabular-nums">
+          {String(frameIndex + 1).padStart(3, "0")} / {String(FRAME_COUNT).padStart(3, "0")}
         </div>
       </div>
-    </div>
-  );
-}
 
-function FramesStack({ progress }) {
-  return (
-    <div className="absolute inset-0">
-      {FRAMES.map((src, i) => (
-        <Frame key={src} src={src} i={i} progress={progress} />
-      ))}
-    </div>
-  );
-}
+      {/* Custom draggable slider */}
+      <div className="relative pt-10 pb-6 select-none">
+        {/* Time-mark labels ABOVE track */}
+        <div className="relative h-5">
+          {TIME_MARKS.map((m) => (
+            <div
+              key={m.label}
+              className="absolute -translate-x-1/2 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/55"
+              style={{ left: `${m.pct}%` }}
+              data-testid={`time-mark-${m.label.toLowerCase().replace(/\s+/g, "-")}`}
+            >
+              {m.label}
+            </div>
+          ))}
+        </div>
 
-function Frame({ src, i, progress }) {
-  const opacity = useTransform(progress, (current) => (current === i ? 1 : 0));
-  return (
-    <motion.img
-      src={src}
-      alt={`Aspen light frame ${i + 1}`}
-      loading="lazy"
-      style={{ opacity }}
-      className="absolute inset-0 w-full h-full object-cover"
-    />
-  );
-}
+        {/* Track */}
+        <div
+          ref={trackRef}
+          role="slider"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={Math.round(progress)}
+          aria-label="Time of day"
+          tabIndex={0}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+          onClick={onClick}
+          onKeyDown={onKeyDown}
+          data-testid="aspen-slider-track"
+          className={`relative mt-3 h-[6px] bg-paper/15 cursor-pointer rounded-full touch-none ${
+            dragging ? "ring-2 ring-warm-gold/60" : ""
+          }`}
+        >
+          {/* Filled portion */}
+          <div
+            className="absolute top-0 left-0 h-full bg-warm-gold/80 rounded-full"
+            style={{ width: `${progress}%` }}
+          />
+          {/* Time-mark ticks below the track */}
+          {TIME_MARKS.map((m) => (
+            <div
+              key={m.label}
+              className="absolute top-[10px] -translate-x-1/2 w-px h-2 bg-paper/25"
+              style={{ left: `${m.pct}%` }}
+              aria-hidden="true"
+            />
+          ))}
+          {/* Thumb */}
+          <div
+            className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-paper border border-warm-gold shadow-[0_2px_8px_rgba(0,0,0,0.5)] pointer-events-none transition-transform ${
+              dragging ? "scale-110" : ""
+            }`}
+            style={{ left: `calc(${progress}% - 10px)` }}
+            data-testid="aspen-slider-thumb"
+          />
+        </div>
 
-function FrameCounter({ progress, total }) {
-  const label = useTransform(progress, (i) => `${String(i + 1).padStart(3, "0")} / ${String(total).padStart(3, "0")}`);
-  return (
-    <div className="font-display text-paper/90 text-base md:text-lg tabular-nums font-medium">
-      <motion.span>{label}</motion.span>
+        <div className="mt-6 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/50">
+          Drag the slider &middot; or use &larr; &rarr; keys
+        </div>
+      </div>
     </div>
   );
 }
