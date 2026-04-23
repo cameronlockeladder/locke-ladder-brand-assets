@@ -3,62 +3,48 @@
 **Purpose:** Board members self-educate as if Jon Strand were pitching in person.
 
 ## Current architecture · 14 sections
-1. **Hero** · steeple video · Contractor · Scope · Begin
-2. **Alignment** · "We speak your language." · 2 photo placeholders + Jon Strand copy
-3. **Problem** · "Roof is at the end of useful life." · Polycam
-4. **Field Inspection** · 5 featured tiles · 42-tile rail · 5× square magnifier + lightbox magnifier
-5. **Repair vs Replace** · 5 · 6 bullets
-6. **Today's Cedar** · bg video · native lifecycle chart
-7. **Lasting Beauty** · drone · Laskey reveal · Why-Brava vertical POV + split copy · 22-tile interwoven gallery (no L&L tagging) · 3 quote cards (Amy · Gilda Hickman pull-quote · Faith Apostolic)
-8. **Light Study** · Color-for-Life slide · Aspen scrubber
-9. **Roof System** · etymology headline · L&L ↔ Brava toggle · 6-layer table · 5 Standards · Partners · 2 expandable panels (Low-e · Grace IWS vs generic)
-10. **Attention to Detail**
-11. **Our Approach** · vertical music video with audio
-12. **Christ Church Success Road Map** · 7 steps + BRAVA installer pill
-13. **Questions (FAQ)** · 5 expandable Q&A on Brava / replace / disruption / church-fit / next-steps
-14. **Human Close** · flag video · sign-off block (Jon Strand · PDF · "— end —")
+1. Hero · steeple video · Contractor · Scope · Begin
+2. **Alignment** · copy-first · FAC-roof video + Jon presenting photo
+3. Problem · Polycam · "Roof is at the end of useful life."
+4. Field Inspection · 5 featured + 42-tile rail · 5× hover + lightbox magnifiers
+5. Repair vs Replace · 5+6 bullets · **central 3.14x ↔ 16.76x cost-multiple viz**
+6. Today's Cedar · bg video · lifecycle bars · **roofing-cost timeline** · **3-ring lifespan graphic**
+7. Lasting Beauty · drone · Laskey reveal · Why-Brava product photo + split copy · 22-tile gallery · 3 quote cards (Amy · Hickman pull-quote · Faith Apostolic)
+8. **Light Study** · Color-for-Life slide · **contained draggable time-slider** (dawn → evening)
+9. Roof System · etymology headline · L&L ↔ Brava toggle · **hover-to-highlight 6-layer** · **click-popover Standards** · Partners · 2 expandable panels (Low-e · Grace IWS with real photos)
+10. Attention to Detail · Snape sliders + 3 uncaptioned tiles
+11. Our Approach · vertical music video with audio
+12. Christ Church Success Road Map · 7 steps with lucide icons + Step 04 crew photo
+13. FAQ · 5 expandable Q&A
+14. Human Close · flag video · sign-off block · PDF
 
 ## Global controls
-- Sticky **scroll-progress bar** (2px top, warm-gold, mix-blend-difference)
-- Header **theme toggle** (day / night) + **side-nav toggle** (hide/show 13-dot navigator)
+- **Scroll-progress bar** at top (no mix-blend, fixed ghosting)
+- Header theme toggle + side-nav toggle (desktop)
+- **Mobile hamburger** → full-screen sheet with all 14 sections
 
-## Tech
-- React SPA · Lenis · Framer Motion · react-compare-slider · yet-another-react-lightbox
-- Termina + Inter + Fraunces
-- FastAPI: `GET /api/proposal/packet.pdf` 6.2 MB
+## New assets this iter
+- FAC video of Jon on a church roof (compressed 8.5 → 2.6 MB)
+- Jon presenting still
+- Brava cedar shake product photo (why-brava)
+- Grace IWS installed on an L&L job + generic IWS product photo
+- L&L crew flat-roof photos (Road Map)
 
-## Assets
-- All photos WebP · live-page payload ~45 MB · originals backed up at `/app/.asset-originals/`
+## Copy→viz implementations (POCs live)
+- #1 Roofing-cost timeline (Today's Cedar)
+- #2 Click-popover Standards with plain-English explainers (Roof System)
+- #3 Hover-to-highlight 6-layer + SVG lift (Roof System)
+- #4 Road Map per-step lucide icons
+- #5 Central 3.14x vs 16.76x cost-multiple viz (Repair vs Replace)
+- #6 3-ring lifespan graphic · Generic cedar / Certi-label / Brava (Today's Cedar)
 
-## Outstanding asset requests (ranked, for user to drop in GitHub)
-**Tier 1 (highest impact):**
-1. Jon Strand teaching at L&L / on a roof (Alignment)
-2. Jon's father with Billy Graham (Alignment)
-3. Faith Apostolic Church exterior (anchor for 3rd quote)
-4. One Hickman or Laskey full house-scale AFTER photo
-
-**Tier 2:**
-5. 3 hail-damage Christ Church inspection photos (boss-confirmed)
-6. L&L crew-on-a-roof action shot (Road Map)
-7. Brava cedar shake product sample photo (Why-Brava)
-8. L&L yard sign on completed job (end)
-
-**Tier 3:**
-9. Aerial of church/institutional-scale Brava install
-10. 5-8s b-roll of EchoShield or ridge-vent install
-11. High-res christ-church-logo 2x
-
-## Copy→viz conversions queued
-1. Today's Cedar — 4-dot timeline chart for "roofing doubled every 10 years"
-2. Standards row — click-popover explainer per badge
-3. Roof System 6-layer — hover-row highlights SVG layer
-4. Road Map — per-step icons
-5. Repair vs Replace — central cost-multiple visual (3.14× vs 16.76×)
-6. Today's Cedar — 3-ring cedar-lifespan vs Brava graphic
-7. New Approach — autoplay muted + SOUND-ON CTA + key-line quote card
+## Outstanding asset requests
+- Jon's Dad with Billy Graham (Alignment right slot)
+- Additional Hickman/Laskey full-house-scale AFTER shot
+- Faith Apostolic Church exterior (only if it fits without lengthening page)
 
 ## Iteration history
-- iter_5 17/17 · iter_6 27/27 · iter_7 14/14 · iter_8 11/11 · iter_9 smoke · iter_10 14/14 · **iter_11 11/11 after one-line badge removal fix**
+- iter_5 17/17 · iter_6 27/27 · iter_7 14/14 · iter_8 11/11 · iter_9 smoke · iter_10 14/14 · iter_11 11/11 · **iter_12 13/14 → 14/14 after one-line Standards fix**
 
 ## Testing
-- iter_11: 10/11 first pass, single remaining Laskey badge fixed in one edit, PDF endpoint 200/6.19MB, 0 console errors
+- iter_12: 13/14 first pass; StandardBadge component was defined but the .map wasn't wired to use it. Fixed in one search_replace, verified via screenshot (Class A popover text confirmed). PDF endpoint 200/6.19MB. 0 console errors at 1920 and 390 viewports. Mobile hamburger verified at 390x844.

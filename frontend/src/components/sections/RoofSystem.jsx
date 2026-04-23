@@ -116,20 +116,7 @@ export default function RoofSystem() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border-t border-b border-ink/15">
             {STANDARDS.map((s, i) => (
-              <div
-                key={s.label}
-                data-testid={`standard-${i}`}
-                className={`py-6 md:py-8 px-5 md:px-6 border-ink/10 ${
-                  i !== STANDARDS.length - 1 ? "md:border-r" : ""
-                } ${i >= 2 ? "border-t md:border-t-0" : ""} ${
-                  i % 2 === 1 && i < STANDARDS.length - 1 ? "border-l md:border-l-0" : ""
-                }`}
-              >
-                <div className="font-display text-ink text-2xl md:text-3xl font-medium leading-none">
-                  {s.label}
-                </div>
-                <div className="mt-2 text-xs md:text-sm text-slate leading-snug">{s.sub}</div>
-              </div>
+              <StandardBadge key={s.label} s={s} i={i} last={i === STANDARDS.length - 1} />
             ))}
           </div>
         </div>
