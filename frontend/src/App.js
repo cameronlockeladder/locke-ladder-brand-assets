@@ -16,7 +16,9 @@ import RoofSystem from "@/components/sections/RoofSystem";
 import AttentionToDetail from "@/components/sections/AttentionToDetail";
 import NewApproach from "@/components/sections/NewApproach";
 import RoadMap from "@/components/sections/RoadMap";
+import FAQ from "@/components/sections/FAQ";
 import HumanClose from "@/components/sections/HumanClose";
+import ScrollProgress from "@/components/ScrollProgress";
 import Footer from "@/components/Footer";
 
 export default function App() {
@@ -39,6 +41,7 @@ export default function App() {
 
   return (
     <div className="App paper-grain bg-paper text-ink" data-testid="proposal-root">
+      <ScrollProgress />
       <Nav />
       <main>
         <Hero />
@@ -53,6 +56,7 @@ export default function App() {
         <AttentionToDetail />
         <NewApproach />
         <RoadMap />
+        <FAQ />
         <HumanClose />
       </main>
       <Footer />

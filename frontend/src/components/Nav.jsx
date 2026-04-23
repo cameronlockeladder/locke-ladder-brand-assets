@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const SECTIONS = [
   { id: "hero", label: "Christ Church" },
-  { id: "relationship", label: "Local Experts" },
-  { id: "roof-eol", label: "End of Life" },
+  { id: "relationship", label: "Alignment" },
+  { id: "roof-eol", label: "Problem" },
   { id: "field-inspection", label: "Field Inspection" },
   { id: "repair-vs-replace", label: "Repair vs Replace" },
   { id: "todays-cedar", label: "Today's Cedar" },
@@ -13,6 +13,7 @@ const SECTIONS = [
   { id: "attention", label: "Attention to Detail" },
   { id: "new-approach", label: "Our Approach" },
   { id: "roadmap", label: "Christ Church Success" },
+  { id: "faq", label: "Questions" },
   { id: "human-close", label: "Close" },
 ];
 

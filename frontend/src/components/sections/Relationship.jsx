@@ -10,7 +10,7 @@ export default function Relationship() {
       className="relative bg-paper pt-28 md:pt-36 pb-28 md:pb-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="02 / 13" title="Alignment" />
+        <SectionTag number="02 / 14" title="Alignment" />
 
         <motion.h2
           initial={{ opacity: 0, y: 18 }}

@@ -36,7 +36,7 @@ export default function RoofSystem() {
       className="relative bg-paper-warm py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="09 / 13" title="The full system" />
+        <SectionTag number="09 / 14" title="The full system" />
 
         {/* Etymology headline · definition directly underneath */}
         <div className="mt-8" data-testid="roof-system-headline-block">

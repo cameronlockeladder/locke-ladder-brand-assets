@@ -49,7 +49,7 @@ export default function RoadMap() {
       className="relative bg-paper py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="11 / 13" title="How the work goes" />
+        <SectionTag number="11 / 14" title="How the work goes" />
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">

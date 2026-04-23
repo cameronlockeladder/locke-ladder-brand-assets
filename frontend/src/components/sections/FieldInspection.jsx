@@ -57,7 +57,7 @@ export default function FieldInspection() {
     >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
         <SectionTag
-          number="04 / 13"
+          number="04 / 14"
           title="From the survey"
           className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
         />

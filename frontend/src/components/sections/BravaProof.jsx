@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionTag, Caption } from "@/components/primitives";
 
-// Locke & Ladder installs · now with additional Hickman + Laskey assets
+// All Brava installs · equal weight, no client tagging
 const LL_PROJECTS = [
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-02.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-11.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-13-scaled.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-export-16.webp", title: "Hickman Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-aerial.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
-  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-29.webp", title: "Laskey Residence", loc: "Locke & Ladder client" },
-].map((p) => ({ ...p, kind: "ll" }));
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-06-scaled.webp", title: "Hickman Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-02.webp", title: "Hickman Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-11.webp", title: "Hickman Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-13-scaled.webp", title: "Hickman Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/hickman-export-16.webp", title: "Hickman Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-aerial.webp", title: "Laskey Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-15.webp", title: "Laskey Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-16.webp", title: "Laskey Residence", loc: "Brava cedar shake" },
+  { src: "/assets/photos/projects/locke-ladder-brava-cedar-projects/laskey-pre-painted-29.webp", title: "Laskey Residence", loc: "Brava cedar shake" },
+].map((p) => ({ ...p, kind: "brava" }));
 
 // Brava precedents · larger/premier homes lead; darker/b&w removed
 const BRAVA_PROJECTS = [
@@ -32,12 +32,36 @@ const BRAVA_PROJECTS = [
   { src: "/assets/photos/materials/brava-gallery/08-illinois-cottage.webp", title: "Cottage", loc: "Illinois" },
 ].map((p) => ({ ...p, kind: "brava" }));
 
-const GALLERY = [...BRAVA_PROJECTS, ...LL_PROJECTS];
+// All installs treated as equal-weight Brava precedents — Hickman & Laskey interwoven
+const GALLERY = [
+  BRAVA_PROJECTS[0], // Wyoming Lodge
+  LL_PROJECTS[5],    // Laskey aerial
+  BRAVA_PROJECTS[1], // NY Lake Forest
+  LL_PROJECTS[2],    // Hickman 11
+  BRAVA_PROJECTS[2], // GA Lake Forest
+  LL_PROJECTS[0],    // Hickman 06
+  BRAVA_PROJECTS[3], // Mundelein Lake Forest
+  LL_PROJECTS[6],    // Laskey 15
+  BRAVA_PROJECTS[4], // Winnetka Weathered
+  LL_PROJECTS[3],    // Hickman 13
+  BRAVA_PROJECTS[5], // Long Grove Aspen
+  LL_PROJECTS[7],    // Laskey 16
+  BRAVA_PROJECTS[6], // Wyoming Natural
+  LL_PROJECTS[4],    // Hickman export-16
+  BRAVA_PROJECTS[7], // NC Natural
+  LL_PROJECTS[8],    // Laskey 29
+  BRAVA_PROJECTS[8], // Greensboro Arendale
+  LL_PROJECTS[1],    // Hickman 02
+  BRAVA_PROJECTS[9], // GA Canyon Gray
+  BRAVA_PROJECTS[10],// Colorado
+  BRAVA_PROJECTS[11],// Beechwood
+  BRAVA_PROJECTS[12],// IL Cottage
+];
 
 export default function BravaProof() {
   const [active, setActive] = useState(0);
-  const img = GALLERY[active];
-  const isLL = img.kind === "ll";
+  const active_img = GALLERY[active];
+  const img = active_img;
 
   return (
     <section
@@ -47,7 +71,7 @@ export default function BravaProof() {
     >
       <div className="max-w-[1600px] mx-auto px-6 lg:px-12 pt-28 md:pt-32">
         <SectionTag
-          number="07 / 13"
+          number="07 / 14"
           title="Lasting Beauty"
           className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
         />
@@ -199,16 +223,9 @@ export default function BravaProof() {
           </div>
           <div className="flex items-end justify-between gap-6">
             <div>
-              {isLL ? (
-                <div className="inline-flex items-center gap-3 bg-paper/90 text-ink px-3 py-1.5 mb-3">
-                  <span className="block w-1.5 h-1.5 bg-warm-gold rounded-full" />
-                  <span className="font-brand text-[10px] uppercase tracking-[0.24em] font-semibold">Locke &amp; Ladder client</span>
-                </div>
-              ) : (
-                <div className="inline-flex items-center gap-3 bg-paper/15 text-paper px-3 py-1.5 mb-3 backdrop-blur-sm">
-                  <span className="font-brand text-[10px] uppercase tracking-[0.24em]">Brava precedent</span>
-                </div>
-              )}
+              <div className="inline-flex items-center gap-3 bg-paper/15 text-paper px-3 py-1.5 mb-3 backdrop-blur-sm">
+                <span className="font-brand text-[10px] uppercase tracking-[0.24em]">Brava cedar shake</span>
+              </div>
               <div className="font-serif text-2xl md:text-3xl text-paper">
                 {img.title}
                 <span className="text-paper/50 italic"> &middot; {img.loc}</span>
@@ -241,11 +258,6 @@ export default function BravaProof() {
                 }`}
               >
                 <img src={g.src} alt="" loading="lazy" className="w-full h-full object-cover" />
-                {g.kind === "ll" && (
-                  <span className="absolute top-1 left-1 right-1 bg-paper/85 text-ink font-brand text-[8px] uppercase tracking-[0.18em] px-1 py-[2px] text-center font-semibold">
-                    L&amp;L
-                  </span>
-                )}
               </button>
             ))}
           </div>
@@ -255,7 +267,7 @@ export default function BravaProof() {
       {/* Quote cards · directly under the gallery */}
       <div className="bg-ink border-t border-paper/10">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-20 md:py-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" data-testid="brava-quote-cards">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6" data-testid="brava-quote-cards">
             <QuoteCard
               quote="My satisfaction level hasn't changed in 9 years."
               attr="Amy, Michigan"
@@ -263,6 +275,11 @@ export default function BravaProof() {
             <QuoteCard
               quote="From the first attic inspection to the final day, Locke & Ladder gave us complete confidence. They started exactly when promised, finished in six days, and helped us secure thousands in insurance funds we never would have pursued on our own. Top shelf."
               attr="Gilda Hickman"
+              featuredLine="Top shelf."
+            />
+            <QuoteCard
+              quote="You were so good to us!"
+              attr="Faith Apostolic Church"
             />
           </div>
         </div>
@@ -285,7 +302,29 @@ function Badge({ children, muted = false }) {
   );
 }
 
-function QuoteCard({ quote, attr }) {
+function QuoteCard({ quote, attr, featuredLine }) {
+  // Optional "pull-quote" treatment: big typographic lead, then the rest as body.
+  if (featuredLine && quote.includes(featuredLine)) {
+    const rest = quote.replace(featuredLine, "").trim();
+    return (
+      <figure className="p-7 md:p-8 border border-paper/15 bg-paper/[0.05]">
+        <div className="flex items-center gap-1 text-warm-gold text-base" aria-label="Five star rating">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <span key={i}>&#9733;</span>
+          ))}
+        </div>
+        <blockquote className="mt-5 font-serif italic text-paper leading-[0.95] font-light" style={{ fontSize: "clamp(2.2rem, 3.2vw, 3.4rem)" }}>
+          &ldquo;{featuredLine}&rdquo;
+        </blockquote>
+        <p className="mt-5 font-serif italic text-paper/75 text-base leading-snug">
+          &ldquo;{rest}&rdquo;
+        </p>
+        <figcaption className="mt-5 font-brand text-[11px] uppercase tracking-[0.22em] text-paper/70">
+          &mdash; {attr}
+        </figcaption>
+      </figure>
+    );
+  }
   return (
     <figure className="p-7 md:p-8 border border-paper/15 bg-paper/[0.05]">
       <div className="flex items-center gap-1 text-warm-gold text-base" aria-label="Five star rating">

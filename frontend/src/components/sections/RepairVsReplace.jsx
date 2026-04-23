@@ -26,7 +26,7 @@ export default function RepairVsReplace() {
       className="relative bg-paper py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="05 / 13" title="The choice" />
+        <SectionTag number="05 / 14" title="The choice" />
 
         <h2
           className="mt-8 font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.4vw] leading-[0.98] max-w-5xl"

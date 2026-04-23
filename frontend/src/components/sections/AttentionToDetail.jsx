@@ -31,7 +31,7 @@ export default function AttentionToDetail() {
 
         <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-12 max-w-[1600px] mx-auto">
           <SectionTag
-            number="10 / 13"
+            number="10 / 14"
             title="Craft"
             className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
           />

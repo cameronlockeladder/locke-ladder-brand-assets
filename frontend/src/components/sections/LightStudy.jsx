@@ -25,7 +25,7 @@ export default function LightStudy() {
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12 py-24 md:py-32 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6">
             <SectionTag
-              number="08 / 13"
+              number="08 / 14"
               title="Color for life"
               className="[&_.eyebrow]:text-paper/70 [&_*]:text-paper/90"
             />

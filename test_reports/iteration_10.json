@@ -1,0 +1,45 @@
+{
+  "summary": "Iter 11 audit-action validation (frontend + PDF endpoint). 10 of 11 acceptance checks PASS. ONE real failure: Laskey intro figure still renders the 'LOCKE & LADDER CLIENT' badge — spec explicitly required it to be removed (only 'Laskey Residence · Introducing Brava' should remain on laskey-intro). All other requested changes verified: scroll progress bar, new FAQ section (13/14), Faith Apostolic 3rd quote card, Hickman pull-quote treatment ('Top shelf.' at 54.4px blockquote + supporting <p> body), 22-thumbnail gallery with zero L&L badges on the rail, side-nav relabeled 'Alignment' and now has 14 dots (added faq), rebuilt HumanClose sign-off block (statement + Jon Strand signature + PDF button at right=494px, nowhere near right edge + '— end —' marker), section numbering updated to /14 across spot-checked sections, no console errors on full scroll, PDF endpoint returns 200 application/pdf 6,191,706 bytes.",
+  "backend_issues": { "critical": [], "minor": [] },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "BravaProof.jsx (lines 117-121, data-testid=laskey-intro)",
+        "issue": "Laskey intro still contains the 'Locke & Ladder client' badge overlay (<span>…Locke &amp; Ladder client</span>). Spec (review item #5b) requires: 'The Laskey intro figure (data-testid=laskey-intro) NO LONGER contains any element with the text \"Locke & Ladder client\" — only \"Laskey Residence · Introducing Brava\" remains.' Currently laskey-intro.innerText = 'LOCKE & LADDER CLIENT\\nLASKEY RESIDENCE · INTRODUCING BRAVA\\nReal cedar and Brava cedar on the same house. In the same light.'",
+        "selector": "[data-testid=\"laskey-intro\"] span (first badge in top-left column)",
+        "priority": "HIGH",
+        "fix": "Delete the <span className='…'>…Locke &amp; Ladder client</span> block at BravaProof.jsx lines 118-121 (and its outer wrapping flex-col gap-2 can become just the single Laskey-intro badge)."
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "verified_pass": {
+    "scroll_progress_bar": "data-testid=scroll-progress-bar exists; position:fixed, top:0, height:2px, z-index:50, background rgb(133,118,80) (warm-gold). At 50% scroll the inline transform = scaleX(0.518012) — within spec tolerance.",
+    "faq_section": "id=faq + data-testid=section-faq present. SectionTag shows '13 / 14 · QUESTIONS'. faq-headline = 'Questions the Board has asked before.'. 5 items rendered (faq-item-0..4). Initial state: toggle-0 aria-expanded=true & answer-0 visible; 1-4 collapsed. After clicking faq-toggle-2: item-0 aria-expanded=false, item-2 aria-expanded=true & answer-2 visible. All 5 question texts match the required substrings.",
+    "brava_quote_cards": "data-testid=brava-quote-cards has exactly 3 child cards. Card text includes 'You were so good to us!' and '— FAITH APOSTOLIC CHURCH' as the 3rd card.",
+    "hickman_pullquote": "Gilda Hickman's card contains a <blockquote> with text '“Top shelf.”' at computed fontSize 54.4px (≈3.4rem — matches clamp ending), AND a separate <p> below it containing 'From the first attic inspection to the final day, Locke & Ladder gave us complete confidence…' Pull-quote treatment confirmed.",
+    "ll_detagging_partial": "(a) Gallery hero overlay: only 1 'Locke & Ladder client' string exists in entire BravaProof source (line 120) — NOT in the main gallery hero; confirmed. (c) Thumbnail rail has 0 L&L overlay badges (passes). (d) Thumbnail count = 22 (passes). (b) FAILS — see ui_bugs.",
+    "side_nav": "side-section-nav contains exactly 14 button[data-testid^=nav-dot-] in order: hero, relationship, roof-eol, field-inspection, repair-vs-replace, todays-cedar, brava-proof, light-study, system, attention, new-approach, roadmap, faq, human-close. nav-dot-relationship aria-label='Alignment', visible label 'ALIGNMENT'. nav-dot-faq exists.",
+    "humanclose_signoff": "signoff-block present. signoff-statement text = 'With respect for your mission,\\nand for the work of your community —' (contains both required substrings). signoff-signature = 'Jon Strand'. closing-pdf-download present; boundingRect.right = 494.45 at 1920-wide viewport — well under (1920 - 60) = 1860, zero side-nav collision. signoff-end-marker text = '— END —'.",
+    "section_tag_numbers": "#relationship='02 / 14', #system='09 / 14', #roadmap='11 / 14', #faq='13 / 14'. (#human-close has no SectionTag eyebrow — by design, full-bleed ending section.)",
+    "console_errors": "Zero pageerror events captured during full top-to-bottom scroll. Two framer-motion positioning warnings emitted (container non-static position) — non-blocking, not errors.",
+    "pdf_endpoint": "curl GET /api/proposal/packet.pdf => HTTP/2 200, content-type: application/pdf, 6,191,706 bytes (> 100 KB)."
+  },
+  "test_report_links": [],
+  "action_items": [
+    "BravaProof.jsx: remove the 'Locke & Ladder client' <span> badge (lines ~118-121) inside the laskey-intro figure. Only the 'Laskey Residence · Introducing Brava' caption should remain on that image per spec item #5b."
+  ],
+  "critical_code_review_comments": [
+    "BravaProof.jsx line 118-121 is the single remaining source of the 'Locke & Ladder client' string — removing it satisfies the full de-tagging spec in one edit.",
+    "HumanClose.jsx builds API URL via `${BACKEND_URL}/api` which correctly consumes REACT_APP_BACKEND_URL; fails safely to empty string if env missing.",
+    "ScrollProgress appears to use framer-motion with inline transform; a non-blocking framer-motion positioning warning is emitted twice on load — harmless but could be silenced by ensuring the scroll container has non-static position.",
+    "FAQ.jsx uses inline state with open=-1 sentinel for 'all collapsed' — clean and correct. Could be extracted to a small <Accordion> primitive if reused elsewhere."
+  ],
+  "updated_files": [],
+  "success_rate": { "backend": "100%", "frontend": "91%" },
+  "seed_data_creation": "",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "Only one line of code blocks full iter-11 acceptance: BravaProof.jsx lines 118-121 still render the 'Locke & Ladder client' overlay on the Laskey intro. After main agent removes that <span>, re-verify that document.querySelector('[data-testid=laskey-intro]').innerText does NOT match /Locke & Ladder client/i. Everything else — scroll progress bar, FAQ accordion (all 5 items + toggle behavior), 3rd Faith Apostolic quote card, Hickman pull-quote at 54px blockquote, 22-thumbnail rail with zero L&L badges, 14-dot side nav with 'Alignment' relabel + faq dot, HumanClose sign-off block with PDF at right=494px (no side-nav collision), end marker, /14 section numbering, zero console errors, PDF endpoint 200/6.19MB — all verified good."
+}
