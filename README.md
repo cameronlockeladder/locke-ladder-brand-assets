@@ -54,6 +54,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Supporting notes and generated manifests.
   Includes Brava presentation reference slides under `docs/brava-presentation-reference-slides/`.
   Includes Jon PDF reference pages under `docs/jon-pdf-reference-pages/`.
+  Includes cropped phone-shot reference images under `docs/phone-reference-photos/`.
   Includes Hickman and Laskey Brava cedar precedent reports under `docs/project-reports/brava-cedar-precedents/`.
 
 ## Deliberately Excluded
