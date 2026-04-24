@@ -147,9 +147,9 @@ export default function TodaysCedar() {
           </Caption>
         </div>
 
-        {/* Roofing-cost timeline · copy→viz POC #1 */}
+        {/* Roofing-cost timeline · doubling in real dollars, illustrative baseline */}
         <div className="mt-24 md:mt-28 pt-14 md:pt-16 border-t border-paper/10" data-testid="cost-timeline">
-          <div className="flex items-end justify-between gap-8 flex-wrap mb-10">
+          <div className="flex items-end justify-between gap-8 flex-wrap mb-12">
             <div>
               <div className="eyebrow text-paper/70">The cost of waiting</div>
               <h3 className="mt-4 font-serif italic font-light text-paper text-[7vw] sm:text-3xl lg:text-[2.8vw] leading-[1.05] max-w-3xl">
@@ -162,34 +162,52 @@ export default function TodaysCedar() {
             </p>
           </div>
 
-          <div className="relative pt-10 pb-6">
-            <div className="absolute left-0 right-0 top-[52px] h-px bg-paper/15" />
-            <div className="grid grid-cols-4 gap-0 relative">
-              {[
-                { year: "1996", mul: "1x", dot: "bg-paper/25" },
-                { year: "2006", mul: "2x", dot: "bg-paper/45" },
-                { year: "2016", mul: "4x", dot: "bg-paper/70" },
-                { year: "2026", mul: "8x", dot: "bg-warm-gold" },
-              ].map((t, i) => (
+          {/* Scaled bar-columns · heights grow exponentially to show the doubling visually */}
+          <div className="grid grid-cols-4 gap-4 md:gap-6 items-end" style={{ minHeight: "360px" }}>
+            {[
+              { year: "1996", amount: "$100,000", grew: 100, tone: "muted" },
+              { year: "2006", amount: "$200,000", grew: 200, tone: "muted" },
+              { year: "2016", amount: "$400,000", grew: 400, tone: "muted" },
+              { year: "2026", amount: "$800,000", grew: 800, tone: "gold" },
+            ].map((t, i) => {
+              const pct = (t.grew / 800) * 100; // scale against 2026 max
+              return (
                 <motion.div
                   key={t.year}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                  transition={{ duration: 0.8, delay: i * 0.15 }}
                   data-testid={`timeline-dot-${t.year}`}
-                  className="flex flex-col items-center text-center px-3"
+                  className="flex flex-col items-center text-center h-full justify-end"
                 >
-                  <div className="font-display text-paper text-3xl md:text-5xl font-medium tabular-nums leading-none">
-                    {t.mul}
+                  <div
+                    className={`font-display font-semibold tabular-nums leading-none mb-3 ${
+                      t.tone === "gold" ? "text-warm-gold" : "text-paper"
+                    }`}
+                    style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.4rem)" }}
+                  >
+                    {t.amount}
                   </div>
-                  <span className={`mt-8 w-3 h-3 rounded-full ${t.dot} ring-4 ring-ink`} />
+                  <motion.div
+                    initial={{ height: 0 }}
+                    whileInView={{ height: `${pct}%` }}
+                    viewport={{ once: true, margin: "-60px" }}
+                    transition={{ duration: 1.2, delay: 0.2 + i * 0.15, ease: [0.25, 1, 0.5, 1] }}
+                    className={`w-full max-w-[120px] mx-auto ${
+                      t.tone === "gold" ? "bg-warm-gold" : "bg-paper/25"
+                    }`}
+                    style={{ minHeight: "18px" }}
+                  />
                   <div className="mt-4 font-brand text-[11px] uppercase tracking-[0.24em] text-paper/55">
                     {t.year}
                   </div>
                 </motion.div>
-              ))}
-            </div>
+              );
+            })}
+          </div>
+          <div className="mt-6 font-brand text-[10px] uppercase tracking-[0.24em] text-paper/40">
+            Illustrative baseline &middot; a comparable roof indexed at $100,000 in 1996.
           </div>
         </div>
 

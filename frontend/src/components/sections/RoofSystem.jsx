@@ -22,7 +22,7 @@ const STANDARDS = [
 
 const PARTNERS = [
   { name: "Brava Roof Tile", role: "Material · Composite Shake", href: "https://www.bravarooftile.com" },
-  { name: "Bone Roofing Supply", role: "Distribution", href: "https://bonedry.com" },
+  { name: "Bone Roofing Supply", role: "Distribution", href: "https://www.boneroofingsupply.com" },
   { name: "Grace Ice & Water Shield", role: "Membrane", href: "https://gcpat.com/solutions/products/grace-ice-water-shield-roofing-underlayment" },
   { name: "Eco Chief · Solarhide", role: "Snow retention", href: "https://ecochief.com" },
   { name: "Solar Innovations", role: "Specialty glazing", href: "https://solarinnovations.com" },
@@ -186,6 +186,7 @@ export default function RoofSystem() {
             badge="04"
             title="Grace Ice &amp; Water Shield vs generic IWS"
             subtitle="Where cheap membranes fail, Grace still performs."
+            defaultOpen={true}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-ink/15">
               <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-ink/15">
@@ -289,8 +290,8 @@ function StandardBadge({ s, i, last }) {
   );
 }
 
-function DetailPanel({ testId, badge, title, subtitle, children }) {
-  const [open, setOpen] = useState(false);
+function DetailPanel({ testId, badge, title, subtitle, defaultOpen = false, children }) {
+  const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="border border-rule bg-paper" data-testid={testId}>
       <button

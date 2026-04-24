@@ -80,14 +80,14 @@ export default function Relationship() {
             className="relative overflow-hidden bg-ink/5 aspect-[4/5]"
           >
             <img
-              src="/assets/photos/team/jon-presenting.webp"
-              alt="Jon Strand teaching at Locke & Ladder"
+              src="/assets/photos/team/jon-dad-billy-graham.webp"
+              alt="Jon's father and Billy Graham · framed photograph"
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent pointer-events-none" />
             <figcaption className="absolute bottom-5 left-5 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/60 backdrop-blur-sm text-paper px-2.5 py-1">
-              Jon &middot; teaching at Locke &amp; Ladder
+              Jon&rsquo;s father with Billy Graham
             </figcaption>
           </figure>
         </div>

@@ -95,7 +95,7 @@ export default function FAQ() {
                   }`}
                   data-testid={`faq-answer-${i}`}
                 >
-                  <div className="pb-8 md:pb-10 pl-16 md:pl-[88px] pr-4 md:pr-16 -mt-2">
+                  <div className="pt-2 pb-8 md:pb-10 pl-16 md:pl-[88px] pr-4 md:pr-16">
                     <p className="text-body text-base md:text-lg leading-relaxed max-w-3xl">
                       {item.a}
                     </p>
