@@ -434,48 +434,74 @@ function SystemPanel({ hovered }) {
 
 function SystemDiagram({ hovered }) {
   const layers = [
-    { y: 40, label: "01", color: "#1A1C20" },
-    { y: 90, label: "02", color: "#2B2D32" },
-    { y: 140, label: "03", color: "#857650" },
-    { y: 190, label: "04", color: "#9A5B3E" },
-    { y: 240, label: "05", color: "#8A98A1" },
-    { y: 290, label: "06", color: "#D9D4CA" },
+    { y: 56, label: "01", color: "#1A1C20", name: "Brava shake" },
+    { y: 108, label: "02", color: "#2B2D32", name: "Edge metals" },
+    { y: 160, label: "03", color: "#857650", name: "Ring-shank nails" },
+    { y: 212, label: "04", color: "#9A5B3E", name: "Grace IWS" },
+    { y: 264, label: "05", color: "#8A98A1", name: "EchoShield" },
+    { y: 316, label: "06", color: "#D9D4CA", name: "Decking" },
   ];
   return (
-    <svg viewBox="0 0 300 400" className="w-full h-full" aria-hidden="true">
+    <svg viewBox="0 0 380 420" className="w-full h-full" aria-hidden="true">
       <defs>
         <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
           <stop offset="0%" stopColor="#F1EDE5" />
           <stop offset="100%" stopColor="#EAE2D2" />
         </linearGradient>
       </defs>
-      <rect x="0" y="0" width="300" height="400" fill="url(#sky)" />
+      <rect x="0" y="0" width="380" height="420" fill="url(#sky)" />
+
+      {/* Polygons · centered, slight depth offset */}
       {layers.map((l, i) => {
         const active = hovered === l.label;
         const dim = hovered && hovered !== l.label;
+        const xOffset = 50 + i * 3;
         return (
           <g
-            key={i}
-            transform={`translate(${30 + i * 4}, ${l.y})`}
+            key={l.label}
             data-testid={`system-diagram-layer-${l.label}`}
             style={{
-              opacity: dim ? 0.25 : 1,
-              transform: `translate(${30 + i * 4}px, ${l.y + (active ? -12 : 0)}px)`,
+              opacity: dim ? 0.28 : 1,
+              transform: `translate(${xOffset}px, ${l.y + (active ? -10 : 0)}px)`,
               transition: "transform 380ms cubic-bezier(0.25, 1, 0.5, 1), opacity 260ms ease",
+              transformOrigin: "center",
             }}
           >
             <polygon
               points="0,30 120,0 240,30 120,60"
               fill={l.color}
-              opacity={active ? 1 : 0.9}
+              opacity={active ? 1 : 0.92}
+              stroke={active ? "#857650" : "#1A1C20"}
+              strokeOpacity={active ? 1 : 0.25}
+              strokeWidth={active ? 2 : 1}
+            />
+          </g>
+        );
+      })}
+
+      {/* Labels · static column, never translates */}
+      {layers.map((l) => {
+        const active = hovered === l.label;
+        const dim = hovered && hovered !== l.label;
+        return (
+          <g
+            key={`label-${l.label}`}
+            style={{
+              opacity: dim ? 0.3 : 1,
+              transition: "opacity 260ms ease",
+            }}
+          >
+            <line
+              x1="296" y1={l.y + 30}
+              x2="324" y2={l.y + 30}
               stroke={active ? "#857650" : "#1A1C20"}
               strokeOpacity={active ? 1 : 0.25}
               strokeWidth={active ? 2 : 1}
             />
             <text
-              x="250" y="36"
+              x="332" y={l.y + 34}
               fontFamily="Inter, sans-serif"
-              fontSize="12"
+              fontSize="13"
               fontWeight={active ? 700 : 600}
               fill={active ? "#857650" : "#1A1C20"}
             >
@@ -484,8 +510,9 @@ function SystemDiagram({ hovered }) {
           </g>
         );
       })}
-      <line x1="0" y1="360" x2="300" y2="360" stroke="#1A1C20" strokeOpacity="0.15" />
-      <text x="30" y="378" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="2" fill="#50636F">
+
+      <line x1="20" y1="386" x2="360" y2="386" stroke="#1A1C20" strokeOpacity="0.15" />
+      <text x="20" y="404" fontFamily="Inter, sans-serif" fontSize="9" letterSpacing="2" fill="#50636F">
         INDICATIVE · NOT TO SCALE
       </text>
     </svg>

@@ -194,10 +194,7 @@ function MagnifierTile({ src, label, className, testId, onClick }) {
         />
       )}
 
-      <div className="absolute bottom-3 left-4 right-4 flex items-end justify-between text-paper gap-3 pointer-events-none">
-        <span className="font-brand text-[10px] tracking-[0.22em] uppercase bg-paper/90 text-ink px-2 py-[2px]">
-          {label}
-        </span>
+      <div className="absolute bottom-3 left-4 right-4 flex items-end justify-end text-paper gap-3 pointer-events-none">
         <span className="font-brand text-[10px] tracking-[0.22em] uppercase opacity-80 group-hover:opacity-100 shrink-0">
           Enlarge
         </span>

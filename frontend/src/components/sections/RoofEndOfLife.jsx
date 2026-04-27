@@ -84,7 +84,7 @@ function Polycam3D() {
             data-testid="polycam-load-button"
             className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-ink text-paper hover:bg-ink-soft transition-colors"
             style={{
-              backgroundImage: "url('/assets/photos/projects/christ-church/topdown.jpg')",
+              backgroundImage: "url('/assets/photos/projects/christ-church/topdown.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

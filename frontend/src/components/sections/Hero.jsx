@@ -68,15 +68,6 @@ export default function Hero() {
             <br />
             <span className="text-paper/80">Oak&nbsp;Brook.</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.9, ease: [0.25, 1, 0.5, 1] }}
-            className="mt-8 max-w-xl text-lg md:text-xl text-paper/80 leading-relaxed font-light"
-          >
-            The congregation knows the steeple before they know the address.
-            We built this proposal around keeping it that way.
-          </motion.p>
         </div>
 
         <motion.div

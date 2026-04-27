@@ -15,10 +15,9 @@ const FRAMES = Array.from(
 // Time anchor labels distributed across the visible day.
 const TIME_MARKS = [
   { pct: 0, label: "Dawn" },
-  { pct: 22, label: "Morning" },
-  { pct: 50, label: "Noon" },
-  { pct: 72, label: "Late afternoon" },
-  { pct: 88, label: "Vespers" },
+  { pct: 25, label: "Morning" },
+  { pct: 55, label: "Noon" },
+  { pct: 80, label: "Late afternoon" },
   { pct: 100, label: "Evening" },
 ];
 
@@ -179,9 +178,6 @@ function AspenSlider() {
           className="absolute top-4 left-4 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/65 backdrop-blur-sm text-paper/90 px-2.5 py-1"
         >
           {nearestLabel}
-        </div>
-        <div className="absolute top-4 right-4 font-display text-paper/80 text-sm tabular-nums">
-          {String(frameIndex + 1).padStart(3, "0")} / {String(FRAME_COUNT).padStart(3, "0")}
         </div>
       </div>
 

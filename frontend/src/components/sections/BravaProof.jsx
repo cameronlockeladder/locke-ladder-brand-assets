@@ -129,59 +129,83 @@ export default function BravaProof() {
         </div>
       </figure>
 
-      {/* Why we chose Brava · full-bleed darkened Hickman POV video + overlaid copy */}
+      {/* Why we chose Brava · full-bleed Clarke photo background + centered vertical video + copy below */}
       <div className="relative overflow-hidden" data-testid="why-brava-block">
+        {/* Full-bleed darkened Clarke photo */}
         <div className="absolute inset-0 pointer-events-none">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
+          <img
+            src="/assets/photos/materials/why-brava/brava-cedar-clarke-during-319-why-brava.webp"
+            alt=""
+            loading="lazy"
             className="w-full h-full object-cover"
-            data-testid="why-brava-bg-video"
-          >
-            <source
-              src="/assets/videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4"
-              type="video/mp4"
-            />
-          </video>
-          <div className="absolute inset-0 bg-ink/65" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/75" />
+            data-testid="why-brava-bg-photo"
+          />
+          <div className="absolute inset-0 bg-ink/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink/85" />
         </div>
 
-        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 pt-28 md:pt-36 pb-28 md:pb-36">
-          <div className="max-w-3xl">
-            <div className="eyebrow text-bronze">Why we chose Brava</div>
-            <h3 className="mt-4 font-serif font-light display-tight text-[9vw] sm:text-4xl lg:text-[3.6vw] leading-[1.02] text-paper">
-              The first synthetic
-              <br />we put our name on.
-            </h3>
-
-            <div className="mt-8 max-w-xl space-y-5 text-paper/90 text-base md:text-lg leading-relaxed" data-testid="why-brava-body">
-              <p>
-                We refused every synthetic in this category for years. Brava
-                composite shake is the one that finally earned it.
-              </p>
-              <p>
-                Molded from real cedar masters. Mineral pigmented so the color
-                runs through the shake, not on top of it. Class 4 impact
-                rated. Made in Iowa with about 95% recycled content, and
-                backed for fifty years.
-              </p>
-              <p>
-                It is important to us that we only introduce a material to
-                the Board that we would specify on our own homes. Brava is
-                on that list.
-              </p>
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 lg:px-12 pt-24 md:pt-32 pb-24 md:pb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            {/* LEFT · vertical Hickman POV video like NewApproach */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <div
+                className="relative w-full max-w-[420px] aspect-[9/16] overflow-hidden bg-black ring-1 ring-paper/15 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)]"
+                data-testid="why-brava-video-wrap"
+              >
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  data-testid="why-brava-bg-video"
+                >
+                  <source
+                    src="/assets/videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent pointer-events-none" />
+                <span className="absolute bottom-3 left-3 font-brand text-[10px] uppercase tracking-[0.24em] bg-ink/55 backdrop-blur-sm text-paper/85 px-2 py-0.5">
+                  Hickman Residence &middot; Brava in hand
+                </span>
+              </div>
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3" data-testid="brava-badge-row">
-              <Badge>Class 4</Badge>
-              <Badge>Mineral pigmented</Badge>
-              <Badge muted>~95% recycled content</Badge>
-              <Badge muted>50-year limited warranty</Badge>
-              <Badge muted>Made in Washington, Iowa</Badge>
+            {/* RIGHT · copy + badges */}
+            <div className="lg:col-span-7">
+              <div className="eyebrow text-warm-gold/85">Why we chose Brava</div>
+              <h3 className="mt-4 font-serif font-light display-tight text-[9vw] sm:text-4xl lg:text-[3.6vw] leading-[1.02] text-paper">
+                The first synthetic
+                <br />we put our name on.
+              </h3>
+
+              <div className="mt-8 max-w-xl space-y-5 text-paper/90 text-base md:text-lg leading-relaxed" data-testid="why-brava-body">
+                <p>
+                  We refused every synthetic in this category for years. Brava
+                  composite shake is the one that finally earned it.
+                </p>
+                <p>
+                  Molded from real cedar masters. Mineral pigmented so the color
+                  runs through the shake, not on top of it. Class 4 impact
+                  rated. Made in Iowa with about 95% recycled content, and
+                  backed for fifty years.
+                </p>
+                <p>
+                  It is important to us that we only introduce a material to
+                  the Board that we would specify on our own homes. Brava is
+                  on that list.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-3" data-testid="brava-badge-row">
+                <Badge>Class 4</Badge>
+                <Badge>Mineral pigmented</Badge>
+                <Badge muted>~95% recycled content</Badge>
+                <Badge muted>50-year limited warranty</Badge>
+                <Badge muted>Made in Washington, Iowa</Badge>
+              </div>
             </div>
           </div>
         </div>
