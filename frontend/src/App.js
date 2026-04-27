@@ -40,7 +40,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="App paper-grain bg-paper text-ink" data-testid="proposal-root">
+    <div className="App paper-grain bg-paper text-ink overflow-x-hidden" data-testid="proposal-root">
       <ScrollProgress />
       <Nav />
       <main>

@@ -48,7 +48,7 @@ export default function LightStudy() {
               Mineral pigments have held color for thousands of years. Brava
               uses the same principle &mdash; pigment runs through the shake,
               not on top of it. What you choose in daylight is what you see at
-              vespers, and what still reads as cedar at 7 p.m. in October.
+              dusk, and what still reads as cedar at 7 p.m. in October.
             </p>
           </div>
           <div className="lg:col-span-6">

@@ -56,20 +56,6 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        <div className="max-w-[1200px]">
-          <motion.h1
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 0.35, ease: [0.25, 1, 0.5, 1] }}
-            className="font-display text-paper text-[13vw] sm:text-[10vw] lg:text-[8.5vw] leading-[0.9] display-tight"
-            data-testid="hero-headline"
-          >
-            Christ&nbsp;Church
-            <br />
-            <span className="text-paper/80">Oak&nbsp;Brook.</span>
-          </motion.h1>
-        </div>
-
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
