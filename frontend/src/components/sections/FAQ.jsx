@@ -36,25 +36,6 @@ export default function FAQ() {
       <div className="max-w-[1600px] mx-auto">
         <SectionTag number="13 / 14" title="Questions" />
 
-        <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-          <div className="lg:col-span-8">
-            <h2
-              className="font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.4vw] leading-[0.98]"
-              data-testid="faq-headline"
-            >
-              Questions the Board
-              <br />has asked before.
-            </h2>
-          </div>
-          <div className="lg:col-span-4">
-            <p className="text-base md:text-lg leading-relaxed text-body">
-              Everything else lives in the in-person conversation with Jon.
-              This is the version each member can walk through at their own
-              pace.
-            </p>
-          </div>
-        </div>
-
         <div className="mt-16 border-t border-ink/15" data-testid="faq-list">
           {ITEMS.map((item, i) => {
             const isOpen = open === i;

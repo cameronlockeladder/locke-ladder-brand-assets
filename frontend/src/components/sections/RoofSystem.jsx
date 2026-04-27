@@ -152,7 +152,7 @@ export default function RoofSystem() {
             testId="panel-lowe"
             badge="05"
             title="Low-e Synthetic Underlayment"
-            subtitle="A second skin that reflects radiant heat back at the roof."
+            subtitle=""
           >
             <p className="text-body leading-relaxed">
               Traditional 30-lb felt paper does one job: keep water out for a
@@ -185,7 +185,7 @@ export default function RoofSystem() {
             testId="panel-iws"
             badge="04"
             title="Grace Ice &amp; Water Shield vs generic IWS"
-            subtitle="Where cheap membranes fail, Grace still performs."
+            subtitle=""
             defaultOpen={true}
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-ink/15">
@@ -309,7 +309,9 @@ function DetailPanel({ testId, badge, title, subtitle, defaultOpen = false, chil
             className="block font-display text-xl md:text-2xl text-ink font-medium leading-snug"
             dangerouslySetInnerHTML={{ __html: title }}
           />
-          <span className="block mt-1 text-sm md:text-base text-body leading-snug">{subtitle}</span>
+          {subtitle && (
+            <span className="block mt-1 text-sm md:text-base text-body leading-snug">{subtitle}</span>
+          )}
         </span>
         <span
           className={`shrink-0 w-8 h-8 rounded-full border border-ink/20 flex items-center justify-center transition-transform duration-300 ${

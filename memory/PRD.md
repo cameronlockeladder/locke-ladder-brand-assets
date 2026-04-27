@@ -30,14 +30,25 @@
 ## Iteration history
 - iter_5..iter_12: 17/17, 27/27, 14/14, 11/11, smoke, 14/14, 11/11, 14/14
 - iter_13 (claimed 10/10 but iter_14 retest revealed 3 missed items)
-- **iter_14 (current — Feb 2026 fork): 3 P0 fixes after testing-agent regression**
-  - Hero big "Christ Church / Oak Brook." display headline removed (was never actually applied in iter_13 source despite earlier claim)
-  - LightStudy "vespers" wording replaced with "dusk"
-  - **CRITICAL** horizontal-overflow on tablet (382px) and mobile (14px) fixed by adding `overflow-x-hidden` to root `.App` div in `App.js` — root cause was BravaProof brava-thumb-* rail and field-rail negative-margin leaking past viewport
-  - Bucket A asset cleanup: 15 orphaned files (32.3MB) removed — 6 PNG color-toggle variants, 3 christ-church hero MP4 alternates, 5 README.md, 1 dup wordmark.png. /assets/ is now 190MB (was 222MB).
-  - Verified tablet 768 + mobile 375 both report scrollWidth==clientWidth (0px overflow)
-  - Verified zero /assets/* 404s after deletion
-  - FAQ accordion mobile concern from iter_13 was a false positive (FAQ #0 opens by default)
+- iter_14 — 3 P0 fixes after testing-agent regression (Hero headline, vespers, mobile/tablet overflow) + Bucket A asset cleanup (32 MB / 15 files)
+- **iter_15 (current — Feb 2026): 14-item batch from user**
+  - Hero "Christ Church / Oak Brook." headline RESTORED (per user request after iter_14 removal)
+  - Alignment H2: "We speak your language." → "Alignment." (matches SectionTag)
+  - Field Inspection core group reset: 4 photos selected by user (jn-010, jn-032, jn-035, jn-095 with 180° rotation). 2×2 grid replaces previous 5-photo asymmetric layout.
+  - **Polycam fixed** — replaced iframe (was buffering forever due to Polycam's `cross-origin-embedder-policy: require-corp` requiring cross-origin isolation we don't ship) with click-to-launch-in-new-tab tile using the topdown.webp hero image
+  - TodaysCedar copy trimmed: removed body-2 paragraph entirely; body-1 cut from 8 sentences to 1 sentence; let visuals do the talking
+  - All `$X00,000` → `$X00K` (mobile bar graph no longer overflowing on 375px)
+  - Desktop serif headlines: increased line-height from `leading-[1.05]`/`leading-[0.98]` to `leading-[1.18-1.2]` for italic serif h3s in TodaysCedar — fixes "running into each other" issue
+  - **Lifespan visual rethink** — replaced confusing 3-ring concentric SVG with `ReplacementCycles` component: 50-year horizontal timeline with 3 rows (Generic Cedar = 3 segments, Certi-Label = 2 segments, Brava = 1 solid bar). New headline "One Brava roof outlasts three wood-cedar roofs." Tells the story in 2 seconds.
+  - RoofSystem detail panels: deleted "a second skin..." (Low-e) and "Where cheap membranes fail..." (Grace IWS) subtitles. `DetailPanel` component now conditionally renders subtitle only if non-empty.
+  - BravaProof "Why we chose Brava": deleted "We refused every synthetic..." and "Molded from real cedar masters..." paragraphs. Kept only the "introduce a material to the Board we would specify on our own homes" line.
+  - BravaProof gallery: removed "Lake Forest Shake · Mundelein, IL" photo from BRAVA_PROJECTS + GALLERY interleave (gallery index re-numbered). Added `brava-gallery-prev` and `brava-gallery-next` round arrow buttons (positioned mid-height left/right) for navigation.
+  - LightStudy: deleted "Mineral pigments have held color..." paragraph, replaced with single-line copy connecting to the Color-for-Life slide visual.
+  - FAQ: deleted full H2 "Questions the Board has asked before." block + intro paragraph. SectionTag remains as the only header.
+
+## Iter_15 verified deliveries (Feb 2026)
+- Hard JS-metric checks confirmed: hero-headline present; alignment-headline reads "Alignment."; faq-headline absent; polycam-launch present pointing to https://poly.cam/capture/3c1da4a0-...; lifespan-cycles section with 3 rows; brava-gallery-prev + brava-gallery-next present; "Mundelein", "vespers", "Mineral pigments", "We refused", "Molded from real", "second skin", "Questions the Board", "Everything else lives", "We speak" — all 0 hits in body text; dollars format = ['$100K', '$200K', '$400K', '$800K']; field-featured-* count = 4
+- Visual screenshots (1440 desktop + 375 mobile) confirm: serif headlines no longer collide on desktop; $K bars fit cleanly on 375px; replacement-cycle visual reads instantly; Polycam launch tile renders the topdown hero with proper CTA
 
 ## Outstanding asset requests (optional)
 - Faith Apostolic Church exterior (only if it fits without lengthening)

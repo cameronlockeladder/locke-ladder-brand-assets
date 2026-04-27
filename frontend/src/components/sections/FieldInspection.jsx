@@ -3,28 +3,27 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { SectionTag } from "@/components/primitives";
 
-/* Featured · worst, most clear condition photos (visual cull) + hail hits.
-   Captions adapted from real roof inspection-report language, not fabricated. */
+/* Featured · core inspection group selected by Locke & Ladder */
 const FEATURED = [
   {
-    src: "/assets/photos/projects/christ-church/field-inspection-report/full-campus-aerial-wide.webp",
-    label: "Full campus aerial",
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-010.webp",
+    label: "Field condition · 010",
+    rotate: false,
   },
   {
-    src: "/assets/photos/projects/christ-church/jobnimbus/jn-013.webp",
-    label: "Wind-lifted shakes across the field",
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-032.webp",
+    label: "Field condition · 032",
+    rotate: false,
   },
   {
-    src: "/assets/photos/projects/christ-church/jobnimbus/jn-023.webp",
-    label: "Impact indentations to soft metals",
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-035.webp",
+    label: "Field condition · 035",
+    rotate: false,
   },
   {
-    src: "/assets/photos/projects/christ-church/jobnimbus/jn-065.webp",
-    label: "Split and cupped shakes across the field",
-  },
-  {
-    src: "/assets/photos/projects/christ-church/jobnimbus/jn-074.webp",
-    label: "Previous leak damage at chimney",
+    src: "/assets/photos/projects/christ-church/jobnimbus/jn-095.webp",
+    label: "Field condition · 095",
+    rotate: true,
   },
 ];
 
@@ -78,25 +77,18 @@ export default function FieldInspection() {
           Hover any featured photo to magnify. Click to enlarge.
         </div>
 
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-6 gap-3 md:gap-4">
-          {FEATURED.map((f, i) => {
-            const className =
-              i === 0 ? "col-span-2 md:col-span-6 aspect-[16/7]"
-              : i === 1 ? "col-span-1 md:col-span-3 aspect-[4/3]"
-              : i === 2 ? "col-span-1 md:col-span-3 aspect-[4/3]"
-              : i === 3 ? "col-span-1 md:col-span-3 aspect-[4/3]"
-              : "col-span-1 md:col-span-3 aspect-[4/3]";
-            return (
-              <MagnifierTile
-                key={i}
-                src={f.src}
-                label={f.label}
-                className={className}
-                testId={`field-featured-${i}`}
-                onClick={() => openAt(i)}
-              />
-            );
-          })}
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-2 gap-3 md:gap-4">
+          {FEATURED.map((f, i) => (
+            <MagnifierTile
+              key={i}
+              src={f.src}
+              label={f.label}
+              rotate={f.rotate}
+              className="col-span-1 aspect-[4/3]"
+              testId={`field-featured-${i}`}
+              onClick={() => openAt(i)}
+            />
+          ))}
         </div>
 
         <div className="mt-16 md:mt-20">
@@ -146,7 +138,7 @@ export default function FieldInspection() {
   );
 }
 
-function MagnifierTile({ src, label, className, testId, onClick }) {
+function MagnifierTile({ src, label, className, testId, onClick, rotate = false }) {
   const ref = useRef(null);
   const [lens, setLens] = useState(null);
 
@@ -172,6 +164,7 @@ function MagnifierTile({ src, label, className, testId, onClick }) {
         src={src}
         alt={label}
         loading="lazy"
+        style={rotate ? { transform: "rotate(180deg)" } : undefined}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.02]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent opacity-70 group-hover:opacity-55 transition-opacity pointer-events-none" />
@@ -190,6 +183,7 @@ function MagnifierTile({ src, label, className, testId, onClick }) {
             backgroundSize: "500% 500%",
             backgroundPosition: `${lens.x}% ${lens.y}%`,
             backgroundRepeat: "no-repeat",
+            transform: rotate ? "rotate(180deg)" : undefined,
           }}
         />
       )}

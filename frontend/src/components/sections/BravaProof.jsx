@@ -20,7 +20,6 @@ const BRAVA_PROJECTS = [
   { src: "/assets/photos/materials/brava-gallery/13-wyoming-lodge.webp", title: "Lodge", loc: "Wyoming" },
   { src: "/assets/photos/materials/brava-gallery/01-new-york-lake-forest.webp", title: "Lake Forest", loc: "New York" },
   { src: "/assets/photos/materials/brava-gallery/02-georgia-lake-forest.webp", title: "Lake Forest", loc: "Georgia" },
-  { src: "/assets/photos/materials/brava-gallery/09-mundelein-lake-forest-cedar-shake.webp", title: "Lake Forest Shake", loc: "Mundelein, IL" },
   { src: "/assets/photos/materials/brava-gallery/10-winnetka-weathered-cedar-shake.webp", title: "Weathered Cedar Shake", loc: "Winnetka, IL" },
   { src: "/assets/photos/materials/brava-gallery/06-long-grove-aspen-cedar-shake.webp", title: "Aspen Cedar Shake", loc: "Long Grove, IL" },
   { src: "/assets/photos/materials/brava-gallery/14-wyoming-natural-cedar-shake.webp", title: "Natural Cedar Shake", loc: "Wyoming" },
@@ -40,22 +39,21 @@ const GALLERY = [
   LL_PROJECTS[2],    // Hickman 11
   BRAVA_PROJECTS[2], // GA Lake Forest
   LL_PROJECTS[0],    // Hickman 06
-  BRAVA_PROJECTS[3], // Mundelein Lake Forest
   LL_PROJECTS[6],    // Laskey 15
-  BRAVA_PROJECTS[4], // Winnetka Weathered
+  BRAVA_PROJECTS[3], // Winnetka Weathered (was [4])
   LL_PROJECTS[3],    // Hickman 13
-  BRAVA_PROJECTS[5], // Long Grove Aspen
+  BRAVA_PROJECTS[4], // Long Grove Aspen (was [5])
   LL_PROJECTS[7],    // Laskey 16
-  BRAVA_PROJECTS[6], // Wyoming Natural
+  BRAVA_PROJECTS[5], // Wyoming Natural (was [6])
   LL_PROJECTS[4],    // Hickman export-16
-  BRAVA_PROJECTS[7], // NC Natural
+  BRAVA_PROJECTS[6], // NC Natural (was [7])
   LL_PROJECTS[8],    // Laskey 29
-  BRAVA_PROJECTS[8], // Greensboro Arendale
+  BRAVA_PROJECTS[7], // Greensboro Arendale (was [8])
   LL_PROJECTS[1],    // Hickman 02
-  BRAVA_PROJECTS[9], // GA Canyon Gray
-  BRAVA_PROJECTS[10],// Colorado
-  BRAVA_PROJECTS[11],// Beechwood
-  BRAVA_PROJECTS[12],// IL Cottage
+  BRAVA_PROJECTS[8], // GA Canyon Gray (was [9])
+  BRAVA_PROJECTS[9], // Colorado (was [10])
+  BRAVA_PROJECTS[10],// Beechwood (was [11])
+  BRAVA_PROJECTS[11],// IL Cottage (was [12])
 ];
 
 export default function BravaProof() {
@@ -183,16 +181,6 @@ export default function BravaProof() {
 
               <div className="mt-8 max-w-xl space-y-5 text-paper/90 text-base md:text-lg leading-relaxed" data-testid="why-brava-body">
                 <p>
-                  We refused every synthetic in this category for years. Brava
-                  composite shake is the one that finally earned it.
-                </p>
-                <p>
-                  Molded from real cedar masters. Mineral pigmented so the color
-                  runs through the shake, not on top of it. Class 4 impact
-                  rated. Made in Iowa with about 95% recycled content, and
-                  backed for fifty years.
-                </p>
-                <p>
                   It is important to us that we only introduce a material to
                   the Board that we would specify on our own homes. Brava is
                   on that list.
@@ -251,6 +239,30 @@ export default function BravaProof() {
             </div>
           </div>
         </div>
+
+        {/* Prev / Next arrow buttons */}
+        <button
+          type="button"
+          onClick={() => setActive((a) => (a - 1 + GALLERY.length) % GALLERY.length)}
+          data-testid="brava-gallery-prev"
+          aria-label="Previous image"
+          className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-ink/55 hover:bg-ink/85 backdrop-blur-sm text-paper transition-colors ring-1 ring-paper/20 hover:ring-paper/50 z-10"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <button
+          type="button"
+          onClick={() => setActive((a) => (a + 1) % GALLERY.length)}
+          data-testid="brava-gallery-next"
+          aria-label="Next image"
+          className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-11 h-11 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-ink/55 hover:bg-ink/85 backdrop-blur-sm text-paper transition-colors ring-1 ring-paper/20 hover:ring-paper/50 z-10"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
       </div>
 
       <div className="bg-ink border-t border-paper/10">

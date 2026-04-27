@@ -1,5 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { SectionTag, Caption } from "@/components/primitives";
+
+const POLYCAM_URL = "https://poly.cam/capture/3c1da4a0-341f-4fa2-b9fc-a1afa6154d36";
 
 export default function RoofEndOfLife() {
   return (
@@ -31,7 +33,7 @@ export default function RoofEndOfLife() {
           </div>
         </div>
 
-        {/* Polycam 3D scan · preserved interactive */}
+        {/* Polycam 3D scan · launches in a new tab (Polycam embed requires cross-origin isolation we don't ship) */}
         <div className="mt-20">
           <Polycam3D />
         </div>
@@ -41,20 +43,6 @@ export default function RoofEndOfLife() {
 }
 
 function Polycam3D() {
-  const ref = useRef(null);
-  const [loaded, setLoaded] = useState(false);
-  const [inView, setInView] = useState(false);
-
-  useEffect(() => {
-    if (!ref.current) return;
-    const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && setInView(true)),
-      { rootMargin: "300px 0px" }
-    );
-    io.observe(ref.current);
-    return () => io.disconnect();
-  }, []);
-
   return (
     <div>
       <div className="flex items-end justify-between flex-wrap gap-6 mb-6">
@@ -62,47 +50,39 @@ function Polycam3D() {
         <Caption>3D Scan created from Locke &amp; Ladder site visit</Caption>
       </div>
 
-      <div
-        ref={ref}
-        className="relative bg-ink border border-ink/10 overflow-hidden group"
-        data-testid="polycam-embed-wrap"
+      <a
+        href={POLYCAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-testid="polycam-launch"
+        className="relative block w-full overflow-hidden bg-ink border border-ink/10 group focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-gold"
         style={{ aspectRatio: "16 / 9" }}
       >
-        {inView && loaded ? (
-          <iframe
-            src="https://poly.cam/capture/3c1da4a0-341f-4fa2-b9fc-a1afa6154d36/embed"
-            title="Polycam capture viewer, Christ Church Oak Brook"
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-            frameBorder="0"
-            allow="fullscreen; xr-spatial-tracking"
-            loading="lazy"
-            data-testid="polycam-iframe"
-          />
-        ) : (
-          <button
-            onClick={() => setLoaded(true)}
-            data-testid="polycam-load-button"
-            className="absolute inset-0 w-full h-full flex flex-col items-center justify-center bg-ink text-paper hover:bg-ink-soft transition-colors"
-            style={{
-              backgroundImage: "url('/assets/photos/projects/christ-church/topdown.webp')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute inset-0 bg-ink/65 group-hover:bg-ink/55 transition-colors" />
-            <div className="relative flex flex-col items-center gap-5">
-              <span className="eyebrow text-warm-gold">Interactive 3D model</span>
-              <span className="font-display text-2xl md:text-4xl text-paper font-medium">
-                Launch walkthrough
-              </span>
-              <span className="mt-4 inline-flex items-center gap-3 font-brand text-[11px] uppercase tracking-[0.28em] text-paper/80 border border-paper/40 px-5 py-2.5">
-                <span className="block w-2 h-2 bg-warm-gold rounded-full" />
-                Click to load Polycam viewer
-              </span>
-            </div>
-          </button>
-        )}
-      </div>
+        <img
+          src="/assets/photos/projects/christ-church/topdown.webp"
+          alt="Polycam 3D scan of Christ Church Oak Brook campus, top-down view"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.025]"
+        />
+        <div className="absolute inset-0 bg-ink/60 group-hover:bg-ink/45 transition-colors" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 text-paper text-center px-6">
+          <span className="eyebrow text-warm-gold">Interactive 3D model</span>
+          <span className="font-display text-3xl md:text-5xl font-medium leading-[1.05]">
+            Walk the campus &middot; in 3D
+          </span>
+          <span className="mt-3 inline-flex items-center gap-3 font-brand text-[11px] uppercase tracking-[0.28em] text-paper/90 border border-paper/50 px-5 py-2.5 group-hover:bg-paper group-hover:text-ink transition-colors">
+            <span className="block w-2 h-2 bg-warm-gold rounded-full" />
+            Launch in a new tab
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M7 17 17 7" />
+              <path d="M8 7h9v9" />
+            </svg>
+          </span>
+        </div>
+      </a>
+      <Caption className="mt-3 text-slate/80">
+        Opens at poly.cam &middot; full WebGL 3D viewer (zoom, pan, walk-through)
+      </Caption>
     </div>
   );
 }

@@ -20,8 +20,7 @@ export default function Relationship() {
           className="mt-8 font-display display-tight text-[11vw] sm:text-5xl lg:text-[5.4vw] leading-[0.98] max-w-5xl"
           data-testid="alignment-headline"
         >
-          We speak
-          <br />your language.
+          Alignment.
         </motion.h2>
 
         {/* Copy FIRST · so the section reads even without photos */}

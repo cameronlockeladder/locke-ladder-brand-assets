@@ -45,10 +45,9 @@ export default function LightStudy() {
               <br />through the shake.
             </h2>
             <p className="mt-8 max-w-2xl text-paper/80 text-base md:text-lg leading-relaxed">
-              Mineral pigments have held color for thousands of years. Brava
-              uses the same principle &mdash; pigment runs through the shake,
-              not on top of it. What you choose in daylight is what you see at
-              dusk, and what still reads as cedar at 7 p.m. in October.
+              The same image, walked through every hour from sunrise to dusk &mdash;
+              so the Board can see exactly how Brava reads in every light Christ
+              Church gets.
             </p>
           </div>
           <div className="lg:col-span-6">
