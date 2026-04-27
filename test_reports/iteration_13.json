@@ -1,0 +1,51 @@
+{
+  "summary": "Iteration 13 frontend regression after Bucket A 32MB asset deletion. Confirmed ZERO 404s on /assets/* (deletion clean) and PDF endpoint healthy (200 application/pdf). 14 sections render with correct data-testid pattern. ScrollProgress bar (data-testid=scroll-progress-bar), hamburger, side-nav, and Polycam lazy iframe (loads after click) all working. However, three of the requested 'TWEAK' items are NOT implemented in code (regression vs the iter_12 claims) and there is a real horizontal-overflow bug on tablet/mobile that affects the board's iPad/phone use case.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "Hero.jsx", "issue": "TWEAK-1 NOT applied. Big display headline 'Christ Church / Oak Brook.' (font-display, text-[13vw] sm:text-[10vw] lg:text-[8.5vw], data-testid=hero-headline, lines 60-70) is still rendering over the steeple video. User asked for it to be removed; iter_12 report claimed all tweaks green but this one is clearly still in source and visible in screenshot.", "selector": "[data-testid=hero-headline]", "priority": "HIGH"},
+      {"component": "LightStudy.jsx", "issue": "TWEAK-5 partially incomplete. The word 'vespers' is still present in the body copy on line 51 ('What you choose in daylight is what you see at vespers, ...'). Frame counter is correctly absent, but the 'no vespers text' part of the request was not fulfilled.", "selector": "[data-testid=section-light-study] p", "priority": "MEDIUM"}
+    ],
+    "integration_issues": [],
+    "design_issues": [
+      {"screen": "Tablet 768x1024 (iPad portrait)", "issues": ["CRITICAL horizontal overflow: document body scrollWidth=1150 vs clientWidth=768 — page can be panned 382px to the right. Causes blank space on the right and broken layout, exactly the device class the board will use. Root cause appears to be the BravaProof thumb rail (data-testid=brava-thumb-* buttons, classes 'relative shrink-0 h-20 md:h-24 aspect-[3/2]') and possibly other horizontal rails that aren't fully clipped — note FieldInspection rail (data-testid=field-rail) IS properly clipped via overflow-x:auto, but its container '-mx-6 px-6' negative margin together with another non-rail element pushes main/proposal-root scrollWidth to 1150. Need to wrap each shrink-0 rail in a container with overflow-x:hidden (or apply overflow-x:hidden to <main> / .App)."]},
+      {"screen": "Mobile 375x667 (iPhone SE)", "issues": ["Horizontal overflow of 14px (body scrollWidth=389 vs clientWidth=375) — same family of cause as tablet but smaller. Still violates the 'NO horizontal overflow / scrollbar on body' acceptance criterion."]},
+      {"screen": "FAQ accordion (mobile)", "issues": ["Clicking [data-testid=faq-toggle-0] on mobile did not make [data-testid=faq-answer-0] visible (is_visible() returned false 500ms after click). Could be a Lenis/Framer animation timing issue or the toggle requires a different testid; worth a manual smoke check on a real iPad before the board demo."]}
+    ]
+  },
+  "test_results_detail": {
+    "REGRESSION-1_assets_404": "PASS — full-page scroll across desktop, mobile and tablet recorded zero failed network requests for any /assets/* URL. Deleted Bucket A files (front-entrance.mp4, hero-campus.mp4, side-entry.mp4, *-brava-aspen.png, *-brava-natural-cedar.png, locke-ladder-wordmark.png, 5 README.md) are not referenced anywhere in /app/frontend/src or /app/frontend/public.",
+    "TWEAK-1_hero_copy_removed": "FAIL — Hero.jsx still renders <h1 data-testid=hero-headline> with 'Christ Church / Oak Brook.' at text-[8.5vw]. Visible in screenshot.",
+    "TWEAK-2_field_inspection_captions": "PASS — section-field-inspection has 0 figcaption elements, 0 caption-class elements. 5x square hover magnifier present (44 imgs in section).",
+    "TWEAK-3_polycam_iframe": "PASS — section-roof-eol contains [data-testid=polycam-load-button] placeholder; on click, [data-testid=polycam-iframe] mounts with src=https://poly.cam/capture/3c1da4a0-341f-4fa2-b9fc-a1afa6154d36/embed. Lazy-load by design.",
+    "TWEAK-4_why_brava_bg_video": "PASS — [data-testid=why-brava-bg-video] present, computed position: absolute. Headline 'The first synthetic we put our name on.' present. No 2-col grid.",
+    "TWEAK-5_light_study_no_frame_no_vespers": "PARTIAL FAIL — no 'frame X of Y' counter and no literal 'frame' text (PASS), but 'vespers' word still in body copy line 51 of LightStudy.jsx (FAIL).",
+    "TWEAK-6_roof_system_svg": "PASS at desktop 1920 — viewBox '0 0 380 420', 7 <text> labels all inside bounds (0 overflow). L&L↔Brava toggle present. Mobile SVG renders 277x369 (scales). Recommend a manual click-through of the 6-layer hover and Standards popover open/close on a real iPad.",
+    "TWEAK-7_mobile_tablet_no_overflow": "FAIL — horizontal overflow 14px on 375px viewport, 382px on 768px viewport (see design_issues).",
+    "GLOBAL-A_14_sections": "PASS — exactly 14 [data-testid^=section-] elements: section-hero, section-relationship, section-roof-eol, section-field-inspection, section-repair-vs-replace, section-todays-cedar, section-brava-proof, section-light-study, section-system, section-attention, section-new-approach, section-roadmap, section-faq, section-human-close.",
+    "GLOBAL-B_nav_progress": "PASS — [data-testid=scroll-progress-bar] (fixed top-0 h-[2px] bg-warm-gold origin-left) present. Hamburger button present on mobile viewport. Night-mode toggle visible top-right (not click-tested due to time).",
+    "GLOBAL-C_console_errors": "PASS — 0 console errors during full-page scroll on desktop, mobile, and tablet. Only one Polycam-origin warning ('Invalid X-Frame-Options ALLOW' from poly.cam) — third-party, harmless, not from our code.",
+    "GLOBAL-D_pdf_endpoint": "PASS — GET /api/proposal/packet.pdf returned 200 application/pdf."
+  },
+  "test_report_links": [],
+  "action_items": [
+    "FIX TWEAK-1: Remove the <motion.h1 data-testid=hero-headline> block (Hero.jsx lines 59-71) so the steeple video reads cleanly without the 'Christ Church / Oak Brook.' display copy.",
+    "FIX TWEAK-5: Edit LightStudy.jsx line 51 — replace 'vespers' wording. Suggested edit: '...what you see at dusk, and what still reads as cedar at 7 p.m. in October.'",
+    "FIX TWEAK-7 (CRITICAL for iPad demo): Add 'overflow-x: hidden' to <main> in App.js (or to .App / #proposal-root) so the BravaProof brava-thumb-* rail and any negative-margin rails do not push body scrollWidth past viewport. Verify on 768x1024 and 375x667 — body.scrollWidth must equal clientWidth.",
+    "VERIFY: After fixing the overflow, re-confirm the FAQ accordion expansion on mobile (toggle 0 click did not make answer-0 visible during this run — possibly an animation timing artifact, but worth checking)."
+  ],
+  "critical_code_review_comments": [
+    "Iter_12 report claimed '10/10 green' but the Hero big-headline removal (TWEAK-1) and LightStudy 'vespers' removal (TWEAK-5) are not in the source. Either iter_12 tested the wrong items, or the corresponding code changes were reverted in the fork. Recommend a git diff of Hero.jsx and LightStudy.jsx vs the iter_12 commit hash.",
+    "Multiple horizontal rails (field-rail, brava-thumb-*) rely on parent overflow clipping. Consider centralizing with a <HorizontalRail> component that wraps content in an 'overflow-x: hidden' stage so a rogue child cannot leak to body — this would prevent regressions like the current 382px tablet overflow.",
+    "Hero.jsx still has fallback <source src='hero-timeline.mp4'> which is fine, but with deleted alt mp4s the design is now coupled to steeple-closeup.mp4 alone — confirm graceful fallback if that one .mp4 ever 404s.",
+    "FAQ toggle 0 -> answer 0 is_visible() returned false on mobile — could be a Framer/Lenis animation race; add explicit aria-expanded assertions for next iteration."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100%", "frontend": "70% (7/10 acceptance items pass; TWEAK-1, TWEAK-5, TWEAK-7 fail)"},
+  "test_credentials": "N/A (public site, no auth)",
+  "seed_data_creation": "None.",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "After main agent applies action_items, re-run: (1) screenshot Hero at 1920 to confirm no big headline, (2) grep LightStudy.jsx for 'vespers' (must be 0 matches), (3) re-check window.scrollX max and document.body.scrollWidth at 375 AND 768 — both must equal clientWidth. ZERO /assets/* 404s confirmed in this run; the bucket-A deletion is clean and does not need re-verification unless new asset references are added.",
+  "rca_of_the_issue": "Tablet/mobile horizontal overflow RCA: <main>, #proposal-root, and <body> have overflowX: visible. The BravaProof brava-thumb-* horizontal rail (and a sibling negative-margin '-mx-6 px-6' container around field-rail) emit scrollWidth values larger than the viewport at narrow breakpoints. With no overflow-x:hidden on a top-level wrapper, this leaks all the way to the body, allowing window.scrollTo(382,0) on tablet. Fix: add 'overflow-x: hidden' to .App or <main> in App.js. TWEAK-1/TWEAK-5 RCA: code in Hero.jsx and LightStudy.jsx never had the requested edits applied (or they were reverted) — iter_12 self-report appears to have over-claimed."
+}
