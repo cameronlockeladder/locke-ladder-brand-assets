@@ -23,8 +23,8 @@ const STANDARDS = [
 const PARTNERS = [
   { name: "Brava Roof Tile", role: "Material · Composite Shake", href: "https://www.bravarooftile.com" },
   { name: "Bone Roofing Supply", role: "Distribution", href: "https://www.boneroofingsupply.com" },
-  { name: "Grace Ice & Water Shield", role: "Membrane", href: "https://gcpat.com/solutions/products/grace-ice-water-shield-roofing-underlayment" },
-  { name: "Eco Chief · Solarhide", role: "Snow retention", href: "https://ecochief.com" },
+  { name: "Grace Ice & Water Shield", role: "Membrane", href: "https://gcpat.com/en/solutions/products/grace-ice-water-shield-roofing-underlayment/grace-ice-water-shield-data-sheet" },
+  { name: "Eco Chief · Solarhide", role: "Snow retention", href: "https://ecochiefproducts.com/solarhide" },
   { name: "Solar Innovations", role: "Specialty glazing", href: "https://solarinnovations.com" },
 ];
 
