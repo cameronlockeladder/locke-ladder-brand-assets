@@ -2,7 +2,7 @@ import React from "react";
 import { SectionTag } from "@/components/primitives";
 
 const STEPS = [
-  { n: "01", title: "Confirm scope", body: "Walk the line items together. Adjust copper, snow guard count, skylight options. Lock the customer-facing total." },
+  { n: "01", title: "Confirm scope", body: "Walk the line items together. Adjust copper, snow guard count, skylight options." },
   { n: "02", title: "Review samples & color", body: "Pull Brava color samples in person on-site. See the shake against the brick at 10 a.m. and at 6 p.m." },
   { n: "03", title: "Confirm copper, skylights, snow guards", body: "Rocky Mountain snow guard diagram. Velux model and flashing kit confirmation. Copper W-valley spec." },
   { n: "04", title: "Schedule the install", body: "Book against weather and homeowner availability. Crew sequencing reviewed before start." },
@@ -11,7 +11,7 @@ const STEPS = [
   { n: "07", title: "Final walk", body: "Walk every elevation with the homeowner. Punch list closed. Warranty paperwork delivered." },
 ];
 
-export default function NextSteps() {
+export default function NextSteps({ number = "10 / 10", clientLine }) {
   return (
     <section
       id="next"
@@ -19,7 +19,7 @@ export default function NextSteps() {
       className="relative bg-paper py-28 md:py-36 px-6 lg:px-12 border-t border-rule"
     >
       <div className="max-w-[1600px] mx-auto">
-        <SectionTag number="10 / 10" title="What happens next" />
+        <SectionTag number={number} title="What happens next" />
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
@@ -38,7 +38,6 @@ export default function NextSteps() {
           </div>
         </div>
 
-        {/* Steps · vertical, numbered */}
         <ol className="mt-16 divide-y divide-rule border-y border-rule" data-testid="next-steps">
           {STEPS.map((s) => (
             <li
@@ -59,7 +58,6 @@ export default function NextSteps() {
           ))}
         </ol>
 
-        {/* CTA · restrained */}
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
           <div className="lg:col-span-7">
             <h3
@@ -81,12 +79,7 @@ export default function NextSteps() {
             </div>
             <div className="border-t border-ink/15 pt-4">
               <div className="font-brand text-[10px] uppercase tracking-[0.24em] text-slate">For</div>
-              <div className="mt-2 font-display text-base text-ink">
-                Eric Bowles &middot; 404 N Vine St, Hinsdale
-              </div>
-              <div className="mt-1 font-display text-base text-ink">
-                Mark Lindahl &middot; 903 Middleton, Inverness
-              </div>
+              <div className="mt-2 font-display text-base text-ink">{clientLine}</div>
             </div>
           </div>
         </div>
