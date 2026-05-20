@@ -49,6 +49,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
 - `proposal-support/christ-church/`
   Supporting proposal-specific utility assets.
   Includes Christ Church August 2026 install logistics source files under `proposal-support/christ-church/install-logistics-2026-08/`.
+  Includes EagleView aerial/site imagery under `proposal-support/christ-church/install-logistics-2026-08/aerial/`.
 - `reviews/google/`
   Google review proof graphic plus approved review pull quotes.
 - `docs/`

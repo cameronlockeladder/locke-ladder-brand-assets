@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-05-20",
-  "file_count": 591,
+  "file_count": 600,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 4249,
+      "bytes": 4364,
       "mime": "text/markdown",
-      "sha256": "e68a695b9b9828e44e1af8e09c24def3b21e76022b7765f93ab71b10e5d17d39"
+      "sha256": "6b1f5b2102c0ee12bf36adca89ba2cba8aea7cd2161ae6f01ee3a8942f4124a7"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 134187,
+      "bytes": 141689,
       "mime": "application/json",
-      "sha256": "9c0828333ec403145867ae3be89dcec6edd95206fc7db1c8bdbc58f20be449ce"
+      "sha256": "235d9e5b5cb004cd94a34a639d9d581508d419c6086df6baa1dea2d5eaa275c9"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -3428,6 +3428,60 @@
       "bytes": 3084,
       "mime": "application/rtf",
       "sha256": "4be8b9355eeb555fc48a2a9459bf04f507be641f70cd9c62bb03b67143af1c12"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-01.png",
+      "bytes": 272642,
+      "mime": "image/png",
+      "sha256": "42c587a1cfded530a32fcc7f35033932d618487625960702c9b3e465fedc3357"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-02.png",
+      "bytes": 1682512,
+      "mime": "image/png",
+      "sha256": "9f249762436c9a9723837719211f0fb2d4f8a03513188e84ff0171c6ad689002"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-03.png",
+      "bytes": 1269142,
+      "mime": "image/png",
+      "sha256": "29409f118866fdc8f8a4d1c8d3f071de42c53ef1bcb88b45febef3b21b9bd844"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-04.png",
+      "bytes": 1199695,
+      "mime": "image/png",
+      "sha256": "7714a37ee3fbc8d8edb7b4b6122ced7e46ef340560a262806391b46703995c1d"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-05.png",
+      "bytes": 246172,
+      "mime": "image/png",
+      "sha256": "99f7f872315b0b9d86f97686a0c67a1d311ca5bf173ef9cd92048fd755ea0b12"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-06.png",
+      "bytes": 230624,
+      "mime": "image/png",
+      "sha256": "04cbdf88bfe405c8e7ca7581e23cf59c7661190e6c773cf9c37fe6a5926148ab"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-07.png",
+      "bytes": 231977,
+      "mime": "image/png",
+      "sha256": "ef3e7aae4ab86b373d7c1172da7a6441f46f700393be416c1741dbd186a25987"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/eagleview-pages/page-08.png",
+      "bytes": 183332,
+      "mime": "image/png",
+      "sha256": "25f04325a69c165d320a51470cafb049ce10249a005ca309ae1cb6e9ede08dee"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/aerial/site-aerial-eagleview.png",
+      "bytes": 1526642,
+      "mime": "image/png",
+      "sha256": "80bfed6adcd86ef4a853805bc087c6860546c55a0ebb9d9cc27da65e1dfbf08e"
     },
     {
       "path": "proposal-support/christ-church/install-logistics-2026-08/scaffold-north-end-base.jpeg",
