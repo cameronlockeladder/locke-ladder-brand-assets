@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-04-22",
-  "file_count": 574,
+  "generated_at": "2026-05-20",
+  "file_count": 591,
   "items": [
     {
       "path": ".gitignore",
@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 3441,
+      "bytes": 4249,
       "mime": "text/markdown",
-      "sha256": "3b43b70d4101ed08a1bc286b12e590b0a3c4f4b5ef5081a3978287239a7fca6a"
+      "sha256": "e68a695b9b9828e44e1af8e09c24def3b21e76022b7765f93ab71b10e5d17d39"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 132958,
+      "bytes": 134187,
       "mime": "application/json",
-      "sha256": "b2b967c80b255000ea4b1c8e1ab50195bd5b57de7894437712bb1891f4e7b892"
+      "sha256": "9c0828333ec403145867ae3be89dcec6edd95206fc7db1c8bdbc58f20be449ce"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -136,10 +136,34 @@
       "sha256": "b0ee22fd726ac8b40633e48e3662f66853d8e37e063144642d8671c39e2badda"
     },
     {
+      "path": "docs/jon-pdf-reference-pages/README.md",
+      "bytes": 396,
+      "mime": "text/markdown",
+      "sha256": "f24b895670f61531589dbe3f6ceefa514cb3c1e4cc4acaaec9e542c763e3fa1d"
+    },
+    {
+      "path": "docs/jon-pdf-reference-pages/l-and-l-windows-11.webp",
+      "bytes": 203032,
+      "mime": "image/webp",
+      "sha256": "654291c1dff4d092c0dbe2094e59422491686117a327568dd167aa32b2b47006"
+    },
+    {
       "path": "docs/locke-copy-direction.md",
       "bytes": 2942,
       "mime": "text/markdown",
       "sha256": "6e721003c3b05a5b7b2343652bd7cfbde783a76d9e24dfb789b100989278dbd9"
+    },
+    {
+      "path": "docs/phone-reference-photos/README.md",
+      "bytes": 498,
+      "mime": "text/markdown",
+      "sha256": "46eaf2a1fb2d6ad462e28e7f1937bf6fbfbf58bf7052b9316df3a3edf3afff18"
+    },
+    {
+      "path": "docs/phone-reference-photos/img-7918-framed-photo-reference.webp",
+      "bytes": 505184,
+      "mime": "image/webp",
+      "sha256": "8e0eefda87f3a704bf351dee721fcb59962498349d553fa1a550d7eb1767119f"
     },
     {
       "path": "docs/project-reports/brava-cedar-precedents/hickman-preliminary-inspection-report-2025-06-05.pdf",
@@ -158,12 +182,6 @@
       "bytes": 503211,
       "mime": "application/pdf",
       "sha256": "c8f460c0e5e75215fa51dd23eacd55947eab37b59200706fc5d372dcb1d70858"
-    },
-    {
-      "path": "photos/.DS_Store",
-      "bytes": 6148,
-      "mime": "application/octet-stream",
-      "sha256": "0a0a2152974a030fb6aae939b332c8148750f05d0de00786d0a9a3b035e090f7"
     },
     {
       "path": "photos/materials/brava-field-shake-layout-study/README.md",
@@ -1480,6 +1498,48 @@
       "sha256": "f4754cb35381e4ec0229d907a1b95499ab1adaa1d4603bcdd1940da5b8cf8be8"
     },
     {
+      "path": "photos/materials/ice-and-water-shield/README.md",
+      "bytes": 834,
+      "mime": "text/markdown",
+      "sha256": "3711a7a62e01e6f485f04c0ae9a622c5cd3e4d2dbb27f145715dc2668f4e9001"
+    },
+    {
+      "path": "photos/materials/ice-and-water-shield/leakbarrier-roof-underlayments-lb742161-4f_600-cheap-ice-and-water-shield.webp",
+      "bytes": 15636,
+      "mime": "image/webp",
+      "sha256": "594fb4f71ba29c4e5ecc05c71ef62d2a9ad97d1f13292ddeea930daed39f2fe5"
+    },
+    {
+      "path": "photos/materials/ice-and-water-shield/ludowici-install-pierson-indy-7-grace-ice-and-water-shield.webp",
+      "bytes": 557618,
+      "mime": "image/webp",
+      "sha256": "6382378cbadfd5fdf2787263670a691622e4dafa409810e6ae68a4d6228a5b25"
+    },
+    {
+      "path": "photos/materials/ice-and-water-shield/ludowici-install-pierson-indy-9-grace-ice-and-water-shield.webp",
+      "bytes": 987912,
+      "mime": "image/webp",
+      "sha256": "cbecfb31e6cabffefa1d7e076ef6c72ecb8c2d82848c1c8957fb71b8fa817286"
+    },
+    {
+      "path": "photos/materials/road-map/README.md",
+      "bytes": 553,
+      "mime": "text/markdown",
+      "sha256": "d478f10fea1cae894b594ab4b5da805a3f7f64c906061e15f3c2549b16ae5cce"
+    },
+    {
+      "path": "photos/materials/road-map/flatroof-ivan-crew-pics-11-road-map.webp",
+      "bytes": 930094,
+      "mime": "image/webp",
+      "sha256": "c3dbd4680f2e255aebbac8b1429f455bcccfc6bf58bf3ece53a946384ee814e9"
+    },
+    {
+      "path": "photos/materials/road-map/flatroof-ivan-crew-pics-8-road-map.webp",
+      "bytes": 1115656,
+      "mime": "image/webp",
+      "sha256": "5af43627a02eba568242d34b8bd70e4d6962d03228de5bfc3c593c3dde489a1b"
+    },
+    {
       "path": "photos/materials/unlabeled-webp-sequence-2026-04-18/README.md",
       "bytes": 434,
       "mime": "text/markdown",
@@ -2212,10 +2272,22 @@
       "sha256": "d78515283995c29b8e5ae462aaf727f4ac71a6cfe63e073c830d3f817562eb74"
     },
     {
-      "path": "photos/projects/.DS_Store",
-      "bytes": 6148,
-      "mime": "application/octet-stream",
-      "sha256": "2dabc1b39458f825ea9cd18ccaa751b0614372c975fd0a24de7159926f9523cd"
+      "path": "photos/materials/why-brava/README.md",
+      "bytes": 559,
+      "mime": "text/markdown",
+      "sha256": "a7941e980a42d3404635e2761a366ce32155b84187abc7d15febc91d3dc2a480"
+    },
+    {
+      "path": "photos/materials/why-brava/brava-cedar-clarke-during-319-why-brava.webp",
+      "bytes": 467650,
+      "mime": "image/webp",
+      "sha256": "a44e943869bf7e96b95e2c5961695ee88683b8a477a0611bc8fae0abb8af3f6f"
+    },
+    {
+      "path": "photos/materials/why-brava/brava-cedar-clarke-during-320-why-brava.webp",
+      "bytes": 343430,
+      "mime": "image/webp",
+      "sha256": "dc01ffa84d8e08c465fd96a89497c1e6f10e232082c35e6bd31c1bcc3c2c8455"
     },
     {
       "path": "photos/projects/christ-church/bell-tower-primary-leak.jpg",
@@ -2286,7 +2358,7 @@
     {
       "path": "photos/projects/christ-church/front-entrance.mp4",
       "bytes": 7081134,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "fd2896c0383c470a631821eebf244224cad8ba3b7e9a3fa1f99f6098f9ce4888"
     },
     {
@@ -2316,13 +2388,13 @@
     {
       "path": "photos/projects/christ-church/hero-campus.mp4",
       "bytes": 4305904,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "97b9e8d3658198e2c0164728080efac859bad71f6d490fd4e25f22d244db58d1"
     },
     {
       "path": "photos/projects/christ-church/hero-timeline.mp4",
       "bytes": 2360050,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "492383a3570777c169abcfd683d7845b57582f156649932f72e21efdf6e8a9d2"
     },
     {
@@ -2964,7 +3036,7 @@
     {
       "path": "photos/projects/christ-church/side-entry.mp4",
       "bytes": 3936748,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "fc9c27742b605fed110469f3c987cc2f7db1799b1c64958253e1a84c0ebc3d00"
     },
     {
@@ -2988,7 +3060,7 @@
     {
       "path": "photos/projects/christ-church/steeple-closeup.mp4",
       "bytes": 867764,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "3b92bf084ca08fb6980cb46887e80569f33a5e6007f05b60567345466ee45d20"
     },
     {
@@ -3082,24 +3154,6 @@
       "sha256": "44b9d07069d97a950c4adee6061af11333c5563daad7f7b9fbb7c1b23452adc5"
     },
     {
-      "path": "photos/projects/snape/before-after-slider-dormer/README.md",
-      "bytes": 430,
-      "mime": "text/markdown",
-      "sha256": "641065d735687e375439ddcf431b6096192110bd7dfcc7a74addf597b2f8aeff"
-    },
-    {
-      "path": "photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg",
-      "bytes": 773388,
-      "mime": "image/jpeg",
-      "sha256": "bc14d5c2b00d0985d9b5b5ce02b16a73cf74f6f8373d5482af91a2cfb93631af"
-    },
-    {
-      "path": "photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.jpg",
-      "bytes": 512587,
-      "mime": "image/jpeg",
-      "sha256": "1b9c9d91db50cede4233e7dfa3f6f59da2752262927f3f9521be58d8ec7d925d"
-    },
-    {
       "path": "photos/projects/snape/before-after-slider-dormer-aligned/README.md",
       "bytes": 278,
       "mime": "text/markdown",
@@ -3118,6 +3172,24 @@
       "sha256": "09233f4eb470e0732770efeca7bcfd37585514439b6bad65a5324f622314753a"
     },
     {
+      "path": "photos/projects/snape/before-after-slider-dormer/README.md",
+      "bytes": 430,
+      "mime": "text/markdown",
+      "sha256": "641065d735687e375439ddcf431b6096192110bd7dfcc7a74addf597b2f8aeff"
+    },
+    {
+      "path": "photos/projects/snape/before-after-slider-dormer/after-aerial-chimney-slate-roof-detail.jpg",
+      "bytes": 773388,
+      "mime": "image/jpeg",
+      "sha256": "bc14d5c2b00d0985d9b5b5ce02b16a73cf74f6f8373d5482af91a2cfb93631af"
+    },
+    {
+      "path": "photos/projects/snape/before-after-slider-dormer/before-dormer-close-up.jpg",
+      "bytes": 512587,
+      "mime": "image/jpeg",
+      "sha256": "1b9c9d91db50cede4233e7dfa3f6f59da2752262927f3f9521be58d8ec7d925d"
+    },
+    {
       "path": "photos/projects/snape/chimney-detail.jpg",
       "bytes": 1278259,
       "mime": "image/jpeg",
@@ -3132,7 +3204,7 @@
     {
       "path": "photos/projects/snape/copper-loop.mp4",
       "bytes": 3029848,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "370422c2c0679341035075a6068da7b276a1daec3c5b540f231a3d32bb78bcc0"
     },
     {
@@ -3144,7 +3216,7 @@
     {
       "path": "photos/projects/snape/front-approach.mp4",
       "bytes": 20448325,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "79088e296724683060d481431425b65c2647e07419703d9c9863472baefc7994"
     },
     {
@@ -3156,7 +3228,7 @@
     {
       "path": "photos/projects/snape/full-bleed-background-video.mp4",
       "bytes": 2774614,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "93804e61b14de5651ff7019b6a4c2e9ee032a1ee4cabe3a5882b2f202b040f4f"
     },
     {
@@ -3168,13 +3240,13 @@
     {
       "path": "photos/projects/snape/hero-loop.mp4",
       "bytes": 5948791,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "059a934d5aa58006fc91f80521463590bd81c2793534d96e1a3de0547e6e51cb"
     },
     {
       "path": "photos/projects/snape/magnolia-loop.mp4",
       "bytes": 3219450,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "03cd1699df07063c1848e99ae78cd438279980e48f5aa506ef814c58132c6e83"
     },
     {
@@ -3192,26 +3264,32 @@
     {
       "path": "photos/projects/snape/snape-cut-arrival.mp4",
       "bytes": 11716565,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "a7c4a8c816325301adccb113d82d4bf660dff6359ff1fa4b6cd1e237936213ab"
     },
     {
       "path": "photos/projects/snape/snape-cut-details.mp4",
       "bytes": 3931671,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "a608c358d36e7ad64af4d26ec98b4b11df1c8def2e851adc8662897a0d6f64d9"
     },
     {
       "path": "photos/projects/snape/snape-cut-roofline.mp4",
       "bytes": 9599573,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "953bbc167ce69e9b0cce921f9b764b4afb4456aca220d0637620cc3540d6642d"
     },
     {
       "path": "photos/projects/snape/snape-cut-showpiece.mp4",
       "bytes": 13855654,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "3db6d2fc6ae3ccf55c97ad0917a59585a6a3ae3452a24aa072e5011f64ed2913"
+    },
+    {
+      "path": "photos/team/Collage People-2 - Jon Presenting.webp",
+      "bytes": 207536,
+      "mime": "image/webp",
+      "sha256": "c0f23fa66146ffe88f053801258b91cb09a2cef0b96cbc799492fc0cd06440d3"
     },
     {
       "path": "photos/team/Crew Measure.webp",
@@ -3245,9 +3323,9 @@
     },
     {
       "path": "photos/team/README.md",
-      "bytes": 258,
+      "bytes": 356,
       "mime": "text/markdown",
-      "sha256": "6953855815e171c89014ef0f7f2ba0c39edbcb979221e2e89bd7f0be24fddd6e"
+      "sha256": "6cf81de3aa5a776f0e8c59fe23a166c6b5678461c4a7392cfb112590a312d00e"
     },
     {
       "path": "photos/team/Roofers De Sol.webp",
@@ -3346,6 +3424,24 @@
       "sha256": "b807c6b053f044fe5cdae6dd6590ea9340598368596e59a9e251e828a1c05924"
     },
     {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/ChristBuild.rtf",
+      "bytes": 3084,
+      "mime": "application/rtf",
+      "sha256": "4be8b9355eeb555fc48a2a9459bf04f507be641f70cd9c62bb03b67143af1c12"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/scaffold-north-end-base.jpeg",
+      "bytes": 2524118,
+      "mime": "image/jpeg",
+      "sha256": "8812bd6bb9057829c3798de81ff32388ff7a8d283d328a04c2f2cbf3a423cd9f"
+    },
+    {
+      "path": "proposal-support/christ-church/install-logistics-2026-08/scaffold-steeple-gutter-line.jpeg",
+      "bytes": 2514610,
+      "mime": "image/jpeg",
+      "sha256": "60e4bdac661a8550b1092637f5fcc174e39e2056de7869e65a7b6475bf3b9d32"
+    },
+    {
       "path": "proposal-support/christ-church/roof-rot.webp",
       "bytes": 78230,
       "mime": "image/webp",
@@ -3372,14 +3468,8 @@
     {
       "path": "videos/brand/new-approach-to-contracting/new-approach-to-contracting-with-music.mp4",
       "bytes": 7468122,
-      "mime": "video/mp4",
-      "sha256": "b2ba585200f79a20a8d344671e2cd188f84e309d9b5c2e9aa0f56610a5234af3"
-    },
-    {
-      "path": "videos/projects/.DS_Store",
-      "bytes": 6148,
       "mime": "application/octet-stream",
-      "sha256": "024941a3d75d5f6409adb96505b3201b8674e5e54dee847faf0bf2f5e68ef396"
+      "sha256": "b2ba585200f79a20a8d344671e2cd188f84e309d9b5c2e9aa0f56610a5234af3"
     },
     {
       "path": "videos/projects/brava-web-video-assets/README.md",
@@ -3390,43 +3480,43 @@
     {
       "path": "videos/projects/brava-web-video-assets/christ-church-brava-drone-montage.mp4",
       "bytes": 17549057,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "7444d2a85cfd4a54c5e9692fb2989ce2e4a6443bc9973ba5feb22cb64173ab80"
     },
     {
       "path": "videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4",
       "bytes": 8710581,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "c3ed4df50a0156e322be3fc23d8cdc797867282c48875a7164d6a92121b1da10"
     },
     {
       "path": "videos/projects/brava-web-video-assets/laskey-brava-cedar-carmel-00000157-first-12s.mp4",
       "bytes": 8030848,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "e1af53b2c3b7fa3a6a640b3c09b4663483c313ec07d8d7c192560158b7a009fd"
     },
     {
       "path": "videos/projects/brava-web-video-assets/laskey-brava-cedar-carmel-01572414-full.mp4",
       "bytes": 3575225,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "0fe14d2278077ecdda91f6e3c8f1bbb1cb03d02a0f25bce2861a4fceccbda07d"
     },
     {
       "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-05-13s.mp4",
       "bytes": 11397920,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "3c014a020d6620df20f13b8e0dbe40dde8f16a2b692ec6c8ea11c3e2b2e12297"
     },
     {
       "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-16-22s.mp4",
       "bytes": 7484620,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "77bdd1cc1978da31870d03819dea7f1ab8a169e74d2a13f89df2f81380a22a06"
     },
     {
       "path": "videos/projects/brava-web-video-assets/todays-cedar-background-laskey-brava-cedar-carmel-00000097-full.mp4",
       "bytes": 1586651,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "12ed23f5cbf8e7858ef2fd4f3b7028d41b5c225b9a8d0a294da5740356bae97b"
     },
     {
@@ -3438,14 +3528,26 @@
     {
       "path": "videos/projects/coppergate-window-install/coppergate-window-install-v1-0006-07-14s.mp4",
       "bytes": 1757350,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "28dbcd6647afa252090c0b8d87c179ad7f52056bb28ea6e772f4d1cc738aeab8"
     },
     {
       "path": "videos/projects/coppergate-window-install/coppergate-window-install-v1-0008-full.mp4",
       "bytes": 1823444,
-      "mime": "video/mp4",
+      "mime": "application/octet-stream",
       "sha256": "457e985e0de0ba005873fd8f3b68a951c60f643abf5e5b07d64c57ce89d22191"
+    },
+    {
+      "path": "videos/projects/faith-apostolic-church/README.md",
+      "bytes": 437,
+      "mime": "text/markdown",
+      "sha256": "10b7860e8050a6bf30e420ed5a289e578269c873705a464190a245918c16ef65"
+    },
+    {
+      "path": "videos/projects/faith-apostolic-church/v2-0001-jon-at-fac-faith-apostolic-church-full.mp4",
+      "bytes": 8994849,
+      "mime": "application/octet-stream",
+      "sha256": "65dfdf4e2c2ddbd9d3967f040b4cd9510f533036c593074a9ef624d176c16fa3"
     }
   ]
 }

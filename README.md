@@ -48,6 +48,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Imported 121-frame WebP sequence from a downloaded folder whose semantic label was not preserved.
 - `proposal-support/christ-church/`
   Supporting proposal-specific utility assets.
+  Includes Christ Church August 2026 install logistics source files under `proposal-support/christ-church/install-logistics-2026-08/`.
 - `reviews/google/`
   Google review proof graphic plus approved review pull quotes.
 - `docs/`
