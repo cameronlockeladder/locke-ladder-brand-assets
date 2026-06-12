@@ -14,6 +14,7 @@ This is a reusable asset pack, not a dump of the entire working directory.
   Christ Church | Oak Brook client-facing marks and supporting location graphic.
 - `photos/team/`
   WebP team and truck photography from `Branch For Print/webp-team-photos`.
+  Includes Canvas Shoot photography and canvas texture/social stills under `photos/team/canvas-shoot/`.
 - `videos/projects/faith-apostolic-church/`
   Optimized Faith Apostolic Church project video clips for church-related proof use.
 - `videos/brand/new-approach-to-contracting/`

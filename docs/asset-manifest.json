@@ -1,25 +1,25 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-05-20",
-  "file_count": 600,
+  "generated_at": "2026-06-12",
+  "file_count": 629,
   "items": [
     {
       "path": ".gitignore",
       "bytes": 20,
-      "mime": "application/octet-stream",
+      "mime": "text/plain",
       "sha256": "2bdfdb216230559f36faf46907142b8afd478401150f810e1ddaf9a4fdcc656c"
     },
     {
       "path": "NOTICE.md",
       "bytes": 398,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "6a50bb937dab7bfc63176194faa432de10b06e006c2a5dea2d0a4950971782c0"
     },
     {
       "path": "README.md",
-      "bytes": 4364,
-      "mime": "text/markdown",
-      "sha256": "6b1f5b2102c0ee12bf36adca89ba2cba8aea7cd2161ae6f01ee3a8942f4124a7"
+      "bytes": 4468,
+      "mime": "text/plain",
+      "sha256": "d7b7e9349dfa533adb2ba146d56146fe51893116ede500d69a8ea35338127e66"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -42,13 +42,13 @@
     {
       "path": "brand/locke-ladder/TerminaTest-Heavy.woff2",
       "bytes": 7048,
-      "mime": "font/woff2",
+      "mime": "application/octet-stream",
       "sha256": "53301f36b6a152bd31d5a3a3a6efa1960e4da1838bac34a71794f87f8a592837"
     },
     {
       "path": "brand/locke-ladder/TerminaTest-Medium.woff2",
       "bytes": 7128,
-      "mime": "font/woff2",
+      "mime": "application/octet-stream",
       "sha256": "1d4c89f27003450e9319f802b54c3aff0df02bbb6d434d23c6fbf494be111847"
     },
     {
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 141689,
+      "bytes": 155606,
       "mime": "application/json",
-      "sha256": "235d9e5b5cb004cd94a34a639d9d581508d419c6086df6baa1dea2d5eaa275c9"
+      "sha256": "1379c05c5c16173c4e23bb3e676cccab5c215761657e1cec567c60c28e6eb259"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -126,19 +126,19 @@
     {
       "path": "docs/brava-presentation-reference-slides/README.md",
       "bytes": 1097,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "fbca66b0eb4d4e7704e6787832bb91440020960c3a457cacb59fecec968ef1e8"
     },
     {
       "path": "docs/christ-church-brand-notes.md",
       "bytes": 524,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "b0ee22fd726ac8b40633e48e3662f66853d8e37e063144642d8671c39e2badda"
     },
     {
       "path": "docs/jon-pdf-reference-pages/README.md",
       "bytes": 396,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "f24b895670f61531589dbe3f6ceefa514cb3c1e4cc4acaaec9e542c763e3fa1d"
     },
     {
@@ -150,13 +150,13 @@
     {
       "path": "docs/locke-copy-direction.md",
       "bytes": 2942,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "6e721003c3b05a5b7b2343652bd7cfbde783a76d9e24dfb789b100989278dbd9"
     },
     {
       "path": "docs/phone-reference-photos/README.md",
       "bytes": 498,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "46eaf2a1fb2d6ad462e28e7f1937bf6fbfbf58bf7052b9316df3a3edf3afff18"
     },
     {
@@ -186,7 +186,7 @@
     {
       "path": "photos/materials/brava-field-shake-layout-study/README.md",
       "bytes": 367,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "1d88468be724ee11b4655be5e211c118896c07b48506e9fcdd714519f60b315c"
     },
     {
@@ -1500,7 +1500,7 @@
     {
       "path": "photos/materials/ice-and-water-shield/README.md",
       "bytes": 834,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "3711a7a62e01e6f485f04c0ae9a622c5cd3e4d2dbb27f145715dc2668f4e9001"
     },
     {
@@ -1524,7 +1524,7 @@
     {
       "path": "photos/materials/road-map/README.md",
       "bytes": 553,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "d478f10fea1cae894b594ab4b5da805a3f7f64c906061e15f3c2549b16ae5cce"
     },
     {
@@ -1542,7 +1542,7 @@
     {
       "path": "photos/materials/unlabeled-webp-sequence-2026-04-18/README.md",
       "bytes": 434,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "b0a6d91fee9159ccad488cfc73c33f125077cb63abf7cd07de2f2dd5ace30f9c"
     },
     {
@@ -2274,7 +2274,7 @@
     {
       "path": "photos/materials/why-brava/README.md",
       "bytes": 559,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "a7941e980a42d3404635e2761a366ce32155b84187abc7d15febc91d3dc2a480"
     },
     {
@@ -2310,7 +2310,7 @@
     {
       "path": "photos/projects/christ-church/field-inspection-report/README.md",
       "bytes": 566,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "306eec06a0f15aee385a415fc0a062dc903dfb4836d0ad59031306c55cd30d4a"
     },
     {
@@ -2358,7 +2358,7 @@
     {
       "path": "photos/projects/christ-church/front-entrance.mp4",
       "bytes": 7081134,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "fd2896c0383c470a631821eebf244224cad8ba3b7e9a3fa1f99f6098f9ce4888"
     },
     {
@@ -2388,13 +2388,13 @@
     {
       "path": "photos/projects/christ-church/hero-campus.mp4",
       "bytes": 4305904,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "97b9e8d3658198e2c0164728080efac859bad71f6d490fd4e25f22d244db58d1"
     },
     {
       "path": "photos/projects/christ-church/hero-timeline.mp4",
       "bytes": 2360050,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "492383a3570777c169abcfd683d7845b57582f156649932f72e21efdf6e8a9d2"
     },
     {
@@ -3036,7 +3036,7 @@
     {
       "path": "photos/projects/christ-church/side-entry.mp4",
       "bytes": 3936748,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "fc9c27742b605fed110469f3c987cc2f7db1799b1c64958253e1a84c0ebc3d00"
     },
     {
@@ -3060,7 +3060,7 @@
     {
       "path": "photos/projects/christ-church/steeple-closeup.mp4",
       "bytes": 867764,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "3b92bf084ca08fb6980cb46887e80569f33a5e6007f05b60567345466ee45d20"
     },
     {
@@ -3072,7 +3072,7 @@
     {
       "path": "photos/projects/faith-apostolic-church/README.md",
       "bytes": 180,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "da139cf76735a12d01269987475756cbf83b1353183414262db53a249e15f07f"
     },
     {
@@ -3084,7 +3084,7 @@
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/README.md",
       "bytes": 713,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "6cb8f37298df9f648e63cbb24ae8062ce375b2a1cef4b79c39891650783d16e1"
     },
     {
@@ -3156,7 +3156,7 @@
     {
       "path": "photos/projects/snape/before-after-slider-dormer-aligned/README.md",
       "bytes": 278,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "856100cc5471b9aab907737d343fdb609470bd55ed2f78d5356c6765cb361dd3"
     },
     {
@@ -3174,7 +3174,7 @@
     {
       "path": "photos/projects/snape/before-after-slider-dormer/README.md",
       "bytes": 430,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "641065d735687e375439ddcf431b6096192110bd7dfcc7a74addf597b2f8aeff"
     },
     {
@@ -3204,7 +3204,7 @@
     {
       "path": "photos/projects/snape/copper-loop.mp4",
       "bytes": 3029848,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "370422c2c0679341035075a6068da7b276a1daec3c5b540f231a3d32bb78bcc0"
     },
     {
@@ -3216,7 +3216,7 @@
     {
       "path": "photos/projects/snape/front-approach.mp4",
       "bytes": 20448325,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "79088e296724683060d481431425b65c2647e07419703d9c9863472baefc7994"
     },
     {
@@ -3228,7 +3228,7 @@
     {
       "path": "photos/projects/snape/full-bleed-background-video.mp4",
       "bytes": 2774614,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "93804e61b14de5651ff7019b6a4c2e9ee032a1ee4cabe3a5882b2f202b040f4f"
     },
     {
@@ -3240,13 +3240,13 @@
     {
       "path": "photos/projects/snape/hero-loop.mp4",
       "bytes": 5948791,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "059a934d5aa58006fc91f80521463590bd81c2793534d96e1a3de0547e6e51cb"
     },
     {
       "path": "photos/projects/snape/magnolia-loop.mp4",
       "bytes": 3219450,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "03cd1699df07063c1848e99ae78cd438279980e48f5aa506ef814c58132c6e83"
     },
     {
@@ -3264,25 +3264,25 @@
     {
       "path": "photos/projects/snape/snape-cut-arrival.mp4",
       "bytes": 11716565,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "a7c4a8c816325301adccb113d82d4bf660dff6359ff1fa4b6cd1e237936213ab"
     },
     {
       "path": "photos/projects/snape/snape-cut-details.mp4",
       "bytes": 3931671,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "a608c358d36e7ad64af4d26ec98b4b11df1c8def2e851adc8662897a0d6f64d9"
     },
     {
       "path": "photos/projects/snape/snape-cut-roofline.mp4",
       "bytes": 9599573,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "953bbc167ce69e9b0cce921f9b764b4afb4456aca220d0637620cc3540d6642d"
     },
     {
       "path": "photos/projects/snape/snape-cut-showpiece.mp4",
       "bytes": 13855654,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "3db6d2fc6ae3ccf55c97ad0917a59585a6a3ae3452a24aa072e5011f64ed2913"
     },
     {
@@ -3324,7 +3324,7 @@
     {
       "path": "photos/team/README.md",
       "bytes": 356,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "6cf81de3aa5a776f0e8c59fe23a166c6b5678461c4a7392cfb112590a312d00e"
     },
     {
@@ -3352,6 +3352,180 @@
       "sha256": "f3a710487669ea4543cdcacdbc0ef16c31dff229e4133125ed1d22759504fef3"
     },
     {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-1.jpg",
+      "bytes": 13849158,
+      "mime": "image/jpeg",
+      "sha256": "f574a0b4eddeefb9c86f030bef289e144482a910c4ef958ff5c5d733fd129835"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-10.jpg",
+      "bytes": 15262260,
+      "mime": "image/jpeg",
+      "sha256": "ccceb82e84dcf3217512f88be9f56c8e141e51dc55ba157d9312e3286c1ef27d"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-11.jpg",
+      "bytes": 23631777,
+      "mime": "image/jpeg",
+      "sha256": "dc621d7b848000c50f0f2c20210300f7018da19e42e0ccdf348e8884e4c2c8bb"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-12.jpg",
+      "bytes": 28811278,
+      "mime": "image/jpeg",
+      "sha256": "8accf25eb7e420a650db62ec51f0df6a2d4893520336efa6ad4213b945f9d527"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-13.jpg",
+      "bytes": 29625958,
+      "mime": "image/jpeg",
+      "sha256": "db67e3bbf71a9a20d2a1690b1f426cb717bf4f7f5c4889df9ed931842fea69b7"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-14.jpg",
+      "bytes": 26166335,
+      "mime": "image/jpeg",
+      "sha256": "57e5310b2d17ecc5997845783d4bfc02a5fbf52023aad5ebd03ff79a9f5467ec"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-15.jpg",
+      "bytes": 19002808,
+      "mime": "image/jpeg",
+      "sha256": "cbf1b5615661c8d69f6075e066829e1887f02a400c1baff485f38078d41d69c8"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-16.jpg",
+      "bytes": 16158096,
+      "mime": "image/jpeg",
+      "sha256": "6efa90722d794cb314a49383ca6572b04b069119190e748f38ee6e3103a9c811"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-17.jpg",
+      "bytes": 10255357,
+      "mime": "image/jpeg",
+      "sha256": "5d9a363306ef998c77720f8d326a7c8ffd6dbc48b260f23f8b611767cd8b1d1c"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-18.jpg",
+      "bytes": 11334533,
+      "mime": "image/jpeg",
+      "sha256": "0b014884623614464fd4769408194a0c5aedfcead28d0bb76d8b2f0288f93d28"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-19.jpg",
+      "bytes": 22271743,
+      "mime": "image/jpeg",
+      "sha256": "1b7365b3990447377f94215a040d7fb2d6e7f7df661537956ebbc9f69036befb"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-2.jpg",
+      "bytes": 19491573,
+      "mime": "image/jpeg",
+      "sha256": "60b9b05dcb3d071d9fc412026419056dfcef3d4c22275d9df55c14d63dff5825"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-20.jpg",
+      "bytes": 17516285,
+      "mime": "image/jpeg",
+      "sha256": "d8aadb6777ce41da74fbcef39f7c9801d66b7621dcf977e9918beab25da9b717"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-21.jpg",
+      "bytes": 24922474,
+      "mime": "image/jpeg",
+      "sha256": "700f548af8da35f2073d54d1e65af2636289ba7803f1aa3892669d5c01107a5f"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-22.jpg",
+      "bytes": 10313943,
+      "mime": "image/jpeg",
+      "sha256": "4d9ac91f0bd97eae85c32f7913ce4b43ecb1c362db560e61439295dc5087d6c4"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-23.jpg",
+      "bytes": 9471938,
+      "mime": "image/jpeg",
+      "sha256": "16301388e00fe2438a89c3b031372bba9bf3e3800a004167ad75bc2b243aa01b"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-3.jpg",
+      "bytes": 18617654,
+      "mime": "image/jpeg",
+      "sha256": "d33caddad9ddc47a8993b9eabb021059877c9a42392d1984c84aa64efb69ed24"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-4.jpg",
+      "bytes": 21420864,
+      "mime": "image/jpeg",
+      "sha256": "2c886d7569b190219a8838d1fc648332a061a3265b71331266d581fbea91a018"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-5.jpg",
+      "bytes": 10493330,
+      "mime": "image/jpeg",
+      "sha256": "4315f6364d614b33fcdf4b34520aad24a43a08f779ce558ec72eee58d5aebbe4"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-6.jpg",
+      "bytes": 30054284,
+      "mime": "image/jpeg",
+      "sha256": "73183910af4a505e981c8ffb2b9db7f4891ec97715e0f36d95afcbd9b5b9cd55"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-7.jpg",
+      "bytes": 15187768,
+      "mime": "image/jpeg",
+      "sha256": "1d02d88a85bfcb568d0d66453ab47612827443199d45ceff97801b8186e4ea77"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-8.jpg",
+      "bytes": 11338210,
+      "mime": "image/jpeg",
+      "sha256": "d0bba13604d9292f055269d34435bd47100aa17889904727155371e160ac4844"
+    },
+    {
+      "path": "photos/team/canvas-shoot/photos/Canvas Shoot-9.jpg",
+      "bytes": 12312300,
+      "mime": "image/jpeg",
+      "sha256": "23305d1dcfc223f695c009222c92125872acce3b0f1c4cd2d3fb81c263bf02ef"
+    },
+    {
+      "path": "photos/team/canvas-shoot/textures/canvas-full-easel.jpg",
+      "bytes": 13849158,
+      "mime": "image/jpeg",
+      "sha256": "f574a0b4eddeefb9c86f030bef289e144482a910c4ef958ff5c5d733fd129835"
+    },
+    {
+      "path": "photos/team/canvas-shoot/textures/canvas-full-texture.jpg",
+      "bytes": 10493330,
+      "mime": "image/jpeg",
+      "sha256": "4315f6364d614b33fcdf4b34520aad24a43a08f779ce558ec72eee58d5aebbe4"
+    },
+    {
+      "path": "photos/team/canvas-shoot/textures/canvas-ladder-sketches.jpg",
+      "bytes": 11338210,
+      "mime": "image/jpeg",
+      "sha256": "d0bba13604d9292f055269d34435bd47100aa17889904727155371e160ac4844"
+    },
+    {
+      "path": "photos/team/canvas-shoot/textures/canvas-passionately-curious.jpg",
+      "bytes": 17516285,
+      "mime": "image/jpeg",
+      "sha256": "d8aadb6777ce41da74fbcef39f7c9801d66b7621dcf977e9918beab25da9b717"
+    },
+    {
+      "path": "photos/team/canvas-shoot/textures/canvas-take-care.jpg",
+      "bytes": 11334533,
+      "mime": "image/jpeg",
+      "sha256": "0b014884623614464fd4769408194a0c5aedfcead28d0bb76d8b2f0288f93d28"
+    },
+    {
+      "path": "photos/team/canvas-shoot/textures/canvas-what-problem.jpg",
+      "bytes": 19002808,
+      "mime": "image/jpeg",
+      "sha256": "cbf1b5615661c8d69f6075e066829e1887f02a400c1baff485f38078d41d69c8"
+    },
+    {
       "path": "photos/team/google-drive-source/1136-w-75th-indianapolis-in-termites-cashman-11.jpg",
       "bytes": 12559906,
       "mime": "image/jpeg",
@@ -3366,7 +3540,7 @@
     {
       "path": "photos/team/google-drive-source/README.md",
       "bytes": 395,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "3c0f348332665d2e77fa23e688f34f909f06a06c3eb6af8f8027b396ddeaf952"
     },
     {
@@ -3426,7 +3600,7 @@
     {
       "path": "proposal-support/christ-church/install-logistics-2026-08/ChristBuild.rtf",
       "bytes": 3084,
-      "mime": "application/rtf",
+      "mime": "text/rtf",
       "sha256": "4be8b9355eeb555fc48a2a9459bf04f507be641f70cd9c62bb03b67143af1c12"
     },
     {
@@ -3504,7 +3678,7 @@
     {
       "path": "reviews/google/README.md",
       "bytes": 1627,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "dce15c3233238facc279406b3560ce087c6869192b21806308aae488f686758c"
     },
     {
@@ -3516,91 +3690,91 @@
     {
       "path": "videos/brand/new-approach-to-contracting/README.md",
       "bytes": 549,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "2fbb97385732f103cb4c950315911b4cd301370de29ce4564d953c63c0d1aba6"
     },
     {
       "path": "videos/brand/new-approach-to-contracting/new-approach-to-contracting-with-music.mp4",
       "bytes": 7468122,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "b2ba585200f79a20a8d344671e2cd188f84e309d9b5c2e9aa0f56610a5234af3"
     },
     {
       "path": "videos/projects/brava-web-video-assets/README.md",
       "bytes": 1305,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "02c292ab8ac74663c769301376595086fa8f053c6368d3142cb8d2a259543242"
     },
     {
       "path": "videos/projects/brava-web-video-assets/christ-church-brava-drone-montage.mp4",
       "bytes": 17549057,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "7444d2a85cfd4a54c5e9692fb2989ce2e4a6443bc9973ba5feb22cb64173ab80"
     },
     {
       "path": "videos/projects/brava-web-video-assets/hickman-brava-during-v1-first-9s.mp4",
       "bytes": 8710581,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "c3ed4df50a0156e322be3fc23d8cdc797867282c48875a7164d6a92121b1da10"
     },
     {
       "path": "videos/projects/brava-web-video-assets/laskey-brava-cedar-carmel-00000157-first-12s.mp4",
       "bytes": 8030848,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "e1af53b2c3b7fa3a6a640b3c09b4663483c313ec07d8d7c192560158b7a009fd"
     },
     {
       "path": "videos/projects/brava-web-video-assets/laskey-brava-cedar-carmel-01572414-full.mp4",
       "bytes": 3575225,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "0fe14d2278077ecdda91f6e3c8f1bbb1cb03d02a0f25bce2861a4fceccbda07d"
     },
     {
       "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-05-13s.mp4",
       "bytes": 11397920,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "3c014a020d6620df20f13b8e0dbe40dde8f16a2b692ec6c8ea11c3e2b2e12297"
     },
     {
       "path": "videos/projects/brava-web-video-assets/mccue-brava-slate-drone-clip-16-22s.mp4",
       "bytes": 7484620,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "77bdd1cc1978da31870d03819dea7f1ab8a169e74d2a13f89df2f81380a22a06"
     },
     {
       "path": "videos/projects/brava-web-video-assets/todays-cedar-background-laskey-brava-cedar-carmel-00000097-full.mp4",
       "bytes": 1586651,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "12ed23f5cbf8e7858ef2fd4f3b7028d41b5c225b9a8d0a294da5740356bae97b"
     },
     {
       "path": "videos/projects/coppergate-window-install/README.md",
       "bytes": 593,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "f0f5c99876a1afdce18ef49da6000a55238a79f0798082e44fb1e1d0ac12c56b"
     },
     {
       "path": "videos/projects/coppergate-window-install/coppergate-window-install-v1-0006-07-14s.mp4",
       "bytes": 1757350,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "28dbcd6647afa252090c0b8d87c179ad7f52056bb28ea6e772f4d1cc738aeab8"
     },
     {
       "path": "videos/projects/coppergate-window-install/coppergate-window-install-v1-0008-full.mp4",
       "bytes": 1823444,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "457e985e0de0ba005873fd8f3b68a951c60f643abf5e5b07d64c57ce89d22191"
     },
     {
       "path": "videos/projects/faith-apostolic-church/README.md",
       "bytes": 437,
-      "mime": "text/markdown",
+      "mime": "text/plain",
       "sha256": "10b7860e8050a6bf30e420ed5a289e578269c873705a464190a245918c16ef65"
     },
     {
       "path": "videos/projects/faith-apostolic-church/v2-0001-jon-at-fac-faith-apostolic-church-full.mp4",
       "bytes": 8994849,
-      "mime": "application/octet-stream",
+      "mime": "video/mp4",
       "sha256": "65dfdf4e2c2ddbd9d3967f040b4cd9510f533036c593074a9ef624d176c16fa3"
     }
   ]
