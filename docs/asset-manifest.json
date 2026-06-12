@@ -17,9 +17,9 @@
     },
     {
       "path": "README.md",
-      "bytes": 4468,
+      "bytes": 4580,
       "mime": "text/plain",
-      "sha256": "d7b7e9349dfa533adb2ba146d56146fe51893116ede500d69a8ea35338127e66"
+      "sha256": "8e8697f2b50d3180c84709ad77fff36605f84da4b60813d14206d19aab92a59f"
     },
     {
       "path": "brand/client/christ-church/christ-church-logo.png",
@@ -77,9 +77,9 @@
     },
     {
       "path": "docs/asset-manifest.json",
-      "bytes": 155606,
+      "bytes": 146815,
       "mime": "application/json",
-      "sha256": "1379c05c5c16173c4e23bb3e676cccab5c215761657e1cec567c60c28e6eb259"
+      "sha256": "7f19647e1bf8e31b6091cb7eda2482e9e2ca587fb149a03bd83db8995e8ee6c2"
     },
     {
       "path": "docs/brava-presentation-reference-slides/01-major-standards-and-code-approvals.webp",
@@ -3490,42 +3490,6 @@
       "sha256": "23305d1dcfc223f695c009222c92125872acce3b0f1c4cd2d3fb81c263bf02ef"
     },
     {
-      "path": "photos/team/canvas-shoot/textures/canvas-full-easel.jpg",
-      "bytes": 13849158,
-      "mime": "image/jpeg",
-      "sha256": "f574a0b4eddeefb9c86f030bef289e144482a910c4ef958ff5c5d733fd129835"
-    },
-    {
-      "path": "photos/team/canvas-shoot/textures/canvas-full-texture.jpg",
-      "bytes": 10493330,
-      "mime": "image/jpeg",
-      "sha256": "4315f6364d614b33fcdf4b34520aad24a43a08f779ce558ec72eee58d5aebbe4"
-    },
-    {
-      "path": "photos/team/canvas-shoot/textures/canvas-ladder-sketches.jpg",
-      "bytes": 11338210,
-      "mime": "image/jpeg",
-      "sha256": "d0bba13604d9292f055269d34435bd47100aa17889904727155371e160ac4844"
-    },
-    {
-      "path": "photos/team/canvas-shoot/textures/canvas-passionately-curious.jpg",
-      "bytes": 17516285,
-      "mime": "image/jpeg",
-      "sha256": "d8aadb6777ce41da74fbcef39f7c9801d66b7621dcf977e9918beab25da9b717"
-    },
-    {
-      "path": "photos/team/canvas-shoot/textures/canvas-take-care.jpg",
-      "bytes": 11334533,
-      "mime": "image/jpeg",
-      "sha256": "0b014884623614464fd4769408194a0c5aedfcead28d0bb76d8b2f0288f93d28"
-    },
-    {
-      "path": "photos/team/canvas-shoot/textures/canvas-what-problem.jpg",
-      "bytes": 19002808,
-      "mime": "image/jpeg",
-      "sha256": "cbf1b5615661c8d69f6075e066829e1887f02a400c1baff485f38078d41d69c8"
-    },
-    {
       "path": "photos/team/google-drive-source/1136-w-75th-indianapolis-in-termites-cashman-11.jpg",
       "bytes": 12559906,
       "mime": "image/jpeg",
@@ -3686,6 +3650,42 @@
       "bytes": 40824,
       "mime": "image/png",
       "sha256": "a787c1ab0773003f276b0040fd82e07b0ca88d0e377ea9d7415a72e0f9570fdb"
+    },
+    {
+      "path": "textures/locke-ladder-specific/canvas-shoot/canvas-full-easel.jpg",
+      "bytes": 13849158,
+      "mime": "image/jpeg",
+      "sha256": "f574a0b4eddeefb9c86f030bef289e144482a910c4ef958ff5c5d733fd129835"
+    },
+    {
+      "path": "textures/locke-ladder-specific/canvas-shoot/canvas-full-texture.jpg",
+      "bytes": 10493330,
+      "mime": "image/jpeg",
+      "sha256": "4315f6364d614b33fcdf4b34520aad24a43a08f779ce558ec72eee58d5aebbe4"
+    },
+    {
+      "path": "textures/locke-ladder-specific/canvas-shoot/canvas-ladder-sketches.jpg",
+      "bytes": 11338210,
+      "mime": "image/jpeg",
+      "sha256": "d0bba13604d9292f055269d34435bd47100aa17889904727155371e160ac4844"
+    },
+    {
+      "path": "textures/locke-ladder-specific/canvas-shoot/canvas-passionately-curious.jpg",
+      "bytes": 17516285,
+      "mime": "image/jpeg",
+      "sha256": "d8aadb6777ce41da74fbcef39f7c9801d66b7621dcf977e9918beab25da9b717"
+    },
+    {
+      "path": "textures/locke-ladder-specific/canvas-shoot/canvas-take-care.jpg",
+      "bytes": 11334533,
+      "mime": "image/jpeg",
+      "sha256": "0b014884623614464fd4769408194a0c5aedfcead28d0bb76d8b2f0288f93d28"
+    },
+    {
+      "path": "textures/locke-ladder-specific/canvas-shoot/canvas-what-problem.jpg",
+      "bytes": 19002808,
+      "mime": "image/jpeg",
+      "sha256": "cbf1b5615661c8d69f6075e066829e1887f02a400c1baff485f38078d41d69c8"
     },
     {
       "path": "videos/brand/new-approach-to-contracting/README.md",
