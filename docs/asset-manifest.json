@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-06-12",
-  "file_count": 629,
+  "generated_at": "2026-09-17",
+  "file_count": 630,
   "items": [
     {
       "path": ".gitignore",
@@ -50,6 +50,12 @@
       "bytes": 7128,
       "mime": "application/octet-stream",
       "sha256": "1d4c89f27003450e9319f802b54c3aff0df02bbb6d434d23c6fbf494be111847"
+    },
+    {
+      "path": "brand/locke-ladder/ll-email-signature-logo.gif",
+      "bytes": 42914,
+      "mime": "image/gif",
+      "sha256": "cb73f5d3cf8113b7f5c86629ad3b4bb1fb35398a176a9cddf5b7f5863f426453"
     },
     {
       "path": "brand/locke-ladder/ll-icon.webp",
