@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-09-17",
-  "file_count": 631,
+  "file_count": 637,
   "items": [
     {
       "path": ".gitignore",
@@ -52,6 +52,24 @@
       "sha256": "1d4c89f27003450e9319f802b54c3aff0df02bbb6d434d23c6fbf494be111847"
     },
     {
+      "path": "brand/locke-ladder/cameron-reynolds-handwritten-signature.png",
+      "bytes": 39789,
+      "mime": "image/png",
+      "sha256": "b83fa9ca8456d1025f5baca330384773999936ea3add5811f9c5753e23085e3c"
+    },
+    {
+      "path": "brand/locke-ladder/cameron-reynolds-photo-background.jpg",
+      "bytes": 92406,
+      "mime": "image/jpeg",
+      "sha256": "18cfbbacd447d0ab2ebebdf825726b2b340f5f07c1cbb0af1802a056a628d55d"
+    },
+    {
+      "path": "brand/locke-ladder/cameron-reynolds-termina-name.png",
+      "bytes": 16952,
+      "mime": "image/png",
+      "sha256": "eac433a1765d86f97772bc74714c04698d2b17d1edfb7e789c08adc0a5bf6ee6"
+    },
+    {
       "path": "brand/locke-ladder/jay-manzione-handwritten-signature.png",
       "bytes": 56738,
       "mime": "image/png",
@@ -80,6 +98,24 @@
       "bytes": 28916,
       "mime": "image/webp",
       "sha256": "9d25ead963a40c46d8f7ce8daeaade3c5698ab467af46095ed01e1d987c667b4"
+    },
+    {
+      "path": "brand/locke-ladder/social-instagram-mono.png",
+      "bytes": 1378,
+      "mime": "image/png",
+      "sha256": "e8b314e2c4081bc0a348faada570cca6a3deab5f16044d4550f99fc9566e3d05"
+    },
+    {
+      "path": "brand/locke-ladder/social-linkedin-mono.png",
+      "bytes": 621,
+      "mime": "image/png",
+      "sha256": "698eb8afad797a40b4e0b1d6a753a9fd233064a14922cb5ffb33b047e87acd92"
+    },
+    {
+      "path": "brand/locke-ladder/social-youtube-mono.png",
+      "bytes": 744,
+      "mime": "image/png",
+      "sha256": "ecb786ce24bfcc399474fe039ed80dd3664dea3c35d9b691126e1b52f2358394"
     },
     {
       "path": "brand/partners/brava/brava-new-logo-white.svg",
