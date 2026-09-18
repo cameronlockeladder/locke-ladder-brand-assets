@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
   "generated_at": "2026-09-18",
-  "file_count": 637,
+  "file_count": 640,
   "items": [
     {
       "path": ".gitignore",
@@ -52,10 +52,22 @@
       "sha256": "1d4c89f27003450e9319f802b54c3aff0df02bbb6d434d23c6fbf494be111847"
     },
     {
+      "path": "brand/locke-ladder/cameron-reynolds-brand-label.png",
+      "bytes": 3761,
+      "mime": "image/png",
+      "sha256": "c99e9cdeef34cbef30c06a084331e3dea32caa049a478bf328157198da2b845a"
+    },
+    {
       "path": "brand/locke-ladder/cameron-reynolds-handwritten-signature.png",
       "bytes": 39789,
       "mime": "image/png",
       "sha256": "b83fa9ca8456d1025f5baca330384773999936ea3add5811f9c5753e23085e3c"
+    },
+    {
+      "path": "brand/locke-ladder/cameron-reynolds-phone.png",
+      "bytes": 6299,
+      "mime": "image/png",
+      "sha256": "d20f52ff345889d24e33305a5fc4156818ea0b88c4b1f07da3d8cd3021578a9b"
     },
     {
       "path": "brand/locke-ladder/cameron-reynolds-photo-background.jpg",
@@ -68,6 +80,12 @@
       "bytes": 16952,
       "mime": "image/png",
       "sha256": "eac433a1765d86f97772bc74714c04698d2b17d1edfb7e789c08adc0a5bf6ee6"
+    },
+    {
+      "path": "brand/locke-ladder/cameron-reynolds-website.png",
+      "bytes": 6279,
+      "mime": "image/png",
+      "sha256": "63db891b20037f836f6559479b48389542cb9c3a03f8c2fc70f2e91c83395ac6"
     },
     {
       "path": "brand/locke-ladder/jay-manzione-handwritten-signature.png",
