@@ -1,6 +1,6 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-09-17",
+  "generated_at": "2026-09-18",
   "file_count": 637,
   "items": [
     {
@@ -59,9 +59,9 @@
     },
     {
       "path": "brand/locke-ladder/cameron-reynolds-photo-background.jpg",
-      "bytes": 18679,
+      "bytes": 11896,
       "mime": "image/jpeg",
-      "sha256": "8eb4af06c00204dc2e4adaf1c8241d790e05c49e2964f0173f8e720de5eb6c3a"
+      "sha256": "f41d311abaaa16d01ca840f6e7a74a071cf94af669ba631fcea5f995f5887aa8"
     },
     {
       "path": "brand/locke-ladder/cameron-reynolds-termina-name.png",
