@@ -1,7 +1,7 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-09-18",
-  "file_count": 640,
+  "generated_at": "2026-10-09",
+  "file_count": 648,
   "items": [
     {
       "path": ".gitignore",
@@ -104,6 +104,18 @@
       "bytes": 10402,
       "mime": "image/webp",
       "sha256": "96ecbebd11d606ec5835d11019a075d54d4558ef41569f927240a8c0c12a86ef"
+    },
+    {
+      "path": "brand/locke-ladder/locke-ladder-script-12fps.gif",
+      "bytes": 59738,
+      "mime": "image/gif",
+      "sha256": "fc59308580628a14c04bee7f970b052e06006402f547c0e5b1a480514286859b"
+    },
+    {
+      "path": "brand/locke-ladder/locke-ladder-script-12fps.png",
+      "bytes": 73839,
+      "mime": "image/png",
+      "sha256": "4490520a61d978c2c13ee0fdd89e45f9e63ef9a51251fb0ab48ad5f804ba1824"
     },
     {
       "path": "brand/locke-ladder/locke-ladder-wordmark.png",
@@ -3154,6 +3166,12 @@
       "sha256": "6cb8f37298df9f648e63cbb24ae8062ce375b2a1cef4b79c39891650783d16e1"
     },
     {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/clarke-zionsville-brava-twilight-1280.jpg",
+      "bytes": 404217,
+      "mime": "image/jpeg",
+      "sha256": "976f7837f18488a2bac8efb75f1cc766afc4ac6f6d02e0b45489af72cb178596"
+    },
+    {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-02.jpg",
       "bytes": 1389945,
       "mime": "image/jpeg",
@@ -3182,6 +3200,12 @@
       "bytes": 373694,
       "mime": "image/webp",
       "sha256": "c2bc6864ded8033ec71c9a41b57d75b5be99927b46f94f709b8c1d0b9ff81d73"
+    },
+    {
+      "path": "photos/projects/locke-ladder-brava-cedar-projects/hickman-monticello-exterior-evening-1280.jpg",
+      "bytes": 583793,
+      "mime": "image/jpeg",
+      "sha256": "8016058475f79de86122bcfb3a2281a1247fa8875d7507f85a40931a6e5f0880"
     },
     {
       "path": "photos/projects/locke-ladder-brava-cedar-projects/laskey-aerial.webp",
@@ -3556,6 +3580,18 @@
       "sha256": "23305d1dcfc223f695c009222c92125872acce3b0f1c4cd2d3fb81c263bf02ef"
     },
     {
+      "path": "photos/team/faces-of-locke-ladder.gif",
+      "bytes": 462584,
+      "mime": "image/gif",
+      "sha256": "659d731ba58b21f6d807aebe1083db61b3fbcd65676a9ab61bc029c87dead834"
+    },
+    {
+      "path": "photos/team/faces-of-locke-ladder.png",
+      "bytes": 67056,
+      "mime": "image/png",
+      "sha256": "00fb6fde3146cbf1ae7c438d03e57c157876a71c70abaacb939f0370324e2d69"
+    },
+    {
       "path": "photos/team/google-drive-source/1136-w-75th-indianapolis-in-termites-cashman-11.jpg",
       "bytes": 12559906,
       "mime": "image/jpeg",
@@ -3626,6 +3662,18 @@
       "bytes": 12372541,
       "mime": "image/jpeg",
       "sha256": "b807c6b053f044fe5cdae6dd6590ea9340598368596e59a9e251e828a1c05924"
+    },
+    {
+      "path": "photos/team/jon-smiling-profile-right.png",
+      "bytes": 649254,
+      "mime": "image/png",
+      "sha256": "e955c053a9cf969b02897833908cda15df121e6d56d8e255a29441dc7fb384c7"
+    },
+    {
+      "path": "photos/team/jon-smiling-to-left.png",
+      "bytes": 862531,
+      "mime": "image/png",
+      "sha256": "341044a867005ffbacc9ef7e742018d69e5e08536daeb39c21958f977fe0eeb3"
     },
     {
       "path": "proposal-support/christ-church/install-logistics-2026-08/ChristBuild.rtf",
