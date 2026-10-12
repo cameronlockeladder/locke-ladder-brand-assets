@@ -1,6 +1,6 @@
 {
   "repository": "locke-ladder-brand-assets",
-  "generated_at": "2026-10-09",
+  "generated_at": "2026-10-12",
   "file_count": 648,
   "items": [
     {
@@ -3581,15 +3581,15 @@
     },
     {
       "path": "photos/team/faces-of-locke-ladder.gif",
-      "bytes": 462584,
+      "bytes": 260360,
       "mime": "image/gif",
-      "sha256": "659d731ba58b21f6d807aebe1083db61b3fbcd65676a9ab61bc029c87dead834"
+      "sha256": "730ca752bb6ac8576f894366ea5baed8fdb4200f45bdbf1548849c70f423d1ef"
     },
     {
       "path": "photos/team/faces-of-locke-ladder.png",
-      "bytes": 67056,
+      "bytes": 108269,
       "mime": "image/png",
-      "sha256": "00fb6fde3146cbf1ae7c438d03e57c157876a71c70abaacb939f0370324e2d69"
+      "sha256": "fa07220448e1656ee6ec39288fe583bbc1763a6b7436d492bfc735fc450faed5"
     },
     {
       "path": "photos/team/google-drive-source/1136-w-75th-indianapolis-in-termites-cashman-11.jpg",
